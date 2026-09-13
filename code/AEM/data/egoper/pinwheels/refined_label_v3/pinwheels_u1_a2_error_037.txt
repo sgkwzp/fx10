@@ -1,0 +1,2171 @@
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Slip|Drop tortilla on floor
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Dicard tortilla and place a new one
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Use knife to scoop peanut butter|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+Spread peanut butter onto tortilla|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+Clean knife after spreading jelly|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+Roll tortilla|Error_Slip|Fold tortilla
+Roll tortilla|Error_Slip|Fold tortilla
+Roll tortilla|Error_Slip|Fold tortilla
+Roll tortilla|Error_Slip|Fold tortilla
+Roll tortilla|Error_Slip|Fold tortilla
+Roll tortilla|Error_Slip|Fold tortilla
+Roll tortilla|Error_Slip|Fold tortilla
+Roll tortilla|Error_Slip|Fold tortilla
+Roll tortilla|Error_Slip|Fold tortilla
+Roll tortilla|Error_Slip|Fold tortilla
+Roll tortilla|Error_Slip|Fold tortilla
+Roll tortilla|Error_Slip|Fold tortilla
+Roll tortilla|Error_Slip|Fold tortilla
+Roll tortilla|Error_Slip|Fold tortilla
+Roll tortilla|Error_Slip|Fold tortilla
+Roll tortilla|Error_Slip|Fold tortilla
+Roll tortilla|Error_Slip|Fold tortilla
+Roll tortilla|Error_Slip|Fold tortilla
+Roll tortilla|Error_Slip|Fold tortilla
+Roll tortilla|Error_Slip|Fold tortilla
+Roll tortilla|Error_Slip|Fold tortilla
+Roll tortilla|Error_Slip|Fold tortilla
+Roll tortilla|Error_Slip|Fold tortilla
+Roll tortilla|Error_Slip|Fold tortilla
+Roll tortilla|Error_Slip|Fold tortilla
+Roll tortilla|Error_Slip|Fold tortilla
+Roll tortilla|Error_Slip|Fold tortilla
+Roll tortilla|Error_Slip|Fold tortilla
+Roll tortilla|Error_Slip|Fold tortilla
+Roll tortilla|Error_Slip|Fold tortilla
+Roll tortilla|Error_Slip|Fold tortilla
+Roll tortilla|Error_Slip|Fold tortilla
+Roll tortilla|Error_Slip|Fold tortilla
+Roll tortilla|Error_Slip|Fold tortilla
+Roll tortilla|Error_Slip|Fold tortilla
+Roll tortilla|Error_Slip|Fold tortilla
+Roll tortilla|Error_Slip|Fold tortilla
+Roll tortilla|Error_Slip|Fold tortilla
+Roll tortilla|Error_Slip|Fold tortilla
+Roll tortilla|Error_Slip|Fold tortilla
+Roll tortilla|Error_Slip|Fold tortilla
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+Roll tortilla|Error_Correction|Unfold tortilla and roll it
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+Slice using floss to get 5 pinwheels|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal

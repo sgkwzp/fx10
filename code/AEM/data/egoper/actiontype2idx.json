@@ -1,0 +1,7 @@
+{
+    "Normal": 0,
+    "Error_Modification": 1,
+    "Error_Slip": 2,
+    "Error_Correction": 3,
+    "Error_Addition": 4
+}

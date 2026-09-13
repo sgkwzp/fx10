@@ -1,0 +1,19 @@
+*.pyc
+*__pycache__/
+
+# Local datasets
+data/
+datasets/
+
+# Model weights and checkpoints
+checkpoints/
+weights/
+*.pth
+*.pt
+*.ckpt
+
+# Experiment outputs
+outputs/
+runs/
+logs/
+wandb/

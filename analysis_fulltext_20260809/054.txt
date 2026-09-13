@@ -1,0 +1,290 @@
+arXiv:2606.02120v1 [cs.CV] 1 Jun 2026        Understanding-Enhanced Model Collaboration for Long-Tailed
+                                                                   Egocentric Mistake Detection
+
+                                                       Boyu Han1,2 Qianqian Xu1,3,* Shilong Bao2 Zhiyong Yang2
+                                                                       Ruochen Cui4,5 Qingming Huang2,1,*
+
+                                                1 State Key Laboratory of AI Safety, Institute of Computing Technology, CAS
+                                           2 School of Computer Science and Tech., University of Chinese Academy of Sciences
+
+                                                                     3 Beijing Academy of Artificial Intelligence
+                                                                    4 Institute of Information Engineering, CAS
+                                                   5 School of Cyber Security, University of Chinese Academy of Sciences
+
+                                       {hanboyu23z, xuqianqian}@ict.ac.cn {baoshilong,yangzhiyong21,qmhuang}@ucas.ac.cn
+
+                                                                                       cuiruochen25@mails.ucas.ac.cn
+
+                                                               Abstract                               1. Introduction
+
+                                       In this report, we address the problem of determining          This document introduces the solution proposed by the
+                                       whether a user performs an action incorrectly from egocen-     MR-CAS team for the Mistake Detection Challenge of the
+                                       tric video data. To this end, we propose an Understanding-     HoloAssist 2026 competition [12]. The goal of the task is
+                                       Enhanced Model Collaboration Method (UE-MCM) that              to determine whether a user performs an action correctly in
+                                       combines efficient coarse-grained video understanding with     egocentric videos. Compared with standard action recogni-
+                                       accurate fine-grained action reasoning. Specifically, UE-      tion, mistake detection requires not only recognizing what
+                                       MCM contains a small model branch and a large model            action is being performed, but also judging whether the ex-
+                                       branch. The large model branch focuses on whether the          ecution deviates from the expected procedure. This makes
+                                       fine-grained action itself is executed incorrectly, while the  the task sensitive to temporal context, hand-object interac-
+                                       small model branch jointly takes the coarse-grained video      tions, and subtle visual differences between correct and in-
+                                       and fine-grained segment as input to identify actions that     correct operations.
+                                       may be locally correct but inconsistent with the overall
+                                       workflow. The small model branch is built on a CLIP4CLIP          The problem is challenging for two main reasons. First,
+                                       video encoder initialized from a CLIP model enhanced by        mistake samples are rare and often ambiguous, resulting in
+                                       Diffusion Contrastive Reconstruction, and the large model      a long-tailed binary distribution where conventional cross-
+                                       branch uses the Qwen3-VL Embedding model to extract            entropy training tends to overfit the dominant correct class.
+                                       high-capacity representations from fine-grained action seg-    Second, mistakes can occur at different semantic levels.
+                                       ments. The small-branch prediction and the large-branch        Some mistakes are local execution errors, where the cur-
+                                       prediction are then adaptively fused by a lightweight collab-  rent fine-grained action itself is wrong. Others are proce-
+                                       oration gate. To handle the long-tailed distribution of mis-   dural errors, where an action may be executed correctly in
+                                       take instances, we optimize the classifiers with complemen-    isolation but is inappropriate for the current stage of the
+                                       tary objectives, including reweighted cross-entropy, AUC-      coarse-grained workflow. Using a single model [5–7, 13]
+                                       oriented learning, and label-aware adjustment. The result-     to cover both types of information is often inefficient and
+                                       ing system balances speed and accuracy, making it effective    may weaken either coarse contextual understanding or fine-
+                                       for detecting subtle, rare, and ambiguous mistakes in ego-     grained action reasoning.
+                                       centric instructional videos.
+                                                                                                         To address these challenges, we design an
+                                           *Corresponding authors.                                    Understanding-Enhanced Model Collaboration Method
+                                                                                                      (UE-MCM). UE-MCM contains a small model branch
+                                                                                                      and a large model branch with different responsibilities.
+                                                                                                      The large model branch focuses on fine-grained action
+                                                                                                      correctness and predicts whether the observed action itself
+                                                                                                      contains an execution mistake. The small model branch
+        Legend                                              Diffusion Contrastive                                       Weighted
+                                                                Reconstruction                                              CE
+  MoE
+  Frozen Parameters                              CLIP
+  Optimizing Parameters
+Coarse Grained Action                                                                                              AUC         LA
+
+                                            ···  Original                              Enhanced
+                                                 CLIP4CLIP             Small Model Branch
+ Fine Grained Action                              Qwen3-VL
+                                                              𝑓                                                      Long-tail
+                                                                                                                   Optimization
+
+                                                              Classifier              01
+
+                                                                       Large Model Branch
+
+                                                              𝑓                                                       01
+
+                                                                                                                   Prediction
+
+                                                              Classifier              01
+
+Figure 1. An overview of our UE-MCM. The large model branch uses Qwen3-VL Embedding to determine whether the fine-grained
+action itself contains a mistake. The small model branch uses a DCR-enhanced CLIP4CLIP encoder to jointly encode the coarse-grained
+video and the fine-grained segment, thereby reasoning about whether the action is consistent with the overall workflow.
+
+performs fast coarse-grained video understanding by jointly   2. Method
+observing the coarse-grained video and the fine-grained
+segment, which helps identify cases where an action looks     2.1. Overview
+correct locally but is wrong in the current workflow. We
+first enhance the visual representation of CLIP [11] using    Given an egocentric video, the task is to predict whether
+Diffusion Contrastive Reconstruction (DCR) [4]. The en-
+hanced CLIP is then used to construct a CLIP4CLIP-style       the target action contains a mistake. We denote the coarse-
+video encoder [9] for the small branch. In parallel, the
+large model branch adopts Qwen3-VL Embedding [8] to           grained  action  video  as  V  c    ,  where  T  is  the  total  temporal
+extract semantically rich features from fine-grained action                                  0:T
+segments.                                                     length, and the fine-grained action segment as Vt:t+τ f , where
+
+   The predictions from the two branches are finally inte-    t ≥ 0 and t+τ ≤ T . The model outputs a binary prediction,
+grated by an adaptive collaboration gate, allowing the sys-
+tem to balance workflow-level consistency reasoning and       where label 1 indicates a mistake and label 0 indicates a
+action-level correctness judgment for each input. Dur-
+ing optimization, we further combine multiple long-tail       correct action.
+learning objectives, including reweighted cross-entropy [1],
+AUC-oriented learning [2, 14], and label-aware adjust-        Figure 1 illustrates the proposed UE-MCM. The frame-
+ment [10]. These objectives improve mistake recall, deci-
+sion ranking, and probability calibration under skewed data   work contains two complementary model branches. The
+distributions.
+                                                              large model branch is a Qwen3-VL Embedding encoder
+   Overall, UE-MCM integrates action-level mistake rea-       that takes only the fine-grained segment Vt:t+τ f as input and
+soning, workflow-level consistency reasoning, representa-
+tion enhancement, and long-tail optimization. The follow-     judges whether the action itself is incorrectly executed. The
+ing sections describe the proposed method and the exper-
+imental settings used for the HoloAssist mistake detection    small model branch is a DCR-enhanced CLIP4CLIP en-
+benchmark.
+                                                              coder that takes both the coarse-grained video V c0:T and the
+                                                              fine-grained segment Vt:t+τ f as input, allowing it to judge
+
+                                                              whether the action is consistent with the overall workflow.
+
+                                                              The two branch predictions are fused by an adaptive collab-
+
+                                                              oration gate. During training, we use long-tail optimization
+
+                                                              objectives to improve the recognition of rare mistake sam-
+
+                                                              ples.
+
+                                                              2.2. Small Model Branch
+
+                                                              The small model branch is designed for efficient workflow-
+                                                              level video understanding. CLIP provides strong image-
+level semantic priors through large-scale image-text con-      where gs and gl are lightweight classification heads, and
+trastive pre-training [11]. However, directly applying CLIP    zs, zl ∈ R2 are logits for correct and mistake classes.
+to egocentric mistake detection is insufficient because sub-
+tle mistakes often depend on both visual details and proce-       To adaptively combine the two predictions, we use a col-
+dural context.
+                                                               laboration gate. The gate takes the projected branch features
+   To strengthen the visual encoder, we employ Diffusion
+Contrastive Reconstruction (DCR) [4]. DCR improves             as input and outputs normalized branch weights:
+CLIP by introducing reconstruction-guided contrastive sig-
+nals, encouraging the visual representation to preserve both   h¯s = Ps(hs), h¯l = Pl(hl),               (5)
+class-discriminative semantics and detail-aware perceptual
+information. We use the enhanced CLIP visual encoder as        [αs, αl] = softmax Wg[h¯s; h¯l; h¯s ⊙ h¯l] + bg , (6)
+the frame-level backbone of CLIP4CLIP [9]. The small
+model branch encodes both the coarse-grained video and         where Ps(·) and Pl(·) project branch features into a shared
+the fine-grained segment:                                      fusion space, and ⊙ denotes element-wise multiplication.
+                                                               The final logits are computed as
+
+                                                               z = αszs + αlzl.                          (7)
+
+hsc = ϕs (V0:T c ) , hsf = ϕs Vt:t+τ f , (1)                   This design keeps the branch inputs explicit: the small
+                                                               branch combines coarse and fine videos for workflow-level
+where ϕs denotes the DCR-enhanced CLIP4CLIP encoder.           reasoning, while the large branch focuses on the fine seg-
+The two representations are fused before classification:       ment for action-level reasoning. Prediction-level collabora-
+                                                               tion then dynamically balances the two decisions.
+
+hs = ψs [hcs; hsf ; hsc ⊙ hsf ] ,  (2)                         2.5. Long-Tail Optimization
+
+where ψs(·) is a lightweight fusion projection, and ⊙ de-      Mistake detection is naturally imbalanced because correct
+notes element-wise multiplication. Since this branch is        actions appear much more frequently than mistakes. We
+lightweight and observes both temporal scopes, it provides     therefore optimize the classifiers with complementary long-
+stable coarse action context and helps detect cases where      tail objectives.
+an action may be correct in isolation but wrong within the     Reweighted CE Loss [1]. We use class-rebalanced cross-
+current procedure.                                             entropy to increase the penalty for underrepresented mis-
+                                                               take samples:
+
+2.3. Large Model Branch                                                     N
+
+The large model branch focuses on fine-grained action-         LW CE = − wyi log pi,yi ,                 (8)
+level mistake reasoning. We use Qwen3-VL Embedding [8]
+to encode the fine action segment. Compared with the                        i=1
+small model branch, Qwen3-VL has stronger multimodal
+representation capacity and is better suited for recogniz-     where pi,yi is the predicted probability of the ground-truth
+ing whether the observed manipulation itself is incorrectly    class and wyi is computed according to class frequency.
+executed. For each fine-grained segment, the large model       AUC Loss [14]. To improve ranking quality under class
+branch extracts
+                                                               imbalance, we adopt an AUC-oriented objective:
+                        hl = ϕl Vt:t+τ f , (3)
+                                                               1 n+ n−                      −+
+where ϕl denotes the Qwen3-VL Embedding model. We              LAUC = n+n−                  ℓ sj − si ,  (9)
+freeze the large embedding model during classifier train-
+ing and use its output for the large-branch classifier. This                i=1 j=1
+keeps optimization efficient while preserving the semantic
+strength of the large model.                                   where si+ and sj− are mistake and correct scores, respec-
+                                                               tively. This loss encourages mistake samples to receive
+                                                               higher scores than correct samples.
+                                                               Label-Aware Loss [10]. We further use label-aware adjust-
+                                                               ment to calibrate the decision boundary for long-tailed data:
+
+2.4. Model Collaboration                                       N
+
+The two branches provide complementary information. The        LLA = ℓ (zi + log π, yi) ,                (10)
+large model branch predicts action-level mistakes from fine-
+grained execution cues, while the small model branch pre-      i=1
+dicts workflow-level inconsistencies by jointly observing
+the coarse-grained video and fine-grained segment. The         where π denotes the empirical class prior. The final objec-
+branch representations are fed into their corresponding clas-  tive is
+sification heads:
+                                                               L = LW CE + λAUC LAUC + λLALLA. (11)
+
+zs = gs(hs), zl = gl(hl),          (4)                         By combining these objectives, the classifier learns from
+                                                               both calibrated class priors and pairwise ranking con-
+                                                               straints, improving robustness for rare mistakes.
+Table 1. Results obtained on the test set. The champion and the runner-up are highlighted in bold and underline.
+
+              Method                  Modality                  F-score        Correct           Mistake
+              Random                                                     Precision Recall  Precision Recall
+                                            -                     0.28
+   TimeSformer [12] (Baseline)           RGB                      0.35   0.61  0.10        0.15  0.46
+                                        Hands                     0.40
+   UNICT Solution (2024 Top1)       RGB+Hands                     0.36   0.83  0.52        0.13  0.27
+MR-CAS Solution [3] (2025 Top1)  RGB+Hands+Eyes                   0.32
+                                     RGB+Eyes                     0.51   0.93  0.52        0.13  0.31
+                Ours                     RGB                      0.57
+                                         RGB                      0.60   0.86  0.43        0.10  0.12
+
+                                                                         0.89  0.43        0.11  0.50
+
+                                                                         0.95  0.93        0.06  0.09
+
+                                                                         0.97  0.60        0.08  0.63
+
+                                                                         0.97  0.72        0.11  0.62
+
+3. Experiments                                                  References
+
+In this section, we describe some details of the experiments     [1] Yin Cui, Menglin Jia, Tsung-Yi Lin, Yang Song, and Serge
+and present our results.                                              Belongie. Class-balanced loss based on effective number of
+                                                                      samples. In CVPR, pages 9268–9277, 2019. 2, 3
+3.1. Implementation Details
+                                                                 [2] Boyu Han, Qianqian Xu, Zhiyong Yang, Shilong Bao,
+We conduct all experiments using eight NVIDIA A100                    Peisong Wen, Yangbangyan Jiang, and Qingming Huang.
+GPUs. Frames are uniformly sampled from both the full                 Aucseg: Auc-oriented pixel-level long-tail semantic segmen-
+coarse-grained video and the fine-grained segment. The                tation. In NeurIPS, pages 126863–126907, 2024. 2
+backbone encoders are frozen during classifier training, and
+only the projection layers, classification heads, and collabo-   [3] Boyu Han, Qianqian Xu, Shilong Bao, Zhiyong Yang,
+ration gate are optimized. Branch features are projected into         Sicong Li, and Qingming Huang. Dual-stage reweighted
+a shared hidden space before collaborative fusion. The clas-          moe for long-tailed egocentric mistake detection. arXiv
+sifier heads are implemented as lightweight multilayer per-           preprint arXiv:2509.12990, 2025. 4
+ceptrons with dropout. We train the system with AdamW
+and a cosine learning-rate schedule. The entire model is         [4] Boyu Han, Qianqian Xu, Shilong Bao, Zhiyong Yang,
+optimized using the Adam optimizer with a learning rate of            Ruochen Cui, Xilin Zhao, and Qingming Huang. Guiding
+1×10−5. We set the batch size to 128 clips, each consisting           diffusion-based reconstruction with contrastive signals for
+of 32 frames. The model is trained for a total of 5 epochs.           balanced visual representation. In CVPR, 2026. 2, 3
+
+3.2. Results                                                     [5] Boyu Han, Qianqian Xu, Shilong Bao, Zhiyong Yang, Kan-
+                                                                      gli Zi, and Qingming Huang. Lightfair: Towards an efficient
+Table 1 presents the performance of various models on the             alternative for fair t2i diffusion via debiasing pre-trained text
+mistake detection task. Compared to Random and TimeS-                 encoders. In NeurIPS, pages 22671–22724, 2026. 1
+former, our method significantly improves the F-score. Fur-
+thermore, in comparison to the top-performing method of          [6] Zhiying Leng, Shun-Cheng Wu, Mahdi Saleh, Antonio Mon-
+2024, our method achieves a substantial improvement in                tanaro, Hao Yu, Yin Wang, Nassir Navab, Xiaohui Liang,
+mistake recall. Compared with the top-performing method               and Federico Tombari. Dynamic hyperbolic attention net-
+of 2025, our method further improves correct recall. Most             work for fine hand-object reconstruction. In ICCV, pages
+notably, our method attains competitive performance using             14894–14904, 2023.
+only the RGB modality, matching or even surpassing mod-
+els that rely on multimodal inputs.                              [7] Zhiying Leng, Tolga Birdal, Xiaohui Liang, and Federico
+                                                                      Tombari. Hypersdfusion: Bridging hierarchical structures in
+                                                                      language and geometry for enhanced 3d text2shape genera-
+                                                                      tion. In CVPR, pages 19691–19700, 2024. 1
+
+                                                                 [8] Mingxin Li, Yanzhao Zhang, Dingkun Long, Keqin Chen,
+                                                                      Sibo Song, Shuai Bai, Zhibo Yang, Pengjun Xie, An
+                                                                      Yang, Dayiheng Liu, et al. Qwen3-vl-embedding and
+                                                                      qwen3-vl-reranker: A unified framework for state-of-the-
+                                                                      art multimodal retrieval and ranking. arXiv preprint
+                                                                      arXiv:2601.04720, 2026. 2, 3
+
+                                                                 [9] Huaishao Luo, Lei Ji, Ming Zhong, Yang Chen, Wen Lei,
+                                                                      Nan Duan, and Tianrui Li. Clip4clip: An empirical study of
+                                                                      clip for end to end video clip retrieval and captioning. Neu-
+                                                                      rocomputing, 508:293–304, 2022. 2, 3
+
+                                                                [10] Aditya Krishna Menon, Sadeep Jayasumana, Ankit Singh
+                                                                      Rawat, Himanshu Jain, Andreas Veit, and Sanjiv Kumar.
+      Long-tail learning via logit adjustment. In ICLR, 2020. 2,
+      3
+[11] Alec Radford, Jong Wook Kim, Chris Hallacy, Aditya
+      Ramesh, Gabriel Goh, Sandhini Agarwal, Girish Sastry,
+      Amanda Askell, Pamela Mishkin, Jack Clark, Gretchen
+      Krueger, and Ilya Sutskever. Learning transferable visual
+      models from natural language supervision. In ICML, pages
+      8748–8763, 2021. 2, 3
+[12] Xin Wang, Taein Kwon, Mahdi Rad, Bowen Pan, Ishani
+      Chakraborty, Sean Andrist, Dan Bohus, Ashley Feniello, Bu-
+      gra Tekin, Felipe Vieira Frujeri, et al. Holoassist: an egocen-
+      tric human interaction dataset for interactive ai assistants in
+      the real world. In ICCV, pages 20270–20281, 2023. 1, 4
+[13] Yin Wang, Zhiying Leng, Haitian Liu, Frederick WB Li,
+      Mu Li, and Xiaohui Liang. Dynamic worlds, dynamic hu-
+      mans: Generating virtual human-scene interaction motion in
+      dynamic scenes. arXiv preprint arXiv:2601.19484, 2026. 1
+[14] Zhiyong Yang, Qianqian Xu, Shilong Bao, Xiaochun Cao,
+      and Qingming Huang. Learning with multiclass auc: Theory
+      and algorithms. TPAMI, 44(11):7747–7763, 2021. 2, 3
+

@@ -1,0 +1,4 @@
+interface:
+  display_name: "CCF Visual Composer"
+  short_description: "Compose paper plots and architecture diagrams, including confirmed GPT Image 2 drafts and editable SVG/PDF reconstruction."
+  default_prompt: "Use $ccf-visual-composer for reproducible data-analysis plots and publication visuals. For a scientific method/architecture diagram, derive a content-grounded prompt, show it and confirm before invoking GPT Image 2, inspect the result, then always ask whether to reconstruct it as editable SVG/vector PDF. Never invent data, modules, labels, or connections."

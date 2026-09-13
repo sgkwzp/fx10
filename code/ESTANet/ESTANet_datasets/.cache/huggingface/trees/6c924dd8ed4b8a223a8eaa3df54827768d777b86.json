@@ -1,0 +1,45 @@
+{
+ "format_version": 1,
+ "files": {
+  ".gitattributes": {
+   "size": 2504,
+   "blob_id": "bed0738c7eeb449bca98b5d2f33c89a1ee56349a"
+  },
+  "ESTANet_Assembly101-O.zip": {
+   "size": 7337558827,
+   "blob_id": "5da2858dff3df057a147e56ce7fb51095c9d1ab9",
+   "lfs_sha256": "863dbb34967f0c1ce0bef47af45be8ac5ff4e5f9ed19516ba7b4f13fc3d6548d",
+   "lfs_size": 7337558827,
+   "xet_hash": "b035a92cf9dd02ebd5b965a32bffc76326be38a6ede22a2568b187463f1f2dd8"
+  },
+  "ESTANet_EgoPER.zip": {
+   "size": 750924353,
+   "blob_id": "e857f7b0e93f0cf4d878c98b0eba4112bc240616",
+   "lfs_sha256": "cc7af10935de6622b27898af2e672eb76bda1f2920f9396a5081da575261db06",
+   "lfs_size": 750924353,
+   "xet_hash": "7d03a3487a4e829e4eb0cadc8674f6d2125322af17fcb38d7f9be5da1f068add"
+  },
+  "ESTANet_Epic-tent-O.zip": {
+   "size": 2729068402,
+   "blob_id": "282aaae92df0c89b1453318ec6faa1eed2d3aefc",
+   "lfs_sha256": "8de67bffc08bebe2078c41421fbd3652751590a87e4080aab83c29402fc57143",
+   "lfs_size": 2729068402,
+   "xet_hash": "7a5c1e924a5d746af670988fd595545419126a77040c0a4c6f7bc33325a3f140"
+  },
+  "README.md": {
+   "size": 4217,
+   "blob_id": "2f46e284f9b593f423d4d290d78e2eb1ced9bde1"
+  },
+  "checkpoints.zip": {
+   "size": 1805286415,
+   "blob_id": "8e6cb638f26619df96e88ccb328d11ce35b08197",
+   "lfs_sha256": "ebf850da937e1ce830cb022b70b06a8d195245f708274c239bde3a97fe50f369",
+   "lfs_size": 1805286415,
+   "xet_hash": "5f16029627ef1284b6320916504aabfb0643aa114ad4b2628f6a32e0886fb4a8"
+  },
+  "video_list.json": {
+   "size": 39918,
+   "blob_id": "7cc066170bb68c6484dc44d188d99418e427cd34"
+  }
+ }
+}

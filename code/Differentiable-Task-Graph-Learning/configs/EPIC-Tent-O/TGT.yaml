@@ -1,0 +1,10 @@
+TRAIN:
+  ANNOTATIONS: "../../data/epic-tent/train.json"
+  ACTIVITY_NAME: "epic-tent"
+  OUTPUT_DIR: "./Experiments-EPIC-Tent-O/TGT"
+  SEED: 42
+  BETA: 1.0
+  EPOCHS: 1200
+  EMBEDDINGS: "../../data/epic-tent/text_feature"
+  MASK: null
+  LR: 0.000015

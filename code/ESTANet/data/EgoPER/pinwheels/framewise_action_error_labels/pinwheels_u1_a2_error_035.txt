@@ -1,0 +1,1830 @@
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+Place tortilla on cutting board|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+Slice using floss to get 5 pinwheels|Error_Addition|Pour sugar onto tortilla
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Use knife to scoop jelly|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+Spread jelly onto peanut butter on tortilla|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+Clean knife after spreading peanut butter|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+Roll tortilla|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+Trim right and left end of tortilla|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+Discard two ends|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+Slice using floss to get 5 pinwheels|Error_Modification|Slice using knife
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+Place pinwheels on plate|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
