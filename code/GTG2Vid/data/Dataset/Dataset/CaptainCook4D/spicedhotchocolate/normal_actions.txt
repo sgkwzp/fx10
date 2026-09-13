@@ -1,0 +1,7 @@
+Action_1 Heat-Heat_the_contents_of_the_mug_for_1_minute_and_serve
+Action_2 Add-Add_1/5_teaspoon_cinnamon_to_the_mug
+Action_3 Mix-Mix_the_contents_of_the_mug
+Action_4 Add-Add_1_teaspoon_of_white_sugar_to_the_mug
+Action_5 Fill-Fill_a_microwave-safe_mug_with_skimmed_milk
+Action_6 Microwave-Microwave_the_contents_of_the_mug_for_1_minute
+Action_7 Add-Add_2_pieces_of_chocolate_to_the_mug
