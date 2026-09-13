@@ -1,0 +1,850 @@
+[
+  {
+    "video": "tea_u1_a1_error_017",
+    "type": "Normal",
+    "frames": 782,
+    "mean_current_observation_delta_probability": 0.011109768191174057,
+    "mean_current_observation_delta_log_probability": 0.021660655823824593,
+    "fraction_observation_decreases_nominal_probability": 0.2071611253196931
+  },
+  {
+    "video": "tea_u1_a1_error_017",
+    "type": "Error_Modification",
+    "frames": 203,
+    "mean_current_observation_delta_probability": 0.002060636002396981,
+    "mean_current_observation_delta_log_probability": -0.02511357596942975,
+    "fraction_observation_decreases_nominal_probability": 0.46798029556650245
+  },
+  {
+    "video": "tea_u1_a1_error_017",
+    "type": "Error_Slip",
+    "frames": 98,
+    "mean_current_observation_delta_probability": 0.006100270033769369,
+    "mean_current_observation_delta_log_probability": 0.028749343808057107,
+    "fraction_observation_decreases_nominal_probability": 0.10204081632653061
+  },
+  {
+    "video": "tea_u1_a1_error_017",
+    "type": "Error_Correction",
+    "frames": 64,
+    "mean_current_observation_delta_probability": -0.0009106236781001832,
+    "mean_current_observation_delta_log_probability": -0.005695439047893557,
+    "fraction_observation_decreases_nominal_probability": 0.546875
+  },
+  {
+    "video": "tea_u1_a1_error_018",
+    "type": "Normal",
+    "frames": 893,
+    "mean_current_observation_delta_probability": 0.011649146926669695,
+    "mean_current_observation_delta_log_probability": 0.020369327649246313,
+    "fraction_observation_decreases_nominal_probability": 0.20156774916013437
+  },
+  {
+    "video": "tea_u1_a1_error_018",
+    "type": "Error_Slip",
+    "frames": 160,
+    "mean_current_observation_delta_probability": 0.011157018580277081,
+    "mean_current_observation_delta_log_probability": 0.022015720822588007,
+    "fraction_observation_decreases_nominal_probability": 0.06875
+  },
+  {
+    "video": "tea_u1_a1_error_018",
+    "type": "Error_Correction",
+    "frames": 203,
+    "mean_current_observation_delta_probability": 0.006122934193573806,
+    "mean_current_observation_delta_log_probability": 0.0062677026894649495,
+    "fraction_observation_decreases_nominal_probability": 0.14285714285714285
+  },
+  {
+    "video": "tea_u1_a1_error_019",
+    "type": "Normal",
+    "frames": 918,
+    "mean_current_observation_delta_probability": 0.011430282819713176,
+    "mean_current_observation_delta_log_probability": 0.018842042418748216,
+    "fraction_observation_decreases_nominal_probability": 0.16993464052287582
+  },
+  {
+    "video": "tea_u1_a1_error_019",
+    "type": "Error_Modification",
+    "frames": 234,
+    "mean_current_observation_delta_probability": 0.007214045362530507,
+    "mean_current_observation_delta_log_probability": 0.016928769159076745,
+    "fraction_observation_decreases_nominal_probability": 0.21794871794871795
+  },
+  {
+    "video": "tea_u1_a1_error_020",
+    "type": "Normal",
+    "frames": 1038,
+    "mean_current_observation_delta_probability": 0.012365103341509058,
+    "mean_current_observation_delta_log_probability": 0.02386541443181046,
+    "fraction_observation_decreases_nominal_probability": 0.19460500963391136
+  },
+  {
+    "video": "tea_u1_a1_error_020",
+    "type": "Error_Modification",
+    "frames": 108,
+    "mean_current_observation_delta_probability": -0.0036568419649301,
+    "mean_current_observation_delta_log_probability": -0.03568897728936595,
+    "fraction_observation_decreases_nominal_probability": 0.7870370370370371
+  },
+  {
+    "video": "tea_u1_a1_error_021",
+    "type": "Normal",
+    "frames": 770,
+    "mean_current_observation_delta_probability": 0.011646821400025655,
+    "mean_current_observation_delta_log_probability": 0.020092854253730787,
+    "fraction_observation_decreases_nominal_probability": 0.15714285714285714
+  },
+  {
+    "video": "tea_u1_a1_error_021",
+    "type": "Error_Modification",
+    "frames": 179,
+    "mean_current_observation_delta_probability": 0.00422313175411178,
+    "mean_current_observation_delta_log_probability": -0.0005107721682197945,
+    "fraction_observation_decreases_nominal_probability": 0.41899441340782123
+  },
+  {
+    "video": "tea_u1_a1_error_021",
+    "type": "Error_Slip",
+    "frames": 154,
+    "mean_current_observation_delta_probability": 0.011218943982093693,
+    "mean_current_observation_delta_log_probability": 0.0228161731770532,
+    "fraction_observation_decreases_nominal_probability": 0.032467532467532464
+  },
+  {
+    "video": "tea_u1_a1_error_021",
+    "type": "Error_Correction",
+    "frames": 207,
+    "mean_current_observation_delta_probability": 0.007843251571755562,
+    "mean_current_observation_delta_log_probability": 0.008685084088294022,
+    "fraction_observation_decreases_nominal_probability": 0.08695652173913043
+  },
+  {
+    "video": "tea_u1_a1_error_022",
+    "type": "Normal",
+    "frames": 882,
+    "mean_current_observation_delta_probability": 0.013412302453115034,
+    "mean_current_observation_delta_log_probability": 0.022097604844548608,
+    "fraction_observation_decreases_nominal_probability": 0.17913832199546487
+  },
+  {
+    "video": "tea_u1_a1_error_022",
+    "type": "Error_Modification",
+    "frames": 118,
+    "mean_current_observation_delta_probability": 0.005389766413935185,
+    "mean_current_observation_delta_log_probability": 0.01698587189087365,
+    "fraction_observation_decreases_nominal_probability": 0.288135593220339
+  },
+  {
+    "video": "tea_u1_a1_error_022",
+    "type": "Error_Slip",
+    "frames": 114,
+    "mean_current_observation_delta_probability": 0.012589043104658658,
+    "mean_current_observation_delta_log_probability": 0.02622618755550796,
+    "fraction_observation_decreases_nominal_probability": 0.09649122807017543
+  },
+  {
+    "video": "tea_u1_a1_error_022",
+    "type": "Error_Correction",
+    "frames": 64,
+    "mean_current_observation_delta_probability": -0.00826499565500029,
+    "mean_current_observation_delta_log_probability": -0.05796000823164987,
+    "fraction_observation_decreases_nominal_probability": 0.90625
+  },
+  {
+    "video": "tea_u1_a1_error_023",
+    "type": "Normal",
+    "frames": 855,
+    "mean_current_observation_delta_probability": 0.013768737355962124,
+    "mean_current_observation_delta_log_probability": 0.026097736073549135,
+    "fraction_observation_decreases_nominal_probability": 0.1567251461988304
+  },
+  {
+    "video": "tea_u1_a1_error_023",
+    "type": "Error_Modification",
+    "frames": 95,
+    "mean_current_observation_delta_probability": 0.011810872773340532,
+    "mean_current_observation_delta_log_probability": 0.030491754768918848,
+    "fraction_observation_decreases_nominal_probability": 0.021052631578947368
+  },
+  {
+    "video": "tea_u1_a1_error_023",
+    "type": "Error_Slip",
+    "frames": 156,
+    "mean_current_observation_delta_probability": 0.0108116624491958,
+    "mean_current_observation_delta_log_probability": 0.017938758611275887,
+    "fraction_observation_decreases_nominal_probability": 0.038461538461538464
+  },
+  {
+    "video": "tea_u1_a1_error_023",
+    "type": "Error_Correction",
+    "frames": 181,
+    "mean_current_observation_delta_probability": 0.006843812896233033,
+    "mean_current_observation_delta_log_probability": 0.007620989165287873,
+    "fraction_observation_decreases_nominal_probability": 0.143646408839779
+  },
+  {
+    "video": "tea_u1_a1_error_024",
+    "type": "Normal",
+    "frames": 872,
+    "mean_current_observation_delta_probability": 0.011485686625613981,
+    "mean_current_observation_delta_log_probability": 0.01874911446504421,
+    "fraction_observation_decreases_nominal_probability": 0.16743119266055045
+  },
+  {
+    "video": "tea_u1_a1_error_024",
+    "type": "Error_Slip",
+    "frames": 103,
+    "mean_current_observation_delta_probability": 0.012536884073984053,
+    "mean_current_observation_delta_log_probability": 0.027672587210662687,
+    "fraction_observation_decreases_nominal_probability": 0.05825242718446602
+  },
+  {
+    "video": "tea_u1_a1_error_024",
+    "type": "Error_Correction",
+    "frames": 77,
+    "mean_current_observation_delta_probability": -0.009316950665162504,
+    "mean_current_observation_delta_log_probability": -0.0774726523095252,
+    "fraction_observation_decreases_nominal_probability": 0.974025974025974
+  },
+  {
+    "video": "tea_u1_a2_error_001",
+    "type": "Normal",
+    "frames": 725,
+    "mean_current_observation_delta_probability": 0.009729886039885869,
+    "mean_current_observation_delta_log_probability": 0.018727108226953598,
+    "fraction_observation_decreases_nominal_probability": 0.2386206896551724
+  },
+  {
+    "video": "tea_u1_a2_error_001",
+    "type": "Error_Modification",
+    "frames": 256,
+    "mean_current_observation_delta_probability": 0.001267423215241484,
+    "mean_current_observation_delta_log_probability": -0.023723949317936373,
+    "fraction_observation_decreases_nominal_probability": 0.5859375
+  },
+  {
+    "video": "tea_u1_a2_error_001",
+    "type": "Error_Slip",
+    "frames": 137,
+    "mean_current_observation_delta_probability": 0.008024330157867491,
+    "mean_current_observation_delta_log_probability": 0.018117802571120833,
+    "fraction_observation_decreases_nominal_probability": 0.19708029197080293
+  },
+  {
+    "video": "tea_u1_a2_error_001",
+    "type": "Error_Correction",
+    "frames": 79,
+    "mean_current_observation_delta_probability": -0.0033187583992693955,
+    "mean_current_observation_delta_log_probability": -0.04064415878621903,
+    "fraction_observation_decreases_nominal_probability": 0.7974683544303798
+  },
+  {
+    "video": "tea_u1_a2_error_002",
+    "type": "Normal",
+    "frames": 1018,
+    "mean_current_observation_delta_probability": 0.007455997092585886,
+    "mean_current_observation_delta_log_probability": 0.012705126836548633,
+    "fraction_observation_decreases_nominal_probability": 0.206286836935167
+  },
+  {
+    "video": "tea_u1_a2_error_002",
+    "type": "Error_Slip",
+    "frames": 141,
+    "mean_current_observation_delta_probability": 0.00879070494576611,
+    "mean_current_observation_delta_log_probability": 0.029310944069130197,
+    "fraction_observation_decreases_nominal_probability": 0.24822695035460993
+  },
+  {
+    "video": "tea_u1_a2_error_002",
+    "type": "Error_Correction",
+    "frames": 210,
+    "mean_current_observation_delta_probability": 0.006143889489975737,
+    "mean_current_observation_delta_log_probability": 0.005819055121854167,
+    "fraction_observation_decreases_nominal_probability": 0.17142857142857143
+  },
+  {
+    "video": "tea_u1_a2_error_003",
+    "type": "Normal",
+    "frames": 845,
+    "mean_current_observation_delta_probability": 0.011821374170857187,
+    "mean_current_observation_delta_log_probability": 0.019761942950596738,
+    "fraction_observation_decreases_nominal_probability": 0.1834319526627219
+  },
+  {
+    "video": "tea_u1_a2_error_003",
+    "type": "Error_Modification",
+    "frames": 217,
+    "mean_current_observation_delta_probability": 0.0015685617455644906,
+    "mean_current_observation_delta_log_probability": 0.0015965652464257918,
+    "fraction_observation_decreases_nominal_probability": 0.4930875576036866
+  },
+  {
+    "video": "tea_u1_a2_error_004",
+    "type": "Normal",
+    "frames": 882,
+    "mean_current_observation_delta_probability": 0.010067941140739063,
+    "mean_current_observation_delta_log_probability": 0.02170905696803824,
+    "fraction_observation_decreases_nominal_probability": 0.18027210884353742
+  },
+  {
+    "video": "tea_u1_a2_error_004",
+    "type": "Error_Modification",
+    "frames": 201,
+    "mean_current_observation_delta_probability": -0.0020879403405693157,
+    "mean_current_observation_delta_log_probability": -0.043944305291942105,
+    "fraction_observation_decreases_nominal_probability": 0.746268656716418
+  },
+  {
+    "video": "tea_u1_a2_error_005",
+    "type": "Normal",
+    "frames": 738,
+    "mean_current_observation_delta_probability": 0.00883723076110279,
+    "mean_current_observation_delta_log_probability": 0.015342868330351636,
+    "fraction_observation_decreases_nominal_probability": 0.22764227642276422
+  },
+  {
+    "video": "tea_u1_a2_error_005",
+    "type": "Error_Modification",
+    "frames": 221,
+    "mean_current_observation_delta_probability": -0.00314977775178284,
+    "mean_current_observation_delta_log_probability": -0.05307090351024527,
+    "fraction_observation_decreases_nominal_probability": 0.7647058823529411
+  },
+  {
+    "video": "tea_u1_a2_error_005",
+    "type": "Error_Slip",
+    "frames": 345,
+    "mean_current_observation_delta_probability": 0.00910900004509032,
+    "mean_current_observation_delta_log_probability": 0.01655473743080419,
+    "fraction_observation_decreases_nominal_probability": 0.043478260869565216
+  },
+  {
+    "video": "tea_u1_a2_error_005",
+    "type": "Error_Correction",
+    "frames": 193,
+    "mean_current_observation_delta_probability": 0.005090711097743432,
+    "mean_current_observation_delta_log_probability": 0.004336596539128518,
+    "fraction_observation_decreases_nominal_probability": 0.21761658031088082
+  },
+  {
+    "video": "tea_u1_a2_error_006",
+    "type": "Normal",
+    "frames": 936,
+    "mean_current_observation_delta_probability": 0.011586143452639617,
+    "mean_current_observation_delta_log_probability": 0.01986783472984987,
+    "fraction_observation_decreases_nominal_probability": 0.23076923076923078
+  },
+  {
+    "video": "tea_u1_a2_error_006",
+    "type": "Error_Modification",
+    "frames": 83,
+    "mean_current_observation_delta_probability": -0.00022029201318356177,
+    "mean_current_observation_delta_log_probability": -0.0014772648209987378,
+    "fraction_observation_decreases_nominal_probability": 0.6265060240963856
+  },
+  {
+    "video": "tea_u1_a2_error_006",
+    "type": "Error_Slip",
+    "frames": 106,
+    "mean_current_observation_delta_probability": -0.00028485462708556264,
+    "mean_current_observation_delta_log_probability": -0.0320944583879919,
+    "fraction_observation_decreases_nominal_probability": 0.7830188679245284
+  },
+  {
+    "video": "tea_u1_a2_error_006",
+    "type": "Error_Correction",
+    "frames": 63,
+    "mean_current_observation_delta_probability": -0.001773283191707964,
+    "mean_current_observation_delta_log_probability": -0.03071014365947076,
+    "fraction_observation_decreases_nominal_probability": 0.8412698412698413
+  },
+  {
+    "video": "tea_u1_a2_error_007",
+    "type": "Normal",
+    "frames": 1003,
+    "mean_current_observation_delta_probability": 0.011338824476928008,
+    "mean_current_observation_delta_log_probability": 0.02081185060930032,
+    "fraction_observation_decreases_nominal_probability": 0.15453639082751744
+  },
+  {
+    "video": "tea_u1_a2_error_007",
+    "type": "Error_Slip",
+    "frames": 134,
+    "mean_current_observation_delta_probability": 0.01104947754532528,
+    "mean_current_observation_delta_log_probability": 0.02544825646651043,
+    "fraction_observation_decreases_nominal_probability": 0.09701492537313433
+  },
+  {
+    "video": "tea_u1_a2_error_007",
+    "type": "Error_Correction",
+    "frames": 154,
+    "mean_current_observation_delta_probability": 0.0069982633515787524,
+    "mean_current_observation_delta_log_probability": 0.008035674517470334,
+    "fraction_observation_decreases_nominal_probability": 0.18831168831168832
+  },
+  {
+    "video": "tea_u1_a2_error_008",
+    "type": "Normal",
+    "frames": 993,
+    "mean_current_observation_delta_probability": 0.01146575354382472,
+    "mean_current_observation_delta_log_probability": 0.01738841411404027,
+    "fraction_observation_decreases_nominal_probability": 0.18026183282980865
+  },
+  {
+    "video": "tea_u1_a2_error_008",
+    "type": "Error_Slip",
+    "frames": 101,
+    "mean_current_observation_delta_probability": 0.003921304182056856,
+    "mean_current_observation_delta_log_probability": 0.0030917057406427057,
+    "fraction_observation_decreases_nominal_probability": 0.44554455445544555
+  },
+  {
+    "video": "tea_u1_a2_error_008",
+    "type": "Error_Correction",
+    "frames": 70,
+    "mean_current_observation_delta_probability": -0.003993197318039984,
+    "mean_current_observation_delta_log_probability": -0.05456486152342303,
+    "fraction_observation_decreases_nominal_probability": 0.9714285714285714
+  },
+  {
+    "video": "tea_u1_a4_error_025",
+    "type": "Normal",
+    "frames": 843,
+    "mean_current_observation_delta_probability": 0.010286440760149574,
+    "mean_current_observation_delta_log_probability": 0.013698485492045307,
+    "fraction_observation_decreases_nominal_probability": 0.15658362989323843
+  },
+  {
+    "video": "tea_u1_a4_error_025",
+    "type": "Error_Modification",
+    "frames": 291,
+    "mean_current_observation_delta_probability": 0.0029565584295419877,
+    "mean_current_observation_delta_log_probability": -0.0020371112747257255,
+    "fraction_observation_decreases_nominal_probability": 0.30927835051546393
+  },
+  {
+    "video": "tea_u1_a4_error_025",
+    "type": "Error_Slip",
+    "frames": 149,
+    "mean_current_observation_delta_probability": 0.012314701862141115,
+    "mean_current_observation_delta_log_probability": 0.021017301245825876,
+    "fraction_observation_decreases_nominal_probability": 0.053691275167785234
+  },
+  {
+    "video": "tea_u1_a4_error_025",
+    "type": "Error_Correction",
+    "frames": 71,
+    "mean_current_observation_delta_probability": -0.0070154754476654925,
+    "mean_current_observation_delta_log_probability": -0.027772422881012858,
+    "fraction_observation_decreases_nominal_probability": 0.8028169014084507
+  },
+  {
+    "video": "tea_u1_a4_error_026",
+    "type": "Normal",
+    "frames": 1342,
+    "mean_current_observation_delta_probability": 0.009942748156156096,
+    "mean_current_observation_delta_log_probability": 0.019568325330221393,
+    "fraction_observation_decreases_nominal_probability": 0.11698956780923994
+  },
+  {
+    "video": "tea_u1_a4_error_026",
+    "type": "Error_Slip",
+    "frames": 137,
+    "mean_current_observation_delta_probability": 0.01128076063475529,
+    "mean_current_observation_delta_log_probability": 0.01779896038343115,
+    "fraction_observation_decreases_nominal_probability": 0.13138686131386862
+  },
+  {
+    "video": "tea_u1_a4_error_026",
+    "type": "Error_Correction",
+    "frames": 202,
+    "mean_current_observation_delta_probability": 0.007394231189807984,
+    "mean_current_observation_delta_log_probability": 0.0079898086063114,
+    "fraction_observation_decreases_nominal_probability": 0.08415841584158416
+  },
+  {
+    "video": "tea_u1_a4_error_027",
+    "type": "Normal",
+    "frames": 963,
+    "mean_current_observation_delta_probability": 0.012652316108365414,
+    "mean_current_observation_delta_log_probability": 0.022016590260513568,
+    "fraction_observation_decreases_nominal_probability": 0.1536863966770509
+  },
+  {
+    "video": "tea_u1_a4_error_027",
+    "type": "Error_Modification",
+    "frames": 239,
+    "mean_current_observation_delta_probability": 0.003372160024916952,
+    "mean_current_observation_delta_log_probability": 0.009668238620344532,
+    "fraction_observation_decreases_nominal_probability": 0.41841004184100417
+  },
+  {
+    "video": "tea_u1_a4_error_028",
+    "type": "Normal",
+    "frames": 1164,
+    "mean_current_observation_delta_probability": 0.01041605989062083,
+    "mean_current_observation_delta_log_probability": 0.02281738739319928,
+    "fraction_observation_decreases_nominal_probability": 0.18814432989690721
+  },
+  {
+    "video": "tea_u1_a4_error_028",
+    "type": "Error_Modification",
+    "frames": 125,
+    "mean_current_observation_delta_probability": -0.004467233087091709,
+    "mean_current_observation_delta_log_probability": -0.08221238355041986,
+    "fraction_observation_decreases_nominal_probability": 0.904
+  },
+  {
+    "video": "tea_u1_a4_error_029",
+    "type": "Normal",
+    "frames": 904,
+    "mean_current_observation_delta_probability": 0.012351304176735908,
+    "mean_current_observation_delta_log_probability": 0.019832722548007897,
+    "fraction_observation_decreases_nominal_probability": 0.1592920353982301
+  },
+  {
+    "video": "tea_u1_a4_error_029",
+    "type": "Error_Modification",
+    "frames": 278,
+    "mean_current_observation_delta_probability": -0.001471432449652852,
+    "mean_current_observation_delta_log_probability": -0.03447749287764094,
+    "fraction_observation_decreases_nominal_probability": 0.6402877697841727
+  },
+  {
+    "video": "tea_u1_a4_error_029",
+    "type": "Error_Slip",
+    "frames": 104,
+    "mean_current_observation_delta_probability": 0.012799598904716335,
+    "mean_current_observation_delta_log_probability": 0.03702257417049981,
+    "fraction_observation_decreases_nominal_probability": 0.16346153846153846
+  },
+  {
+    "video": "tea_u1_a4_error_029",
+    "type": "Error_Correction",
+    "frames": 219,
+    "mean_current_observation_delta_probability": 0.006392254333468694,
+    "mean_current_observation_delta_log_probability": 0.007393641321232509,
+    "fraction_observation_decreases_nominal_probability": 0.1415525114155251
+  },
+  {
+    "video": "tea_u1_a4_error_030",
+    "type": "Normal",
+    "frames": 1168,
+    "mean_current_observation_delta_probability": 0.011047200928913266,
+    "mean_current_observation_delta_log_probability": 0.0193324181316916,
+    "fraction_observation_decreases_nominal_probability": 0.1053082191780822
+  },
+  {
+    "video": "tea_u1_a4_error_030",
+    "type": "Error_Modification",
+    "frames": 93,
+    "mean_current_observation_delta_probability": -0.0006217767246439731,
+    "mean_current_observation_delta_log_probability": -0.002013525840343772,
+    "fraction_observation_decreases_nominal_probability": 0.5913978494623656
+  },
+  {
+    "video": "tea_u1_a4_error_030",
+    "type": "Error_Slip",
+    "frames": 110,
+    "mean_current_observation_delta_probability": 0.012646877086642248,
+    "mean_current_observation_delta_log_probability": 0.022722418772969447,
+    "fraction_observation_decreases_nominal_probability": 0.15454545454545454
+  },
+  {
+    "video": "tea_u1_a4_error_030",
+    "type": "Error_Correction",
+    "frames": 108,
+    "mean_current_observation_delta_probability": -0.004128736148964441,
+    "mean_current_observation_delta_log_probability": -0.04695208364042061,
+    "fraction_observation_decreases_nominal_probability": 0.8703703703703703
+  },
+  {
+    "video": "tea_u1_a4_error_031",
+    "type": "Normal",
+    "frames": 980,
+    "mean_current_observation_delta_probability": 0.011691366076796222,
+    "mean_current_observation_delta_log_probability": 0.01540622339471036,
+    "fraction_observation_decreases_nominal_probability": 0.1673469387755102
+  },
+  {
+    "video": "tea_u1_a4_error_031",
+    "type": "Error_Modification",
+    "frames": 122,
+    "mean_current_observation_delta_probability": 0.006503239104336992,
+    "mean_current_observation_delta_log_probability": 0.007035580707703236,
+    "fraction_observation_decreases_nominal_probability": 0.23770491803278687
+  },
+  {
+    "video": "tea_u1_a4_error_031",
+    "type": "Error_Slip",
+    "frames": 137,
+    "mean_current_observation_delta_probability": 0.011168402308379167,
+    "mean_current_observation_delta_log_probability": 0.016997902484486044,
+    "fraction_observation_decreases_nominal_probability": 0.145985401459854
+  },
+  {
+    "video": "tea_u1_a4_error_031",
+    "type": "Error_Correction",
+    "frames": 237,
+    "mean_current_observation_delta_probability": 0.003982709156595455,
+    "mean_current_observation_delta_log_probability": 0.004249451416605384,
+    "fraction_observation_decreases_nominal_probability": 0.3206751054852321
+  },
+  {
+    "video": "tea_u1_a4_error_032",
+    "type": "Normal",
+    "frames": 1087,
+    "mean_current_observation_delta_probability": 0.01253152979665284,
+    "mean_current_observation_delta_log_probability": 0.01942447797249825,
+    "fraction_observation_decreases_nominal_probability": 0.1812327506899724
+  },
+  {
+    "video": "tea_u1_a4_error_032",
+    "type": "Error_Slip",
+    "frames": 125,
+    "mean_current_observation_delta_probability": 0.00998099050411611,
+    "mean_current_observation_delta_log_probability": 0.01168688143562599,
+    "fraction_observation_decreases_nominal_probability": 0.12
+  },
+  {
+    "video": "tea_u1_a4_error_032",
+    "type": "Error_Correction",
+    "frames": 51,
+    "mean_current_observation_delta_probability": -0.01161652867025712,
+    "mean_current_observation_delta_log_probability": -0.03295629897992302,
+    "fraction_observation_decreases_nominal_probability": 0.8823529411764706
+  },
+  {
+    "video": "tea_u1_a5_error_009",
+    "type": "Normal",
+    "frames": 942,
+    "mean_current_observation_delta_probability": 0.012013721639196328,
+    "mean_current_observation_delta_log_probability": 0.024217874373286256,
+    "fraction_observation_decreases_nominal_probability": 0.17728237791932058
+  },
+  {
+    "video": "tea_u1_a5_error_009",
+    "type": "Error_Modification",
+    "frames": 220,
+    "mean_current_observation_delta_probability": -3.573051101290735e-05,
+    "mean_current_observation_delta_log_probability": -0.011441496254957212,
+    "fraction_observation_decreases_nominal_probability": 0.5818181818181818
+  },
+  {
+    "video": "tea_u1_a5_error_009",
+    "type": "Error_Slip",
+    "frames": 197,
+    "mean_current_observation_delta_probability": 0.00947848105076377,
+    "mean_current_observation_delta_log_probability": 0.014839315744627865,
+    "fraction_observation_decreases_nominal_probability": 0.12690355329949238
+  },
+  {
+    "video": "tea_u1_a5_error_009",
+    "type": "Error_Correction",
+    "frames": 58,
+    "mean_current_observation_delta_probability": -0.0038968348897662256,
+    "mean_current_observation_delta_log_probability": -0.0221531647706866,
+    "fraction_observation_decreases_nominal_probability": 0.6724137931034483
+  },
+  {
+    "video": "tea_u1_a5_error_010",
+    "type": "Normal",
+    "frames": 1175,
+    "mean_current_observation_delta_probability": 0.011677020308632288,
+    "mean_current_observation_delta_log_probability": 0.02405987800350957,
+    "fraction_observation_decreases_nominal_probability": 0.09702127659574468
+  },
+  {
+    "video": "tea_u1_a5_error_010",
+    "type": "Error_Slip",
+    "frames": 92,
+    "mean_current_observation_delta_probability": 0.011883958283731098,
+    "mean_current_observation_delta_log_probability": 0.01738880537474373,
+    "fraction_observation_decreases_nominal_probability": 0.2391304347826087
+  },
+  {
+    "video": "tea_u1_a5_error_010",
+    "type": "Error_Correction",
+    "frames": 178,
+    "mean_current_observation_delta_probability": 0.007397615389980822,
+    "mean_current_observation_delta_log_probability": 0.009128578413797186,
+    "fraction_observation_decreases_nominal_probability": 0.16292134831460675
+  },
+  {
+    "video": "tea_u1_a5_error_011",
+    "type": "Normal",
+    "frames": 1089,
+    "mean_current_observation_delta_probability": 0.011665503369239508,
+    "mean_current_observation_delta_log_probability": 0.025372722083216732,
+    "fraction_observation_decreases_nominal_probability": 0.1349862258953168
+  },
+  {
+    "video": "tea_u1_a5_error_011",
+    "type": "Error_Modification",
+    "frames": 204,
+    "mean_current_observation_delta_probability": 0.005284445455508222,
+    "mean_current_observation_delta_log_probability": 0.02069276757098093,
+    "fraction_observation_decreases_nominal_probability": 0.27941176470588236
+  },
+  {
+    "video": "tea_u1_a5_error_012",
+    "type": "Normal",
+    "frames": 1200,
+    "mean_current_observation_delta_probability": 0.010074538759629907,
+    "mean_current_observation_delta_log_probability": 0.020283728115629007,
+    "fraction_observation_decreases_nominal_probability": 0.17916666666666667
+  },
+  {
+    "video": "tea_u1_a5_error_012",
+    "type": "Error_Modification",
+    "frames": 122,
+    "mean_current_observation_delta_probability": -0.0018067197619989596,
+    "mean_current_observation_delta_log_probability": -0.08388013865413108,
+    "fraction_observation_decreases_nominal_probability": 0.9180327868852459
+  },
+  {
+    "video": "tea_u1_a5_error_013",
+    "type": "Normal",
+    "frames": 792,
+    "mean_current_observation_delta_probability": 0.011597749684434264,
+    "mean_current_observation_delta_log_probability": 0.017008329895263935,
+    "fraction_observation_decreases_nominal_probability": 0.23232323232323232
+  },
+  {
+    "video": "tea_u1_a5_error_013",
+    "type": "Error_Modification",
+    "frames": 317,
+    "mean_current_observation_delta_probability": 0.0015545622529779253,
+    "mean_current_observation_delta_log_probability": -0.012006411553486753,
+    "fraction_observation_decreases_nominal_probability": 0.5173501577287066
+  },
+  {
+    "video": "tea_u1_a5_error_013",
+    "type": "Error_Slip",
+    "frames": 103,
+    "mean_current_observation_delta_probability": 0.011885335673459532,
+    "mean_current_observation_delta_log_probability": 0.016026260444882368,
+    "fraction_observation_decreases_nominal_probability": 0.18446601941747573
+  },
+  {
+    "video": "tea_u1_a5_error_013",
+    "type": "Error_Correction",
+    "frames": 157,
+    "mean_current_observation_delta_probability": 0.005658227455019378,
+    "mean_current_observation_delta_log_probability": 0.006372793870180019,
+    "fraction_observation_decreases_nominal_probability": 0.2229299363057325
+  },
+  {
+    "video": "tea_u1_a5_error_014",
+    "type": "Normal",
+    "frames": 934,
+    "mean_current_observation_delta_probability": 0.012776512172026407,
+    "mean_current_observation_delta_log_probability": 0.020250103510510077,
+    "fraction_observation_decreases_nominal_probability": 0.15952890792291222
+  },
+  {
+    "video": "tea_u1_a5_error_014",
+    "type": "Error_Modification",
+    "frames": 95,
+    "mean_current_observation_delta_probability": 0.008256896209896697,
+    "mean_current_observation_delta_log_probability": 0.024588366470744645,
+    "fraction_observation_decreases_nominal_probability": 0.09473684210526316
+  },
+  {
+    "video": "tea_u1_a5_error_014",
+    "type": "Error_Slip",
+    "frames": 127,
+    "mean_current_observation_delta_probability": 0.008372026266923379,
+    "mean_current_observation_delta_log_probability": 0.01877787733328609,
+    "fraction_observation_decreases_nominal_probability": 0.1889763779527559
+  },
+  {
+    "video": "tea_u1_a5_error_014",
+    "type": "Error_Correction",
+    "frames": 45,
+    "mean_current_observation_delta_probability": -0.006413998984754242,
+    "mean_current_observation_delta_log_probability": -0.014731468430745482,
+    "fraction_observation_decreases_nominal_probability": 0.6666666666666666
+  },
+  {
+    "video": "tea_u1_a5_error_015",
+    "type": "Normal",
+    "frames": 922,
+    "mean_current_observation_delta_probability": 0.010951570292176287,
+    "mean_current_observation_delta_log_probability": 0.019344260226054368,
+    "fraction_observation_decreases_nominal_probability": 0.20281995661605207
+  },
+  {
+    "video": "tea_u1_a5_error_015",
+    "type": "Error_Modification",
+    "frames": 142,
+    "mean_current_observation_delta_probability": 0.006104657913005016,
+    "mean_current_observation_delta_log_probability": -0.00017068536015137688,
+    "fraction_observation_decreases_nominal_probability": 0.2535211267605634
+  },
+  {
+    "video": "tea_u1_a5_error_015",
+    "type": "Error_Slip",
+    "frames": 104,
+    "mean_current_observation_delta_probability": 0.012350216749527725,
+    "mean_current_observation_delta_log_probability": 0.029621505517641398,
+    "fraction_observation_decreases_nominal_probability": 0.10576923076923077
+  },
+  {
+    "video": "tea_u1_a5_error_015",
+    "type": "Error_Correction",
+    "frames": 145,
+    "mean_current_observation_delta_probability": 0.006024647425675206,
+    "mean_current_observation_delta_log_probability": 0.007575575256965306,
+    "fraction_observation_decreases_nominal_probability": 0.25517241379310346
+  },
+  {
+    "video": "tea_u1_a5_error_016",
+    "type": "Normal",
+    "frames": 976,
+    "mean_current_observation_delta_probability": 0.010032055961900778,
+    "mean_current_observation_delta_log_probability": 0.017929097885500324,
+    "fraction_observation_decreases_nominal_probability": 0.20184426229508196
+  },
+  {
+    "video": "tea_u1_a5_error_016",
+    "type": "Error_Slip",
+    "frames": 108,
+    "mean_current_observation_delta_probability": 0.011641185834199227,
+    "mean_current_observation_delta_log_probability": 0.020819158453822362,
+    "fraction_observation_decreases_nominal_probability": 0.18518518518518517
+  },
+  {
+    "video": "tea_u1_a5_error_016",
+    "type": "Error_Correction",
+    "frames": 62,
+    "mean_current_observation_delta_probability": -0.009466746745986273,
+    "mean_current_observation_delta_log_probability": -0.031503970835061214,
+    "fraction_observation_decreases_nominal_probability": 0.8225806451612904
+  },
+  {
+    "video": "tea_u1_a1_normal_006",
+    "type": "Normal",
+    "frames": 1649,
+    "mean_current_observation_delta_probability": 0.007384244869267639,
+    "mean_current_observation_delta_log_probability": 0.0020745097734680955,
+    "fraction_observation_decreases_nominal_probability": 0.21406913280776227
+  },
+  {
+    "video": "tea_u1_a2_normal_016",
+    "type": "Normal",
+    "frames": 1241,
+    "mean_current_observation_delta_probability": 0.008936271981868518,
+    "mean_current_observation_delta_log_probability": 0.014618643471400126,
+    "fraction_observation_decreases_nominal_probability": 0.22884770346494762
+  },
+  {
+    "video": "tea_u1_a3_normal_026",
+    "type": "Normal",
+    "frames": 1572,
+    "mean_current_observation_delta_probability": 0.011094700603050482,
+    "mean_current_observation_delta_log_probability": 0.014347396902635283,
+    "fraction_observation_decreases_nominal_probability": 0.15139949109414758
+  }
+]

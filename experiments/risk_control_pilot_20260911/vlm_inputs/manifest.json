@@ -1,0 +1,29 @@
+{
+  "purpose": "throughput trial; adapted prompt, not exact published-method scoring",
+  "clips": [
+    {
+      "task": "Quesadilla",
+      "video": "quesadilla_u1_a4_error_018",
+      "duration_from_features_seconds": 93.0,
+      "path": "quesadilla_u1_a4_error_018.mp4",
+      "prompt_file": "quesadilla_profile_prompt.txt",
+      "approx_frames_at_4fps": 372
+    },
+    {
+      "task": "Coffee",
+      "video": "coffee_u1_a5_error_028",
+      "duration_from_features_seconds": 206.6,
+      "path": "coffee_u1_a5_error_028.mp4",
+      "prompt_file": "coffee_profile_prompt.txt",
+      "approx_frames_at_4fps": 827
+    },
+    {
+      "task": "Pinwheels",
+      "video": "pinwheels_u1_a1_error_001",
+      "duration_from_features_seconds": 366.1,
+      "path": "pinwheels_u1_a1_error_001.mp4",
+      "prompt_file": "pinwheels_profile_prompt.txt",
+      "approx_frames_at_4fps": 1465
+    }
+  ]
+}

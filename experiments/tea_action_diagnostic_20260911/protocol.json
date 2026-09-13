@@ -1,0 +1,16 @@
+{
+  "feature_family": "vc_v_features_10fps",
+  "fps": 10,
+  "bank_per_class": 256,
+  "causal_smoothing_frames": 5,
+  "normal_validation_quantile": 0.99,
+  "event_iou": 0.1,
+  "bootstrap_video_replicates": 300,
+  "seed": 20260911,
+  "status": "exploratory; previously inspected test set",
+  "fit": "available official training videos, Normal frames only",
+  "threshold": "official normal validation videos only",
+  "methods": ["global_nn", "predicted_action_nn", "oracle_action_nn"],
+  "oracle": "ground-truth nominal action; Error_Addition and unsupported actions fall back to global NN; not deployable or guaranteed upper bound",
+  "evaluation": "all frames, oracle-supported frames, and Correction-excluded sensitivity; identical masks across methods"
+}

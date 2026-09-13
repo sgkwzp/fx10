@@ -1,0 +1,102 @@
+{
+  "source_tasks": [
+    "Quesadilla"
+  ],
+  "calibration_videos": [
+    [
+      "Quesadilla",
+      "quesadilla_u1_a3_normal_005"
+    ],
+    [
+      "Quesadilla",
+      "quesadilla_u1_a5_normal_015"
+    ],
+    [
+      "Quesadilla",
+      "quesadilla_u1_a5_normal_025"
+    ]
+  ],
+  "rules": [
+    {
+      "unit": "pooled_frames",
+      "alpha": 0.01,
+      "threshold": 0.38526076078414917,
+      "rank": 2510,
+      "calibration_units": 2534,
+      "never_alarm": false
+    },
+    {
+      "unit": "pooled_1s_block_max",
+      "alpha": 0.01,
+      "threshold": 0.4670531988143921,
+      "rank": 250,
+      "calibration_units": 251,
+      "never_alarm": false
+    },
+    {
+      "unit": "video_max",
+      "alpha": 0.01,
+      "threshold": null,
+      "rank": 4,
+      "calibration_units": 3,
+      "never_alarm": true
+    },
+    {
+      "unit": "pooled_frames",
+      "alpha": 0.05,
+      "threshold": 0.21891638040542602,
+      "rank": 2409,
+      "calibration_units": 2534,
+      "never_alarm": false
+    },
+    {
+      "unit": "pooled_1s_block_max",
+      "alpha": 0.05,
+      "threshold": 0.24510748386383058,
+      "rank": 240,
+      "calibration_units": 251,
+      "never_alarm": false
+    },
+    {
+      "unit": "video_max",
+      "alpha": 0.05,
+      "threshold": null,
+      "rank": 4,
+      "calibration_units": 3,
+      "never_alarm": true
+    },
+    {
+      "unit": "pooled_frames",
+      "alpha": 0.1,
+      "threshold": 0.19152398109436036,
+      "rank": 2282,
+      "calibration_units": 2534,
+      "never_alarm": false
+    },
+    {
+      "unit": "pooled_1s_block_max",
+      "alpha": 0.1,
+      "threshold": 0.21716245412826538,
+      "rank": 227,
+      "calibration_units": 251,
+      "never_alarm": false
+    },
+    {
+      "unit": "video_max",
+      "alpha": 0.1,
+      "threshold": null,
+      "rank": 4,
+      "calibration_units": 3,
+      "never_alarm": true
+    },
+    {
+      "unit": "video_CRC_block_alert_rate",
+      "alpha": null,
+      "threshold": null,
+      "calibration_units": 3,
+      "budget_per_minute": 1,
+      "correction_floor_per_minute": 15.0,
+      "never_alarm": true
+    }
+  ]
+}

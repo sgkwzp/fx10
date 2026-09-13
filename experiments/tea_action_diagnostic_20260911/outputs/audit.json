@@ -1,0 +1,2686 @@
+{
+  "splits_disjoint": true,
+  "label_action_map": {
+    "BG": 0,
+    "Measure 12 ounces of cold water": 1,
+    "Transfer water to kettle": 2,
+    "Place tea bag in mug": 3,
+    "Check water temperature": 4,
+    "Pour water from kettle into mug": 5,
+    "Steep tea bag in mug for a few seconds": 6,
+    "Put tea bag into trash can": 7,
+    "Add honey to mug": 8,
+    "Stir using spoon": 9,
+    "Hold cup in front of you": 10
+  },
+  "label_type_map": {
+    "Normal": 0,
+    "Error_Modification": 1,
+    "Error_Slip": 2,
+    "Error_Correction": 3,
+    "Error_Addition": 4
+  },
+  "splits": {
+    "training": {
+      "listed_videos": 42,
+      "available_videos": 26,
+      "missing_videos": [
+        "tea_u2_ak_normal_001",
+        "tea_u2_ak_normal_002",
+        "tea_u2_ak_normal_003",
+        "tea_u2_ak_normal_004",
+        "tea_u2_ak_normal_005",
+        "tea_u2_aq_normal_006",
+        "tea_u2_aq_normal_007",
+        "tea_u2_aq_normal_008",
+        "tea_u2_aq_normal_009",
+        "tea_u2_av_normal_010",
+        "tea_u2_av_normal_011",
+        "tea_u2_av_normal_012",
+        "tea_u2_ay_normal_013",
+        "tea_u2_ay_normal_014",
+        "tea_u2_ay_normal_015",
+        "tea_u2_ay_normal_016"
+      ],
+      "used_frames": 38909
+    },
+    "validation": {
+      "listed_videos": 3,
+      "available_videos": 3,
+      "missing_videos": [],
+      "used_frames": 4525
+    },
+    "test": {
+      "listed_videos": 35,
+      "available_videos": 35,
+      "missing_videos": [],
+      "used_frames": 48827
+    }
+  },
+  "videos": [
+    {
+      "video": "tea_u1_a1_normal_013",
+      "split": "training",
+      "label_frames": 1426,
+      "types": {
+        "Normal": 1426,
+        "Error_Modification": 0,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1426,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1426,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u1_a1_normal_014",
+      "split": "training",
+      "label_frames": 1331,
+      "types": {
+        "Normal": 1331,
+        "Error_Modification": 0,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1331,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1331,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u1_a1_normal_021",
+      "split": "training",
+      "label_frames": 1280,
+      "types": {
+        "Normal": 1280,
+        "Error_Modification": 0,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1280,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1280,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u1_a1_normal_022",
+      "split": "training",
+      "label_frames": 1207,
+      "types": {
+        "Normal": 1207,
+        "Error_Modification": 0,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1207,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1207,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u1_a1_normal_029",
+      "split": "training",
+      "label_frames": 1237,
+      "types": {
+        "Normal": 1237,
+        "Error_Modification": 0,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1237,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1237,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u1_a1_normal_030",
+      "split": "training",
+      "label_frames": 1279,
+      "types": {
+        "Normal": 1279,
+        "Error_Modification": 0,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1279,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1279,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u1_a2_normal_007",
+      "split": "training",
+      "label_frames": 1569,
+      "types": {
+        "Normal": 1569,
+        "Error_Modification": 0,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1569,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1569,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u1_a2_normal_008",
+      "split": "training",
+      "label_frames": 1625,
+      "types": {
+        "Normal": 1625,
+        "Error_Modification": 0,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1625,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1625,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u1_a2_normal_023",
+      "split": "training",
+      "label_frames": 1139,
+      "types": {
+        "Normal": 1139,
+        "Error_Modification": 0,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1139,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1139,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u1_a2_normal_024",
+      "split": "training",
+      "label_frames": 1152,
+      "types": {
+        "Normal": 1152,
+        "Error_Modification": 0,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1152,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1152,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u1_a2_normal_031",
+      "split": "training",
+      "label_frames": 1444,
+      "types": {
+        "Normal": 1444,
+        "Error_Modification": 0,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1444,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1444,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u1_a2_normal_032",
+      "split": "training",
+      "label_frames": 1374,
+      "types": {
+        "Normal": 1374,
+        "Error_Modification": 0,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1374,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1374,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u1_a3_normal_001",
+      "split": "training",
+      "label_frames": 1504,
+      "types": {
+        "Normal": 1504,
+        "Error_Modification": 0,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1504,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1504,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u1_a3_normal_002",
+      "split": "training",
+      "label_frames": 1517,
+      "types": {
+        "Normal": 1517,
+        "Error_Modification": 0,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1517,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1517,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u1_a3_normal_003",
+      "split": "training",
+      "label_frames": 1632,
+      "types": {
+        "Normal": 1632,
+        "Error_Modification": 0,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1632,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1632,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u1_a3_normal_004",
+      "split": "training",
+      "label_frames": 1685,
+      "types": {
+        "Normal": 1685,
+        "Error_Modification": 0,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1685,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1685,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u1_a3_normal_009",
+      "split": "training",
+      "label_frames": 1481,
+      "types": {
+        "Normal": 1481,
+        "Error_Modification": 0,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1481,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1481,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u1_a3_normal_010",
+      "split": "training",
+      "label_frames": 1573,
+      "types": {
+        "Normal": 1573,
+        "Error_Modification": 0,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1573,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1573,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u1_a3_normal_011",
+      "split": "training",
+      "label_frames": 1823,
+      "types": {
+        "Normal": 1823,
+        "Error_Modification": 0,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1823,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1823,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u1_a3_normal_012",
+      "split": "training",
+      "label_frames": 1793,
+      "types": {
+        "Normal": 1793,
+        "Error_Modification": 0,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1793,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1793,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u1_a3_normal_017",
+      "split": "training",
+      "label_frames": 1511,
+      "types": {
+        "Normal": 1511,
+        "Error_Modification": 0,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1511,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1511,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u1_a3_normal_018",
+      "split": "training",
+      "label_frames": 1396,
+      "types": {
+        "Normal": 1396,
+        "Error_Modification": 0,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1396,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1396,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u1_a3_normal_019",
+      "split": "training",
+      "label_frames": 1843,
+      "types": {
+        "Normal": 1843,
+        "Error_Modification": 0,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1843,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1843,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u1_a3_normal_020",
+      "split": "training",
+      "label_frames": 1660,
+      "types": {
+        "Normal": 1660,
+        "Error_Modification": 0,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1660,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1660,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u1_a3_normal_027",
+      "split": "training",
+      "label_frames": 1859,
+      "types": {
+        "Normal": 1859,
+        "Error_Modification": 0,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1859,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1859,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u1_a3_normal_028",
+      "split": "training",
+      "label_frames": 1569,
+      "types": {
+        "Normal": 1569,
+        "Error_Modification": 0,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1569,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1569,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u2_ak_normal_001",
+      "split": "training",
+      "label_frames": 1334,
+      "types": {
+        "Normal": 1334,
+        "Error_Modification": 0,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": false
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1334,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u2_ak_normal_002",
+      "split": "training",
+      "label_frames": 1507,
+      "types": {
+        "Normal": 1507,
+        "Error_Modification": 0,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": false
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1507,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u2_ak_normal_003",
+      "split": "training",
+      "label_frames": 1241,
+      "types": {
+        "Normal": 1241,
+        "Error_Modification": 0,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": false
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1241,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u2_ak_normal_004",
+      "split": "training",
+      "label_frames": 1267,
+      "types": {
+        "Normal": 1267,
+        "Error_Modification": 0,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": false
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1267,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u2_ak_normal_005",
+      "split": "training",
+      "label_frames": 1281,
+      "types": {
+        "Normal": 1281,
+        "Error_Modification": 0,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": false
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1281,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u2_aq_normal_006",
+      "split": "training",
+      "label_frames": 1001,
+      "types": {
+        "Normal": 1001,
+        "Error_Modification": 0,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": false
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1001,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u2_aq_normal_007",
+      "split": "training",
+      "label_frames": 1168,
+      "types": {
+        "Normal": 1168,
+        "Error_Modification": 0,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": false
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1168,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u2_aq_normal_008",
+      "split": "training",
+      "label_frames": 1033,
+      "types": {
+        "Normal": 1033,
+        "Error_Modification": 0,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": false
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1033,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u2_aq_normal_009",
+      "split": "training",
+      "label_frames": 1103,
+      "types": {
+        "Normal": 1103,
+        "Error_Modification": 0,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": false
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1103,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u2_av_normal_010",
+      "split": "training",
+      "label_frames": 1381,
+      "types": {
+        "Normal": 1381,
+        "Error_Modification": 0,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": false
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1381,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u2_av_normal_011",
+      "split": "training",
+      "label_frames": 1189,
+      "types": {
+        "Normal": 1189,
+        "Error_Modification": 0,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": false
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1189,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u2_av_normal_012",
+      "split": "training",
+      "label_frames": 1235,
+      "types": {
+        "Normal": 1235,
+        "Error_Modification": 0,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": false
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1235,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u2_ay_normal_013",
+      "split": "training",
+      "label_frames": 1186,
+      "types": {
+        "Normal": 1186,
+        "Error_Modification": 0,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": false
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1186,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u2_ay_normal_014",
+      "split": "training",
+      "label_frames": 1273,
+      "types": {
+        "Normal": 1273,
+        "Error_Modification": 0,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": false
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1273,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u2_ay_normal_015",
+      "split": "training",
+      "label_frames": 1217,
+      "types": {
+        "Normal": 1217,
+        "Error_Modification": 0,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": false
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1217,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u2_ay_normal_016",
+      "split": "training",
+      "label_frames": 1069,
+      "types": {
+        "Normal": 1069,
+        "Error_Modification": 0,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": false
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1069,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u1_a1_normal_005",
+      "split": "validation",
+      "label_frames": 1742,
+      "types": {
+        "Normal": 1742,
+        "Error_Modification": 0,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1742,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1742,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u1_a2_normal_015",
+      "split": "validation",
+      "label_frames": 1284,
+      "types": {
+        "Normal": 1284,
+        "Error_Modification": 0,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1284,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1284,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u1_a3_normal_025",
+      "split": "validation",
+      "label_frames": 1499,
+      "types": {
+        "Normal": 1499,
+        "Error_Modification": 0,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1499,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1499,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u1_a1_error_017",
+      "split": "test",
+      "label_frames": 1147,
+      "types": {
+        "Normal": 782,
+        "Error_Modification": 203,
+        "Error_Slip": 98,
+        "Error_Correction": 64,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1147,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1147,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u1_a1_error_018",
+      "split": "test",
+      "label_frames": 1324,
+      "types": {
+        "Normal": 893,
+        "Error_Modification": 0,
+        "Error_Slip": 160,
+        "Error_Correction": 203,
+        "Error_Addition": 68
+      },
+      "unsupported_action_frames": 68,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1324,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1324,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u1_a1_error_019",
+      "split": "test",
+      "label_frames": 1388,
+      "types": {
+        "Normal": 918,
+        "Error_Modification": 234,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 236
+      },
+      "unsupported_action_frames": 236,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1388,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1388,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u1_a1_error_020",
+      "split": "test",
+      "label_frames": 1274,
+      "types": {
+        "Normal": 1038,
+        "Error_Modification": 108,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 128
+      },
+      "unsupported_action_frames": 128,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1274,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1274,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u1_a1_error_021",
+      "split": "test",
+      "label_frames": 1310,
+      "types": {
+        "Normal": 770,
+        "Error_Modification": 179,
+        "Error_Slip": 154,
+        "Error_Correction": 207,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1310,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1310,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 0.8386844166014096
+    },
+    {
+      "video": "tea_u1_a1_error_022",
+      "split": "test",
+      "label_frames": 1270,
+      "types": {
+        "Normal": 882,
+        "Error_Modification": 118,
+        "Error_Slip": 114,
+        "Error_Correction": 64,
+        "Error_Addition": 92
+      },
+      "unsupported_action_frames": 92,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1270,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1270,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 0.9267697314890154
+    },
+    {
+      "video": "tea_u1_a1_error_023",
+      "split": "test",
+      "label_frames": 1440,
+      "types": {
+        "Normal": 855,
+        "Error_Modification": 95,
+        "Error_Slip": 156,
+        "Error_Correction": 181,
+        "Error_Addition": 153
+      },
+      "unsupported_action_frames": 153,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1440,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1440,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 0.8718861209964412
+    },
+    {
+      "video": "tea_u1_a1_error_024",
+      "split": "test",
+      "label_frames": 1146,
+      "types": {
+        "Normal": 872,
+        "Error_Modification": 0,
+        "Error_Slip": 103,
+        "Error_Correction": 77,
+        "Error_Addition": 94
+      },
+      "unsupported_action_frames": 94,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1146,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1146,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 0.9317160826594789
+    },
+    {
+      "video": "tea_u1_a2_error_001",
+      "split": "test",
+      "label_frames": 1197,
+      "types": {
+        "Normal": 725,
+        "Error_Modification": 256,
+        "Error_Slip": 137,
+        "Error_Correction": 79,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1197,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1197,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u1_a2_error_002",
+      "split": "test",
+      "label_frames": 1480,
+      "types": {
+        "Normal": 1018,
+        "Error_Modification": 0,
+        "Error_Slip": 141,
+        "Error_Correction": 210,
+        "Error_Addition": 111
+      },
+      "unsupported_action_frames": 111,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1480,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1480,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 0.8555632342778162
+    },
+    {
+      "video": "tea_u1_a2_error_003",
+      "split": "test",
+      "label_frames": 1247,
+      "types": {
+        "Normal": 845,
+        "Error_Modification": 217,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 185
+      },
+      "unsupported_action_frames": 185,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1247,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1247,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u1_a2_error_004",
+      "split": "test",
+      "label_frames": 1308,
+      "types": {
+        "Normal": 882,
+        "Error_Modification": 201,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 225
+      },
+      "unsupported_action_frames": 225,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1308,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1308,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u1_a2_error_005",
+      "split": "test",
+      "label_frames": 1497,
+      "types": {
+        "Normal": 738,
+        "Error_Modification": 221,
+        "Error_Slip": 345,
+        "Error_Correction": 193,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1497,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1497,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 0.8688524590163934
+    },
+    {
+      "video": "tea_u1_a2_error_006",
+      "split": "test",
+      "label_frames": 1278,
+      "types": {
+        "Normal": 936,
+        "Error_Modification": 83,
+        "Error_Slip": 106,
+        "Error_Correction": 63,
+        "Error_Addition": 90
+      },
+      "unsupported_action_frames": 90,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1278,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1278,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 0.9501206757843926
+    },
+    {
+      "video": "tea_u1_a2_error_007",
+      "split": "test",
+      "label_frames": 1447,
+      "types": {
+        "Normal": 1003,
+        "Error_Modification": 0,
+        "Error_Slip": 134,
+        "Error_Correction": 154,
+        "Error_Addition": 156
+      },
+      "unsupported_action_frames": 156,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1447,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1447,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 0.8914893617021277
+    },
+    {
+      "video": "tea_u1_a2_error_008",
+      "split": "test",
+      "label_frames": 1244,
+      "types": {
+        "Normal": 993,
+        "Error_Modification": 0,
+        "Error_Slip": 101,
+        "Error_Correction": 70,
+        "Error_Addition": 80
+      },
+      "unsupported_action_frames": 80,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1244,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1244,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 0.9428334714167357
+    },
+    {
+      "video": "tea_u1_a4_error_025",
+      "split": "test",
+      "label_frames": 1354,
+      "types": {
+        "Normal": 843,
+        "Error_Modification": 291,
+        "Error_Slip": 149,
+        "Error_Correction": 71,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1354,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1354,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u1_a4_error_026",
+      "split": "test",
+      "label_frames": 1804,
+      "types": {
+        "Normal": 1342,
+        "Error_Modification": 0,
+        "Error_Slip": 137,
+        "Error_Correction": 202,
+        "Error_Addition": 123
+      },
+      "unsupported_action_frames": 123,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1804,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1804,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 0.8865047995482778
+    },
+    {
+      "video": "tea_u1_a4_error_027",
+      "split": "test",
+      "label_frames": 1325,
+      "types": {
+        "Normal": 963,
+        "Error_Modification": 239,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 123
+      },
+      "unsupported_action_frames": 123,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1325,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1325,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u1_a4_error_028",
+      "split": "test",
+      "label_frames": 1448,
+      "types": {
+        "Normal": 1164,
+        "Error_Modification": 125,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 159
+      },
+      "unsupported_action_frames": 159,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1448,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1448,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u1_a4_error_029",
+      "split": "test",
+      "label_frames": 1505,
+      "types": {
+        "Normal": 904,
+        "Error_Modification": 278,
+        "Error_Slip": 104,
+        "Error_Correction": 219,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1505,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1505,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 0.8517006802721089
+    },
+    {
+      "video": "tea_u1_a4_error_030",
+      "split": "test",
+      "label_frames": 1573,
+      "types": {
+        "Normal": 1168,
+        "Error_Modification": 93,
+        "Error_Slip": 110,
+        "Error_Correction": 108,
+        "Error_Addition": 94
+      },
+      "unsupported_action_frames": 94,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1573,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1573,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u1_a4_error_031",
+      "split": "test",
+      "label_frames": 1615,
+      "types": {
+        "Normal": 980,
+        "Error_Modification": 122,
+        "Error_Slip": 137,
+        "Error_Correction": 237,
+        "Error_Addition": 139
+      },
+      "unsupported_action_frames": 139,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1615,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1615,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 0.850632911392405
+    },
+    {
+      "video": "tea_u1_a4_error_032",
+      "split": "test",
+      "label_frames": 1367,
+      "types": {
+        "Normal": 1087,
+        "Error_Modification": 0,
+        "Error_Slip": 125,
+        "Error_Correction": 51,
+        "Error_Addition": 104
+      },
+      "unsupported_action_frames": 104,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1367,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1367,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 0.9623493975903614
+    },
+    {
+      "video": "tea_u1_a5_error_009",
+      "split": "test",
+      "label_frames": 1417,
+      "types": {
+        "Normal": 942,
+        "Error_Modification": 220,
+        "Error_Slip": 197,
+        "Error_Correction": 58,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1417,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1417,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u1_a5_error_010",
+      "split": "test",
+      "label_frames": 1560,
+      "types": {
+        "Normal": 1175,
+        "Error_Modification": 0,
+        "Error_Slip": 92,
+        "Error_Correction": 178,
+        "Error_Addition": 115
+      },
+      "unsupported_action_frames": 115,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1560,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1560,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u1_a5_error_011",
+      "split": "test",
+      "label_frames": 1505,
+      "types": {
+        "Normal": 1089,
+        "Error_Modification": 204,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 212
+      },
+      "unsupported_action_frames": 212,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1505,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1505,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u1_a5_error_012",
+      "split": "test",
+      "label_frames": 1507,
+      "types": {
+        "Normal": 1200,
+        "Error_Modification": 122,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 185
+      },
+      "unsupported_action_frames": 185,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1507,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1507,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u1_a5_error_013",
+      "split": "test",
+      "label_frames": 1369,
+      "types": {
+        "Normal": 792,
+        "Error_Modification": 317,
+        "Error_Slip": 103,
+        "Error_Correction": 157,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1369,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1369,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u1_a5_error_014",
+      "split": "test",
+      "label_frames": 1326,
+      "types": {
+        "Normal": 934,
+        "Error_Modification": 95,
+        "Error_Slip": 127,
+        "Error_Correction": 45,
+        "Error_Addition": 125
+      },
+      "unsupported_action_frames": 125,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1326,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1326,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u1_a5_error_015",
+      "split": "test",
+      "label_frames": 1472,
+      "types": {
+        "Normal": 922,
+        "Error_Modification": 142,
+        "Error_Slip": 104,
+        "Error_Correction": 145,
+        "Error_Addition": 159
+      },
+      "unsupported_action_frames": 159,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1472,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1472,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u1_a5_error_016",
+      "split": "test",
+      "label_frames": 1221,
+      "types": {
+        "Normal": 976,
+        "Error_Modification": 0,
+        "Error_Slip": 108,
+        "Error_Correction": 62,
+        "Error_Addition": 75
+      },
+      "unsupported_action_frames": 75,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1221,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1221,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u1_a1_normal_006",
+      "split": "test",
+      "label_frames": 1649,
+      "types": {
+        "Normal": 1649,
+        "Error_Modification": 0,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1649,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1649,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u1_a2_normal_016",
+      "split": "test",
+      "label_frames": 1241,
+      "types": {
+        "Normal": 1241,
+        "Error_Modification": 0,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1241,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1241,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    },
+    {
+      "video": "tea_u1_a3_normal_026",
+      "split": "test",
+      "label_frames": 1572,
+      "types": {
+        "Normal": 1572,
+        "Error_Modification": 0,
+        "Error_Slip": 0,
+        "Error_Correction": 0,
+        "Error_Addition": 0
+      },
+      "unsupported_action_frames": 0,
+      "vc_v_features_10fps": {
+        "exists": true,
+        "shape": [
+          1572,
+          256
+        ],
+        "dtype": "float32",
+        "zero_rows": 0
+      },
+      "features_10fps": {
+        "exists": true,
+        "shape": [
+          1572,
+          2048
+        ],
+        "dtype": "float16",
+        "zero_rows": 0
+      },
+      "json_annotation_available": true,
+      "json_end_minus_frame_duration_s": 0.0,
+      "json_type_interior_agreement": 1.0
+    }
+  ]
+}

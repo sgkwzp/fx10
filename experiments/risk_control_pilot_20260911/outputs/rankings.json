@@ -1,0 +1,162 @@
+{
+  "within_task/Coffee": {
+    "ap": 0.06281644231517378,
+    "positive_rate": 0.05858943037160859,
+    "risk_curve": {
+      "aurc": 0.06519019745067618,
+      "full_coverage_error": 0.10228237109425228,
+      "confidence": "absolute raw-score margin to fixed threshold; not a probability",
+      "risk_at_coverage": {
+        "0.1": 0.054005400540054004,
+        "0.25": 0.05781149543525781,
+        "0.5": 0.06119326218336119,
+        "0.75": 0.06966696669666966,
+        "1.0": 0.10228237109425228
+      }
+    }
+  },
+  "leave_one_task_out/Coffee": {
+    "ap": 0.06079537048572435,
+    "positive_rate": 0.05858943037160859,
+    "risk_curve": {
+      "aurc": 0.3227406651564855,
+      "full_coverage_error": 0.32848141957052845,
+      "confidence": "absolute raw-score margin to fixed threshold; not a probability",
+      "risk_at_coverage": {
+        "0.1": 0.36787964510736787,
+        "0.25": 0.3038189533239038,
+        "0.5": 0.28026231194548024,
+        "0.75": 0.2930950237880931,
+        "1.0": 0.32848141957052845
+      }
+    }
+  },
+  "within_task/Oatmeal": {
+    "ap": 0.22444425319706943,
+    "positive_rate": 0.10761821874093415,
+    "risk_curve": {
+      "aurc": 0.10436031810884167,
+      "full_coverage_error": 0.16443284015085582,
+      "confidence": "absolute raw-score margin to fixed threshold; not a probability",
+      "risk_at_coverage": {
+        "0.1": 0.07519145973543746,
+        "0.25": 0.06062012625324916,
+        "0.5": 0.07902432231711845,
+        "0.75": 0.109837232330734,
+        "1.0": 0.16443284015085582
+      }
+    }
+  },
+  "leave_one_task_out/Oatmeal": {
+    "ap": 0.080074371541313,
+    "positive_rate": 0.10761821874093415,
+    "risk_curve": {
+      "aurc": 0.6703270824130164,
+      "full_coverage_error": 0.538984624310995,
+      "confidence": "absolute raw-score margin to fixed threshold; not a probability",
+      "risk_at_coverage": {
+        "0.1": 0.9774889765606869,
+        "0.25": 0.7518102487931675,
+        "0.5": 0.5903035647976235,
+        "0.75": 0.5523889095185047,
+        "1.0": 0.538984624310995
+      }
+    }
+  },
+  "within_task/Pinwheels": {
+    "ap": 0.25371490451433376,
+    "positive_rate": 0.2500839928326116,
+    "risk_curve": {
+      "aurc": 0.2901744430946026,
+      "full_coverage_error": 0.3254068986113185,
+      "confidence": "absolute raw-score margin to fixed threshold; not a probability",
+      "risk_at_coverage": {
+        "0.1": 0.280608435983576,
+        "0.25": 0.28579961176646257,
+        "0.5": 0.28283186501418545,
+        "0.75": 0.2913369170275248,
+        "1.0": 0.3254068986113185
+      }
+    }
+  },
+  "leave_one_task_out/Pinwheels": {
+    "ap": 0.1905820438300529,
+    "positive_rate": 0.2500839928326116,
+    "risk_curve": {
+      "aurc": 0.609359171215776,
+      "full_coverage_error": 0.5127295804091384,
+      "confidence": "absolute raw-score margin to fixed threshold; not a probability",
+      "risk_at_coverage": {
+        "0.1": 0.8297872340425532,
+        "0.25": 0.6395400925787667,
+        "0.5": 0.5573951022846051,
+        "0.75": 0.5260813299487332,
+        "1.0": 0.5127295804091384
+      }
+    }
+  },
+  "within_task/Quesadilla": {
+    "ap": 0.47729926892951596,
+    "positive_rate": 0.29315261721505015,
+    "risk_curve": {
+      "aurc": 0.22250946287744583,
+      "full_coverage_error": 0.30158535463493913,
+      "confidence": "absolute raw-score margin to fixed threshold; not a probability",
+      "risk_at_coverage": {
+        "0.1": 0.14132434089515636,
+        "0.25": 0.1704893904084386,
+        "0.5": 0.2256837973751993,
+        "0.75": 0.25904575003066355,
+        "1.0": 0.30158535463493913
+      }
+    }
+  },
+  "leave_one_task_out/Quesadilla": {
+    "ap": 0.46302777228532455,
+    "positive_rate": 0.29315261721505015,
+    "risk_curve": {
+      "aurc": 0.20511603662711778,
+      "full_coverage_error": 0.3047744626046426,
+      "confidence": "absolute raw-score margin to fixed threshold; not a probability",
+      "risk_at_coverage": {
+        "0.1": 0.14224402207234826,
+        "0.25": 0.1607997056298295,
+        "0.5": 0.1997424261008218,
+        "0.75": 0.2500919906782779,
+        "1.0": 0.3047744626046426
+      }
+    }
+  },
+  "within_task/Tea": {
+    "ap": 0.5063704665938027,
+    "positive_rate": 0.2812788006635673,
+    "risk_curve": {
+      "aurc": 0.18138312910682144,
+      "full_coverage_error": 0.25492043336678477,
+      "confidence": "absolute raw-score margin to fixed threshold; not a probability",
+      "risk_at_coverage": {
+        "0.1": 0.11734589391767355,
+        "0.25": 0.16015400999426557,
+        "0.5": 0.19234865241255017,
+        "0.75": 0.21190027579803938,
+        "1.0": 0.25492043336678477
+      }
+    }
+  },
+  "leave_one_task_out/Tea": {
+    "ap": 0.3712171369965712,
+    "positive_rate": 0.2812788006635673,
+    "risk_curve": {
+      "aurc": 0.2995953120403584,
+      "full_coverage_error": 0.32660208491203635,
+      "confidence": "absolute raw-score margin to fixed threshold; not a probability",
+      "risk_at_coverage": {
+        "0.1": 0.3403645300020479,
+        "0.25": 0.28041287785696734,
+        "0.5": 0.2631686737118047,
+        "0.75": 0.2899975423937085,
+        "1.0": 0.32660208491203635
+      }
+    }
+  }
+}

@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bd416825-8fe4-45c5-88b7-f9133d38630d" name="默认变更列表" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="2b4c7YN1PadEdm3azg4rEktjSH4" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/inspiration" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Python" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\paper_writing1\模块缝合库(新)\inspiration" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\paper_writing1\模块缝合库(新)" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.SparseTSF">
+    <configuration name="AGCRN" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="模块缝合库" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/inspiration" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/inspiration/AGCRN.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="SCSA" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="模块缝合库" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/inspiration" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/inspiration/SCSA.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="SparseTSF" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="模块缝合库" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/inspiration" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/inspiration/SparseTSF.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TimesNet_cls" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="模块缝合库" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/inspiration" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/inspiration/TimesNet_cls.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="WTConv" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="模块缝合库" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/inspiration" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/inspiration/WTConv.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.SparseTSF" />
+        <item itemvalue="Python.AGCRN" />
+        <item itemvalue="Python.SCSA" />
+        <item itemvalue="Python.TimesNet_cls" />
+        <item itemvalue="Python.WTConv" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="bd416825-8fe4-45c5-88b7-f9133d38630d" name="默认变更列表" comment="" />
+      <created>1705477625565</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1705477625565</updated>
+      <workItem from="1705477626821" duration="11910000" />
+      <workItem from="1705511149625" duration="3506000" />
+      <workItem from="1705936029722" duration="24673000" />
+      <workItem from="1706628033666" duration="4104000" />
+      <workItem from="1706709003132" duration="5518000" />
+      <workItem from="1708925613807" duration="61392000" />
+      <workItem from="1709967993142" duration="18788000" />
+      <workItem from="1710251523975" duration="18258000" />
+      <workItem from="1710588300876" duration="30970000" />
+      <workItem from="1711126949344" duration="5801000" />
+      <workItem from="1711343204390" duration="11067000" />
+      <workItem from="1711543518226" duration="103476000" />
+      <workItem from="1712818285737" duration="6754000" />
+      <workItem from="1712939542961" duration="47785000" />
+      <workItem from="1714229892337" duration="46056000" />
+      <workItem from="1714998149165" duration="35767000" />
+      <workItem from="1715509564245" duration="8796000" />
+      <workItem from="1715851329699" duration="11969000" />
+      <workItem from="1716115321718" duration="41077000" />
+      <workItem from="1717065978568" duration="57132000" />
+      <workItem from="1718339811180" duration="7538000" />
+      <workItem from="1718631092525" duration="24877000" />
+      <workItem from="1719129329173" duration="19521000" />
+      <workItem from="1719602912308" duration="10879000" />
+      <workItem from="1720182249867" duration="11949000" />
+      <workItem from="1720723339938" duration="11274000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/__$uft.coverage" NAME="uft 覆盖结果" MODIFIED="1712583350534" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$SPD.coverage" NAME="SPD 覆盖结果" MODIFIED="1713459896056" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$SGFMT.coverage" NAME="SGFMT 覆盖结果" MODIFIED="1718982030013" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$pfaam.coverage" NAME="pfaam 覆盖结果" MODIFIED="1709468989255" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$PoseBERT.coverage" NAME="PoseBERT 覆盖结果" MODIFIED="1711731990273" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$GCN.coverage" NAME="GCN 覆盖结果" MODIFIED="1720120802439" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$AdaDyGNN.coverage" NAME="AdaDyGNN 覆盖结果" MODIFIED="1717267827756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$MSAF__.coverage" NAME="MSAF(多模态融合) 覆盖结果" MODIFIED="1714997940058" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/$SimA.coverage" NAME="SimA 覆盖结果" MODIFIED="1705480465521" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/__$EPA.coverage" NAME="EPA 覆盖结果" MODIFIED="1720473862617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$CAN__.coverage" NAME="CAN(人群计数) 覆盖结果" MODIFIED="1715102967033" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/$HWD.coverage" NAME="HWD小波下采样 覆盖结果" MODIFIED="1706617734666" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$ContraNorm__.coverage" NAME="ContraNorm(对比归一化层) 覆盖结果" MODIFIED="1717532811999" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$Crossnorm_Selfnorm.coverage" NAME="Crossnorm-Selfnorm 覆盖结果" MODIFIED="1713462653680" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$sp.coverage" NAME="sp 覆盖结果" MODIFIED="1713178686822" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$PnP_3D.coverage" NAME="PnP-3D 覆盖结果" MODIFIED="1709308212100" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$KpconvFeatureExtractor.coverage" NAME="‎KpconvFeatureExtractor 覆盖结果" MODIFIED="1719516242666" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$Agent_Attention.coverage" NAME="Agent-Attention 覆盖结果" MODIFIED="1720732696372" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$uft1.coverage" NAME="uft1 覆盖结果" MODIFIED="1712584618296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$ASCMHRSA.coverage" NAME="ASC和MHRSA 覆盖结果" MODIFIED="1711090125353" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$hgc.coverage" NAME="hgc 覆盖结果" MODIFIED="1709144710871" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$MLKA.coverage" NAME="MLKA 覆盖结果" MODIFIED="1719951181805" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$PCT.coverage" NAME="PCT 覆盖结果" MODIFIED="1713335402296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$PaCoLoss.coverage" NAME="PaCoLoss 覆盖结果" MODIFIED="1717359367763" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$SPVCNN.coverage" NAME="SPVCNN 覆盖结果" MODIFIED="1710241998630" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$CMA_Block.coverage" NAME="CMA_Block 覆盖结果" MODIFIED="1714905652044" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$F_Block.coverage" NAME="F_Block 覆盖结果" MODIFIED="1716577463261" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$hilo.coverage" NAME="hilo 覆盖结果" MODIFIED="1718353796012" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/$GPSA.coverage" NAME="GPSA 覆盖结果" MODIFIED="1705478305714" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/__$tAPE.coverage" NAME="tAPE 覆盖结果" MODIFIED="1715417461238" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$FR_Head.coverage" NAME="FR-Head 覆盖结果" MODIFIED="1717873719817" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$ScConv.coverage" NAME="ScConv 覆盖结果" MODIFIED="1712076671166" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/__$LKA_Attention3d.coverage" NAME="LKA_Attention3d 覆盖结果" MODIFIED="1719002237459" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$Free_UNetModel____1_.coverage" NAME="Free_UNetModel(扩散模型) (1) 覆盖结果" MODIFIED="1714502433436" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$TalkingHeadAttn.coverage" NAME="TalkingHeadAttn 覆盖结果" MODIFIED="1710415951645" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$MCAM.coverage" NAME="MCAM 覆盖结果" MODIFIED="1713121259635" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$model_3dUNet_SDM1.coverage" NAME="model_3dUNet_SDM1 覆盖结果" MODIFIED="1719071784398" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$RSConv.coverage" NAME="RSConv 覆盖结果" MODIFIED="1711546456686" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/$LinAngularAttention.coverage" NAME="LinAngularAttention 覆盖结果" MODIFIED="1705479360800" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/__$sLSTMmLSTM__1_.coverage" NAME="sLSTM＆mLSTM (1) 覆盖结果" MODIFIED="1717792096611" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$CAFM.coverage" NAME="CAFM 覆盖结果" MODIFIED="1715681219316" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$PIDNet__1_.coverage" NAME="PIDNet (1) 覆盖结果" MODIFIED="1710143907531" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$TimesBlock.coverage" NAME="TimesBlock 覆盖结果" MODIFIED="1711102014399" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$MUSEAttention.coverage" NAME="MUSEAttention 覆盖结果" MODIFIED="1712668723506" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/__$Free_UNetModel__.coverage" NAME="Free_UNetModel(扩散模型) 覆盖结果" MODIFIED="1714902496534" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$SAM.coverage" NAME="SAM 覆盖结果" MODIFIED="1713550669986" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$EnergyCrossAttention.coverage" NAME="EnergyCrossAttention 覆盖结果" MODIFIED="1711000608315" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$MIDF__.coverage" NAME="MIDF(图文多模态融合) 覆盖结果" MODIFIED="1714996989287" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$EDAIN_Layer.coverage" NAME="EDAIN_Layer 覆盖结果" MODIFIED="1711092581303" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$DSAttention.coverage" NAME="DSAttention 覆盖结果" MODIFIED="1711129537638" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/$.coverage" NAME="部分卷积 覆盖结果" MODIFIED="1705503180259" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/$CoTAttention.coverage" NAME="CoTAttention 覆盖结果" MODIFIED="1706423543703" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/__$LinAngularAttention.coverage" NAME="LinAngularAttention 覆盖结果" MODIFIED="1714136758577" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/__$MSCAAttention.coverage" NAME="MSCAAttention 覆盖结果" MODIFIED="1716198997154" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$SPVCnn.coverage" NAME="SPVCnn 覆盖结果" MODIFIED="1710250087774" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$DySample.coverage" NAME="DySample 覆盖结果" MODIFIED="1718048831182" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$UFOAttention.coverage" NAME="UFOAttention 覆盖结果" MODIFIED="1710416124472" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/__$NRN.coverage" NAME="NRN 覆盖结果" MODIFIED="1712217205746" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$SAW.coverage" NAME="SAW 覆盖结果" MODIFIED="1711992027081" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$TPC1.coverage" NAME="TPC1 覆盖结果" MODIFIED="1719931416433" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$diffConv__.coverage" NAME="diffConv(点云相关) 覆盖结果" MODIFIED="1715863219177" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$Wave_pooling_CV2_.coverage" NAME="Wave-pooling(轨迹预测，CV2维度任务通用) 覆盖结果" MODIFIED="1714158293679" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$CoordGate.coverage" NAME="CoordGate 覆盖结果" MODIFIED="1714585247794" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$AGSA.coverage" NAME="AGSA 覆盖结果" MODIFIED="1711470920955" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$RandlaConv.coverage" NAME="RandlaConv 覆盖结果" MODIFIED="1711546929909" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$TabAttention.coverage" NAME="TabAttention 覆盖结果" MODIFIED="1717506147482" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$SCSA.coverage" NAME="SCSA 覆盖结果" MODIFIED="1720889084476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$OS_block.coverage" NAME="OS_block 覆盖结果" MODIFIED="1709747161769" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$Token_Merging.coverage" NAME="Token Merging 覆盖结果" MODIFIED="1718034895926" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$diffConv.coverage" NAME="diffConv 覆盖结果" MODIFIED="1715154846945" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/$CrossAttention.coverage" NAME="CrossAttention 覆盖结果" MODIFIED="1705479012814" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/__$PFNet.coverage" NAME="PFNet 覆盖结果" MODIFIED="1713551078604" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$SimVP.coverage" NAME="SimVP 覆盖结果" MODIFIED="1717497628792" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/$MSCAAttention__1_.coverage" NAME="MSCAAttention (1) 覆盖结果" MODIFIED="1706544417311" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$MotionGRU.coverage" NAME="MotionGRU 覆盖结果" MODIFIED="1711128653067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$LFA__1_.coverage" NAME="LFA (1) 覆盖结果" MODIFIED="1714584921789" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$Edge_attention_Guidance.coverage" NAME="Edge-attention_Guidance 覆盖结果" MODIFIED="1720440902536" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$FITS.coverage" NAME="FITS 覆盖结果" MODIFIED="1712421103744" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$Doctests__KAN__.coverage" NAME="Doctests (KAN 内) 覆盖结果" MODIFIED="1714841431060" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$U_VixLSTM.coverage" NAME="U-VixLSTM 覆盖结果" MODIFIED="1720443614265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$SDM_3D_.coverage" NAME="SDM(3D任务) 覆盖结果" MODIFIED="1719068330390" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$ViP.coverage" NAME="ViP 覆盖结果" MODIFIED="1706709893725" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/__$RRS.coverage" NAME="RRS 覆盖结果" MODIFIED="1719929983431" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$DEConv.coverage" NAME="DEConv 覆盖结果" MODIFIED="1711906031622" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$TFF_SFF.coverage" NAME="TFF&amp;SFF 覆盖结果" MODIFIED="1720472570910" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/$MSCAAttention_.coverage" NAME="MSCAAttention( 覆盖结果" MODIFIED="1706535623071" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$GeoConv.coverage" NAME="GeoConv 覆盖结果" MODIFIED="1716305390885" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$Doctests__U_VixLSTM__.coverage" NAME="Doctests (U-VixLSTM 内) 覆盖结果" MODIFIED="1720443540083" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$VisualTokenRandomSelection.coverage" NAME="VisualTokenRandomSelection 覆盖结果" MODIFIED="1710354870610" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$HWD.coverage" NAME="HWD小波下采样 覆盖结果" MODIFIED="1711883920869" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$point_nn.coverage" NAME="point_nn 覆盖结果" MODIFIED="1713079250718" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$S2Attention.coverage" NAME="S2Attention 覆盖结果" MODIFIED="1706713814463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/__$STSelfAttention.coverage" NAME="STSelfAttention 覆盖结果" MODIFIED="1714497466832" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$Partial_conv3.coverage" NAME="Partial_conv3 覆盖结果" MODIFIED="1709358790545" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/__$dgcnn.coverage" NAME="dgcnn 覆盖结果" MODIFIED="1715964299873" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$CSCA.coverage" NAME="CSCA 覆盖结果" MODIFIED="1719931657212" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$Hydra.coverage" NAME="Hydra 覆盖结果" MODIFIED="1709737316120" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$dilateformer.coverage" NAME="dilateformer 覆盖结果" MODIFIED="1718034850553" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$Lsttn__1_.coverage" NAME="Lsttn (1) 覆盖结果" MODIFIED="1714498188831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$tadaconv.coverage" NAME="tadaconv 覆盖结果" MODIFIED="1709144616750" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$MSAF3d.coverage" NAME="MSAF3d 覆盖结果" MODIFIED="1718283331131" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$TPC.coverage" NAME="TPC 覆盖结果" MODIFIED="1719931025211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$nei_con_loss.coverage" NAME="nei_con_loss 覆盖结果" MODIFIED="1717589671965" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$skfusion.coverage" NAME="skfusion 覆盖结果" MODIFIED="1715681415290" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$AGCRN.coverage" NAME="AGCRN 覆盖结果" MODIFIED="1720987323091" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$LipschitzNorm.coverage" NAME="LipschitzNorm 覆盖结果" MODIFIED="1709917497633" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$ConvSSM.coverage" NAME="ConvSSM 覆盖结果" MODIFIED="1711904015909" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$CAA_Module.coverage" NAME="CAA_Module 覆盖结果" MODIFIED="1711641392428" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$cluster.coverage" NAME="cluster 覆盖结果" MODIFIED="1715879715847" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$MLP_Communicator__.coverage" NAME="MLP_Communicator(多模态适用) 覆盖结果" MODIFIED="1715450144301" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$dfe_module.coverage" NAME="dfe_module 覆盖结果" MODIFIED="1711821253635" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/$DCNv4.coverage" NAME="DCNv4 覆盖结果" MODIFIED="1706626548022" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/$kNNAttention.coverage" NAME="kNNAttention 覆盖结果" MODIFIED="1705502859844" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/__$SparseTSF.coverage" NAME="SparseTSF 覆盖结果" MODIFIED="1720987653616" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$PSA.coverage" NAME="PSA 覆盖结果" MODIFIED="1706713964486" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/__$PagFM.coverage" NAME="PagFM 覆盖结果" MODIFIED="1710143819943" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$ISL.coverage" NAME="ISL 覆盖结果" MODIFIED="1715973091613" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$VisionPermutator.coverage" NAME="VisionPermutator 覆盖结果" MODIFIED="1709465509483" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/__$Doctest_KANLayer___init__.coverage" NAME="Doctest KANLayer.__init__ 覆盖结果" MODIFIED="1714841172623" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$NEW.coverage" NAME="NEW 覆盖结果" MODIFIED="1715696082973" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/$BCN.coverage" NAME="BCN 覆盖结果" MODIFIED="1706631106211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$Doctests__KANLayer__.coverage" NAME="Doctests (KANLayer 内) 覆盖结果" MODIFIED="1714841175451" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$EGA_CV2_.coverage" NAME="EGA(边缘检测，CV2维图像通用) 覆盖结果" MODIFIED="1720184185724" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$KAN.coverage" NAME="KAN 覆盖结果" MODIFIED="1718795418975" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$TKSA.coverage" NAME="TKSA 覆盖结果" MODIFIED="1711382742444" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$model_3dUNet_SDM.coverage" NAME="model_3dUNet_SDM 覆盖结果" MODIFIED="1719068384554" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$SimplifiedSelfAttention.coverage" NAME="SimplifiedSelfAttention 覆盖结果" MODIFIED="1706712952611" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/__$Spe_FC.coverage" NAME="Spe_FC 覆盖结果" MODIFIED="1710941242625" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$DASI.coverage" NAME="DASI 覆盖结果" MODIFIED="1711089476046" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$.coverage" NAME="蛇形卷积 覆盖结果" MODIFIED="1715239836631" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$DPTAM.coverage" NAME="DPTAM 覆盖结果" MODIFIED="1717873668346" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$PPA_Attention.coverage" NAME="PPA-Attention 覆盖结果" MODIFIED="1711175641880" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$Spa_FC.coverage" NAME="Spa_FC 覆盖结果" MODIFIED="1710939500302" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$diffusion_unet__1_.coverage" NAME="diffusion_unet (1) 覆盖结果" MODIFIED="1710857262221" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$RAMP_CNN.coverage" NAME="RAMP-CNN 覆盖结果" MODIFIED="1719342091354" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$odconv.coverage" NAME="odconv 覆盖结果" MODIFIED="1710353434577" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$SDM_3D___1_.coverage" NAME="SDM(3D任务) (1) 覆盖结果" MODIFIED="1714380129385" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$LFA.coverage" NAME="LFA 覆盖结果" MODIFIED="1716470909598" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$NRConvBlock.coverage" NAME="NRConvBlock 覆盖结果" MODIFIED="1717067655009" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$MLP_Communicator.coverage" NAME="MLP_Communicator 覆盖结果" MODIFIED="1715091484406" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$ContraNorm.coverage" NAME="ContraNorm 覆盖结果" MODIFIED="1717532074307" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/$ExternalAttention.coverage" NAME="ExternalAttention 覆盖结果" MODIFIED="1705497989750" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/__$adaptive_rotated_conv.coverage" NAME="adaptive_rotated_conv 覆盖结果" MODIFIED="1711365558370" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$SSPCAB.coverage" NAME="SSPCAB 覆盖结果" MODIFIED="1715972917042" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/$TalkingHeadAttn.coverage" NAME="TalkingHeadAttn 覆盖结果" MODIFIED="1706631584979" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/$1.coverage" NAME="1 覆盖结果" MODIFIED="1705512684009" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$iccv2023.coverage" NAME="（iccv2023）蛇形卷积 覆盖结果" MODIFIED="1715239923604" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/$EVCBlock.coverage" NAME="EVCBlock 覆盖结果" MODIFIED="1706619169038" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$SDM3d.coverage" NAME="SDM3d 覆盖结果" MODIFIED="1714157791316" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$ASCMHRSA__1_.coverage" NAME="ASC和MHRSA (1) 覆盖结果" MODIFIED="1709917939854" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$kernel_warehouse.coverage" NAME="kernel_warehouse 覆盖结果" MODIFIED="1714841059782" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$kNNAttention.coverage" NAME="kNNAttention 覆盖结果" MODIFIED="1710494119084" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/__$idnet.coverage" NAME="idnet 覆盖结果" MODIFIED="1706712482542" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$EGA_CV2___1_.coverage" NAME="EGA(边缘检测，CV2维图像通用) (1) 覆盖结果" MODIFIED="1717097998939" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$xLSTMBlock.coverage" NAME="xLSTMBlock 覆盖结果" MODIFIED="1717777820644" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$lcff.coverage" NAME="lcff 覆盖结果" MODIFIED="1706712261088" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$SACBlock.coverage" NAME="SACBlock 覆盖结果" MODIFIED="1710242891034" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$TCNN.coverage" NAME="TCNN 覆盖结果" MODIFIED="1711632119040" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$CorNet.coverage" NAME="CorNet 覆盖结果" MODIFIED="1718827677577" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$ULSAM.coverage" NAME="ULSAM 覆盖结果" MODIFIED="1719854351708" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$ESAM.coverage" NAME="ESAM 覆盖结果" MODIFIED="1712421241987" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$Partial_conv3__1_.coverage" NAME="Partial_conv3 (1) 覆盖结果" MODIFIED="1706710771097" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/__$D_LKA__Attention_3D___1_.coverage" NAME="D-LKA _Attention(3D版本) (1) 覆盖结果" MODIFIED="1719002775830" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$DCMHAttention.coverage" NAME="DCMHAttention 覆盖结果" MODIFIED="1718093339897" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$Variance_Attention.coverage" NAME="Variance_Attention 覆盖结果" MODIFIED="1715159023961" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$EGA.coverage" NAME="EGA 覆盖结果" MODIFIED="1716986433043" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$THAN.coverage" NAME="THAN 覆盖结果" MODIFIED="1717267835282" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$unet.coverage" NAME="unet 覆盖结果" MODIFIED="1710855462349" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/$E_MHSA.coverage" NAME="E_MHSA 覆盖结果" MODIFIED="1705478501548" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/__$AP3D.coverage" NAME="AP3D 覆盖结果" MODIFIED="1712822009953" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$double_Conv.coverage" NAME="double_Conv 覆盖结果" MODIFIED="1715331090152" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$GKONet.coverage" NAME="GKONet 覆盖结果" MODIFIED="1716317066356" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$RG_SA.coverage" NAME="RG_SA 覆盖结果" MODIFIED="1710856583341" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$Doctest_KANLayer_unlock.coverage" NAME="Doctest KANLayer.unlock 覆盖结果" MODIFIED="1714841123996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$WTConv.coverage" NAME="WTConv 覆盖结果" MODIFIED="1720883466711" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$TimesNet_cls.coverage" NAME="TimesNet_cls 覆盖结果" MODIFIED="1720885730825" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$DynamicFilter_CV2_.coverage" NAME="DynamicFilter(频域模块动态滤波器用于CV2维图像) 覆盖结果" MODIFIED="1718285074246" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$CTR_GC.coverage" NAME="CTR-GC 覆盖结果" MODIFIED="1717685703221" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$RGA__.coverage" NAME="RGA(关系感知全局注意力) 覆盖结果" MODIFIED="1712124878811" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$FeatUpdownsamplers.coverage" NAME="FeatUpdownsamplers 覆盖结果" MODIFIED="1712157870720" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$High_Frequency_Enhancement_Module.coverage" NAME="High-Frequency Enhancement Module 覆盖结果" MODIFIED="1717783662481" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/$MCA.coverage" NAME="MCA 覆盖结果" MODIFIED="1706630602059" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$1.coverage" NAME="1 覆盖结果" MODIFIED="1706710552191" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/__$ASC.coverage" NAME="ASC 覆盖结果" MODIFIED="1709903038860" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$WiKG.coverage" NAME="WiKG 覆盖结果" MODIFIED="1714840102752" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$PAM.coverage" NAME="PAM 覆盖结果" MODIFIED="1718648005166" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$CSCA_test_block__pytest.coverage" NAME="CSCA.test_block 的 pytest 覆盖结果" MODIFIED="1719400130084" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$CAN.coverage" NAME="CAN 覆盖结果" MODIFIED="1714922266651" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$Wave_pooling.coverage" NAME="Wave-pooling 覆盖结果" MODIFIED="1714157642571" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$rsaBlock3d.coverage" NAME="rsaBlock3d 覆盖结果" MODIFIED="1718283577752" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$ParNetAttention.coverage" NAME="ParNetAttention 覆盖结果" MODIFIED="1706714022634" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/__$sLSTMmLSTM_NLP___1_.coverage" NAME="sLSTM＆mLSTM(NLP和时序任务) (1) 覆盖结果" MODIFIED="1718353056703" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$Deepfake__.coverage" NAME="Deepfake(深度伪造检测) 覆盖结果" MODIFIED="1714932388503" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/$EDAmodule.coverage" NAME="EDAmodule 覆盖结果" MODIFIED="1706533480225" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$RFD.coverage" NAME="RFD 覆盖结果" MODIFIED="1711820468455" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$AGCA.coverage" NAME="AGCA 覆盖结果" MODIFIED="1711473562676" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$SPABlock.coverage" NAME="SPABlock 覆盖结果" MODIFIED="1709398397127" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$Free_UNetModel.coverage" NAME="Free_UNetModel 覆盖结果" MODIFIED="1714311682590" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$MCAM__.coverage" NAME="MCAM(图像特征融合) 覆盖结果" MODIFIED="1715681163353" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/$Akconv.coverage" NAME="Akconv 覆盖结果" MODIFIED="1706031836187" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$StackedDilatedConv.coverage" NAME="StackedDilatedConv 覆盖结果" MODIFIED="1714500112481" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$1__.coverage" NAME="1(模块创新距离) 覆盖结果" MODIFIED="1706709329362" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$xxx.coverage" NAME="xxx 覆盖结果" MODIFIED="1712649213217" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$CF_loss.coverage" NAME="CF_loss 覆盖结果" MODIFIED="1710310863753" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$DynamicFilter.coverage" NAME="DynamicFilter 覆盖结果" MODIFIED="1716751804281" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/$CBAM.coverage" NAME="CBAM 覆盖结果" MODIFIED="1705478064908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/__$Deepfake_3.coverage" NAME="Deepfake_3 覆盖结果" MODIFIED="1714914103187" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/inspiration" />
+    <SUITE FILE_PATH="coverage/__$SGE.coverage" NAME="SGE 覆盖结果" MODIFIED="1706713304140" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>

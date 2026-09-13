@@ -1,0 +1,11 @@
+{
+  "previous_baseline_scores_and_priors": "passed",
+  "normal_validation_oracle_invariance": "passed",
+  "observation_freeze_leaves_transition_active": "passed",
+  "current_mask_cannot_change_current_scoring_prior": "passed",
+  "observable_score_prefix_invariance": "passed",
+  "event_local_baseline_rollout_equivalence": "passed",
+  "event_local_equal_initial_belief": "passed",
+  "shifted_mask_same_suppression_count": "passed",
+  "all_new_outputs": "current experiment directory"
+}

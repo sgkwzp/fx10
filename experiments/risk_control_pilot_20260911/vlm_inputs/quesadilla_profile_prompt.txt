@@ -1,0 +1,26 @@
+You are analyzing a complete cooking procedure video and detecting mistakes.
+Task: Quesadilla. The following is a task graph, not a forced total execution order.
+[0] BG
+[1] Place tortilla on cutting board
+[2] Use knife to scoop Nutella
+[3] Spread Nutella onto tortilla
+[4] Put banana slices on tortilla
+[5] Sprinkle cinnamon onto tortilla
+[6] Fold tortilla
+[7] Slice using knife
+[8] Place tortilla wedges on plate
+Edges: [(0, 1), (1, 2), (2, 3), (3, 4), (3, 5), (4, 6), (5, 6), (6, 7), (7, 8), (8, 9)]
+Start node: 0
+End node: 9
+Segment the entire video into contiguous non-overlapping actions. Match each
+segment to a named step, background, or unexpected. Compare the observed object,
+tool, location, and execution details with the instruction. Mark wrong execution
+or an unexpected action as has_error=true. Missing steps/prerequisites belong in
+missing_steps, not automatically in each later action's error label. Do not invent
+visible evidence. Task objects are those named in the instructions above.
+Give explanations only for errors.
+Return a JSON object with segments, missing_steps, and overall_verdict.
+Each segment must contain start_time_sec, end_time_sec, matched_step, has_error
+(boolean), error_type, and error_explanation. Cover the whole video; do not return
+numeric self-reported confidence. Probabilities will be obtained from repeated
+samples separately.

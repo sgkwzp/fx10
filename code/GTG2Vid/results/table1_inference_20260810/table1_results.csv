@@ -1,0 +1,11 @@
+Dataset,Task,Config,ExitCode,DurationSeconds,wF1@0.000,EAcc,Paper_wF1@0.000,Paper_EAcc,Delta_wF1,Delta_EAcc,Completed
+EgoPER,Quesadilla,configs/EgoPER/quesadilla/vc_4omini_post_db0.2.json,0,68.1,31.7,100.0,31.7,100.0,0.0,0.0,Yes
+EgoPER,Oatmeal,configs/EgoPER/oatmeal/vc_4omini_post_db0.4.json,0,207.5,31.3,100.0,31.3,100.0,0.0,0.0,Yes
+EgoPER,Pinwheels,configs/EgoPER/pinwheels/vc_4omini_post_db0.3.json,0,141.8,17.8,100.0,17.8,100.0,0.0,0.0,Yes
+EgoPER,Coffee,configs/EgoPER/coffee/vc_4omini_post_db0.3_ndb0.json,0,4901.2,4.5,100.0,4.5,100.0,0.0,0.0,Yes
+EgoPER,Tea,configs/EgoPER/tea/vc_4omini_post_db0.6.json,0,119.9,22.1,100.0,22.1,100.0,0.0,0.0,Yes
+CaptainCook4D,Spiced Hot Chocolate,configs/CaptainCook4D/spicedhotchocolate/vc_4omini_post_db0.1_ndb0.json,0,97.0,10.1,100.0,10.5,100.0,-0.4,0.0,Yes
+CaptainCook4D,Microwave Egg Sandwich,configs/CaptainCook4D/microwaveeggsandwich/vc_4omini_post_db0.0_ndb0.json,0,220.6,8.5,100.0,8.5,100.0,0.0,0.0,Yes
+CaptainCook4D,Breakfast Burritos,configs/CaptainCook4D/breakfastburritos/vc_4omini_post_db0.0_ndb0_win100.json,0,227.5,14.1,75.0,9.4,75.0,4.7,0.0,Yes
+CaptainCook4D,Ramen,configs/CaptainCook4D/ramen/vc_4omini_post_db0.3.json,0,283.8,6.5,75.0,4.4,75.0,2.1,0.0,Yes
+CaptainCook4D,Cucumber Raita,configs/CaptainCook4D/cucumberraita/vc_4omini_post_db-0.2_ndb0.json,0,3449.0,23.2,100.0,23.0,100.0,0.2,0.0,Yes

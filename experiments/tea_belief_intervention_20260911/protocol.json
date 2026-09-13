@@ -1,0 +1,21 @@
+{
+  "feature_family": "vc_v_features_10fps",
+  "fps": 10,
+  "bank_per_class": 256,
+  "causal_smoothing_frames": 5,
+  "normal_validation_quantile": 0.99,
+  "event_iou": 0.1,
+  "seed": 20260911,
+  "bootstrap_video_replicates": 300,
+  "distance_softmin_temperature": 0.05,
+  "weak_update_multiplier": 0.25,
+  "observable_gate": "previous experiment global_nn score exceeds its fixed normal-validation threshold",
+  "methods": ["global_nn", "history_soft_nn", "observable_freeze", "oracle_freeze", "oracle_weak", "oracle_exclude_correction", "shifted_mask_freeze", "oracle_action_nn"],
+  "primary_detection_subset": "oracle_supported",
+  "primary_intervention": "oracle_freeze vs history_soft_nn; transitions still advance, only observation updates are suppressed",
+  "event_local_intervention": "same baseline hidden posterior before event onset; original updates vs skip observations or multiply observation strength by 0.25; compare same nominal action probability",
+  "placebo": "roll per-video true error mask by floor(video_length/2), preserving suppressed-frame count; privileged diagnostic only",
+  "test_label_usage": "oracle interventions, shifted-mask control, oracle-action scorer, and evaluation only; observable scorer never receives labels",
+  "selection": "none: reuse all fitted parameters, bank, and normal-validation settings",
+  "status": "exploratory single-task diagnostic on previously inspected test set"
+}

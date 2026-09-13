@@ -1,0 +1,21 @@
+{
+  "test": {
+    "frames": 48827,
+    "positive_rate": 0.2812788006635673,
+    "effect_only": {
+      "roc_auc": 0.6595577325747906,
+      "average_precision": 0.5175605015980829
+    },
+    "mahalanobis_gate": {
+      "roc_auc": 0.6152375656585571,
+      "average_precision": 0.4760908023495904
+    }
+  },
+  "error_type_gate_mean": {
+    "Error_Correction": 7.415903563824995,
+    "Error_Modification": 6.115332730874486,
+    "Error_Slip": 6.228904893180061,
+    "Normal": 4.676301539994598,
+    "Error_Addition": 26.764228196826494
+  }
+}

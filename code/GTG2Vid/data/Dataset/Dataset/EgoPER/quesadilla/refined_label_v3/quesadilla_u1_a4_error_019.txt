@@ -1,0 +1,1203 @@
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+Place tortilla on cutting board|Error_Slip|Drop tortilla
+Place tortilla on cutting board|Error_Slip|Drop tortilla
+Place tortilla on cutting board|Error_Slip|Drop tortilla
+Place tortilla on cutting board|Error_Slip|Drop tortilla
+Place tortilla on cutting board|Error_Slip|Drop tortilla
+Place tortilla on cutting board|Error_Slip|Drop tortilla
+Place tortilla on cutting board|Error_Slip|Drop tortilla
+Place tortilla on cutting board|Error_Slip|Drop tortilla
+Place tortilla on cutting board|Error_Slip|Drop tortilla
+Place tortilla on cutting board|Error_Slip|Drop tortilla
+Place tortilla on cutting board|Error_Slip|Drop tortilla
+Place tortilla on cutting board|Error_Slip|Drop tortilla
+Place tortilla on cutting board|Error_Slip|Drop tortilla
+Place tortilla on cutting board|Error_Slip|Drop tortilla
+Place tortilla on cutting board|Error_Slip|Drop tortilla
+Place tortilla on cutting board|Error_Slip|Drop tortilla
+Place tortilla on cutting board|Error_Slip|Drop tortilla
+Place tortilla on cutting board|Error_Slip|Drop tortilla
+Place tortilla on cutting board|Error_Slip|Drop tortilla
+Place tortilla on cutting board|Error_Slip|Drop tortilla
+Place tortilla on cutting board|Error_Slip|Drop tortilla
+Place tortilla on cutting board|Error_Slip|Drop tortilla
+Place tortilla on cutting board|Error_Slip|Drop tortilla
+Place tortilla on cutting board|Error_Slip|Drop tortilla
+Place tortilla on cutting board|Error_Slip|Drop tortilla
+Place tortilla on cutting board|Error_Slip|Drop tortilla
+Place tortilla on cutting board|Error_Slip|Drop tortilla
+Place tortilla on cutting board|Error_Slip|Drop tortilla
+Place tortilla on cutting board|Error_Slip|Drop tortilla
+Place tortilla on cutting board|Error_Slip|Drop tortilla
+Place tortilla on cutting board|Error_Slip|Drop tortilla
+Place tortilla on cutting board|Error_Slip|Drop tortilla
+Place tortilla on cutting board|Error_Slip|Drop tortilla
+Place tortilla on cutting board|Error_Slip|Drop tortilla
+Place tortilla on cutting board|Error_Slip|Drop tortilla
+Place tortilla on cutting board|Error_Slip|Drop tortilla
+Place tortilla on cutting board|Error_Slip|Drop tortilla
+Place tortilla on cutting board|Error_Slip|Drop tortilla
+Place tortilla on cutting board|Error_Slip|Drop tortilla
+Place tortilla on cutting board|Error_Slip|Drop tortilla
+Place tortilla on cutting board|Error_Slip|Drop tortilla
+Place tortilla on cutting board|Error_Slip|Drop tortilla
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+Place tortilla on cutting board|Error_Correction|Discard tortilla and place a new one
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Use knife to scoop Nutella|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+Spread Nutella onto tortilla|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+Put banana slices on tortilla|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+Pour a handful of oatmeals on tortilla|Error_Addition|Pour a handful of oatmeals on tortilla
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+Fold tortilla|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Slice using knife|Normal
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+Place tortilla wedges on plate|Error_Modification|Place tortilla wedges into bowl
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal

@@ -1,0 +1,97 @@
+[
+  {
+    "path": "code/AMNAR/AMNARckpt/coffee_aod_rebuild_ca_sigt_online_clusterCenter_it0.6_addedMax_norm_unfreeze_winlen32_dila3_dilaLayer5_fr5_cu10_cus0.40_m0.9_dp0.1_e200_1st/eval_results.pkl",
+    "videos": 38,
+    "example_video": "coffee_u1_a7_normal_006",
+    "fields": [
+      "segments",
+      "label",
+      "score"
+    ],
+    "example_field_shapes": {
+      "segments": [],
+      "label": [],
+      "score": [
+        200
+      ]
+    },
+    "continuous_error_score_verified": false,
+    "reason": "score accompanies TAS segments; no normal-validation output in this cache; not assumed to be mistake probability"
+  },
+  {
+    "path": "code/AMNAR/AMNARckpt/oatmeal_aod_rebuild_ca_sigt_online_clusterCenter_it0.6_addedMax_norm_unfreeze_winlen32_dila3_dilaLayer5_fr5_cu10_cus0.40_m0.9_dp0.1_e200_1st/eval_results.pkl",
+    "videos": 35,
+    "example_video": "oatmeal_u1_a2_error_025",
+    "fields": [
+      "segments",
+      "label",
+      "score"
+    ],
+    "example_field_shapes": {
+      "segments": [],
+      "label": [],
+      "score": [
+        200
+      ]
+    },
+    "continuous_error_score_verified": false,
+    "reason": "score accompanies TAS segments; no normal-validation output in this cache; not assumed to be mistake probability"
+  },
+  {
+    "path": "code/AMNAR/AMNARckpt/pinwheels_aod_rebuild_ca_sigt_online_clusterCenter_it0.6_addedMax_norm_unfreeze_winlen32_dila3_dilaLayer5_fr5_cu10_cus0.40_m0.9_dp0.1_e200_1st/eval_results.pkl",
+    "videos": 45,
+    "example_video": "pinwheels_u1_a1_error_001",
+    "fields": [
+      "segments",
+      "label",
+      "score"
+    ],
+    "example_field_shapes": {
+      "segments": [],
+      "label": [],
+      "score": [
+        200
+      ]
+    },
+    "continuous_error_score_verified": false,
+    "reason": "score accompanies TAS segments; no normal-validation output in this cache; not assumed to be mistake probability"
+  },
+  {
+    "path": "code/AMNAR/AMNARckpt/quesadilla_aod_rebuild_ca_sigt_online_clusterCenter_it0.6_addedMax_norm_unfreeze_winlen32_dila3_dilaLayer5_fr5_cu10_cus0.40_m0.9_dp0.1_e200_1st/eval_results.pkl",
+    "videos": 35,
+    "example_video": "quesadilla_u1_a1_error_009",
+    "fields": [
+      "segments",
+      "label",
+      "score"
+    ],
+    "example_field_shapes": {
+      "segments": [],
+      "label": [],
+      "score": [
+        200
+      ]
+    },
+    "continuous_error_score_verified": false,
+    "reason": "score accompanies TAS segments; no normal-validation output in this cache; not assumed to be mistake probability"
+  },
+  {
+    "path": "code/AMNAR/AMNARckpt/tea_aod_rebuild_ca_sigt_online_clusterCenter_it0.6_addedMax_norm_unfreeze_winlen32_dila3_dilaLayer5_fr5_cu10_cus0.40_m0.9_dp0.1_e200_1st/eval_results.pkl",
+    "videos": 35,
+    "example_video": "tea_u1_a1_error_017",
+    "fields": [
+      "segments",
+      "label",
+      "score"
+    ],
+    "example_field_shapes": {
+      "segments": [],
+      "label": [],
+      "score": [
+        200
+      ]
+    },
+    "continuous_error_score_verified": false,
+    "reason": "score accompanies TAS segments; no normal-validation output in this cache; not assumed to be mistake probability"
+  }
+]

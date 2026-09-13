@@ -1,0 +1,102 @@
+{
+  "source_tasks": [
+    "Tea"
+  ],
+  "calibration_videos": [
+    [
+      "Tea",
+      "tea_u1_a1_normal_005"
+    ],
+    [
+      "Tea",
+      "tea_u1_a2_normal_015"
+    ],
+    [
+      "Tea",
+      "tea_u1_a3_normal_025"
+    ]
+  ],
+  "rules": [
+    {
+      "unit": "pooled_frames",
+      "alpha": 0.01,
+      "threshold": 0.34907084703445435,
+      "rank": 4481,
+      "calibration_units": 4525,
+      "never_alarm": false
+    },
+    {
+      "unit": "pooled_1s_block_max",
+      "alpha": 0.01,
+      "threshold": 0.42893152236938475,
+      "rank": 448,
+      "calibration_units": 451,
+      "never_alarm": false
+    },
+    {
+      "unit": "video_max",
+      "alpha": 0.01,
+      "threshold": null,
+      "rank": 4,
+      "calibration_units": 3,
+      "never_alarm": true
+    },
+    {
+      "unit": "pooled_frames",
+      "alpha": 0.05,
+      "threshold": 0.2589328408241272,
+      "rank": 4300,
+      "calibration_units": 4525,
+      "never_alarm": false
+    },
+    {
+      "unit": "pooled_1s_block_max",
+      "alpha": 0.05,
+      "threshold": 0.3019998788833618,
+      "rank": 430,
+      "calibration_units": 451,
+      "never_alarm": false
+    },
+    {
+      "unit": "video_max",
+      "alpha": 0.05,
+      "threshold": null,
+      "rank": 4,
+      "calibration_units": 3,
+      "never_alarm": true
+    },
+    {
+      "unit": "pooled_frames",
+      "alpha": 0.1,
+      "threshold": 0.22787187099456788,
+      "rank": 4074,
+      "calibration_units": 4525,
+      "never_alarm": false
+    },
+    {
+      "unit": "pooled_1s_block_max",
+      "alpha": 0.1,
+      "threshold": 0.259211266040802,
+      "rank": 407,
+      "calibration_units": 451,
+      "never_alarm": false
+    },
+    {
+      "unit": "video_max",
+      "alpha": 0.1,
+      "threshold": null,
+      "rank": 4,
+      "calibration_units": 3,
+      "never_alarm": true
+    },
+    {
+      "unit": "video_CRC_block_alert_rate",
+      "alpha": null,
+      "threshold": null,
+      "calibration_units": 3,
+      "budget_per_minute": 1,
+      "correction_floor_per_minute": 15.0,
+      "never_alarm": true
+    }
+  ]
+}

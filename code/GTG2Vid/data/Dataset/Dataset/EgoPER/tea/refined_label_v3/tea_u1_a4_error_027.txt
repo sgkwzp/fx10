@@ -1,0 +1,1325 @@
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+Transfer water to kettle|Error_Modification|Directly pour water to kettle
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+Check water temperature|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+Pour water from kettle into mug|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+Place tea bag in mug|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+Steep tea bag in mug for a few seconds|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+Put mug into microwave for 5 seconds|Error_Addition|Put mug into microwave for 5 seconds
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+Put tea bag into trash can|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+Stir using spoon|Error_Modification|Stir using knife
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+Hold cup in front of you|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal
+BG|Normal

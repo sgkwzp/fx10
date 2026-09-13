@@ -1,0 +1,19 @@
+{
+  "feature_family": "vc_v_features_10fps",
+  "fps": 10,
+  "bank_per_class": 256,
+  "causal_smoothing_frames": 5,
+  "normal_validation_quantile": 0.99,
+  "event_iou": 0.1,
+  "seed": 20260911,
+  "bootstrap_video_replicates": 300,
+  "methods": ["global_nn", "predicted_action_nn", "visual_soft_nn", "history_hard_nn", "history_soft_nn", "no_order_soft_nn", "oracle_action_nn"],
+  "emission_temperature_candidates": [0.03, 0.07, 0.15],
+  "emission_strength_candidates": [0.1, 0.3, 1.0],
+  "transition_pseudocount": 0.1,
+  "distance_softmin_temperature": 0.05,
+  "selection_objective": "mean per-video normal validation action negative log likelihood; history scores use predictive prior before current observation",
+  "primary_subset": "oracle_supported",
+  "status": "exploratory; test previously used in direction discovery",
+  "base_experiment": "tea_action_diagnostic_20260911"
+}

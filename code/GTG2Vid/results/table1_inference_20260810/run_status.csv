@@ -1,0 +1,11 @@
+Dataset,Task,Started,Ended,DurationSeconds,ExitCode,CompletionMarker
+EgoPER,quesadilla,2026-08-10T19:48:37,2026-08-10T19:49:45,68.1,0,Yes
+EgoPER,oatmeal,2026-08-10T22:03:23,2026-08-10T22:06:51,207.5,0,Yes
+EgoPER,pinwheels,2026-08-10T19:49:59,2026-08-10T19:52:21,141.8,0,Yes
+EgoPER,coffee,2026-08-10T20:48:48,2026-08-10T22:10:29,4901.2,0,Yes
+EgoPER,tea,2026-08-10T22:06:51,2026-08-10T22:08:51,119.9,0,Yes
+CaptainCook4D,spicedhotchocolate,2026-08-10T22:08:51,2026-08-10T22:10:28,97.0,0,Yes
+CaptainCook4D,microwaveeggsandwich,2026-08-10T22:10:28,2026-08-10T22:14:08,220.6,0,Yes
+CaptainCook4D,breakfastburritos,2026-08-10T22:14:08,2026-08-10T22:17:56,227.5,0,Yes
+CaptainCook4D,ramen,2026-08-10T22:17:56,2026-08-10T22:22:40,283.8,0,Yes
+CaptainCook4D,cucumberraita,2026-08-10T22:22:40,2026-08-10T23:20:09,3449.0,0,Yes

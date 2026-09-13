@@ -1,0 +1,9 @@
+{
+  "global_nn": 0.28049046993255616,
+  "predicted_action_nn": 0.3575262427330017,
+  "visual_soft_nn": 0.3284072816371918,
+  "history_hard_nn": 0.3893240213394165,
+  "history_soft_nn": 0.31910584488503557,
+  "no_order_soft_nn": 0.3371222810901145,
+  "oracle_action_nn": 0.30516380071640015
+}

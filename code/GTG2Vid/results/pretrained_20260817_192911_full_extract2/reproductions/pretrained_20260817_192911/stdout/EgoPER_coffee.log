@@ -1,0 +1,12 @@
+Loading Dataset ...
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Loading Dataset ...
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+Loading Dataset ...
+  0%|          | 0/38 [00:00<?, ?it/s] 39%|███▉      | 15/38 [00:00<00:00, 149.48it/s]100%|██████████| 38/38 [00:00<00:00, 194.71it/s]100%|██████████| 38/38 [00:00<00:00, 187.79it/s]
+Ignore specific or non-exsting action type for error recognition: ['Normal', 'Error_Addition']
+Load from epoch 27
+Num of valid omitted sequences: 14
+/gz-data/GTG2Vid/runner.py:394: RuntimeWarning: invalid value encountered in divide
+  r = tp / float(tp+fn)
+Evalutation Done...

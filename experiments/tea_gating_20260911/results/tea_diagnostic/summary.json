@@ -1,0 +1,54 @@
+{
+  "validation": {
+    "visual": {
+      "frames": 4525,
+      "positive_rate": 0.0,
+      "roc_auc": null,
+      "average_precision": null
+    },
+    "order": {
+      "frames": 4525,
+      "positive_rate": 0.0,
+      "roc_auc": null,
+      "average_precision": null
+    },
+    "effect": {
+      "frames": 4525,
+      "positive_rate": 0.0,
+      "roc_auc": null,
+      "average_precision": null
+    },
+    "factorized_fused": {
+      "frames": 4525,
+      "positive_rate": 0.0,
+      "roc_auc": null,
+      "average_precision": null
+    }
+  },
+  "test": {
+    "visual": {
+      "frames": 48827,
+      "positive_rate": 0.2812788006635673,
+      "roc_auc": 0.5719157186240587,
+      "average_precision": 0.367015889734508
+    },
+    "order": {
+      "frames": 48827,
+      "positive_rate": 0.2812788006635673,
+      "roc_auc": 0.5897559915594434,
+      "average_precision": 0.3356118714679312
+    },
+    "effect": {
+      "frames": 48827,
+      "positive_rate": 0.2812788006635673,
+      "roc_auc": 0.6595577253128864,
+      "average_precision": 0.5175604924724094
+    },
+    "factorized_fused": {
+      "frames": 48827,
+      "positive_rate": 0.2812788006635673,
+      "roc_auc": 0.6266660763361143,
+      "average_precision": 0.40432406670127063
+    }
+  }
+}

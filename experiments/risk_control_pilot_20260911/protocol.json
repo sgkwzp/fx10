@@ -1,0 +1,20 @@
+{
+  "tasks": ["Coffee", "Oatmeal", "Pinwheels", "Quesadilla", "Tea"],
+  "feature_family": "vc_v_features_10fps",
+  "fps": 10,
+  "causal_mean_frames": 5,
+  "reference_rows_per_task": 512,
+  "alphas": [0.01, 0.05, 0.1],
+  "block_seconds": 1,
+  "alarm_budget_per_minute": 1,
+  "scorer": "diagnostic normal-feature cosine 1NN; not AMNAR, AEM, or ZeProM",
+  "within_task": "bank from available normal task training videos; calibrate only 3 official normal validation videos",
+  "leave_one_task_out": "bank from the four source tasks only; calibrate their 12 normal validation videos; no target task training or calibration input",
+  "frame_calibration": "empirical heuristic under dependent pooled frames; no finite-sample exchangeability claim",
+  "block_calibration": "max score in a fixed non-overlapping 1-second block; blocks in same video remain dependent",
+  "video_calibration": "one maximum per normal validation video; conformal guarantee conditional on exchangeable normal calibration/test videos and frozen scorer",
+  "video_CRC": "mean fraction of 1-second blocks alerting per normal video; bounded monotone loss; guarantee conditional on exchangeable videos, not arbitrary new-task shift",
+  "tail_handling": "incomplete final block excluded from block metrics",
+  "ECE": "not computed: normal-distance scores are not error probabilities and normal-only calibration cannot identify both-class correctness probabilities",
+  "status": "first local diagnostic; published-detector and VLM experiments remain separate"
+}

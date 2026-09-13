@@ -1,0 +1,127 @@
+{
+  "history": {
+    "temperature": 0.15,
+    "strength": 0.1,
+    "normal_validation_predictive_action_nll": 0.738275377482807,
+    "per_video_nll": [
+      0.6308187906424251,
+      0.9219708610143933,
+      0.6620364807916025
+    ]
+  },
+  "visual": {
+    "temperature": 0.07,
+    "normal_validation_action_nll": 1.3459522724151611
+  },
+  "history_candidates": [
+    {
+      "temperature": 0.03,
+      "strength": 0.1,
+      "normal_validation_predictive_action_nll": 1.0926704196997725,
+      "per_video_nll": [
+        1.0517382377066422,
+        1.360651967763505,
+        0.8656210536291704
+      ]
+    },
+    {
+      "temperature": 0.03,
+      "strength": 0.3,
+      "normal_validation_predictive_action_nll": 1.8441630525496198,
+      "per_video_nll": [
+        1.9811813368179512,
+        2.398832801337022,
+        1.152475019493886
+      ]
+    },
+    {
+      "temperature": 0.03,
+      "strength": 1.0,
+      "normal_validation_predictive_action_nll": 2.4505554970926036,
+      "per_video_nll": [
+        2.6122349133374296,
+        2.9153018400163226,
+        1.8241297379240589
+      ]
+    },
+    {
+      "temperature": 0.07,
+      "strength": 0.1,
+      "normal_validation_predictive_action_nll": 0.7838861816427318,
+      "per_video_nll": [
+        0.6627013336697606,
+        0.9547546001100856,
+        0.7342026111483494
+      ]
+    },
+    {
+      "temperature": 0.07,
+      "strength": 0.3,
+      "normal_validation_predictive_action_nll": 1.2335525433687262,
+      "per_video_nll": [
+        1.234327392873006,
+        1.547561890287144,
+        0.9187683469460282
+      ]
+    },
+    {
+      "temperature": 0.07,
+      "strength": 1.0,
+      "normal_validation_predictive_action_nll": 2.0541718916843865,
+      "per_video_nll": [
+        2.2163937331049812,
+        2.5911020502641113,
+        1.3550198916840672
+      ]
+    },
+    {
+      "temperature": 0.15,
+      "strength": 0.1,
+      "normal_validation_predictive_action_nll": 0.738275377482807,
+      "per_video_nll": [
+        0.6308187906424251,
+        0.9219708610143933,
+        0.6620364807916025
+      ]
+    },
+    {
+      "temperature": 0.15,
+      "strength": 0.3,
+      "normal_validation_predictive_action_nll": 0.8674468636156396,
+      "per_video_nll": [
+        0.7604474398144365,
+        1.0722635669786282,
+        0.7696295840538542
+      ]
+    },
+    {
+      "temperature": 0.15,
+      "strength": 1.0,
+      "normal_validation_predictive_action_nll": 1.5347593937031558,
+      "per_video_nll": [
+        1.5947145527615552,
+        1.999996994267363,
+        1.0095666340805496
+      ]
+    }
+  ],
+  "visual_candidates": [
+    {
+      "temperature": 0.03,
+      "normal_validation_action_nll": 1.6689278682072957
+    },
+    {
+      "temperature": 0.07,
+      "normal_validation_action_nll": 1.3459522724151611
+    },
+    {
+      "temperature": 0.15,
+      "normal_validation_action_nll": 1.6533472935358684
+    }
+  ],
+  "selection_videos": [
+    "tea_u1_a1_normal_005",
+    "tea_u1_a2_normal_015",
+    "tea_u1_a3_normal_025"
+  ]
+}

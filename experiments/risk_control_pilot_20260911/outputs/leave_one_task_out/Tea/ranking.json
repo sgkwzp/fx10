@@ -1,0 +1,16 @@
+{
+  "ap": 0.3712171369965712,
+  "positive_rate": 0.2812788006635673,
+  "risk_curve": {
+    "aurc": 0.2995953120403584,
+    "full_coverage_error": 0.32660208491203635,
+    "confidence": "absolute raw-score margin to fixed threshold; not a probability",
+    "risk_at_coverage": {
+      "0.1": 0.3403645300020479,
+      "0.25": 0.28041287785696734,
+      "0.5": 0.2631686737118047,
+      "0.75": 0.2899975423937085,
+      "1.0": 0.32660208491203635
+    }
+  }
+}
