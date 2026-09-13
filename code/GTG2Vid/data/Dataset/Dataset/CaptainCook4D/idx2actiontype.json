@@ -1,0 +1,9 @@
+{
+    "0": "Normal",
+    "1": "Preparation Error",
+    "2": "Measurement Error",
+    "3": "Timing Error",
+    "4": "Technique Error",
+    "5": "Temperature Error",
+    "6": "Other"
+}
