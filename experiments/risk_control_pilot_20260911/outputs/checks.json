@@ -1,8 +1,0 @@
-{
-  "normal_only_reference_and_calibration": "passed",
-  "within_task_split_disjoint": "passed",
-  "LOTO_target_excluded_from_bank_and_calibration": true,
-  "conformal_small_n_infinity_and_ties": "passed",
-  "thresholds_written_before_target_test_scoring": true,
-  "ECE_from_uninterpreted_distances": false
-}

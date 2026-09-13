@@ -1,9 +1,0 @@
-{
-  "frame_label_lengths": "all present files exact",
-  "finite_features": "passed",
-  "split_disjoint": "passed",
-  "normal_only_fit": "passed",
-  "causal_score_prefix_invariance": "passed",
-  "metric_interval_and_matching_examples": "passed",
-  "output_root": "experiments/tea_action_diagnostic_20260911"
-}
