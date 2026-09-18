@@ -1,0 +1,1923 @@
+ProAct: A Benchmark and Multimodal Framework for Structure-Aware
+                                  Proactive Response
+
+Xiaomeng Zhu 1 2 Fengming Zhu 1 Weijie Zhou 2 Ye Tian 2 Zhenlin Hu 3 Yufei Huang 2 Yuchun Guo 2
+                        Xinyu Wu 4 Zhengyou Zhang 2 Fangzhen Lin 1 Xuantang Xiong 2
+
+                        Abstract                                                    Previous                       Current              Future
+
+      While passive agents merely follow instructions,            ① Trigger Detection                              Take out the old garbage bag
+      proactive agents align with higher-level objec-             Decide whether to intervene now.
+      tives, such as assistance and safety by continu-            ② Step Detection
+      ously monitoring the environment to determine               Locate the current step in the workflow.
+      when and how to act. However, developing                    ③ Task Detection
+      proactive agents is hindered by the lack of spe-            Identify the high-level task to pursue.
+      cialized resources. To address this, we intro-
+      duce ProAct-75, a benchmark designed to train               ④ Future Action Prediction
+      and evaluate proactive agents across diverse do-            Predict 0-step future actions as candidate set.
+      mains, including assistance, maintenance, and
+      safety monitoring. Spanning 75 tasks, our dataset           ⑤ Proactive Action Selection
+      features 91,581 step-level annotations enriched             Choose the next graph-feasible action.
+      with explicit task graphs. These graphs encode
+      step dependencies and parallel execution possi-             Task Graph          Take out the old             Blocking my way?     Leave with trash
+      bilities, providing the structural grounding nec-                                 garbage bag                    Tie the
+      essary for complex decision-making. Building                     (partially)
+      on this benchmark, we propose ProAct-Helper,                   Start clean      Parallel teamwork!           garbage bag
+      a reference baseline powered by a Multimodal                    trash bin
+      Large Language Model (MLLM) that grounds                                       Take out the new …                            AND
+      decision-making in state detection, and leverag-
+      ing task graphs to enable entropy-driven heuris-                              drawstring trash bag           Put the garbage      Human current step
+      tic search for action selection, allowing agents                                                             bag on the bin       Robot selected action
+      to execute parallel threads independently rather
+      than mirroring the human’s next step. Extensive             Figure 1. Overview of proactive response tasks. ProAct-75
+      experiments demonstrate that ProAct-Helper out-             supports five vision-based tasks with step-level annotations, hi-
+      performs strong closed-source models, improv-               erarchical labels, and task graphs. Traditional intent-following
+      ing trigger detection mF1 by 6.21%, saving 0.25             approaches predict human-intended actions (e.g., tie the bag) and
+      more steps in online one-step decision, and in-             execute them, inadvertently blocking workflows. Our benchmark
+      creasing the rate of parallel actions by 15.58%.            enables evaluation of strategies where robots pursue independent
+      Code is available at https://github.com/                    parallel threads to reduce disruptions.
+      ZhuXMMM/ProAct.git
+                                                                  1. Introduction
+    1Department of Computer Science and Engineering, The Hong
+Kong University of Science and Technology (HKUST), Hong           Unlike passive agents that respond to explicit instructions,
+Kong SAR, China 2Tencent, Shenzhen, China 3Futian Laboratory,     proactive agents take initiative toward higher-level ob-
+Shenzhen, China 4Shenzhen Institute of Advanced Technology        jectives by continuously observing the environment, and
+(SIAT), Chinese Academy of Sciences, Shenzhen, China. Corre-      autonomously selecting actions (Wooldridge & Jennings,
+spondence to: Fangzhen Lin <flin@cse.ust.hk>, Xuantang Xiong      1995; Li et al., 2023; van Den Broek & Moeslund, 2024).
+<sheltxiong@tencent.com>.                                         For instance, a robot may replace a trash bag before it
+                                                                  overflows in a human-absent scenario, or proactively pre-
+Proceedings of the 43 rd International Conference on Machine      pare a new bag while observing a human remove a full
+Learning, Seoul, South Korea. PMLR 306, 2026. Copyright 2026      one in a collaborative scenario. However, most existing
+by the author(s).                                                 robotic systems still rely on passive instructions, imposing
+                                                                  cognitive load and limiting the robot’s autonomous oper-
+                                                                  ation (Johannsmeier & Haddadin, 2016; Camilleri et al.,
+                                                                  2022; Noormohammadi-Asl et al., 2025). In this work,
+                                                                  we study proactive response for robot agents in settings of
+                                                                  human-absent autonomy and human-robot collaboration,
+                                                                  where agents must continuously monitor video observations
+                                                                  to determine when to intervene and what action to take.
+
+                                                                  Training such proactive agents requires a robust ability of
+
+                                                               1
+           ProAct: A Benchmark and Multimodal Framework for Structure-Aware Proactive Response
+
+           Assistance Scenario                                    Previous  Current             Future
+                   Videos
+  Source                                 Annotations    Trigger Detection: True Step Detection: Fold clothes and put in suitcase Proactive Action Selection:
+                (All / Best)             (All / Best)   Task Detection: Pack a Suitcase for Travel Future Action Prediction: Pack toiletries… Pack toiletries
+   COIN          465 / 465              2,600 / 2,600
+Ego-Exo4D       3,446 / 856            85,010 / 19,923
+                 375 / 125               2,239 / 751
+    Ours
+
+Source     Maintenance Scenario        (All / Best)     Trigger Detection: True Step Detection: Take out the old garbage bag Proactive Action Selection:
+COIN              (All / Best)          552 / 552       Task Detection : Clean Trash Bin Future Action Prediction : Tie the garbage bag… drawstring trash bag Take out the new
+ Ours               93 / 93            2,381 / 686
+                   407 / 115
+
+           Safety Monitoring Scenario
+
+Source     (All / Best)                (All / Best)
+
+UCF-CRIME  915 / 915                   1,053 / 1,053    Trigger Detection: True Step Detection: Respond to Explosion Task Detection : Respond to Explosion
+
+Figure 2. Qualitative examples of ProAct-75 across three application scenarios. We visualize the previous-current-future observation
+window and structured annotations for our proactive visual response tasks. Assistance and Maintenance examples are from self-collected
+exocentric videos. Safety examples are from UCF-Crime. Safety videos omit future action prediction and proactive action selection due to
+the absence of human-robot collaboration.
+
+perception across diverse scenarios (Triantafyllidis et al.,      tance, maintenance, and safety monitoring. ProAct-75
+2023; Gao et al., 2023; Wu et al., 2024). More importantly,       comprises 75 tasks with 5,383 videos and 91,581 annotated
+they need to have structured task representations that con-       segments. Videos are sourced from Ego-Exo4D (Grauman
+nect high-level objectives with executable steps (Kaelbling       et al., 2024), COIN (Tang et al., 2019), and UCF-Crime (Das
+& Lozano-Pérez, 2011; Kou et al., 2024; Wang et al., 2025b).      et al., 2019), complemented by 495 self-collected clips to
+An example is hierarchical task graphs with precedence con-       improve coverage of underrepresented tasks. For evaluation,
+straints and parallel threads (Gombolay et al., 2018; Suslova     we adopt a consistent protocol to re-annotate all videos, en-
+& Fazli, 2020; Zhao et al., 2026; Kou et al., 2026) that en-      suring atomic action-level temporal granularity. Critically,
+able structure-aware execution to preserve task feasibility       ProAct-75 provides explicit task graphs for each task, en-
+and shorten workflows that enable robots to execute tasks         coding AND/OR dependencies and parallelizable threads to
+that humans would eventually perform but have no prece-           support structure-aware action selection (enabling parallel
+dence dependencies (Pupa et al., 2022). For instance, in the      support actions under constraints). This enables evaluation
+trash-handling scenario shown in Figure 1, a robot agent          of five proactive response tasks: trigger detection, step
+lacking dependency knowledge might wait to tie the bag            detection, task detection, future action prediction, and
+sequentially, whereas understanding parallel threads would        proactive action selection (as shown in Figure 1), cover-
+allow it to prepare a new bag concurrently, accelerating          ing both intervention judgment and graph-feasible action
+completion.                                                       selection beyond standard action recognition or anticipation.
+
+However, existing video understanding benchmarks present          Furthermore, we propose ProAct-Helper as a reference
+critical gaps for evaluating proactive response. While multi-     baseline built upon MLLM. ProAct-Helper employs a
+source datasets are essential for cross-scenario diversity,       MLLM with a Hierarchical Binding Module (HBM) to
+they often exhibit inconsistent temporal granularities and        enhance cross-level semantic consistency for perception
+annotation schemes (Sultani et al., 2018; Das et al., 2019;       tasks (trigger, task, step detection, and future action predic-
+Tang et al., 2019; Damen et al., 2022; Zhu et al., 2023; Kou      tion)1. ProAct-Helper employs an entropy-driven heuristic
+et al., 2023; Li et al., 2024; Hartmann et al.). Some anno-       to search for the next best proactive action on the given task
+tate mid-level states while others focus on atomic actions,       graph, such that it may prioritize actions on parallel threads
+preventing unified hierarchical task modeling. More criti-        rather than strictly following the human’s next intended step,
+cally, existing benchmarks rarely provide task graphs that        and meanwhile, does not violate any precedence constraints.
+encode temporal precedence and parallel execution possi-          In summary, our main contributions are:
+bilities, which are essential for effective planning. Without
+explicit dependency structures, agents must treat all steps        • A benchmark called ProAct-75 for vision-based proac-
+conservatively as sequential, missing opportunities to exe-          tive response that provides explicit task graphs and
+cute independent tasks in parallel and thereby unnecessarily         structure-aware annotations across assistance, mainte-
+prolonging workflows (Xiang et al., 2023; Zhu et al., 2025).
+                                                                      1We use “step” to refer to observed human activity states and
+To address these gaps, we introduce ProAct-75, a bench-           “action” to refer to robot execution primitives, though both repre-
+mark for vision-based proactive response spanning assis-          sent atomic nodes in the task graph.
+
+                                                               2
+ProAct: A Benchmark and Multimodal Framework for Structure-Aware Proactive Response
+
+   nance, and safety monitoring scenarios.                         & Liu, 2025) for symbolic action reasoning and Proac-
+ • An MLLM-based framework called ProAct-Helper that               tiveBench (Wang et al., 2025d) for diagnostic evaluations.
+                                                                   However, visual input is essential for proactive systems
+   integrates HBM for multi-level state perception and             to perceive real-time environmental states and anticipate
+   entropy-driven heuristic search for proactive action se-        task requirements in physical scenarios. While large-
+   lection under task-graph constraints.                           scale egocentric datasets such as Ego4D (Grauman et al.,
+ • Comprehensive experiments showing that ProAct-Helper            2022), EPIC-Kitchens (Damen et al., 2022), and Something-
+   outperforms strong MLLMs, improving trigger detection           Something (Goyal et al., 2017) have advanced activity un-
+   mF1 by 6.21%, achieving 0.25 saved steps, and increas-          derstanding, proactive systems rely more on holistic scene
+   ing Parallel Action by 15.58%.                                  context and structured task representations from exocen-
+                                                                   tric views (Patel & Chernova, 2023). Complete task-step
+Conflict of Interest Disclosure. Some authors are af-              sequences are particularly critical for learning procedural
+filiated with Tencent, which provided research support             dependencies (Gao et al., 2022; Zhou et al., 2023). Exist-
+and data-collection resources for this work. The use of            ing exocentric datasets include COIN (Tang et al., 2019),
+self-collected data followed the applicable company data-          Ego-Exo4D (Grauman et al., 2024), CrossTask (Zhukov
+governance procedures. The authors independently con-              et al., 2019), Assembly101 (Sener et al., 2022), and Toy-
+ducted the benchmark design, annotation protocol, experi-          ota SmartHome (Das et al., 2019). We select COIN and
+ments, analysis, and conclusions. We are not aware of any          Ego-Exo4D for their complete task-step annotations and
+other financial conflicts of interest.                             multi-view collaboration data, introduce UCF-Crime (Sul-
+                                                                   tani et al., 2018) for anomalous scenarios in safety moni-
+2. Related Work                                                    toring, and collect additional videos for underrepresented
+                                                                   tasks.
+2.1. Proactive Embodied Agents
+                                                                   3. Problem Statement
+Existing proactive robotic systems typically aim to infer
+human goals from observations (Huang & Mutlu, 2016;                Vision-based proactive response couples state perception
+Nikolaidis et al., 2017; Losey et al., 2018; Patel & Cher-         with action selection under task-graph constraints. We for-
+nova, 2023). Related research adopts the inverse reason-           malize the problem in this section.
+ing paradigm of Theory of Mind (ToM), inferring human
+intentions from behavioral observations to generate assis-         3.1. Task Graph Formulation
+tive strategies. These approaches often assume the robot
+agent’s intentions align with human’s intentions, positioning      Human activities follow structured procedures: some steps
+the robot as assistive tools (Jara-Ettinger et al., 2016; van      must precede others, while certain sub-processes can
+Den Broek & Moeslund, 2024). Existing methods mainly               progress in parallel. To provide an explicit executable con-
+cover intention recognition, environment prediction, and           straint model for proactive response, we represent each task
+shared autonomy (Schrempf et al., 2005; Baker et al., 2009;        as a Directed Acyclic Graph (DAG) (Sifat et al., 2023; Grau-
+Dragan et al., 2013; Koppula & Saxena, 2015; Javdani               man et al., 2024) with AND/OR dependencies. We provide
+et al., 2018; Ognibene et al., 2019; Rhinehart et al., 2019;       the formal definitions below.
+Broad et al., 2019; Shi et al., 2021; Atan et al., 2024; Wang
+et al., 2025a; 2026). However, recent studies indicate that        A task T is a finite directed graph (V, E), denoting a finite
+robot agent’s intentions need not align with human’s inten-        set of nodes and the set of edges, respectively:
+tions (van Den Broek & Moeslund, 2024; Zhu et al., 2025),
+as human intentions may be suboptimal in unattended sce-            • A node v ∈ V represents either an executable step (v ∈
+narios or when holding negative beliefs (Wang et al., 2025c).         Ve) or a non-executable structural node (v ∈ Vn). Non-
+This suggests robot agent should make more independent                executable nodes include start/terminate nodes and mid-
+decisions based on scene understanding and task structure.            level node pairs2, with Ve ∩ Vn = ∅.
+While recent works (Bi et al., 2024; Yang et al., 2025; 2026)
+focus on sensory-driven user assistance, our work studies           • A directed edge (u, v) ∈ E denotes a dependency where
+proactive response in attended and unattended settings, us-           u must be executed before v.
+ing task-graph structure to guide action selection from visual
+state estimates.                                                    • The set of predecessor node is defined as Pred(v) ≜
+                                                                      {u ∈ V : (u, v) ∈ E}, and the successor node set as
+2.2. Video Benchmarks for Proactive Response                          Succ(v) ≜ {w ∈ V : (v, w) ∈ E}.
+
+Existing proactive response research has primarily fo-                 2Mid-level nodes abstract over a category of behaviors or a
+cused on text-based reasoning, such as ProRAC (Wu                  sequence of actions, e.g., “prepare ingredients”. They come in
+                                                                   pairs: a start node marks the beginning of a mid-level task and an
+                                                                   end node marks its completion.
+
+                                                                3
+                 ProAct: A Benchmark and Multimodal Framework for Structure-Aware Proactive Response
+
+A node a is reachable from node b, denoted a ∈ Reach(b),                                      Video Collection                        Annotated using
+iff either a = b (every node reaches itself), or there exists a                                                                      annotation system
+directed path from b to a. Formally, this is captured by the                       COIN
+recursive definition:
+                                                                                   Ego-Exo4D  ProAct-75
+a ∈ Reach(b) ⇐⇒ a = b∨∃c ∈ V. (c, a) ∈ E∧c ∈ Reach(b).                             UCF-CRIME
+                                                                           (1)                  Raw Videos
+
+Note that for any mid-level start node u with end node u′ and                      Ours                                    Step: semantic name with time period.
+successors bi, bj ∈ Succ(u), there exists no edge (vi, vj) ∈                                                               Trigger: annotated triggering reason.
+E or (vj, vi) ∈ E where vi ∈ (Reach(bi) ∩ Pred(u′)) \                                                                      Views: best-view selected.
+Reach(bj) and vj ∈ (Reach(bj) ∩ Pred(u′)) \ Reach(bi),
+ensuring branch independence until merge to u′.                                               Task Graph Annotation
+
+We associate each node with type via ϕ : V → {AND, OR},                            Activation conditions &      Structural repair &  Initial graph skeleton
+which specifies when the node can be executed:                                      multi-parent AND/OR         node completion
+
+ • For a node v with ϕ(v) = AND, it can only be executed                                      Mid-level phase abstraction            Task Graph
+   when every node in Pred(v) has been executed. We call
+   it an AND node for simplicity.                                                                                                                Manual review
+
+ • Similarly, for a node v with ϕ(v) = OR, it can only be                          Figure 3. ProAct-75 data collection and annotation pipeline. We
+   executed when at least one node in Pred(v) has been
+   executed, and is termed an OR node similarly.                                   combine videos from public datasets and self-collected recordings,
+
+ • In particular, for the initial step v0 with Pred(v0) = ∅, it                    then annotate step spans/names, triggers, and best views. Each
+   can be executed immediately.
+                                                                                   task is equipped with a task-graph annotation.
+Let Progt ⊆ V denote the set of executed nodes up to
+timestep t. Every executable step v ∈ Ve consumes a                                ger gates subsequent predictions, and task/step detection
+timestep upon execution, while a structural node v ∈ Vn is                         localizes the current state for action planning.
+automatically satisfied once its preconditions are met. Task
+progression follows the constraints:                                               4. ProAct-75 Benchmark
+
+∀v ∈ Progt.      ϕ(v) = AND =⇒ Pred(v) ⊆ Progt                                     ProAct-75 evaluates proactive response on trigger detection,
+                 ϕ(v) = OR =⇒ Pred(v) ∩ Progt̸ = ∅                                 task detection, step detection, future action prediction, and
+                                                                                   proactive action selection tasks. In the following sections
+                                                    (2)                            we describe the data composition and annotation protocol.
+
+An executable step a ∈ Ve is legal at timestep t if a ∈/ Progt                     4.1. Data Composition and Annotations
+
+and its preconditions are satisfied under the AND/OR seman-                        ProAct-75 covers three interaction scenarios with distinct
+tics above. We denote the set of such steps by Atlegal ⊆ Ve.                       mechanisms of goal formation. Assistance evaluates an-
+A task is completed at timestep t∗ if the current progression                      ticipatory support in activities with human-initiated goals.
+                                                                                   Maintenance evaluates environment-triggered goal gen-
+state reaches the terminal node vterm for the first time, i.e.,                    eration driven by observable states (e.g., cluttered desks).
+vterm ∈ Progt∗ ∧ ∀t′ < t∗.vterm ∈/ Progt′ .                                        Safety monitoring focuses on preventive interventions
+                                                                                   against risky behaviors. Assistance and Maintenance may
+3.2. Proactive Response Formulation                                                overlap at the task level depending on whether intervention
+                                                                                   is triggered by human activity or environment monitoring.
+Proactive response requires continuously monitoring hu-
+                                                                                   To cover these scenarios at scale while maintaining diverse
+man activities and intervening when assistance is needed.                          environments, we construct ProAct-75 by aggregating exo-
+                                                                                   centric videos from Ego-Exo4D, COIN, UCF-Crime, and
+At each timestep t, given a video frame and task                                   self-collected sources. We adopt the Ego-Exo4D standard
+                                                                                   and re-annotate other sources to ensure consistent step-level
+graph as the input Xt, the agent outputs Yt =                                      granularity. For multi-view recordings in Ego-Exo4D, we
+   trig task step                                                                  follow the annotation of original view. For our self-collected
+(yt , yt , yt , aˆt+1:t+n, at+1):⋆                                                 multi-view videos, we select the best views so that key ac-
+                                                                                   tions are visible and occlusions are minimized. The data
+• Trigger: yttrig ∈ {0, 1} indicates if interaction is needed.                     scale and distribution are shown in Figure 2. More collec-
+          ytask                                                                    tion details are available in Section D.
+•  Task:         ∈T  identifies the task category.
+            t                                                                      We adopt a unified annotation protocol where each step
+• Step: ytstep ∈ V identifies the current step.                                    boundary corresponds to the semantic change in human
+                                                                                   actions. Each video is annotated with task- and step-level
+• Future actions: aˆt+1:t+n ∈ V predicts future actions.                           temporal spans (aligned timestamps and frame indices), and
+                                                                                   natural-language context cues (scenario and trigger descrip-
+•  Proactive action:  a⋆     ∈  Ve ∪ {WAIT} is the robot’s
+
+                        t+1
+
+   selected next action.
+
+These predictions form a hierarchical structure where trig-
+
+                                                                                4
+ProAct: A Benchmark and Multimodal Framework for Structure-Aware Proactive Response
+
+tions at task and step granularity). We provide human-rated          sion, HBM enhances cross-level semantic consistency by
+task priority scores to support cost-sensitive evaluation. For       maximizing the agreement between parent and child level
+COIN, UCF-Crime, and our selected data, three trained an-            representations while strengthening class separability under
+notators produced 1,978 videos and 6,797 step segments               parent-level conditioning.
+over 1.5 months. Quality control involved two rounds (half
+a month) where three experts reviewed annotations to fix             HBM extracts token hidden states for trigger/task/step fields
+inconsistencies and refine boundaries. Disagreements were            (Figure 4). Let hi be the i-th output-token hidden state
+resolved through deliberation to ensure consistency across           and Iℓ the token span of level ℓ ∈ {trig, task, step}. We
+sources. In total, ProAct-75 comprises 5,383 videos contain-         obtain Hℓ by mean pooling over {hi}i∈Iℓ . We introduce
+ing 91,581 step segments, with the remainder contributed             two cross-level contrastive constraints to maximize mutual
+by Ego-Exo4D’s existing step annotations.
+                                                                     information between hierarchical levels while respecting cat-
+4.2. Task Graph                                                      egory structure. For each paired instance i in a mini-batch
+                                                                     of size B with parent-child pair (Hp(i), Hc(i)), we define
+Following the formulation in Section 3.1, we construct task          the positive pair as (Hp(i), Hc(i)) and the negatives as mis-
+graphs as DAGs with atomic steps as nodes and temporal               matched pairs formed with other instances in the mini-batch.
+dependencies as edges. We build each graph incremen-                 The binding loss between parent level p and child level c is:
+tally. Given the step inventory of a task, GPT-4o proposes
+one local dependency (with activation conditions) at a time,         L(p, c) = −  1B     log   exp(sim(Hp(i), Hc(i))/τ )
+followed by automatic validation to enforce DAG valid-                                                            (i) (j) ,
+ity (acyclicity, reachability, no dead ends/isolated nodes)                       B i=1
+and basic physical feasibility checks. Gemini-3-Pro fur-                                      j∈N exp(sim(Hp , Hc )/τ )
+ther groups atomic steps into mid-level phases. Finally, all
+graphs are manually reviewed to correct any residual incon-                                                        (4)
+sistencies (as shown in Figure 3). More statistics on the task
+graphs can be found in Section E.                                    where N = {1, . . . , B} indexes paired instances in the mini-
+
+                                                                     batch, sim(·, ·) is cosine similarity, and τ is temperature. We
+
+                                                                     use a symmetric variant by averaging L(p, c) and L(c, p).
+
+                                                                     We combine two cross-level binding terms as:
+
+                                                                     Lbind = λttLtrig2task + λtsLtask2step.        (5)
+
+5. ProAct-Helper Method                                              where Ltrig2task and Ltask2step are instantiated as
+                                                                     L(trig, task) and L(task, step), respectively.
+
+5.1. ProAct-Helper Framework
+
+ProAct-Helper is a proactive response framework built upon           5.3. Proactive Action Selection
+
+MLLM and integrated with task-graph planning. The model              In this work, we study proactive action selection using an-
+                                                                     notated task graphs to choose the next feasible step. The
+takes multimodal input Xt at time t and produces struc-              key challenge is exploiting parallelizable thread to enable
+trig task step                                                       concurrent progress, rather than strictly following a single
+tured predictions Yt = (yt , yt , yt , aˆt:t+τ , at+1) as⋆           sequential path. Inspired by the perspective of behavioral
+                                                                     entropy (Goodrich et al., 2004; Guastello et al., 2012; Balch,
+defined in Section 3.2. To handle the long-tailed trigger–           2000), we model the human/robot action distribution over
+                                                                     parallel threads and use entropy to penalize mixed thread
+task–step hierarchy, we propose HBM to enforce cross-level           assignments, which indicate frequent thread switching and
+                                                                     higher cognitive load.
+alignment and improve rare-class representations.
+                                                                     To capture parallelizable threads in collaborative tasks, we
+Our training process employs instruction tuning with aux-            define threads based on the reachability structure of the
+iliary constraints. We apply standard autoregressive cross-          task graph. For any mid-level start node u with multiple
+entropy loss LCE over supervised tokens, supplemented by             successors Succ(u) = {b1, . . . , bm} that later merge at u′,
+a binary classification loss Ltrig at the trigger token position     we assign each successor (and its downstream nodes) to a
+to prevent signal dilution. The final objective is:                  thread via a mapping π : V → N. Two successors bi and
+                                                                     bj are considered in the same thread if their reachable node
+L = LCE + λtrigLtrig + λbindLbind,                    (3)            sets overlap, i.e., Reach(bi) ∩ Reach(bj)̸ = ∅; otherwise
+                                                                     they belong to different threads. Nodes not covered by such
+where Lbind is introduced by the Hierarchical Binding Mod-           regions are assigned to the primary thread π(v) = 0.
+ule to strengthen cross-level consistency and mitigate train-
+ing instability for long-tail classes.                               Given the task graph, current progression state, and action
+                                                                     set A, we obtain the set of legal actions Atlegal. The thread
+5.2. Hierarchical Binding Module
+
+The supervision signals in ProAct-75 exhibit a trigger-task-
+step hierarchy with severe long-tail distributions at the
+task and step levels. To address the representation insuffi-
+ciency caused by relying solely on autoregressive supervi-
+
+                                                                  5
+              ProAct: A Benchmark and Multimodal Framework for Structure-Aware Proactive Response
+
+Hierarchical Binding Losses                    FFrraammee 0226  ProAct-Helper                               Proactive Action Selection
+                                             … Frame 455
+       !!"#$       Span Pooling  ℎ!"#$                                 Decide if help is needed,        Predicted steps: A2 A3 B1 B2 B3
+                                                                       identify task and current
+!!%&'                            ℎ!%&'                                 step, and predict human’s                   A1 A2 A3
+                                                                       next actions.
+                                                                                                           S1                    AND T1
+
+                                             Keyframes                             Prompts                         B1 B2 B3
+
+!&!()                            ℎ&!()                          tokenizer                                              Task DAG
+
+%+/ #!%&'*&!() +%++ #!"#$*!%&' = #,#-.                                                                  Entropy-driven heuristic search
+
+                                                                                                                        ① ② !!"# = 0
+                                                                                                                    A1 A2 A3
+
+Contrasitive Loss                Step Token                     ProAct-Helper                              S1                    AND T1
+
+Trigger Token                    Task Token                                                                        B1 ① B2 ② B3
+
+Future Action Prediction Token                                                                          Human Step     Robot Step  Candidates
+
+Figure 4. Overview of ProAct-Helper framework. Given keyframes and prompts, the model predicts trigger, task, step, and human’s
+future actions, trained with hierarchical binding losses for cross-level consistency under long-tail data. It then selects the next robot action
+on the task DAG via an entropy-driven heuristic search to favor feasible, low thread-mixing progress.
+
+mapping π(·) groups these legal actions by thread, and the              6. Experiments
+robot agent selects an action from the grouped set based on
+the objective below. For each action a ∈ Atlegal, we estimate           6.1. Experimental Setup
+its induced thread mixing entropy Hmix.
+                                                                        Benchmark. All experiments use ProAct-75, split by video
+Let Ht and Rt denote the human and robot step histories                 into train/test at an approximate 3:1 ratio, yielding Ntrain =
+up to time t. To evaluate the thread mixing induced by a                4, 074 and Ntest = 1, 309 videos. Unless stated otherwise,
+candidate action a, we consider the counterfactual one-step-            we train on the best-view subset (Ntrain = 1, 905 and Ntest =
+ahead robot history Rt ∪ {a} and compute the per-thread                 516; see Section 4.1 and Figure 2) and evaluate on its test set,
+step count for each agent α ∈ {hum, rob} as:                            while other views are used for Out Of Distribution (OOD)
+                                                                        evaluation (see Section B.5).
+
+nkα ≜ |{x ∈ Ht | π(x) = k}|                  if α = hum,                Implementation details. We extract keyframes based on
+                                                              (6)
+       |{x ∈ Rt ∪ {a} | π(x) = k}| if α = rob.
+                                                                        adjacent-frame appearance changes and use a 5-frame slid-
+
+The mixing ratio for thread k is then pk = nhum k /(nhum k +            ing window with stride 3 as the input Xt (see Section B.1).
+nrob k ), quantifying the proportion of human participation.
+The binary entropy for each thread is:                                  Input prompt templates and output formats are detailed in
+
+                                                                        Section F. For action selection, since predicted actions may
+
+                                                                        not fall within the legal action domain, we take the inter-
+
+Hk(pk) = −pk log pk − (1 − pk) log(1 − pk), (7)                         section  Acand      =  Atlegal  ∩  Atpred  to  ensure    feasibility.  We
+
+                                                                                    t
+                                                                        slightly abuse the notation by treating Atpred as a set and
+
+where Hk(pk) = 0 when pk ∈ {0, 1} (i.e., single-agent                   removing possible duplicates.
+execution). The thread mixing entropy is a length-weighted
+sum across threads:                                                     We evaluate both open-source and closed-source MLLMs.
+                                                                        ProAct-Helper is built upon Qwen2.5-VL-Instruct 3B/7B
+       Hmix Ht, Rt ∪ {a} = wk Hk(pk),                           (8)     and fine-tuned with LoRA. All baselines are evaluated in
+                                                                        two stages: Stage-1 decides trigger and task given the
+                                        k                               keyframe window and task list; if triggered, Stage-2 detects
+                                                                        step and future actions given the identified task graph. We
+where wk = (nhum k + nrob k )/ j (nhum j + nrob j ) weights             avoid in-context video demonstrations as keyframe streams
+threads by total executions, so mixing on more active threads           already create long video-token contexts, and adding demo
+                                                                        keyframes would substantially increase latency.
+contributes more than on rarely visited ones.
+
+We employ a one-step lookahead strategy to select the action            ProAct-Helper is trained for 10 epochs with a batch size
+that minimizes this entropy:                                            of 128 using the AdamW optimizer and a learning rate of
+                                                                        5 × 10−5. All training is conducted on NVIDIA H20 GPUs
+at+1 ⋆ = arg min Hmix Ht, Rt ∪ {a} . (9)                                using bfloat16 precision. For LoRA fine-tuning, we set
+                                                                        the rank to r = 32 and the scaling factor to α = 32. For
+                    a∈Atlegal                                           inference, we apply different decoding strategies depending
+                                                                        on the evaluation setup. When measuring generation time
+This strategy favors actions on threads different from the
+human’s current thread and discourages frequent switching
+by the robot, reducing coordination overhead while enabling
+parallel progress.
+
+                                                                     6
+ProAct: A Benchmark and Multimodal Framework for Structure-Aware Proactive Response
+
+on our fine-tuned model, we use greedy decoding with a               6.3. Ablation Study
+maximum of 256 tokens. For the evaluation of baseline
+models, we employ nucleus sampling with temperature T =              To enable ablation studies within computational budgets, we
+0.7, top-p = 0.8, and top-k = 20.                                    sampled 1/8 of the best-view split using stratified sampling,
+                                                                     preserving task diversity and step-level distributions.3 We
+Evaluation Metrics. For trigger, task, and step detection,           examine HBM by isolating the Trigger-Task alignment loss
+we report Acc/F1 as micro-averaged metrics and mAc-                  Ltrig2task and Task-Step dependency loss Ltask2step. Ta-
+c/mF1, which average over classes to reflect long-tail per-          ble 2 shows that introducing Ltrig2task improves Task and
+formance. For future action prediction, we compute the               Step mAcc by 2.82% and 2.56%, while Ltask2step yields
+ED between predicted and ground-truth sequence. Further-             larger gains of 3.48% and 2.70%. The full model achieves
+more, we report four metrics for proactive action selection.         best performance, and Ltask2step is consistently more ef-
+Saved Steps (SS) measures how many human steps are                   fective than Ltrig2task, indicating that grounding tasks in
+saved by robot actions; Entropy (E) quantifies the human-            execution steps yields stronger supervision.
+robot thread mixing entropy Hmix; ER measures thread
+entropy for robot threads; Parallel Actions (PA) measures            6.4. Analysis of Text-only Proactive Action Selection
+the proportion of parallel actions where robot and previous
+human threads differ. E, ER, and PA are computed over                To decouple proactive action selection from upstream ac-
+effective actions only, i.e., excluding wait.                        tion prediction errors, we simulate collaboration between
+                                                                     human and robot agents from the video’s initial state. In
+6.2. Main Results                                                    the oracle setting, the robot uses the complete human tra-
+                                                                     jectory as Atpred. For LLM-based methods, we adopt the
+Table 1 presents results on ProAct-75. For all MLLMs                 prompt settings from Section 6.2. To avoid rollout dead-
+baselines, evaluation follows a two-stage process. The first         locks caused by minor mismatches between human traces
+stage determines whether a trigger occurs and identifies the         and strict graph preconditions, we use a one-step alignment
+corresponding task based on the keyframe window and the              safeguard that temporarily admits the observed next human
+task list. If triggered, the second stage uses the task graph of     step when it is not graph-enabled. This is applied uniformly
+the identified task to detect current steps and predict future       across methods and only at the current timestep, while robot
+steps. For proactive action selection, which relies on textual       actions remain graph-filtered. The full simulation procedure,
+predictions from the previous stage, we provide task graphs,         including the safeguard and tie-breaking rule, is provided
+AND/OR constraints, and thread definitions with parallel             in Section A.
+execution prioritization (as detailed in Section F).
+                                                                     Table 3 shows that closed-source LLMs’ SS remain lower
+The results show that ProAct-Helper outperforms both open-           than ProAct-Helper, despite being provided with task graphs
+source and closed-source baselines across most metrics,              and AND/OR constraints. GPT-4o exhibits lower mixing en-
+validating its effectiveness for proactive assistance. For           tropy E than ProAct-Helper yet higher robot thread entropy
+trigger/task/step detection, ProAct-Helper (7B) improves             ER. This suggests closed-source LLMs output more waiting
+task F1 by 17.09% and step F1 by 11.72% over the best                actions, leaving more effective actions to be completed by
+closed-source baseline Gemini-2.5-Pro. Furthermore, our              the human alone, thereby reducing E while failing to estab-
+HBM module boosts task mF1 by 2.71% and step mF1 by                  lish stable robot parallel execution threads as evidenced by
+1.63% on average across both backbones compared to the               elevated ER. In contrast, ProAct-Helper achieves the low-
+plain variant. This improvement on mF1 averaged over all             est ER of 0.654 and highest PA of 33.95%, demonstrating
+the classes indicates better handling of long-tail categories.       that entropy-driven heuristic search more effectively drives
+                                                                     strategies for stable parallel execution.
+For proactive action selection, ProAct-Helper significantly
+outperforms existing strong baseline models. Compared to             6.5. Analysis of Failure Case
+the best closed-source model Gemini-2.5-Pro, the 7B-based
+ProAct-Helper achieves SS of 0.361 and PA of 19.41%,                 Figure 5a reports hallucination rates, i.e., outputs that vio-
+demonstrating stronger task parallelization capability. The          late predefined constraints. We consider three types: Trigger
+plain variant without HBM attains lower SS at 0.350 and              (false interventions when the ground truth requires none),
+PA at 18.72%, as improved step detection and action pre-             Step (predicting step labels outside the predefined step vo-
+diction accuracy from HBM enable more effective action               cabulary), and Future (empty sequences or steps outside
+selection. Additional qualitative, hyperparameter, OOD,              the step vocabulary). ProAct-Helper achieves low Trigger
+trigger-error, representation, and inference time analyses are       and near-zero Step hallucination, indicating strong vocab-
+in Section B.1 and Section C.
+                                                                         3Stratified sampling ensures at least one video per task. Long-
+                                                                     tail distributions arise intrinsically from task structures
+
+                                                                  7
+                  ProAct: A Benchmark and Multimodal Framework for Structure-Aware Proactive Response
+
+Table 1. Main results on ProAct-75. We report mAcc/mF1 and Acc/F1 metrics for trigger/task/step detection and Edit Distance (ED) for
+future action prediction. Open-source baselines are evaluated without fine-tuning, while closed-source baselines use the same prompt
+template and decoding settings. Best results are in bold and second-best results are underlined. ↑ / ↓ indicate higher/lower is better.
+
+Base Model                    Trigger (%)                          Task (%)                  Step (%)        ED ↓ SS ↑ PA (%) ↑
+                                                                             F1 mAcc mF1 Acc           F1
+                              mAcc mF1 Acc F1 mAcc mF1 Acc
+
+                                                        Open-Source MLLMs
+
+Qwen3-VL-30B-A3B-Instruct 51.61 66.25 73.50 81.89 22.80 31.70 34.66 51.48 6.67 9.44 8.53 15.72 4.77 0.013 0.09
+
+Qwen3-Omni-30B                46.86 63.35 65.07 71.30 18.96 26.87 17.55 29.87 3.72 5.42 4.48 8.58 4.64 0.078 6.09
+
+Qwen2.5-VL-32B-Instruct 45.72 62.36 63.77 69.64 16.62 23.96 29.45 45.50 4.04 6.04 6.14 11.57 4.72 0.038 3.71
+
+Qwen2.5-VL-3B-Instruct        42.33 54.94 69.55 80.59 12.53 18.92 23.18 37.64 1.46 2.42 3.06 5.95 4.74 0.034 4.23
+
+                                                        Closed-Source MLLMs
+
+Qwen3-VL-Flash                54.73 70.35 72.06 77.48 17.36 24.84 17.91 30.37 3.70 5.51 2.94 5.72 4.76 0.046 2.46
+Qwen3-VL-Plus                 51.52 67.39 69.89 76.41 14.88 21.52 17.39 29.63 5.14 7.38 4.66 8.91 4.71 0.045 3.10
+GPT-4o                        30.59 46.70 47.11 51.38 16.67 24.90 20.27 33.71 4.02 6.05 8.70 16.0 4.64 0.026 0.77
+Gemini-2.5-Flash              49.73 64.24 72.52 81.44 21.78 30.66 31.14 47.49 6.97 10.12 9.42 17.21 4.70 0.062 2.55
+Gemini-2.5-Pro                42.89 55.94 69.31 80.21 22.95 32.39 35.23 52.11 8.69 12.31 11.99 21.41 4.70 0.120 3.83
+
+ProAct-Helper (plain)         61.50 75.40 79.24 85.12 24.02 31.85 48.21 65.05 6.46 9.27 17.54 29.85 3.99 0.333 17.15
+ProAct-Helper                 61.50 75.38 79.32 85.23 28.33 36.72 51.03 67.58 7.61 10.67 18.68 31.49 3.96 0.366 17.44
+
+                                     ProAct-Helper (based on Qwen2.5-VL-7B-Instruct)
+
+ProAct-Helper (plain)         62.36 76.09 79.85 85.57 25.49 34.24 48.94 65.71 6.39 9.70 18.23 30.83 3.99 0.350 18.72
+ProAct-Helper                 62.90 76.56 80.08 85.65 27.07 34.79 52.91 69.20 8.25 11.56 19.85 33.13 3.90 0.361 19.41
+
+Table 2. Ablation study results. We report mAcc/mF1 and Acc/F1 for trigger/task/step detection and ED for future action prediction.
+
+ Task Trigger                        Task (%)                                     Step (%)                           ED ↓
+→Step →Task                                                                                            F1
+                  mAcc        mF1                  Acc         F1     mAcc   mF1      Acc
+
+×       × 13.43 (+0.00) 18.50 (+0.00) 33.22 (+0.00) 49.87 (+0.00) 2.64 (+0.00) 3.99 (+0.00) 9.26 (+0.00) 16.94 (+0.00) 4.23 (+0.00)
+
+×       ✓ 16.25 (+2.82) 22.10 (+3.60) 35.72 (+2.50) 52.64 (+2.77) 5.20 (+2.56) 7.14 (+3.15) 13.38 (+4.12) 23.60 (+6.66) 3.97 (-0.26)
+
+✓       × 16.91 (+3.48) 22.60 (+4.10) 39.08 (+5.86) 56.19 (+6.32) 5.34 (+2.70) 7.28 (+3.29) 13.70 (+4.44) 24.10 (+7.16) 4.01 (-0.22)
+
+✓       ✓ 17.12 (+3.69) 23.10 (+4.60) 42.06 (+8.84) 59.22 (+9.35) 5.25 (+2.61) 7.18 (+3.19) 13.96 (+4.70) 24.50 (+7.56) 3.94 (-0.29)
+
+Table 3. Trajectory simulation results with human and robot           Figure 5b decomposes waiting into model-generated wait
+agents under GT labels.                                               and forced wait (i.e., caused by illegal actions). Gemini-
+                                                                      2.5-Flash exhibits the lowest forced wait ratio, indicating
+Method                 SS↑    E↓     ER↓ PA (%)↑                      better constraint adherence, while GPT-4o shows the high-
+                                                                      est, revealing reasoning limitations. Our method achieves
+        Closed-Source Large Language Models (LLMs)                    the highest parallel action ratio, substantially exceeding all
+                                                                      closed-source models, demonstrating a preference for paral-
+GPT-4o                 5.872  0.640  0.736              33.60         lel thread execution and efficient collaboration. Moreover,
+Gemini-2.5-Flash       5.918  0.662  0.748              28.26         most closed-source models achieve parallel action ratios
+Gemini-2.5-Pro         6.023  0.671  0.723              29.52         below Greedy, reflecting insufficient preference for parallel
+DeepSeek-v3.2          5.868  0.664  0.742              31.58         thread execution with humans under common-sense-driven
+Qwen3-Max              6.160  0.683  0.769              29.89         decision making, thereby hindering efficient collaboration.
+
+               ProAct Action Selection Strategies
+
+Greedy                 9.868  0.837  0.836              28.11
+ProAct-Helper          9.868  0.662  0.654              33.95
+
+ulary alignment, but exhibits some Future hallucination,              7. Conclusion
+suggesting controllability issues in action sequence gener-
+ation. Among closed-source models, GPT-4o shows the                   This paper studies proactive response, where an agent rec-
+lowest overall hallucination, Gemini-2.5-Pro exhibits the             ognizes state from video and selects feasible next actions
+highest Trigger hallucination, and Qwen3-VL variants show             under task-graph constraints. To support this problem, we
+the highest Step and Future hallucination.                            introduce ProAct-75, aggregating multi-source videos into
+                                                                      step-level annotations with explicit task graphs across as-
+                                                                      sistance, maintenance, and safety scenarios. On top of this
+
+                                                                   8
+      ProAct: A Benchmark and Multimodal Framework for Structure-Aware Proactive Response
+
+Hallucination rate                              0.6                                             research rather than a ready-to-deploy autonomous safety
+                                   Fraction                                                     system. High-stakes deployments should use calibrated trig-
+0.50                                            0.4                                             ger thresholds and human confirmation before consequential
+                                                                                                interventions.
+0.25                                            0.2
+                                                                                                References
+   0.00                                             0.0
+     PT-4-oFlas.h5-Pr-oFlasLh-Plpuesr-3pBer-7B       PT-4-oFlas.h5-P3ro-Max-V3.2reedHyelper     Atan, U., Bharadwaj, V. R., and Jiang, C. Assistive control
+                                                    Gni-2.5ini-2wenpSeek GAct-                     of robot arms via adaptive shared autonomy. In 2024
+   iGni-2m.5inin-23-VeLn3-cVt-Heclt-Hel          emi Gem QDee Pro                                 IEEE International Conference on Advanced Intelligent
+Gem GeQwe QwProAProA                            G                                                 Mechatronics (AIM), pp. 1096–1102. IEEE, 2024.
+                                                   Parallel Wait Forced wait
+      Trigger Step Future                                                                       Baker, C. L., Saxe, R., and Tenenbaum, J. B. Action under-
+                                                                                                   standing as inverse planning. Cognition, 113(3):329–349,
+(a) Hallucination rates.                        (b) Parallel action execution.                     2009.
+
+Figure 5. Failure case analysis. (a) We compare hallucination
+rates across trigger, step, and future prediction actions for different
+MLLMs. (b) We analyze models’ parallel execution tendencies,
+waiting behaviors, and task graph constraint comprehension. For
+clarity, we omit non-parallel actions from the visualization.
+
+benchmark, we find existing MLLMs often struggle to fol-                                        Balch, T. Hierarchic social entropy: An information the-
+low task-graph structure and leverage parallel threads even                                        oretic measure of robot group diversity. Autonomous
+when the graphs are given as input. We therefore propose                                           robots, 8(3):209–238, 2000.
+a strong multimodal baseline, ProAct-Helper. Extensive
+experiments show clear gains over closed-source models                                          Bi, S., Wang, W., Pan, H., Feng, F., and He, X. Proactive
+in state recognition and collaboration efficiency. Although                                        recommendation with iterative preference guidance. In
+our planner is a lightweight graph-constrained heuristic,                                         Companion Proceedings of the ACM Web Conference
+its thread-entropy objective and DAG feasibility signals                                          2024, pp. 871–874, 2024.
+suggest future directions for graph-feasible decoding, and
+ProAct-75’s trigger descriptions provide additional post-                                       Broad, A., Murphey, T., and Argall, B. Highly parallelized
+training data for reasonable proactive responses.                                                  data-driven mpc for minimal intervention shared control.
+                                                                                                   In Robotics: science and systems, 2019.
+Acknowledgments
+                                                                                                Camilleri, A., Dogramadzi, S., and Caleb-Solly, P. A study
+We thank Changwei Wang and Weiheng Chi for helpful                                                 on the effects of cognitive overloading and distractions on
+discussions and valuable feedback that improved this work.                                         human movement during robot-assisted dressing. Fron-
+                                                                                                   tiers in Robotics and AI, 9:815871, 2022.
+Impact Statement
+                                                                                                Damen, D., Doughty, H., Farinella, G. M., Furnari, A.,
+This paper presents work whose goal is to advance the field                                        Kazakos, E., Ma, J., Moltisanti, D., Munro, J., Perrett,
+of Machine Learning. Our benchmark is primarily built                                             T., Price, W., et al. Rescaling egocentric vision: Col-
+on publicly available datasets. We will release the cor-                                           lection, pipeline and challenges for epic-kitchens-100.
+responding annotations and evaluation code, and provide                                           International Journal of Computer Vision, 130(1):33–55,
+instructions for obtaining the original videos through the                                         2022.
+official channels of each source dataset. This avoids redis-
+tributing restricted content and ensures compliance with the                                    Das, S., Dai, R., Koperski, M., Minciullo, L., Garattoni, L.,
+respective licenses. For our self-collected videos, the data                                       Bremond, F., and Francesca, G. Toyota smarthome: Real-
+were collected under an industrial data-collection protocol,                                      world activities of daily living. In Proceedings of the
+and all participants provided written informed consent for                                        IEEE/CVF international conference on computer vision,
+research and model-training use. The data collection and                                           pp. 833–842, 2019.
+planned public release follow the applicable consent terms,
+internal compliance review, and company data-governance                                         Dragan, A. D., Lee, K. C., and Srinivasa, S. S. Legibility and
+procedures. To mitigate privacy risks, we blur potentially                                         predictability of robot motion. In 2013 8th ACM/IEEE
+sensitive information such as computer screens and logos,                                         International Conference on Human-Robot Interaction
+and anonymize participants’ faces before release. A poten-                                        (HRI), pp. 301–308. IEEE, 2013.
+tial risk is unnecessary intervention caused by false-positive
+triggers, especially in safety-monitoring scenarios. ProAct-                                    Gao, J., Chen, M., and Xu, C. Fine-grained temporal con-
+75 is intended as a benchmark for perception and decision                                          trastive learning for weakly-supervised temporal action
+                                                                                                   localization. In Proceedings of the IEEE/CVF conference
+                                                                                                   on computer vision and pattern recognition, pp. 19999–
+                                                                                                   20009, 2022.
+
+                                                                                             9
+ProAct: A Benchmark and Multimodal Framework for Structure-Aware Proactive Response
+
+Gao, J., Chen, M., and Xu, C. Collecting cross-modal                Javdani, S., Admoni, H., Pellegrinelli, S., Srinivasa, S. S.,
+   presence-absence evidence for weakly-supervised audio-              and Bagnell, J. A. Shared autonomy via hindsight opti-
+  visual event perception. In Proceedings of the IEEE/CVF              mization for teleoperation and teaming. The International
+   conference on computer vision and pattern recognition,             Journal of Robotics Research, 37(7):717–742, 2018.
+   pp. 18827–18836, 2023.
+                                                                    Johannsmeier, L. and Haddadin, S. A hierarchical human-
+Gombolay, M. C., Wilcox, R. J., and Shah, J. A. Fast                   robot interaction-planning framework for task allocation
+   scheduling of robot teams performing tasks with tem-                in collaborative industrial assembly processes. IEEE
+   porospatial constraints. IEEE Transactions on Robotics,            Robotics and Automation Letters, 2(1):41–48, 2016.
+   34(1):220–239, 2018.
+                                                                    Kaelbling, L. P. and Lozano-Pérez, T. Hierarchical task and
+Goodrich, M. A., Boer, E. R., Crandall, J. W., Ricks, R. W.,           motion planning in the now. In 2011 IEEE international
+   and Quigley, M. L. Behavioral entropy in human-robot                conference on robotics and automation, pp. 1470–1477.
+   interaction. In Proceedings of PERMIS, 2004.                        IEEE, 2011.
+
+Goyal, R., Ebrahimi Kahou, S., Michalski, V., Materzynska,          Koppula, H. S. and Saxena, A. Anticipating human activi-
+  J., Westphal, S., Kim, H., Haenel, V., Fruend, I., Yianilos,         ties using object affordances for reactive robotic response.
+   P., Mueller-Freitag, M., et al. The" something something"          IEEE transactions on pattern analysis and machine intel-
+  video database for learning and evaluating visual com-               ligence, 38(1):14–29, 2015.
+   mon sense. In Proceedings of the IEEE international
+   conference on computer vision, pp. 5842–5850, 2017.              Kou, Z., Wang, J., Jia, Y., Liu, B., and Geng, X. Instance-
+                                                                       dependent inaccurate label distribution learning. IEEE
+Grauman, K., Westbury, A., Byrne, E., Chavis, Z., Furnari,            Transactions on Neural Networks and Learning Systems,
+  A., Girdhar, R., Hamburger, J., Jiang, H., Liu, M., Liu,             36(1):1425–1437, 2023.
+  X., et al. Ego4d: Around the world in 3,000 hours of
+   egocentric video. In Proceedings of the IEEE/CVF con-            Kou, Z., Wang, J., Tang, J., Jia, Y., Shi, B., and Geng,
+   ference on computer vision and pattern recognition, pp.            X. Exploiting multi-label correlation in label distribu-
+  18995–19012, 2022.                                                   tion learning. In Proceedings of the Thirty-Third Inter-
+                                                                       national Joint Conference on Artificial Intelligence, pp.
+Grauman, K., Westbury, A., Torresani, L., Kitani, K., Ma-             4326–4334, 8 2024.
+   lik, J., Afouras, T., Ashutosh, K., Baiyya, V., Bansal, S.,
+   Boote, B., et al. Ego-exo4d: Understanding skilled hu-           Kou, Z., Xie, Y., Wang, H., Chen, J., Wang, J., Xie, M.-
+   man activity from first-and third-person perspectives. In           K., Chen, S., Jia, Y., Liu, T., and Geng, X. Rankmatch:
+  Proceedings of the IEEE/CVF Conference on Computer                  A novel approach to semi-supervised label distribution
+  Vision and Pattern Recognition, pp. 19383–19400, 2024.               learning leveraging rank correlation between labels. Ad-
+                                                                       vances in Neural Information Processing Systems, 38:
+Guastello, S. J., Gorin, H., Huschen, S., Peters, N. E.,              158074–158095, 2026.
+   Fabisch, M., and Poston, K. New paradigm for task
+   switching strategies while performing multiple tasks: en-        Li, K., Wang, Y., He, Y., Li, Y., Wang, Y., Liu, Y., Wang,
+   tropy and symbolic dynamics analysis of voluntary pat-              Z., Xu, J., Chen, G., Luo, P., et al. Mvbench: A compre-
+   terns. Nonlinear dynamics, psychology, and life sciences,           hensive multi-modal video understanding benchmark. In
+  16(4):471–497, 2012.                                                Proceedings of the IEEE/CVF Conference on Computer
+                                                                      Vision and Pattern Recognition, pp. 22195–22206, 2024.
+Hartmann, V. N., Heinle, T., Huang, Y., and Coros, S. A
+   benchmark for multi-modal multi-robot multi-goal path            Li, S., Zheng, P., Liu, S., Wang, Z., Wang, X. V., Zheng,
+   planning. In IROS 2025 Workshop-LeaPRiDE: Learning,                 L., and Wang, L. Proactive human–robot collaboration:
+  Planning, and Reasoning in Dynamic Environments.                     Mutual-cognitive, predictable, and self-organising per-
+                                                                       spectives. Robotics and Computer-Integrated Manufac-
+Huang, C.-M. and Mutlu, B. Anticipatory robot control                  turing, 81:102510, 2023.
+   for efficient human-robot collaboration. In 2016 11th
+  ACM/IEEE international conference on human-robot in-              Losey, D. P., McDonald, C. G., Battaglia, E., and O’Malley,
+   teraction (HRI), pp. 83–90. IEEE, 2016.                             M. K. A review of intent detection, arbitration, and com-
+                                                                       munication aspects of shared control for physical human–
+Jara-Ettinger, J., Gweon, H., Schulz, L. E., and Tenenbaum,            robot interaction. Applied Mechanics Reviews, 70(1):
+  J. B. The naïve utility calculus: Computational principles           010804, 2018.
+   underlying commonsense psychology. Trends in cognitive
+   sciences, 20(8):589–604, 2016.
+
+                                                                10
+ProAct: A Benchmark and Multimodal Framework for Structure-Aware Proactive Response
+
+Nikolaidis, S., Zhu, Y. X., Hsu, D., and Srinivasa, S. Human-       Sultani, W., Chen, C., and Shah, M. Real-world anomaly de-
+   robot mutual adaptation in shared autonomy. In Proceed-             tection in surveillance videos. In Proceedings of the IEEE
+   ings of the 2017 ACM/IEEE International Conference on               conference on computer vision and pattern recognition,
+  Human-Robot Interaction, pp. 294–302, 2017.                          pp. 6479–6488, 2018.
+
+Noormohammadi-Asl, A., Fan, K., Smith, S. L., and Daut-             Suslova, E. and Fazli, P. Multi-robot task allocation with
+   enhahn, K. Human leading or following preferences:                  time window and ordering constraints. In 2020 IEEE/RSJ
+   Effects on human perception of the robot and the human–            International Conference on Intelligent Robots and Sys-
+   robot collaboration. Robotics and Autonomous Systems,               tems (IROS), pp. 6909–6916. IEEE, 2020.
+  183:104821, 2025.
+                                                                    Tang, Y., Ding, D., Rao, Y., Zheng, Y., Zhang, D., Zhao,
+Ognibene, D., Mirante, L., and Marchegiani, L. Proactive               L., Lu, J., and Zhou, J. Coin: A large-scale dataset for
+   intention recognition for joint human-robot search and              comprehensive instructional video analysis. In Proceed-
+   rescue missions through monte-carlo planning in pomdp               ings of the IEEE/CVF Conference on Computer Vision
+   environments. In International Conference on Social                 and Pattern Recognition, pp. 1207–1216, 2019.
+  Robotics, pp. 332–343. Springer, 2019.
+                                                                    Triantafyllidis, E., Acero, F., Liu, Z., and Li, Z. Hybrid
+Patel, M. and Chernova, S. Proactive robot assistance via              hierarchical learning for solving complex sequential tasks
+   spatio-temporal object modeling. In Conference on Robot             using the robotic manipulation network roman. Nature
+  Learning, pp. 881–891. PMLR, 2023.                                  Machine Intelligence, 5(9):991–1005, 2023.
+
+Pupa, A., Van Dijk, W., Brekelmans, C., and Secchi, C.              van Den Broek, M. K. and Moeslund, T. B. What is proac-
+  A resilient and effective task scheduling approach for               tive human-robot interaction?-a review of a progressive
+   industrial human-robot collaboration. Sensors, 22(13):              field and its definitions. ACM Transactions on Human-
+  4901, 2022.                                                         Robot Interaction, 13(4):1–30, 2024.
+
+Rhinehart, N., McAllister, R., Kitani, K., and Levine, S. Pre-      Wang, H., Su, A., , Ren, W., Lin, F., and Chen, W.
+   cog: Prediction conditioned on goals in visual multi-agent          Pixel reasoner: Incentivizing pixel-space reasoning with
+   settings. In Proceedings of the IEEE/CVF international              curiosity-driven reinforcement learning. arXiv preprint
+   conference on computer vision, pp. 2821–2830, 2019.                 arXiv:2505.15966, 2025a.
+
+Schrempf, O. C., Hanebeck, U. D., Schmid, A. J., and Worn,          Wang, H., Xu, Q., Liu, C., Wu, J., Lin, F., and Chen, W.
+   H. A novel approach to proactive human-robot coopera-               Emergent hierarchical reasoning in llms through rein-
+   tion. In ROMAN 2005. IEEE International Workshop on                 forcement learning. arXiv preprint arXiv:2509.03646,
+  Robot and Human Interactive Communication, 2005., pp.                2025b.
+   555–560. IEEE, 2005.
+                                                                    Wang, H., Qu, C., Huang, Z., Chu, W., Lin, F., and Chen,
+Sener, F., Chatterjee, D., Shelepov, D., He, K., Singhania,           W. Vl-rethinker: Incentivizing self-reflection of vision-
+   D., Wang, R., and Yao, A. Assembly101: A large-scale                language models with reinforcement learning. Advances
+   multi-view video dataset for understanding procedural               in Neural Information Processing Systems, 38:30865–
+   activities. In Proceedings of the IEEE/CVF Conference               30891, 2026.
+   on Computer Vision and Pattern Recognition, pp. 21096–
+   21106, 2022.                                                     Wang, Y., Chen, Y., Zhong, F., Ma, L., and Wang, Y. Simu-
+                                                                       lating human-like daily activities with desire-driven au-
+Shi, Y., Chen, Z., Liu, H., Riedel, S., Gao, C., Feng, Q.,             tonomy. In International Conference on Learning Repre-
+   Deng, J., and Zhang, J. Proactive action visual resid-              sentations, volume 2025, pp. 32924–32969, 2025c.
+   ual reinforcement learning for contact-rich tasks using a
+   torque-controlled robot. In 2021 IEEE International Con-         Wang, Y., Meng, X., Wang, Y., Zhang, H., and Zhao, D.
+   ference on Robotics and Automation (ICRA), pp. 765–771.             Proactivevideoqa: A comprehensive benchmark evaluat-
+   IEEE, 2021.                                                         ing proactive interactions in video large language models.
+                                                                       arXiv preprint arXiv:2507.09313, 2025d.
+Sifat, A. H., Deng, X., Bharmal, B., Wang, S., Huang, S.,
+   Huang, J., Jung, C., Zeng, H., and Williams, R. A safety-        Wooldridge, M. and Jennings, N. R. Intelligent agents:
+   performance metric enabling computational awareness                Theory and practice. The knowledge engineering review,
+   in autonomous robots. IEEE Robotics and Automation                 10(2):115–152, 1995.
+  Letters, 8(9):5727–5734, 2023.
+                                                                    Wu, H. and Liu, Y. Prorac: A neuro-symbolic method
+                                                                       for reasoning about actions with llm-based progression.
+                                                                       arXiv preprint arXiv:2511.15069, 2025.
+
+                                                                11
+                      ProAct: A Benchmark and Multimodal Framework for Structure-Aware Proactive Response
+
+Wu, Z., Gao, J., and Xu, C. Open-vocabulary video scene
+   graph generation via union-aware semantic alignment. In
+  Proceedings of the 32nd ACM International Conference
+   on Multimedia, pp. 8566–8575, 2024.
+
+Xiang, J., Tao, T., Gu, Y., Shu, T., Wang, Z., Yang, Z., and
+   Hu, Z. Language models meet world models: Embod-
+   ied experiences enhance language models. Advances in
+   neural information processing systems, 36:75392–75412,
+   2023.
+
+Yang, B., Xu, L., Zeng, L., Guo, Y., Jiang, S., Lu, W.,
+   Liu, K., Xiang, H., Jiang, X., Xing, G., et al. Proagent:
+   Harnessing on-demand sensory contexts for proactive llm
+   agent systems. arXiv preprint arXiv:2512.06721, 2025.
+
+Yang, B., Xu, L., Zeng, L., Liu, K., Jiang, S., Lu, W.,
+   Chen, H., Jiang, X., Xing, G., and Yan, Z. Contextagent:
+   Context-aware proactive llm agents with open-world sen-
+   sory perceptions. Advances in Neural Information Pro-
+   cessing Systems, 38:167509–167543, 2026.
+
+Zhao, Z., Zhao, Z., Xu, K., Fu, Y., Chai, J., Zhu, Y., and
+   Zhao, D. Learning and planning multi-agent tasks via an
+   moe-based world model. Advances in Neural Information
+  Processing Systems, 38:40857–40890, 2026.
+
+Zhou, H., Martín-Martín, R., Kapadia, M., Savarese, S.,
+   and Niebles, J. C. Procedure-aware pretraining for in-
+   structional video understanding. In Proceedings of the
+  IEEE/CVF Conference on Computer Vision and Pattern
+  Recognition, pp. 10727–10738, 2023.
+
+Zhu, C., Xiao, F., Alvarado, A., Babaei, Y., Hu, J., El-Mohri,
+   H., Culatana, S., Sumbaly, R., and Yan, Z. Egoobjects:
+  A large-scale egocentric dataset for fine-grained object
+   understanding. In Proceedings of the IEEE/CVF interna-
+   tional conference on computer vision, pp. 20110–20120,
+   2023.
+
+Zhu, F., Pan, Y., Zhu, X., and Lin, F. A computable game-
+   theoretic framework for multi-agent theory of mind. arXiv
+   preprint arXiv:2511.22536, 2025.
+
+Zhukov, D., Alayrac, J.-B., Cinbis, R. G., Fouhey, D.,
+   Laptev, I., and Sivic, J. Cross-task weakly supervised
+   learning from instructional videos. In Proceedings of the
+  IEEE/CVF Conference on Computer Vision and Pattern
+  Recognition, pp. 3537–3545, 2019.
+
+                                                                        12
+                      ProAct: A Benchmark and Multimodal Framework for Structure-Aware Proactive Response
+
+A. Implementation Details of Proactive Action Selection
+
+We detail the evaluation procedure for proactive action selection under task-graph constraints. While Section 6.4 summarizes
+
+the rollout safeguard used in the full-video simulation, this appendix provides the complete procedure, including candidate
+
+construction, the deadlock-prevention safeguard, tie-breaking, and the SS/PA metrics. At each timestep t, the robot first
+
+constructs the legal action set Atlegal ⊆ Ve according to the annotated AND/OR preconditions, then filters it by the predicted
+                      Atpred
+action  sequence              to  obtain  Acand  (Algorithm       1).
+
+                                             t
+
+For the full-video text-only proactive action selection simulation in Table 3, we apply a deadlock-prevention safeguard.
+
+Human execution may not strictly satisfy task-graph preconditions (e.g., minor omissions or implicit prerequisites), while
+
+our simulator enforces strict graph feasibility, which can stall rollouts when some nodes never become enabled. To maintain
+
+simulation fidelity, we use a one-step runtime alignment that relaxes feasibility only for the observed next human action.
+
+Let gt+1 denote the ground-truth next human executable step at time t. If gt+1 ∈ Ve, gt+1 ∈/ Progt, and gt+1 ∈/ Atlegal,
+                                Atlegal       Atlegal
+we  temporarily    augment               ←             ∪  {gt+1}  before  constructing  Acand.  This  safeguard  is  applied  uniformly  across
+
+                                                                                           t
+
+methods and only admits gt+1 at the current timestep. Note that it is used only for Table 3, since Table 1 evaluates one-step
+
+decisions without full-rollout deadlocks.
+
+Moreover, when multiple candidates attain the same minimum entropy value, we select the action that appears earliest in
+Atpred to ensure reproducibility. Concretely, Pos(S, a) returns the smallest index of a in a sequence S, and we apply a
+
+lexicographic arg min over (Hmix, Pos).
+
+Algorithm 1 Thread-Entropy-Based Proactive Action Selection with Rollout Safeguard
+
+Require: Task graph G = (V, E), executable set Ve, thread mapping π(·), progression state Progt, ground-truth next
+human step gt+1, histories Ht, Rt, predicted action sequence Atpred
+                                       a⋆
+Ensure:      Robot    next  action
+                                         t+1
+
+Atlegal ← {a ∈ Ve | a ∈/ Progt, Precond(a; Progt) = true}
+Atlegal ← Atlegal
+if gt+1 ∈ Ve and gt+1 ∈/ Progt and gt+1 ∈/ Atlegal then
+
+    Atlegal ← Atlegal ∪ {gt+1}
+
+end if
+if Atlegal = ∅ then
+
+    return WAIT
+
+end if
+
+    cand           pred         legal
+At ← At ∩ At
+    Acand
+if              =  ∅  then
+       t
+
+        return WAIT
+
+end if
+
+for     all  a  ∈  Acand    do
+
+                      t
+
+        Compute Hmix(Ht, Rt ∪ {a})
+
+end for
+
+                ⋆                                                         pred
+return at+1 ← arg mina∈Acand t Hmix(Ht, Rt ∪ {a}), Pos(At , a)
+
+Saved Step (SS). We measure collaboration efficiency in two settings. In full-trajectory simulation, for each video i we
+define Si = Bi − Hi, where Bi is the number of steps in the annotated human trajectory and Hi is the number of steps
+actually executed by the human in simulation. We report
+
+                                                                        1N
+                                                               SS = N Si. (10)
+
+                                                                                                           i=1
+
+In the online one-step decision setting, each sample corresponds to a single decision point. We set Sj = 1 if the robot
+executes an action that belongs to the ground-truth trajectory (excluding Terminate), and Sj = 0 otherwise, and report
+SS = 1 Ns j=1 Ns Sj .
+Parallel Action (PA). We quantify the fraction of effective robot actions that advance a thread different from the human’s
+most recent thread. Let N R be the total number of effective robot actions across all videos (excluding WAIT). For each
+
+                                                                        13
+              ProAct: A Benchmark and Multimodal Framework for Structure-Aware Proactive Response
+
+           (a) Effect of Window Size      (b) Effect of Stride         (c) Effect of tt           (d) Effect of ts
+
+       75                             75                          85                         85
+                                                                  80                         80
+Value  50                             50                          75                         75
+                                                                  50                         50
+
+       25                             25
+
+       0   3                8         0   1  3             5        0                         0
+                        5                                              0.1 0.3 0.5 0.7 0.9 0.1 0.3 0.5 0.7 0.9
+
+              Window sides                   Stride Steps                        tt                   ts
+
+           Trigger Acc     Trigger F1     Task Acc         Task F1     Step Acc      Step F1      ED  F1            Acc
+
+Figure 6. Hyperparameter analysis on the mini set. We evaluate the effect of window size, stride, and the loss weights λtt and λts. We
+report trigger/task/step accuracy and F1, as well as the future-action edit distance (ED; lower is better). Unless otherwise specified, we
+adopt window size 5, stride 3, and λtt = 0.3, λts = 0.5.
+
+Table 4. Ablation of MLP projection heads for HBM. Directly applying the binding loss to span-pooled hidden states yields lower
+validation loss and stronger overall performance.
+
+                           Method            Trig. mF1 Task mF1 Step mF1 ED ↓ Val Loss ↓
+
+                           w/o MLP (Ours)    70.18            23.10    7.18          3.94  0.306
+                           w/ MLP (d = 128)  67.55            21.41
+                           w/ MLP (d = 256)  68.60            21.18    6.99          4.05  0.649
+
+                                                                       7.25          4.03  0.694
+
+effective robot action a, let hprev be the most recent human action before the decision. If π(a)̸ = π(hprev), we count it as a
+parallel-action event. Let P be the total number of such events, and define PA = P/N R.
+
+B. Additional Quantitative Analyses
+
+We provide additional quantitative analyses to better characterize the practical behavior of ProAct-Helper, including
+training-design ablations, trigger error modes, representation analyses, OOD generalization, and inference latency.
+
+B.1. Hyperparameter Analysis
+
+We analyze the effects of temporal configuration and loss-weighting strategies in Figure 6. The results highlight a consistent
+trade-off between temporal coverage, noise accumulation, and cross-level regularization strength.
+
+A window size of 5 achieves the best balance across trigger, task, and step prediction by providing sufficient temporal
+context to capture task state transitions without introducing excessive irrelevant frames. Smaller windows lack coverage
+for state evolution, while larger windows dilute critical cues and incur higher computational cost. Similarly, a stride of 3
+yields the strongest performance by effectively reducing redundancy while preserving key temporal signals. Smaller strides
+introduce short-term noise, whereas larger strides miss informative transitions.
+
+We further examine the task–trigger and task–step consistency losses. Moderate weighting consistently improves task and
+step recognition, indicating the benefit of cross-level regularization. However, overly large weights lead to performance
+degradation, suggesting that excessive emphasis on consistency suppresses fine-grained discriminative learning. Based on
+these observations, we adopt λtt = 0.3 and λts = 0.5, which provide stable gains while maintaining balanced performance
+across all hierarchies.
+
+B.2. Projection Head Ablation
+
+HBM applies the hierarchical binding loss directly to the span-pooled hidden states Hℓ. We additionally evaluate whether
+introducing a separate projection head, a common design in contrastive representation learning, improves cross-level binding.
+Specifically, we train two variants with a two-layer MLP projection head, Linear(H, d) → ReLU → Linear(d, d), where
+H = 2048 is the hidden size of Qwen2.5-VL and d ∈ {128, 256}. We use the same 1/8 stratified mini-split as in Section 6.3
+and keep all other training settings unchanged.
+
+                                                                        14
+ProAct: A Benchmark and Multimodal Framework for Structure-Aware Proactive Response
+
+Table 5. Under-triggering and over-triggering analysis on representative models. FPR corresponds to over-triggering, while FNR
+corresponds to under-triggering.
+
+         Method          FPR ↓ FNR ↓ mF1 ↑
+
+         GPT-4o          39.2 59.2 46.7
+
+         Gemini-2.5-Pro  77.4 9.2 55.9
+
+         ProAct-Helper (7B) 34.5 13.2 76.6
+
+Table 6. Cross-level representation consistency on the full test set. HBM increases both CKA and cosine similarity between adjacent
+hierarchy levels.
+
+Model    CKA(t, T ) ↑ CKA(T, s) ↑ Cos(t, T ) ↑ Cos(T, s) ↑
+
+w/o HBM  0.628           0.821  0.197       0.406
+w/ HBM   0.994           0.991  0.987       0.978
+
+As shown in Table 4, adding a projection head does not improve HBM. Both MLP variants yield lower trigger and task mF1,
+comparable or lower step mF1, worse future-action ED, and substantially higher validation loss. This suggests that, in our
+autoregressive generation setting, directly binding the span-pooled hidden states provides a cleaner optimization path for
+cross-level alignment, whereas an additional randomly initialized projection head makes the joint optimization harder.
+
+B.3. Under-triggering and Over-triggering Analysis
+
+Trigger detection is evaluated frame-wise over keyframe windows. To better characterize its error modes, we report false
+positive rate (FPR) and false negative rate (FNR) for representative models, where FPR measures over-triggering and
+FNR measures under-triggering. As shown in Table 5, GPT-4o exhibits a high FNR, indicating that it frequently misses
+intervention-worthy states, while Gemini-2.5-Pro exhibits a high FPR, indicating a tendency to produce unnecessary
+interventions. In contrast, ProAct-Helper achieves a better balance between the two error modes and obtains the highest
+macro-F1 among the compared representative models. This result suggests that trigger detection requires contextual
+intervention judgment rather than merely recognizing the ongoing action.
+
+B.4. Representation Analysis of HBM
+
+We further analyze the representation effect of HBM to understand how cross-level binding improves the trigger–task–step
+hierarchy. ProAct-75 contains a highly imbalanced hierarchy, with only two trigger classes but many task and step classes.
+Under such long-tailed supervision, autoregressive token prediction alone may not sufficiently organize representations
+across hierarchy levels. HBM is designed to address this issue by binding parent–child representations while preserving
+fine-grained discrimination. Here t, T , and s denote trigger, task, and step representations, respectively.
+
+We first evaluate cross-level consistency using centered kernel alignment (CKA) and cosine similarity on the full test set.
+As shown in Table 6, HBM substantially increases both trigger–task and task–step consistency. Compared with the model
+without HBM, CKA increases from 0.628 to 0.994 for trigger–task and from 0.821 to 0.991 for task–step. Cosine similarity
+shows a similar trend, increasing from 0.197 to 0.987 for trigger–task and from 0.406 to 0.978 for task–step. These results
+indicate that HBM strengthens cross-level semantic alignment between adjacent hierarchy levels.
+
+High cross-level similarity alone does not necessarily imply correct parent–child alignment, since it could also arise from
+indiscriminate global similarity. To examine this, we randomly shuffle the parent–child pairing at test time and recompute
+cosine similarity between mismatched hierarchy levels. As shown in Table 7, without HBM, shuffling only changes
+trigger–task cosine similarity marginally, with a paired-shuffled gap of 0.009. With HBM, the paired-shuffled gap becomes
+much larger, reaching 0.768 for trigger–task and 0.780 for task–step. This suggests that the increased similarity induced by
+HBM is tied to the correct hierarchical correspondence rather than indiscriminate global similarity.
+
+We further examine whether the stronger cross-level structure is obtained through trivial representation collapse. We compute
+effective rank (eRank), which measures how broadly information is distributed across the hidden dimensions, and shared
+subspace overlap (SSO50), which measures the fraction of task-level variance explained by the top-50 principal components
+of trigger representations. As shown in Table 7, HBM increases SSO50 from 7.7% to 64.7%, indicating a much stronger
+shared cross-level subspace. Meanwhile, eRank also increases from 637 to 934, suggesting that the representation remains
+high-dimensional rather than collapsing into a narrow subspace.
+
+                                                                        15
+         ProAct: A Benchmark and Multimodal Framework for Structure-Aware Proactive Response
+
+Table 7. Pair-specific alignment and representation geometry under HBM. Pair and Shuf denote paired and shuffled cosine similarities
+on the full test set. SSO50 measures the fraction of task-level variance explained by the top-50 principal components of trigger
+representations.
+
+                   Paired and shuffled cosine similarity                                      Geometry
+
+Model    Pairt,T   Shuft,T            ∆  PairT ,s         ShufT ,s           ∆      eRank ↑            SSO50 ↑
+
+w/o HBM  0.197     0.188    0.009        0.406            0.219              0.187  637                  7.7%
+                                                                                                        64.7%
+w/ HBM   0.987     0.220    0.768        0.978            0.199              0.780  934
+
+Table 8. View-set OOD evaluation on Ego-Exo4D and Our selected videos. Models are trained on the Best View training set and
+evaluated on Best View test set or Other View test set (all non-best views). We report macro-averaged (mAcc/mF1) and micro-averaged
+(Acc/F1) metrics for trigger/task/step classification and future action edit distance (ED; lower is better).
+
+Dataset  View Set        Trigger (%)                          Task (%)                       Step (%)          ED ↓
+                         mF1 Acc         F1 mAcc mF1 Acc                F1 mAcc mF1 Acc                F1
+                   mAcc
+
+                            ProAct-Helper (based on Qwen2.5-VL-3B-Instruct)
+
+Ego-Exo4D Other View 54.40 63.48 89.61 94.37 0.90 1.62 5.76 10.89 0.77 1.36 6.49 12.18 4.41
+                 Best View 61.22 71.32 92.09 95.72 35.13 43.67 60.68 75.53 19.56 24.96 20.68 34.27 3.53
+
+Ours Other View 62.85 76.17 81.45 87.38 17.83 23.43 35.02 51.87 10.02 13.92 23.86 38.53 2.96
+                 Best View 85.51 92.11 93.23 95.09 81.78 89.21 83.26 90.86 62.40 69.76 73.57 84.77 0.78
+
+                            ProAct-Helper (based on Qwen2.5-VL-7B-Instruct)
+
+Ego-Exo4D Other View 54.15 63.40 88.97 93.99 0.62 1.10 6.10 11.51 0.95 1.67 7.17 13.38 4.33
+                 Best View 60.68 70.64 92.18 95.79 21.38 26.27 62.73 77.10 19.96 25.95 22.30 36.47 3.50
+
+Ours Other View 63.74 76.82 82.35 88.15 31.41 39.53 50.74 67.32 16.75 21.30 29.20 45.20 2.55
+                 Best View 83.77 91.05 92.44 94.58 84.44 91.12 84.48 91.59 63.64 71.04 70.65 82.80 0.82
+
+These results show that HBM strengthens correct parent–child alignment while avoiding trivial representation collapse. This
+supports the design motivation of applying explicit cross-level binding to the trigger–task–step hierarchy under long-tailed
+supervision.
+
+B.5. Cross-View Generalization
+
+In this view-set OOD evaluation, we train all models on the Best View training set and evaluate them on both the Best
+View test set and the Other View test set, which contains all non-best views, to characterize generalization robustness under
+systematic viewpoint shifts. As shown in Table 8, despite the more challenging distribution shift in Other View due to
+variations in perspective, occlusion, and visibility that destabilize visual cues, ProAct-Helper maintains substantially more
+reliable task and step recognition as well as future action prediction. For task and step detection on Qwen2.5-VL-7B, our
+method’s Task F1 decreases from 91.59 on Best View to 67.32 on Other View, retaining approximately 73% of performance,
+whereas Ego-Exo4D drops from 77.10 to 11.51, retaining only 15%. For Step F1, our method declines from 82.80 to 45.20,
+preserving roughly 55%, while Ego-Exo4D falls from 36.47 to 13.38, retaining merely 37%. Similar trends appear with the
+3B backbone: our Task F1 on Other View remains at 51.87, significantly outperforming Ego-Exo4D’s 10.89.
+
+From a long-tail perspective measured by macro-averaged metrics, our method achieves Task mF1 of 23.43 and 39.53 on the
+3B and 7B backbones respectively on Other View, compared to 1.62 and 1.10 for Ego-Exo4D. Step mF1 similarly reaches
+13.92 and 21.30 for our method against 1.36 and 1.67 for Ego-Exo4D, demonstrating superior robustness on tail categories
+under viewpoint shifts. Finally, for future action prediction, our method exhibits lower edit distance on Other View: 2.96
+compared to 4.41 on 3B, and 2.55 compared to 4.33 on 7B, further validating more consistent procedural prediction under
+suboptimal viewing conditions. Overall, these results demonstrate that our approach not only achieves higher performance
+ceilings on Best View but also maintains superior cross-view stability and transferability in more realistic deployment
+scenarios with non-optimal viewpoints.
+
+                                                                        16
+                    ProAct: A Benchmark and Multimodal Framework for Structure-Aware Proactive Response
+
+Table 9. Actor-split OOD evaluation on self-collected videos. The OOD setting trains on Actors 1–4 and evaluates on the held-out
+Actor 5, while the full-data setting trains with videos from all five actors.
+
+Setting             Trig. mAcc Trig. mF1 Trig. Acc Trig. F1 Task mAcc Task F1 Step mAcc Step F1 Future ED ↓
+
+Actor-split OOD     60.64  74.33           80.06      86.46  29.51    64.21       11.04      34.97       2.670
+Full-data training  75.51  85.57           89.39      93.00  88.15    94.64       79.24      89.97       0.563
+
+Table 10. Average wall clock latency per timestep. Perception aggregates trigger, task, step, and future prediction, while Planning
+denotes online one-step action selection.
+
+                           Base model                 Perception time (s) Planning time (s)
+
+                                                   Open-source MLLMs
+
+                           Qwen3-VL-30B-A3B-Instruct         15.04          0.51
+
+                           Qwen3-Omni-30B                    1.20           0.52
+
+                           Qwen2.5-VL-32B-Instruct           46.04          0.29
+
+                           Qwen2.5-VL-3B-Instruct            12.48          0.16
+
+                           ProAct-Helper (based on Qwen2.5-VL-7B-Instruct)
+
+                           ProAct-Helper                     2.75           0.08
+
+B.6. Actor-Split OOD Generalization
+
+We further evaluate out-of-distribution generalization across actors on our self-collected videos. Specifically, we train
+ProAct-Helper with the Qwen2.5-VL-3B backbone on videos from Actors 1–4 and evaluate it on the held-out Actor 5. As a
+reference, we also report a full-data setting trained with videos from all five actors under the same training protocol. This
+evaluation isolates actor-level distribution shift, where the task set and annotation protocol remain fixed but execution style,
+temporal rhythm, body motion, and interaction details vary across individuals.
+
+As shown in Table 9, the actor-split setting leads to a moderate drop in trigger detection, with Trigger F1 decreasing from
+93.00 to 86.46. The degradation is more pronounced for fine-grained perception: Task F1 decreases from 94.64 to 64.21,
+and Step F1 decreases from 89.97 to 34.97. Future-action prediction is also affected, with ED increasing from 0.563 to
+2.670. These results suggest that trigger-level intervention cues transfer more reliably across actors than fine-grained task
+and step states. Cross-actor generalization therefore remains a challenging setting in ProAct-75, especially for detailed
+procedural understanding and future-step prediction.
+
+B.7. Inference Latency Comparison
+
+We report wall clock inference latency for the proactive pipeline, comparing ProAct-Helper-7B with representative open-
+source MLLMs. Following the evaluation protocol, Perception aggregates the first four perception subtasks, including
+trigger detection, task identification, step detection, and short-horizon future action prediction. Planning denotes online
+one step decision making for proactive action selection under task-graph constraints, where the policy outputs a single
+executable action at each timestep.
+
+Table 10 shows that ProAct-Helper-7B substantially reduces end-to-end latency compared to general-purpose open-source
+baselines, especially on the perception stack. The planning latency of ProAct-Helper-7B remains low, which is critical for
+interactive deployment where decisions must be produced continuously over keyframe windows.
+
+C. Qualitative Results
+
+We present qualitative examples to illustrate typical success and failure patterns of the proposed proactive response pipeline.
+These cases complement the quantitative results by revealing how cross-stage consistency and task-graph constraints manifest
+in real videos. We additionally visualize the results of proactive action selection tasks, illustrating how graph-feasible robot
+actions are chosen from short-horizon candidates.
+
+                                                                        17
+                                          ProAct: A Benchmark and Multimodal Framework for Structure-Aware Proactive Response
+
+COIN
+
+                          Trigger: True   Task: Install License Plate Frame                                 Trigger: True   Task: Upgrade PC Components
+
+                          Step: Place license plate cover                                                   Step: Remove the screen cover
+
+                          Future Steps: Tighten and secure the lid; Place license plate;                    Future Steps: Remove the screen screws; Remove the screen; Install the screen;
+                                                 Tighten and secure the lid                                                        Tighten the screen screws; Install the screen bezel
+
+EGO-Exo4D
+
+                          Trigger: True   Task: Covid-19 Rapid Antigen Test                                 Trigger: True   Task: Fix a Flat Tire - Replace a Bike Tube
+
+                          Step: Arrange test material                                                       Step: Squeeze out any air inside the tube
+
+                          Future Steps: Locate and unwrap the collection swab; Slowly insert the tip of     Future Steps: Use the tire lever around the rim until the tube is complete
+                          the swab into the nose; Rotate and swirl the swab around for 5-10 times; Slowly   off the wheel; Pull the inner tube out; Get a new inner tube; Engage the valve
+
+                          extract the swab from the nostril; Repeat the process with the other nostril      stem into the rim; Fit the tube to the wheel
+
+UCF-CRIME
+
+                          Trigger: True   Task: Respond to Explosion             Step: Respond to fighting  Trigger: True   Task: Respond to Fighting         Step: Respond to fighting
+
+Ours
+
+                          Trigger: True   Task: Organize Desk                                               Trigger: True   Task: Pack a Suitcase for Travel       Step: Place luggage
+
+                          Step: Put the glue, scissors, ruler, and knife in the pen holder                  Future Steps: Open the suitcase; Fold clothes; Put the clothes into the
+                                                                                                                                  suitcase; Pack toiletries; Put the toiletry bag in the
+                          Future Steps: Collect shredded paper waste; Discard shredded paper waste;
+                             Take out books and papers from the bookend; Accidentally knocked over
+
+                            bookend and internal books; Take out books and papers from the bookend
+
+                                          (a) Success cases. Trigger decision, predicted task/current step, and plausible future steps.
+
+Trigger Detection         Trigger: False                                                                    Trigger: False
+
+Task Detection            Trigger: True Task: Covid-19 Rapid Antigen Test Step: Unbox package               Trigger: True   Task: Organize Desk
+
+                          Future Steps: Read the instructions; Locate and unwrap the collection swab;       Step: Take out books and papers from the bookend
+                          Slowly insert the tip of the swab into the nose; Rotate and swirl the swab
+                          around for 5-10 times; Slowly extract the swab from the nostril                   Future Steps: Assemble cupboard; Place bed board;
+                                                                                                                                    Place the mattress on the bed
+
+Step Detection            Trigger: True   Task: Assemble Bed          Step: Assemble bed frame              Trigger: True   Task: Cooking Tomato & Eggs
+
+                          Future Steps: Assemble cupboard; Place bed board;                                 Step: Get measuring tool (scoop or spoon or cup)
+                                                  Place the mattress on the bed
+
+                                                                                                            Future Steps: Get water; Add water; Get chopsticks; Whisk until the egg
+                                                                                                                        whites and yolks are well integrated.; Check paper recipe
+
+Future Action Prediction  Trigger: True   Task: Cooking Noodles       Step: Check paper recipe              Trigger: True Task: Cooking an Omelet
+
+                          Future Steps: Get oil; Add oil; Tilt and rotate the skillet to allow oil or       Step: Get skillet or frying pan or wok
+                          butter flow into empty space; Add spring onions; Add garlic cloves
+                                                                                                            Future Steps: Get spatula; Place the skillet or pan or pot on the stove;
+                                                                                                            Turn on the stove; Get eggs; Get a bowl
+
+                       (b) Failure cases. Task/step confusion, invalid or repetitive futures, and incomplete generations.
+
+Figure 7. Qualitative results across sources. We show representative success and failure patterns for proactive prediction and future-step
+generation.
+
+                                                                                                       18
+                         ProAct: A Benchmark and Multimodal Framework for Structure-Aware Proactive Response
+
+                              Start clean trash bin
+
+                                                                                                                 Start assemble sofa
+
+        Start remove old                                 Start prepare new                                       Start preparation and
+             garbage                                           garbage                                               base assembly
+
+Step 1  Tie the garbage bag                              Take out the new   Step 2 Step 3                         OR                                  Material preparation  Step 1
+Step 3       Take out the                                   garbage bag     Step 4
+Step 6       garbage bag                                    Open a new                     Install sofa legs
+
+        Leave with the trash                             regular trash bag                                                 OR
+            Finish remove                                  Finish prepare
+              old garbage                                   new garbage                                          Finish preparation and
+                                                                                                                      base assembly
+
+                                                                                                                 Start main frame
+                                                                                                                      assembly
+
+                                           AND                                   Step 2    Assemble seat bracket
+                                                                                 Step 4
+                              Start replace and secure new                                                                                            Install sofa armrest  Step 5
+                                         garbage bag
+
+                                        Replace with new                                   Install seat bracket
+                                           garbage bag
+                                                                                                                          OR
+                              Put the garbage bag on the bin
+        Thread                                                     Step 5                                        Tighten the screw
+         Human action                                         Take out the new
+
+        Robot action          Finish replace and secure          garbage bag                                     Finish main frame
+        Structural node            new garbage bag                                                                    assembly
+
+                                           …                                                                                                       …
+                                                                                           Human ground-truth labeled trace:
+        Human ground-truth labeled trace:
+           Tie the garbage bag             Take out the                                    Material preparation   Assemble seat                       Install sofa legs
+                                           garbage bag                                                                bracket
+
+        Leave with the trash  Put the garbage bag                Open a new                                      Install sofa armrest                 Install seat bracket
+                                     on the bin               regular trash bag
+
+                         (a) Trash-bin replacement.                                                              (b) Sofa assembly.
+
+Figure 8. Stage-5 visualization of proactive action selection under task-graph constraints. We overlay the human ground-truth
+trace on the annotated task graph and visualize how the agent selects the next proactive action after short-horizon future-step generation.
+Candidate actions are first filtered by graph feasibility (e.g., prerequisite satisfaction and AND/OR dependencies) and then ranked to
+choose an actionable, procedure-aligned robot step that best supports the ongoing workflow. Left: trash-bin replacement; right: sofa
+assembly.
+
+C.1. Success Cases
+
+State Detection and Prediction Tasks. Figure 7a shows representative success cases of our proactive pipeline across
+multiple sources (COIN, Ego-Exo4D, UCF-Crime, and our collected data). Overall, the model demonstrates strong
+cross-stage consistency: it triggers interventions when warranted, identifies the correct task context and ongoing step, and
+generates plausible short-horizon future steps that remain coherent with the observed workflow. Notably, the predicted
+futures are typically actionable and procedurally aligned (e.g., preparing tools before execution), suggesting that the model
+has learned transferable procedural priors beyond dataset-specific appearance cues.
+
+Proactive Action Selection. Beyond per-stage predictions, Figure 8 visualizes how the pipeline instantiates graph-
+constrained decision making at the final stage. Given the recognized task/step context and the short-horizon candidates,
+the agent filters out graph-infeasible actions (e.g., violated prerequisites) and selects an actionable next robot step that is
+procedurally aligned with the ongoing workflow. As shown in the trash-bin replacement and sofa assembly examples, the
+selected actions tend to prioritize prerequisite- and preparation-type steps before execution, demonstrating effective use of
+task-graph constraints for low-risk and high-utility interventions.
+
+C.2. Failure Cases
+
+Figure 7b summarizes typical failure modes. First, the model may confuse semantically related tasks under limited visual
+evidence (e.g., mapping emergency response contexts to an incorrect but plausible category), which then cascades to
+step-level mismatch. Second, we observe procedural hallucination and redundancy in future-step generation, such as
+repeated steps or inserting irrelevant sub-procedures, indicating that language priors can dominate when the visual state
+is ambiguous. Third, some outputs become graph-inconsistent or incomplete (e.g., truncated step descriptions), which
+suggests remaining challenges in maintaining well-formed, graph-feasible plans under long-tail or OOD conditions. These
+cases motivate incorporating stricter graph-constrained decoding and validity-aware training objectives to further suppress
+
+                                                                        19
+              ProAct: A Benchmark and Multimodal Framework for Structure-Aware Proactive Response
+
+                                 VIEW 1      VIEW 2  VIEW 3
+
+CAMERA 3
+
+WORKSPACE CAMERA 2
+
+CAMERA 1
+
+              WATER BAR
+
+CAMERA 3
+
+CAMERA 2              CAMERA 1
+
+CAMERA 2              CAMERA 3
+
+              CONFE-
+              RENCE
+               TABLE
+
+CAMERA 1              CAMERA 2
+   LAUNDRY
+   MACHINE
+
+CAMERA 1               CAMERA 3
+   CAMERA 3           BED
+      CLOSET
+
+CAMERA 1      CAMERA 2
+
+Figure 9. Multi-view scene setups and example frames. The left column illustrates the camera layouts for each scene, while the right
+columns show representative synchronized frames from the three viewpoints (View 1–3).
+
+invalid or low-utility interventions. In addition, errors in upstream task/step recognition can lead to mis-constrained action
+selection, where graph filtering over-prunes feasible actions or favors an incorrect thread, yielding conservative or suboptimal
+interventions.
+
+D. Dataset and Annotation Details
+
+We provide additional details of the multi-view data collection setup and quality control. Each scene is captured by three
+synchronized cameras (Canon M50) at 4K/30fps to provide complementary viewpoints and reduce occlusion. For our
+self-collected multi-view videos, we additionally select a Best View based on manipulation visibility and minimal occlusion
+to form a standardized evaluation set. All videos are annotated under a unified step-level protocol, where boundaries
+correspond to semantic changes in human actions. Quality control is conducted in multiple rounds, and disagreements are
+resolved through expert discussion to ensure consistent step boundaries and labels across sources.
+
+                                         20
+                                       ProAct: A Benchmark and Multimodal Framework for Structure-Aware Proactive Response
+
+E. Task-Graph Gallery
+
+To facilitate reproducibility and error analysis, we include a gallery visualization of all annotated task graphs. In these
+visualizations, tasks are color-coded by scenario: Assistance , Maintenance , and Safety Monitoring , with overlapping
+regions indicating tasks that belong to both Assistance and Maintenance scenarios. Besides the sunburst renderings, we also
+report the distribution over mid-level nodes for each task graph, which characterizes how execution threads are induced by
+mid-level groups. We note that the optional priority scores are not used for training, since each task has fixed scores in our
+closed-set setting and can be directly retrieved via a lookup table when needed.
+
+Accidentally discovered missing phone                          Clean and Lubricate the Chain                                                                                                   Cooking Pasta                                                                                    Covid-19 Rapid Antigen Test
+
+                                                                                                Other                                                                                          Other se                                             7                                                                     Other          Perform testing
+                                                                                              1                                                                                            3 on Pha                                                                                                                     2                    19
+1                                                              1 Degrease                                                          cPrep                                                                         Get kitchenw                                                 6              1                                                                       14
+     Other                                                                                                                           leanare                                            arati                      P utensils are &                                                                                                                            aterials
+                                                                                                                                                                                      Prep                                                                 redire dentsry                             Sele                                                 are m
+                                                                                                                                        ingfor                                     1                                                                                                                   Mct S                                             rep waste 6
+                                                                                           the                                               10                         2                                                                           ingrepa                   nts 5                                ethoamp                              P Dispose
+                                                            reGadeyt               bicyclechain                                                                             Cook Pa            sta Phase                                               Get Ingredie                          2 Unbox                 d ling                             Nasal Swab
+                                                         3            the                                                                                                                                                                                                                             tkhiet covid19                                     Sali Method 5
+                                                                      f  or cleaning                                                                                                                                                                                                                                                                      Meva S
+                                                                                                                                                                           Preparreoslluirnfgace                                                       Cdormy biningerewdet and                                                                             thodample
+                                       handlin                                     the tools                                       Clean                                2 for                  e dough ball                                         Rol    l and              ients 5        2 Preparation ults
+                                         phog m                                                                                         the c                                                                                                                  cut p                                       ck res                                                    5
+                                           ne issing           Clean up                               5 Lubricate the                       hain 7                                 Mak         4                            4                                                 asta                                 3 Perform sampling         3
+                                                  5                                                    chain                                                                                      ingPrut aw              et                                                           5                Che                                 d the
+                                                            4                                                                                                              3                         edienay           are wnts                                                                                                          inRsetrauctions
+                                                                                                                                                                                                       ts           Prinepgredie
+                                                                                                                                                                                                                 Clean up 4                                                                  3
+
+Assemble Bed                                                Conference Room Water Preparation                                                                                      Cooking Scrambled Eggs                                                                                                          Do the Laundry
+
+  Other                                                                              Other                                                                                                           11               inStirGet Ingredients 30
+1                                                                                  1                                                                                                                                       gredfry t
+                                                                                                                                                                              5                                                                                                                          Other
+                                                                                                                                                                                                                              ienthe                                                                  1
+                                               ed 9                                                                                                   6                                        Clea       Other                  s
+                                           ble bents                                                                                       ntainaetiron                  5                                                          16
+                                       assemmpon                                                                                          corepar                                 Serve        n up                                                             are & 12
+                                        co                                                                                                p                                                                                                              itchennswils
+7 preparation                                            3 Pour water                                                                                                        Add fillinnignsgor                                                                                                                                          washing and drying8
+                                                                                                                                                                        5 seaso y                                                                          te
+                  place components 9                                                                  6 providing water to                                                                     6                            7                       Get k u                                            n and
+                                                                                                        attendees                                                                   t awaare &  oveHreat th               ts to                     Was inPgurteadwieanyts 12                    paratidoing
+                                                                                                                                                                                  Puhenwnsils       medieusmkille      grediebnowl                                                             pre loa
+                                                                                                                                                                                 kitc ute              heatt       Adda minixing                       hukitch                               5
+                                                                                                                                                                            6                                    Grease a skillet 7                     tensiel nwa
+                                                                                                                                                                                                                                                             s re &
+                                                                                                                                                                                                                                                                     8
+
+Assemble Cabinet                                                                 Cooking an Omelet                                                                                 Cooking Sushi Rolls                                                                                       Fix a Flat Tire - Replace a Bike Tube
+
+  Other                                                                                        11                                  s 51                                                                Other            Mix ingredients                                                                     Other se                     FD inal C e om flate ponents 8
+1                                                                                                                                                                                                    1                      7                                                                           4 on Pha                                the
+                                                               5                                               AddGet Ingredient                      33                      1                                                                                                     6                                                              tube
+                                                                                                                                                                                  Make su                                                                                                            arati                                              7
+                                                                      Hover                     Other llet at                               l to                                                                                                                     are &                         Prep
+                                                                                   eat tmhedi                                             ixinrgedie                    1 shi roll                                                                         henwsils                             1
+                                           e assembly 8   6                                                                                  bownts                             Cook rice                                                              kitcuten                               2                                                             ove inner tube 6
+                                       fram                       Clean up            ie                                           a m ing           are & 21                                                                                       Get RollinguarnSdushi                 5        Seat and Inflate                                     Rem
+                                                                                   e skum h                                                   itchennswils              2 Clean up Phase                                                                                                                                                                PIrnespare New Tube 6
+                                                         6 Grease a skillet                                                                                                         paration                                                        Cutting Yo                               4 Inspect the tubetire                                     irrseaptect th
+4 preparation                                                         reparieents                                                               te                                                                                                                                                        ct the
+                                                                     Pgred                                                                Get k u                                 Pre                                                                                                                                                                     egullaine fe bea
+                  5 internal and door                               in           11 Wash kitc                                                                                  2               3 Wash kitche                                        G Serve                                           Inspe                                                   ritieor d
+                    assembly                                                          utenshenw                                              inPgurteadwieanyts 19                               utensilnsware &         e using a 3                et In                                 4      4                 4 frLooosen                   and 5           s
+                                                             6                          i                       s or 12                    inSgtir fr                                                                 Coorkicreiccooker                    gred                                                       rimmsagatihne bea       Tube                     6
+                                                                                        ls are &              fillinging                                                                                                                                     ient          s                                              idewsat thed     Install Tire
+                                                                                                           Addseason                          rediey the                                                                                                                                                                    ll          Get tools and
+                                                                                                         Put away                                 nts                                                                                                                                                                                  supplies ready 4
+                                                                                                       kitchenware & 12
+                                                                                                      utensils                                           13
+
+                                                                                                                                                                                                                                                                                    3
+
+Assemble Sofa                                                                      Cooking Noodles                                                                                 Cooking Tomato & Eggs                                                                                                           Install a Wheel
+
+  Other                                                                                        23              Add ing Get Ingredients 47                                                27 Other ato and                                 s 42                                                                            Other
+1                                                                                                                    a borewdie                                                       toms                                                                                                                              1
+                                                               4                                                        l nts                                                                                         GetGet Ingredient                                    22                     2G                                     Adjustm
+                                                                                                                          to                                                       bine egg                                                                                                         foret th                                  ents Pha
+                                                   6                     Heamed    t theium         Other ver                32                                         6       Com                                                                 ukitch    ils are &                               whee bik                                     se14
+                                         n frabmlye                                                                                                                           6                                                                        tensenw
+                                       maissem            5 Boil th                        pot hoeat                                        Put adwiaeynts      23            Grease a skillet                                                              edientsootok 19                  3 Get el inesread
+                                        a                        until etennododles                                                                                                                                                                 Add sinkgilrletttooecs                        thethgerobike oefrft y
+5 upholstery and                                                         er                                                                 ingre                                                                                                    the toma                                           und
+     cushioning                                                 InPgrreepdaierents                                                        Get kuitchenware &                  Heat thdeiuskmillheetat                                                Mi Clean up 18                                 Clean Up                             Gsuetppthle tools
+                                                                                                                                          k P tensils           21      6 over me                      skin                                         creatxeingr                                                                               ies readaynd
+                                                         6 (Cut/Wash/Peel)         9 Wash                                                 itcheut aw                                10 Addmiixngredtomato             Wash kitchenware &Put awa& ute                                          4                                                          8
+                     ion and 5                                        tir friyents    uktietchen               Add ingredients to         utennswaray                         Remove      ing bioents                                                    egg emdien                                                5 Install a Wh              6
+                  pbreapsearaastsembly                               Sgred               nsils ware                                         ils e &                                         wl to a                                                          ixtuts to                                                   eel                e Wheel
+                                                                                           &                                                                                                                                                                    re 1                                                                     Secure th
+                                                                    in                                                                                                                                                                                               5
+                                                             7                                        skillet                      Serve                    13             6                                  utensils                                 enwar
+                                                                                                                                                                                                                                                    y kitcnhsils
+                                                                                                                                                                                                                                                                   e 15
+                                                                                                                                            12
+
+                                                                                                               9                                                                                                 11
+
+                                                                                                                                                                    21
+                                                                        ProAct: A Benchmark and Multimodal Framework for Structure-Aware Proactive Response
+
+                         Install Ceiling Fan                                                              Making Coffee latte                                                                                                Remove a Wheel                                               Replace Toilet Seat
+
+                            Other                                                                                                    53                                      20                                                                       Other                                 Other
+                         1                                                                                                                                                                                                                          1                                     1
+                                                                                                       8                                               Get kitchenw                               er) 18                           1                         foGret the
+                                                                                                                                                         (ma B utensils are &                                                          Axle                     wheelbike r
+                                                                                                          Boiellectr        watiec ke        Other an                                  l pocuoffe                                         PhDeta                   remoeady                                                             ew Seat 10
+                                                                             ion and 11                 9 Wash k                                                                          r-ove                                            ase chm                   val 6                                                       Install N
+                                                                      prepabralatdes                            utietcnhsenwar       r inttle                                nuarew             (drip 12
+                                                                                                                     ils e &                                                              coffeeaker)                        1 Bike Conf ent
+5    fixture                                                                                                                                                                         Brecwoffee m                                     Phasieguration               Remove a Wheel 6       6 Remove Old Seat
+   installation                                                                                        9 Add sweetener ot                                                             Get Ingredients 11
+   (Optional)                                                                                                          in aapn                                                       (frBerew                                    Preparation Phase
+                                                                                                                                                                                       nch pcoffe                            1                                                                                Water Management8
+                                                                                                                  milkucep                                 10                                                                3                                                5
+                                                                                                               Boilor sa                                 n a                                ress)e                              Fina                                       nd
+                                                                                                           9                                          waterciepan                                   11                             Plh Re                               ols aady
+                                           6 insmtaaillnaftiaonn                                          10                                      Booitlor sau                                                                       asemoval                         the tioes re
+                                                                                                            kitchPeut aw                        p Prepare milk                                                                                                     Gest uppl
+                                                                                                               utennswaraey                    (frothed) 10                                                                                3 G tethtehgerbike off
+                                                                                                                  ils &                                                                                                                       ound
+
+         Install Curtain                                                                                  Making A Ham Sandwich                                                                                              Replace Faucet                                               Replace a Light Bulb
+
+   1                                                                                                      4                            Other                               make fi                                              Other                                                       Other                                          6
+        Other                                                                                                prepare bread           1                                         lling                                         1                                                            1                                        paration
+                                                                                                            are equiapdment                                                          11                                                                                                   4 Install New B                        Pre
+                     rod insta                                                                                                                                                                                                                                                                          ulb
+                          llati                                                                        5 prep and bre                                                                                                                                              Install new faucet 20
+                             on                                                                                                                                            place ing                                                rational&
+                                15                                                                                          6 finalize sandwi                                    redie                                          prepraemov                                                4 Rem                        6
+                                                                                                                                 ch                                                  nts 10                                  12                                                               ove Ol               bly
+                                                                                                                                                                                                                                                                                                  d Bulb      Reassem
+
+   Install License Plate Frame                                                                         Making Cucumber & Tomato Salad                                                                                        Replace Car Fuse                                             Replace A Wiper Head
+
+         Other                                                                                                     Other se                            drepa PGet Ingredients 47                                                 Other                                                      Other                   mponents7
+      2                                                                                                        2 on Pha                                      ressre sa                                                       1                                                            1                   nstall Co
+                                                                                                                                                                                                                                                                                                              I
+                                                                                                            arati                                              ing lad
+                                                                                                          Prep                                                       27
+                                                                                                       1
+                                                                      tightenuirnigngand 6              4                                                                  Put awa                y ingredients 17                                                                        5Remove Components
+                                                                        sec                                      Serve
+                                                                                                                                                                           PuGet kuittcehnenware &                                                                 diaregmnose and
+             plate                                                                                     4 Prepare ingredients                                                         t aw sils                       13           e box access                          oval 9
+        e anmd bly                                                                                                 Clean up                            Wash kitchenware &Add minixing& auyt kitc                             3 fus
+     framasse                                                                                                               5                                                                     ensilhsenware                                                                           5                             6
+   5                                                                                                       5                  Construct sal    utensils                              grediebnowl                 11                                                                         Remove Wip             iper
+                                                                                                                                    ad                                                          ts to a 8                                                                                          er         Install W
+
+                                                                                                                                                       8
+
+                         Making Chai Tea                                                               Making Sesame-Ginger Asian Salad                                                                                      Replace SIM Card                                             Replace Light Socket
+
+             19 R Ot a her wts                                    s 22                     13               1                          Other             Add                                                                    Other                                                        Other
+          pare dien                                  GetGet Ingredient                                        Prep                   1                      (dreingr                                                         1                                                            1
+                                                                      ukitch    ils are &                        are dress
+       PreIngre                                                          tensenw                                                                              ssinedie
+   4                                                                                                   2 Preparation ing                                         g) nts
+ 5 Taransfer                                                            Put adwiaeynts             13              Phase                                            106
+        cup ordmrink to
+                ug                                                      ingre                                Prepdaireents                                                                                                                                         Remove Old SIM 9                           Remove Old Socket9
+                                                                      Wash kuitchenware &              16 ingre
+6 Clean up n                                                            Bo tensils                 11  21 Preparation                                  Get kiutctehnesniwlsare &25Get In                                       Install New SIM                                                      Socket
+              r forl a2-3                                             pot oil wa                              Phase                                                                    gredie                                5                                                               tall New
+                         7                                as 0          r sautcer in                                                                                                        nts 79                                                                                        9 Ins
+         immiteionuates.    Steep                      suchger, 1                 epana
+        Sadd min              the tea               spicesn, gi,nand t                         10
+    6                                             Addnnamaomomthe po
+                                               ci cardPveusttaoway
+                                             kcliotchenware & 10
+                                            utensils
+
+                         Making Milk Tea                                                               Personal Water Preparation                                                                                            Replace Door Knob                                            Replace Electrical Outlet
+
+                                 19                               s 19                                                                                                                                                                                                             Other
+                                                                                                                                                                                                                                                                               1
+   4                                                 GetGet Ingredient                     18                Other
+                                                                                                          4                                                                                                                     Other
+      Add you            swer cho        Other r of                   ukitch    ils are &                                                                                                                                    1
+ 4 Boil w                                                                tensenw
+       electricater in a           e                                                     14                                                                                                                                                                             ve Old Door 9
+              kettle n           eten ice                                  Put adwiaeynts                                                                                                                                                                          Remo Knob                                  Install New Outlet 8
+                                                                           ingre
+6 Clean up ner                                                        Was Steep the tea 13                   r dispensing                                                    surface cleaning 6                                     ew bDoor                                                       ld Outlet
+           dd sweete                                                     hukitch                       5 wate                                                                                                                    all NKno                                                  Remove O
+         A              6 potBoil w                                       tensiel nwa                                                                                                                                         Inst                                                        7
+                           oar sauacter in                                                                                                                                                                                   9
+    6                         kettleepan oar                                   s re &
+                                                                                      11
+                                                         9
+                                                       y
+                                                    ut awwaare &
+                                                 iPtchetnensils
+                                               kSimumer for an
+                                             additional 2-3 8
+                                            minutes.
+
+                                                                                                                                                                                                                         22
+                                              ProAct: A Benchmark and Multimodal Framework for Structure-Aware Proactive Response
+
+Replace Small Device Battery                                        Vacuum the Floor                                              Clean Bathtub                                                        Make the Bed
+
+   5 Calibr         OtherRemove Com                                   Other                                      e Floor 17         Other                                                        9       Other                                              and 8
+        Testaition1             ponents9                            1                                      Clean th               1                                                      ratiorngent)  1                                              sembralytion
+            ng and                                                                                                                                                                  prep/aDete                                                    disapsrepa
+                                      Measure and Clean8            9 Clean the Desk                                              6 rinsing and final                              (Tools              4 sheet organization
+6 Close Covers                                                                                                                          cleanup
+
+6                                6                                                       Prepare Cleaning                                                     scrubbing process 8                                           8 bedding and pillow
+ CIonsmtall N              Open Covers                                                  Supplies 15                                                                                                                           placement
+     ponenew
+       ts
+
+Replace Sewing Machine Needle                                       Wash the Dishes                                               Clean Rusty Pot                                                      Organize Desk
+
+  Other                                eplace6                         Other                                                          4                Other            cleaanpply                          1                 Other           fill th
+1                              ve aneddRle                          3                                                                    rinse       1                     ing liqu                             staot rgan  2                   holdere pen
+                            emo Ne                                                                                                          off resid                        agenid                               ione ize
+                           R                                                                               Clean tableware 6                      ue                            ts 12                                                                 8
+                                                                                                                                                                                                       4 organize shreylf
+4 Preparation                                                                                                                        Pour cleaning                                 pphryespicaare pot         items                                organize 6
+                                                                                                                                  7 powder                                          thermallllyyor 8               en holder                      electronics
+                           Needle Handling 5                                                                                      8 dry and                                                                                 5 organize books
+                                                                           utensils                                                    seaso                                  8                             Mobile p          papers and               6
+                                                                       Rinse                                                             n pot                          cleaning action                   5                                        aste
+                                                                    6                                                                                                                                                                         manage w
+
+Replace Mobile Screen Protector                                     Upgrade PC Components                                         Clean Trash Bin                                                      Organize Cables
+
+   Other                                                              Other                       ponent1s7                                           Other                          5                   Other                                           ble 6
+1                                                                   1                      ove Com                                                  1                         cleaning                 1                                            vice cpaing
+                                                 finisihon ands 11  7                   Rem                                       4 nreeplace                             spot                                                                    Dewrap
+5 prepare surface                             instalolantal step        Preparation                                                   w garabnadg secu
+                                               opti                                                                                           e bagre                   remove                         5 Storage
+                                                                          Reassembly                                                                                         old garb
+                   6 align and apply                                  8                      onents16                             4                                               age5                                               Cable management5
+                     protector                                                             Comp                                     gaprrepa
+                                                                                        Install                                        bagree ne
+                                                                                                                                          bagw
+
+Replace Refrigerator Water Filter                                   Unexpectedly found the charger not                                              CleanToilet                                        Unclog Sink WithBakingSoda
+                                                                                 brought
+  Other                                                                                                                                               Other
+1                                                        8             Other                                                        3               1                         leanli)ng 10                Other
+5 Install                                         pipeent           2                                                                    preparation                       rm cralle                   2
+        New Filte                              rainacem                                                                                                                 erfo (Pa
+                r                             Drepl                                                                               5 rinse and finish                    p                                                                          physical 9
+                                                                                                                                                                        toGoathe                                                                  unclogging
+                                                                       etrieve Charger                     Pack Charger 6                                                 ls (Praopti                            ical lteo
+                                                                    4R                                                                                                                                      chemnk ho
+5 Prepare                            r6                                                                                                              6 apply detergent         ralleonal                Addthe si
+     New Fil                    Old Filte                                                                                                                                         l) 6                 6
+          ter              Remove
+
+Use Rice Cooker To Cook Rice                                        Pick up the dropped items                                     Fold and Store Laundry                                               Remove Crayon From Walls
+
+     1              Other                         7                    Other                                                         Other                                                                Other
+       prep       1                      Ingredients                1                                                             1                                                                    1
+          aration                     Get
+               pha                    cooking                                                              Pick up items 9                                                         folding process 7   1 Finish dete                                    g cleaning 10
+                                         phasexec                                                                                                                                                            cleaningrgent                        selectimnethod
+3 serving phase se                                                                                                                                                                                                ish t wipe
+                                            e utio                      e items safely                                                                                                                         Finer/weing
+6 Get Kitch                                       n6                7 Plac                                                             ring items                                                                              Finish
+     enware                                                                                                                          sto                                                                  1 hairdryclean     toothpaste/baking 2
+                                                                                                                                  6
+                                                                                                                                                                                                                            soda cleaning
+
+                                                                                                                              23
+                            ProAct: A Benchmark and Multimodal Framework for Structure-Aware Proactive Response
+
+Pack a Suitcase for Travel                      First Aid - CPR                                                Respond to Robbery               Respond to Explosion
+
+    3                Other  Pack frag             Other                                   if thse 7            1                                1
+       Pack        1             ile items      1                                    Cheactkienotuis ours           Other                            Other
+           toile                      6
+              tries                             3 pGereftorremady to                   ponscinscio
+                            pack electronics 5             CPR                        cunco                                Respond
+3 Pack shoes                                                                                                                     to robb
+4 pPack                                                                                                                              ery6                   exResp
+  ust thecloth                   4                                    7 Perform CPR                                                                          plosond
+     uitcam ines an         prepare suitcase                                                                                                                    ion to
+        se the d                                                                                                                                                      6
+
+Accidentally knocked over bookend and               Respond to Abuse                                              Respond to Burglary               Respond to Vandalism
+            internal books                                                                                                                      1
+                                                1                                                              1
+   1                                                 Other                                                          Other                            Other
+         Other
+                                                                 Respond                                                          bResp                            vaResp
+                     ihandnling                                        to abuse                                                    urglond                          ndalond
+                        cideboo                                              6                                                                                         ism to
+                           nt ken                                                                                                     ary to                                 6
+                                d                                                                                                           5
+                                 4
+
+Accidentally knocked over water cup                 Respond to Arson                                              Respond to Fighting               Respond to Shoplifting
+
+6 Other                     wipe surface 6      1                                                              1                                1
+                                                     Other                                                          Other                            Other
+
+                                                                 Respond                                                          fRigespo                        shRoesp
+                                                                       to arson                                                     htinngd to                       plifond
+                                                                             6                                                              6                          tingto
+                                                                                                                                                                             6
+
+Unexpectedly found the trash bag leaking            Respond to Arrest                                             Respond to Shooting             Respond to RoadAccidents
+    4                                                                                                                                           1
+         Other                                  1                                                              1
+                                                     Other                                                          Other                            Other
+                     get new
+                           trash bag                             Respond                                                          sRhesp                         roaRd esp
+                                  9                                    to arres                                                     ootiond                         acciond
+                                                                            t6                                                                                         den to
+                                                                                                                                      ng to                              ts
+                                                                                                                                            5                                5
+
+Unexpectedly found the water cup leaking            Respond to Assault                                            Respond to Stealing
+
+    Other                                       1                                                              1
+2                                                    Other                                                          Other
+
+    ecure the cup           Wipe surface 9                      Respond                                                           sResp
+4S                                                                     to assau                                                    tealiond
+                                                                            lt 5
+                                                                                                                                      ng to
+                                                                                                                                            5
+
+                                                                                                           24
+                      ProAct: A Benchmark and Multimodal Framework for Structure-Aware Proactive Response
+
+Figure 10. Task-graph collection (75 tasks). We visualize the annotated task graphs for all tasks as sunburst-style DAG renderings. Each
+sector denotes a step, radial depth indicates hierarchical decomposition, and connectivity implicitly reflects prerequisite and branching
+constraints.
+
+F. Prompt Templates
+
+In this section, we document the prompt templates used in our experiments. We include (i) the proactive action selection
+prompt, which takes the task graph, progression state, human next-step horizon, and a candidate action set as input and
+requires a strict JSON action output, and (ii) the two-stage state perception prompts for trigger/task and step/future prediction
+from video frames. We also provide representative example inputs and raw outputs from several LLMs to illustrate common
+failure modes (e.g., malformed JSON, truncated generations, and constraint violations) under identical prompting.
+
+                                            Proactive Action Selection Prompt (Template)
+
+   System:
+   You are a robot action planner collaborating with a human on a procedural task.
+   Choose exactly ONE next robot action from the provided candidate list.
+
+   Hard constraints:
+   1) You must output a JSON object with key "action".
+   2) The value must be exactly one string from CANDIDATE_ACTIONS, or "Wait / None" if
+
+          the list is empty.
+   3) Prefer actions that are parallel to the human’s current thread (i.e., from a
+
+          different execution thread in the task graph), when possible. Thread (thread): an
+          independent branch in the task graph induced by the same mid-level start/end node
+          pair; different threads have no shared nodes.
+
+   User:
+   TASK: {task_name}
+
+   TASK_GRAPH (compact):
+   {task_graph}
+
+   COMPLETED_STEPS:
+   {completed}
+
+   HUMAN_IMMEDIATE_NEXT (do NOT do these):
+   {human_immediate}
+
+   HUMAN_FUTURE_HORIZON:
+   {human_future}
+
+   CANDIDATE_ACTIONS:
+   {candidates}
+
+   Return JSON only:
+   {"action":"...","reason":"...","confidence":0-1}
+
+Planning Example Input (State ID: COIN\_-2CxSAVwFqE:1)
+
+Task: Upgrade PC Components         executed  robot  action.
+Candidate actions:
+[
+
+   "Remove the old hard drive",
+   "Install the hard drive",
+   "Install laptop back cover",
+   "Terminate"
+]
+Note: Logged "action" is the final
+
+                                    25
+ProAct: A Benchmark and Multimodal Framework for Structure-Aware Proactive Response
+
+If a proposed action’s preconditions are not met, it becomes "Wait / None"
+and the reason is appended with "| prereq_not_met".
+
+                                                     Planning Output (GPT-4o)
+
+{
+   "action": "Wait / None",
+   "reason": "This action follows directly after ’Remove the old hard drive’, which is
+      in the HUMAN_IMMEDIATE_NEXT, allowing continuous progress without interruption. |
+      prereq_not_met",
+   "confidence": 0.9
+
+}
+(raw proposed action: "Install the hard drive")
+
+                                               Planning Output (Gemini-2.5-Flash)
+
+{
+   "action": "Wait / None",
+   "reason": "The human is about to",
+   "confidence": null
+
+}
+
+Planning Output (Qwen3-Max)
+
+{                                                                                    drive
+   "action": "Wait / None",                                                          next
+   "reason": "The human is currently focused on removing the old hard drive (
+      HUMAN_IMMEDIATE_NEXT), so I should avoid that step. Installing the new hard
+      is a valid candidate action not in HUMAN_IMMEDIATE_NEXT, and it unlocks the
+      human steps while reducing thread switching. | prereq_not_met",
+   "confidence": 0.95
+
+}
+(raw proposed action: "Install the hard drive")
+
+                                                Planning Output (DeepSeek-v3.2)
+
+{
+   "action": "Wait / None",
+   "reason": "All candidate actions are in HUMAN_IMMEDIATE_NEXT (Remove the old hard
+      drive) or would violate constraint #3. According to hard constraint #5, I must
+      choose ’Wait / None’ when every candidate action is in HUMAN_IMMEDIATE_NEXT or the
+        list is effectively empty for the robot to act upon.",
+   "confidence": 1.0
+
+}
+
+26
+ProAct: A Benchmark and Multimodal Framework for Structure-Aware Proactive Response
+                    Proactive response Stage-1 Prompt (Trigger + Task)
+
+System:                                  for video task detection.
+You are a precise vision-language model  decide CURRENT high-level task.
+From the given frames (oldest->latest),  <true_or_false>, "task": "<
+Return strict JSON only: {"is_trigger":
+
+      one_of_list_or_others>"}.
+
+IMPORTANT:
+- If the person needs help with ANY task from the list, set is_trigger=true and output
+
+        that task; otherwise set is_trigger=false.
+- Avoid false negatives: do NOT output {"is_trigger": false, "task": "others"} unless
+
+      none matches.
+
+User:
+Frames: <frame_descs joined by comma>
+Candidate tasks: <comma-joined task list>
+If no task fits, use ’others’ and set is_trigger=false.
+
+                            Proactive response Stage-2 Prompt (Step + Future Steps + Scores)
+
+System:
+You are a precise vision-language model for fine-grained procedural understanding.
+From the frames and the current task, decide CURRENT step and the NEXT 5 likely future
+
+        steps.
+All steps MUST be chosen from the provided list. Scores must be integers 1..3 and
+priority = max(urgency, value).
+Return strict JSON only:
+{
+
+   "current_step": "<one_step_from_list_or_empty>",
+   "future_steps": ["<step1>","<step2>","<step3>","<step4>","<step5>"],
+   "scores": { "urgency": <int>, "value": <int>, "priority": <int> }
+}
+
+Proactive response Example Input (EGO\_EXO4D\_...\_cam02)
+
+Frame window:                          Test"
+[
+
+   "[idx=0 t=0.00s]",
+   "[idx=32 t=1.28s]",
+   "[idx=51 t=2.04s]",
+   "[idx=67 t=2.68s]"
+]
+GT: task = "Covid-19 Rapid Antigen
+
+       step = "Read the instructions"
+       is_trigger = true
+
+                                               Proactive response Output (GPT-4o)
+
+{
+   "pred_is_trigger": false,
+   "pred_task": "others",
+   "pred_step": "",
+
+                                              27
+                      ProAct: A Benchmark and Multimodal Framework for Structure-Aware Proactive Response
+
+       "pred_future_steps": [],
+       "scores": {}
+   }
+
+                                            Proactive response Output (Gemini-2.5-Flash)
+
+   {
+       "pred_is_trigger": false,
+       "pred_task": "others",
+       "pred_step": "",
+       "pred_future_steps": [],
+       "scores": {}
+
+   }
+
+                                             Proactive response Output (Qwen3-VL-Plus)
+
+   {
+       "pred_is_trigger": true,
+       "pred_task": "Organize Desk",
+       "pred_step": "Take the cloth",
+       "pred_future_steps": [
+           "Wipe the desk with a tissue",
+           "Place the item in a dry area",
+           "Support book upright",
+           "Discard tissue",
+           "Place the book in a dry area"
+       ],
+       "scores": { "urgency": 1, "value": 1, "priority": 1 }
+
+   }
+
+Figure 11. Prompts and example outputs for ProAct-75. Each card is rendered as a web-style panel (full-width title bar) and may span
+pages automatically.
+
+                                                                        28
+

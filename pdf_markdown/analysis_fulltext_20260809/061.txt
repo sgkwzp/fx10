@@ -1,0 +1,1680 @@
+                                       TRAJDEBUG: Tracing Error Lifecycle to Identify Critical Failures
+                                                          in Long-Horizon Agent Trajectories
+
+                                                            Yunjia Qi1, Zehua Yin1, Xintong Shi1, Hao Peng1,
+                                            Songyuanyi Lu3, Yixian Liu3, Richeng Xuan3, Yuhong Liu3, Zhichao Hu3,*,
+
+                                                             Xiaozhi Wang2, Lei Hou1, Bin Xu1,*, Juanzi Li1
+                                         1Department of Computer Science and Technology, BNRist, Tsinghua University
+
+                                                    2Shenzhen International Graduate School, Tsinghua University
+                                                                               3Tencent Hunyuan
+
+                                                                            *Corresponding authors
+                                                                      qyj23@mails.tsinghua.edu.cn
+
+                                                             Abstract                              Fix CSV boolean export: True/False → true/false. Do not       Task Conflict:
+                                                                                                                 modify core/serialization.py.                     Constraint
+                                            LLM-based agentic systems have shown re-                                                                                Violation
+                                            markable capabilities in complex domains,                 Inspect CSV export logic and plan to add a local fix.
+                                            while suffering from cascading errors and dif-
+                                            ficulty in debugging. Critical error detection         The shared serializer controls boolean formatting. Decide to
+                                            aims to locate the earliest error step in a failed
+                                            trajectory that is responsible for the final fail-     modify core/serialization.py                     Critical Error
+                                            ure. However, progress faces two main chal-
+                                            lenges. First, long trajectories make it dif-          Modify core/serialization.py.  Forbidden file edited
+                                            ficult to identify individual errors, since the
+                                            evidence for judging a step may be scattered           JSON export tests fail.        Side effect: JSON
+                                            across distant instructions, observations, and
+arXiv:2608.06346v1 [cs.AI] 6 Aug 2026       prior context. Second, failed trajectories of-                                        behavior changes
+                                            ten contain multiple local errors whose down-
+                                            stream effects differ: some are repaired, some         Add special handling to preserve JSON behavior.
+                                            remain harmless, and only some contribute to
+                                            the final failure. In this work, we propose TRA-       Modify JSON exporter.          Compensating patch
+                                            JDEBUG, an error-lifecycle tracing framework
+                                            that addresses long-trajectory error discovery                      All tests pass.                                     Cascade
+                                            with multi-granularity history compression and         Failure: Task constraints remain violated.                        Error
+                                            evidence-based error identification, and sup-
+                                            ports critical attribution by tracing each error’s     Figure 1: Critical error detection requires grounding er-
+                                            resolution status and terminal impact. We fur-         rors in long-range context and distinguishing the failure-
+                                            ther construct TRAJERRBENCH, a benchmark               responsible error from multiple coexisting errors.
+                                            of 486 manually annotated failed trajectories
+                                            from τ 2-Benchand SWE-Bench Pro, covering              2025). These trajectories often span hundreds of
+                                            realistic tool-use and coding scenarios. Experi-       reasoning, action, and observation steps, and a ter-
+                                            ments across diverse agent benchmarks show             minal failure may trace back to an early mistake
+                                            that TRAJDEBUG achieves the best overall per-          that propagates through subsequent decisions, mak-
+                                            formance over existing baselines, and applica-         ing the trajectory difficult to debug and improve.
+                                            tion studies further demonstrate that its diag-        Critical error detection (Zhang et al., 2025c) ad-
+                                            noses provide actionable feedback for improv-          dresses this difficulty by locating the earliest error
+                                            ing downstream agent success. We will release          step in a failed trajectory that is causally linked to
+                                            the code and data to facilitate further research1.     the task failure, thereby supporting trajectory repair
+                                                                                                   and system reliability analysis.
+                                       1 Introduction
+                                                                                                      Critical error detection faces two key challenges
+                                       Large language model (LLM)-based agentic sys-               in long, complex agent trajectories. First, long
+                                       tems have shown remarkable capabilities in com-             trajectories make it difficult to identify individual
+                                       plex, real-world domains, such as software engi-            errors. Complex tasks often require extended exe-
+                                       neering (Jimenez et al., 2024; Deng et al., 2025),          cution processes that interleave planning, reason-
+                                       scientific discovery (Mialon et al., 2024), and multi-      ing, tool use, environment feedback, and repair
+                                       turn customer service workflows (Barres et al.,             attempts over many steps (Yao et al., 2023, 2022).
+                                                                                                   As a result, judging whether a step is erroneous
+                                           1https://github.com/THU-KEG/TrajDebug                   may require relating it to evidence scattered across
+                                                                                                   distant task instructions, observations, and prior
+                                                                                                   trajectory context (Peng et al., 2023). For example,
+                                                                                                   in Figure 1, the erroneous decision conflicts with a
+                                                                                                   task constraint stated at the beginning of the trajec-
+                                                                                                   tory, requiring long-range task context to identify
+                                                                                                   the error. Second, failed trajectories often contain
+
+                                                                                                1
+multiple local errors whose downstream effects dif-         rather than judging over the full trajectory.
+fer, obscuring which error is critical to the final            To evaluate critical error detection under real-
+failure. A failed trajectory may contain many local
+errors (Cemri et al., 2026), some are resolved, some        istic scenarios and complement existing bench-
+are inconsequential, and others are merely down-            marks (Zhang et al., 2025c; Zhu et al., 2025), we
+stream symptoms of earlier mistakes (Fan et al.,            construct TRAJERRBENCH, a benchmark of 486
+2026). Thus, the critical error is not necessarily the      manually annotated failed trajectories: 400 from
+first local error observed in the trajectory, nor the       τ 2-Bench (Barres et al., 2025), covering diverse
+temporally closest error to the terminal failure.           tool-use and user-interaction scenarios, and 86
+                                                            from SWE-Bench Pro (Deng et al., 2025), covering
+   Existing methods often address only part of this         long-horizon coding trajectories with an average
+problem. Current taxonomy-based and constraint-             length of about 119.7 steps.
+based methods focus on identifying candidate erro-
+neous steps in long trajectories (Zhu et al., 2025;            Experiments on existing agent benchmarks and
+Barke et al., 2026), while causal-diagnostic meth-          TRAJERRBENCH show that TRAJDEBUG achieves
+ods use causal structures or counterfactual attribu-        the best overall performance over advanced LLM
+tion to filter propagated errors (Wang et al., 2026;        prompting baselines and existing diagnostic sys-
+Li et al., 2026). However, candidate-error methods          tems. Length-based analysis shows that TRAJDE-
+often leave criticality to a holistic final judgment,       BUG remains more robust on long-horizon trajec-
+which is brittle when many local errors coexist.            tories. To assess whether critical-error diagnoses
+Causal attribution methods model dependencies               can improve future agent behavior, we explore two
+among errors, but their judgments can remain am-            inference-time application scenarios. In the first,
+biguous when later feedback and repair attempts             each failed trajectory is diagnosed and converted
+alter the effects of earlier errors.                        into targeted guidance before re-executing the same
+                                                            task, improving success by 10.80% on average. In
+   To address these challenges, we propose TRA-             the second, diagnoses from a small set of histor-
+JDEBUG, an evidence-grounded error-lifecycle                ical failures are aggregated into reusable failure
+tracing framework for critical error detection. TRA-        memory and transferred to held-out tasks, yield-
+JDEBUG decomposes the task into three stages:               ing a 5.70% average improvement. These results
+error trigger detection, error state classification,        suggest that TRAJDEBUG can serve not only as a
+and critical attribution. First, to identify individ-       diagnostic tool, but also as a practical interface for
+ual errors in long trajectories, TRAJDEBUG uses             converting failed executions into actionable experi-
+multi-granularity history compression and detects           ence for improving long-horizon agents.
+error triggers as wrong commitments grounded in
+conflicts with task instructions, trajectory history,       2 Pilot Study
+environment feedback, or the agent’s own reason-
+ing. This turns error discovery from holistic diagno-       This section first formalizes critical error step detec-
+sis into an auditable evidence-verification problem,        tion (§ 2.1) and then provides empirical motivation
+reducing hallucinated or weakly grounded diag-              for the two challenges discussed above. We exam-
+noses (Gao et al., 2023). Second, to address the            ine how trajectory length is associated with critical
+ambiguity caused by multiple local errors with dif-         error localization difficulty (§ 2.2) and how local
+ferent downstream effects, TRAJDEBUG groups                 errors evolve within failed trajectories (§ 2.3). See
+related triggers into error instances by their shared       Appendix A for experiment and annotation details.
+violated reference, such as a task constraint or prior
+observation. It then classifies the state of each in-       2.1 Task Formulation
+stance by tracking whether the wrong commitment
+is resolved, and whether it leaves an observable ter-       Let a trajectory be τ = (x1, x2, . . . , xN ), where
+minal footprint, such as an irreversible state change,      each step xt contains the agent’s reasoning, action,
+a persistent task violation, or a substantial recov-        or environment response. A trajectory is failed if
+ery cost. These state classifications distinguish           its final state does not satisfy the task goal. Fol-
+errors that are repaired or remain harmless from            lowing Zhang et al. (2025c), a step xt contains a
+those that stay relevant to the final failure. Finally,     decisive error if replacing its action with a correct
+TRAJDEBUG selects the critical error step from              one, while leaving all prior steps unchanged and
+evidence-backed instances with terminal relevance,          allowing the remainder of the trajectory to unfold
+                                                            correctly, would have turned the failure into a suc-
+
+                                                         2
+50          Individual Model Step Accuracy (%)                  count. These dynamics show that critical error
+40          Avg. Critical Error Detection Step Accuracy (%)     detection must distinguish local error occurrence
+30          Error Count per Trajectory                          from its downstream state and terminal impact, mo-
+20                                                              tivating TRAJDEBUG in § 3.3.
+10          11-30  31-60       61+
+ 0          Trajectory Length                                   3 TRAJDEBUG
+
+      1-10                                                      Figure 3 shows the overall framework of TRAJDE-
+                                                                BUG. Given a failed trajectory τ , TRAJDEBUG
+Figure 2: Critical error detection accuracy and local           first constructs multi-granularity trajectory views to
+error density across trajectory length buckets.                 preserve local evidence while compressing distant
+                                                                context (§3.1). TRAJDEBUG then follows an error-
+cess. The critical error step is the earliest decisive          lifecycle tracking perspective and decomposes crit-
+error step, identifying the origin of the failure rather        ical error detection into three stages. First, TRA-
+than its downstream propagation.                                JDEBUG detects evidence-grounded error triggers
+                                                                at individual steps (§3.2). Second, it groups re-
+2.2 Error Detection under Growing Context                       lated triggers into object-anchored error instances
+                                                                and classifies each instance’s error state, based
+We group trajectories from WhoAndWhen (Zhang                    on whether the error is resolved or remains active
+et al., 2025c) and AgentDebugBench (Zhu et al.,                 and whether it leaves an observable terminal foot-
+2025) by trajectory length, and directly prompt                 print (§3.3). Finally, it attributes the final failure to
+LLMs to identify the annotated critical error step              the critical candidate through candidate-set-guided
+in each failed trajectory, and use critical-step de-            causal attribution (§3.4). This turns critical error
+tection accuracy as an indicator of the difficulty              detection from an end-to-end judgment over the full
+introduced by growing context. We evaluate seven                trajectory into three more controlled steps: finding
+widely used advanced models and report the aver-                evidence-backed local errors, classifying their error
+age accuracy across models to reveal the overall                states, and selecting the causally responsible step
+trend. Figure 2 shows that detection accuracy de-               from the remaining candidates. More details and
+creases as trajectory length increases, suggesting              examples are in Appendix C and Appendix D.
+that long-horizon context makes critical error de-
+tection harder. This trend is consistent with prior             3.1 Multi-Granularity Compression
+observations that longer trajectories are associated
+with lower task success rates (Qi et al., 2026).                To reduce the long-context burden while preserving
+                                                                verifiable evidence, we use LLM to construct three
+2.3 Trajectory Dynamics of Local Errors                         views for each step: (1) high-detail view keeps
+                                                                the original instruction, action, observation, and
+We further sample 50 failed trajectories from these             locally relevant reasoning snippets needed for evi-
+benchmarks and annotate local error steps with                  dence verification; (2) medium-detail view summa-
+three annotators, with details in Appendix A. The               rizes the step’s main intent, action, and state update;
+sampled trajectories contain 381 local errors in                (3) low-detail view records only coarse progress,
+total, averaging 7.62 per failed trajectory, while              salient entities, and unresolved commitments. Each
+each trajectory has only one critical error. Fig-               stage then retrieves the finest view required for its
+ure 2 shows that the average number of local er-                decision, using high-detail views for local verifica-
+rors increases with trajectory length, indicating that          tion and compressed views for distant context.
+longer trajectories expose a denser set of plausible
+but non-critical candidates. To understand how                  3.2 Error Trigger Detection
+non-critical errors evolve, we exclude the critical
+errors and analyze the remaining 331 local errors.              For each step, given the trajectory prefix up to that
+We find that 205 (61.9%) are later repaired by the              step, the first stage extracts per-step atomic error
+agent, while 104 (31.4%) persist until the final out-           triggers. A trigger e = (t, c, p, qw, qr) denotes a
+come. Only 22 (6.6%) are unrepaired yet dormant:                local evidence-grounded mismatch at step t, where
+for example, a step may miscount four search re-                qw is an erroneous commitment expressed in the
+sults as two, but no later decision depends on the              current step, qr is the violated reference, c is the
+                                                                reference category, and p is the execution phase.
+                                                                The violated reference qr may come from the task
+
+                                                             3
+    [TASK] Fix CSV boolean export: True/False →          Error Trigger Detection Instance Clustering  Lifecycle Analysis Causal Attribution
+   true/false. Do not modify core/serialization.py.
+                                                         Conflict with the    Reference                Latent Active:     Task
+[Step 1] There are two relevant files: csv_exporter.py,     Intra-Step       object: two              No downstream
+json_exporter.py, and serialization.py.                     description       Step 1 says                               Step 1
+                                                                            "two" but lists            step depends        …
+                       …                                                      three files.              on this error.
+                                                                                                                        Step 10
+[Step 4] Try fixing boolean output by changing CSV        Conflict with       Reference                     Clean
+quoting logic.                                                History           object:                 Resolution:     Step 11
+                                                                                                       Error resolved      …
+                       …                                   Observation       changing csv              at Step 15; no
+                                                                            quoting logic             terminal effect.  Step 20
+[Step 10] The previous change had no effect;              Conflict with       Repeat the
+                                                             History         failed Step 4             Latent Active    Step 21
+try the same CSV quoting change again.                                                                                     …
+                                                          Observation           change.
+[Step 11] Modify the CSV quoting logic.                                                                                 Step 60
+                                                          Conflict with        Reference
+                       …                                 Task Constraint     object: don’t               Manifest            Step: 20
+                                                                                                          Active:         Task Conflict
+[Step 20] I should modify core/serialization.py to        Conflict with         modify                Forbidden core      Stage: Reason
+complete the task.                                       Task Constraint    core/serializati           edit remains.    Ignore Constraint
+
+[Step 21] Modify core/serialization.py.                                          on.py
+
+                       …
+
+                      [Step 60] Failure
+
+Figure 3: An overview of the framework of TRAJDEBUG.
+
+instruction, prior trajectory, environment feedback,                        3.3 Error State Classification
+or the same step. To prevent subjective drift and
+hallucinated diagnoses, each trigger must satisfy a                         The second stage groups per-step triggers into error
+verbatim evidence condition: both qw and qr must                            instances and classifies the state of each instance.
+be explicitly citable; otherwise, the trigger is dis-                       Since the same wrong commitment may appear
+carded. A step may contain multiple triggers when                           across multiple steps (Xie et al., 2026), such as
+it violates different references or expresses differ-                       a task-constraint violation surfacing in planning,
+ent erroneous commitments. For each inspected                               action, and verification, we define an instance as
+step, the detector uses the high-detail current step                        E = (E, O), where E contains triggers that vi-
+and task instruction, medium-detail previous two                            olate the same reference object O. This avoids
+steps, and low-detail views for the remaining his-                          overcounting repeated manifestations of the same
+tory. This preserves local evidence for verification                        error. Each instance thus represents one continu-
+while keeping long-range context compact.                                   ous episode of holding a wrong commitment to a
+                                                                            concrete reference object.
+   We organize triggers along two axes. The first
+axis is the reference category c, which specifies                              For each instance, the state classifier makes two
+the source of the violated reference qr: (1) Task                           evidence-backed judgments: whether the wrong
+Conflict, where qr comes from the task instruction,                         commitment is resolved or remains active, and
+such as a constraint; (2) History Conflict, where qr                        whether it leaves an observable terminal footprint.
+comes from prior trajectory context, such as a tool                         An instance is resolved only if later steps explicitly
+output, or established trajectory fact; and (3) Intra-                      revisit O and provide citable evidence that super-
+Step Conflict, where qr comes from the current step                         sedes the wrong commitment; otherwise, it remains
+itself, such as an earlier claim. We additionally use                       active. A terminal footprint is assigned when there
+(4) Environment Anomaly as an exogenous category                            is evidence of: (i) an irreversible state change, such
+when the agent action is reasonable but the envi-                           as submitting a wrong order; (ii) a semantic foot-
+ronment response is abnormal. The second axis is                            print, where the wrong commitment is reflected in
+the execution phase p, which records where the                              later steps or the terminal state, such as a persistent
+mismatch surfaces in the agent process (Deshpande                           violation of a task constraint; or (iii) budget debt,
+et al., 2025; Zhu et al., 2025): planning, reason-                          where the error is resolved only after consuming
+ing, action, observation, or verification (detailed in                      more than k% of the trajectory. In implementation,
+Appendix D). The reference category c, together                             we set k = 50, as exceeding half the trajectory
+with the violated reference qr, determines the refer-                       mostly leaves an insufficient budget for recovery.
+ence object O used for instance clustering, while
+the execution phase p characterizes the agent-side                             Combining these two judgments yields four er-
+mechanism for fine-grained analysis.                                        ror states: Clean Resolution (resolved, no foot-
+                                                                            print), Costly Resolution (resolved, budget-debt
+                                                                            footprint), Manifest Active (active, irreversible or
+
+                                                         4
+WebShop 28% 22% 16% 6% 6%    6%  4% 12%                                                   mistakes from failure-responsible ones. Each tra-
+WW-Algo 16% 24% 11% 10% 7% 13% 5% 5% 10% 1% 25                                            jectory is annotated by three annotators, and labels
+ALFWorld 21% 26% 12% 12% 5% 2% 2% 8% 2% 10% 20                         Percentage (%)     with at least two-way agreement are used as ground
+                                                                     15                   truth; this majority-vote protocol yields usable la-
+GAIA 14% 27% 10% 12% 4% 14%      8% 10%                                                   bels for 98.2% of τ 2-Bench trajectories and 91.9%
+                                                                                          of SWE-Bench Pro trajectories. The critical-error
+WW-HC 21% 9% 17% 5% 7% 3% 7% 12% 9% 10% 10                                                step labels reach almost-perfect agreement on τ 2-
+                                                                                          Bench (Fleiss’ κ=0.91) and substantial agreement
+SWE-Bench-Pro 2% 3% 5% 9% 14% 12% 26% 14% 6% 9% 5                                         on the longer, code-heavy SWE-Bench Pro trajec-
+                                                                                          tories (Fleiss’ κ=0.67); details are in Appendix B.
+Tau2Bench 1% 4% 4% 6% 8% 19% 22% 22% 10% 6% 0
+                                                                                             Figure 4 shows that critical errors in TRAJER-
+0-10% 10-20%20-30%30-40%40-50%50-60%60-70%70-80%80-90%90-100%                             RBENCH often occur in the mid-to-late. This re-
+      Relative Position of Critical Error Step (step / total_steps)                       flects the shared structure of TRAJERRBENCH:
+                                                                                          agents first gather task-relevant information before
+Figure 4: Relative position of the critical error step                                    making decisive decisions, through user interaction
+within each trajectory in TRAJERRBENCH and others.                                        in τ 2-Bench and repository exploration in SWE-
+                                                                                          Bench Pro. Such extended information gathering
+semantic footprint), and Latent Active (active, no                                        shifts many critical errors later and makes local-
+footprint). We retain terminal-relevant instances as                                      ization harder, as relevant evidence is accumulated
+candidates:                                                                               across earlier context. We also annotate each crit-
+                                                                                          ical error by contradiction reference category and
+                      F(τ ) = {E : state(E) ∈                                             execution phase, with full statistics in Appendix B.
+                                                         (1)                              In τ 2-Bench, critical errors are almost evenly split
+                                                                                          between task conflicts (52.4%) and history con-
+    {CostlyResolution, ManifestActive}}.                                                  flicts (46.3%), while SWE-Bench Pro is dominated
+                                                                                          by task conflicts (73.4%) with fewer history con-
+Each candidate is passed to the final stage with                                          flicts (24.1%). Reasoning is the dominant failure
+its origin step, state label, footprint channel, and                                      phase in both domains (60.7% and 57.1%), sug-
+supporting evidence; final criticality is decided by                                      gesting that failures mainly arise from misinterpret-
+the attribution stage.                                                                    ing accumulated context in agentic trajectories.
+
+3.4 Candidate-Set-Guided Causal Attribution                                               5 Experiments
+
+This stage executes candidate-set-guided causal at-                                       5.1 Experimental Settings
+tribution. Given the candidate set F(τ ), this attri-
+bution head selects the candidate instance whose                                          Datasets and Evaluation Metric. We evaluate
+first step best explains the terminal failure. A sim-                                     our approach across benchmarks in various do-
+ple earliest-candidate rule is insufficient because                                       mains. WhoAndWhen (Zhang et al., 2025c) con-
+temporal order alone does not determine failure                                           tains a hand-crafted subset of 58 trajectories and
+responsibility. For example, an earlier budget-debt                                       an algorithm-generated subset of 126 trajectories
+instance should not be selected over a later seman-                                       drawn from GAIA and AssistantBench. AgentDe-
+tic instance unless the wasted budget plausibly pre-                                      bugBench (Zhu et al., 2025) provides 100 ALF-
+vented the agent from avoiding the later failure.                                         World and 50 each from GAIA and WebShop tra-
+Therefore, we use an LLM as the final attribution                                         jectories. One GAIA trajectory has a null ground-
+head. Each candidate is provided with its first step,                                     truth critical-error label and is therefore excluded
+state label, and supporting verbatim evidence, and                                        from evaluation, leaving 869 evaluated trajecto-
+the LLM selects the critical error step.                                                  ries in total. TRAJERRBENCH (§ 4) adds 400
+                                                                                          τ 2-Bench and 86 SWE-Bench Pro trajectories, ex-
+4 TRAJERRBENCH                                                                            tending evaluation to substantially longer tool-use
+                                                                                          and software-engineering rollouts. Following prior
+Existing critical-error benchmarks remain limited                                         benchmark (Zhang et al., 2025c; Zhu et al., 2025),
+in scale, domain diversity, or trajectory complex-                                        we report exact critical-step accuracy, where a
+ity (Zhang et al., 2025c; Zhu et al., 2025; Barke                                         prediction is correct only if it matches the annotated
+et al., 2026; Li et al., 2026). We construct TRA-
+JERRBENCH, a benchmark of 486 manually anno-
+tated failed trajectories from two complementary
+domains: 400 τ 2-Bench trajectories (Barres et al.,
+2025) and 86 SWE-Bench Pro trajectories (Deng
+et al., 2025), averaging 29.3 and 119.7 steps, re-
+spectively. Following WhoAndWhen (Zhang et al.,
+2025c), annotators identify the earliest evidence-
+grounded mistake responsible for the final failure,
+while separating locally wrong but later repaired
+
+                                                                                       5
+Method                         AgentDebugBench            WhoAndWhen          TRAJERRBENCH       AVG
+                        ALFWorld GAIA WebShop                           τ 2-Bench SWE-Bench Pro
+Avg. Trajectory Length                          Hand-Crafted Algorithm                           49.97
+                           60.00 28.68 51.84
+Direct Prompting                                       51.60  8.72      29.27  119.70            25.59
+GLM-5.1                                                                                          31.29
+Gemini-3.1-Pro          15.00  26.00  26.00            15.52  42.86     46.75   6.98             27.97
+DeepSeek-V4-Pro         19.00  30.61  32.00            20.69  46.82     52.50  17.44             22.99
+Claude Sonnet 4.6       15.00  34.69  24.00            18.97  42.06     48.25  12.79             19.96
+GPT-5.4                 13.00  30.61  18.00            12.07  29.37     42.75  15.12             29.40
+Claude Opus 4.6         11.00  20.41  14.00            13.79  28.57     41.50  10.46             25.69
+Qwen3-235B-A22B         10.00  34.69  24.00            27.59  46.83     45.25  17.44
+Multi-Agent System       9.00  33.33  18.00            17.24  42.06     42.75  17.44             23.72
+AgentDebugger                                                                                    18.77
+CHIEF                   21.00  36.00  20.00            12.07  40.48     26.00  10.47             23.10
+AgentRX                  6.00  26.00  10.00            18.97  41.27     26.82   2.32             34.11
+                         8.00  26.53  18.00            25.86  41.27     36.25   5.81
+TRAJDEBUG (Ours)
+                        26.00  38.78  26.00            22.41  48.41     52.75  24.41
+
+Table 1: Main results on critical error detection across multiple benchmarks. All methods operate without task
+ground truth and receive only the failed trajectory. Bold values indicate the best result per column.
+
+step, and evaluate all methods in a realistic setting     LLMs listed in Table 1. All methods use tempera-
+where they use only the failed trajectory and failure     ture 0 for reproducibility, and multi-agent baselines
+signal, without success traces, gold outcomes, or         follow official prompts and pipelines where avail-
+auxiliary debugging signals.                              able. Implementation details are in Appendix E.
+
+Baselines. We compare with two families of base-          5.2 Main Results
+lines. Motivated by the effectiveness of direct
+prompting reported in prior work (Zhang et al.,           All experimental results are presented in Table 1.
+2025c; Banerjee et al., 2025), our first family is        We have the following observations: (1) TRA-
+Direct Prompting, which queries an LLM for the            JDEBUG achieves the best overall average in our
+critical error step from the full trajectory under        benchmark suite. It obtains the highest macro-
+a unified instruction; we instantiate it with seven       average accuracy (34.11%), outperforming both
+widely-used advanced models: GLM-5.1 (Zeng                direct prompting with frontier models and all multi-
+et al., 2026), Gemini-3.1-Pro (Team et al., 2023),        agent baselines on average. The absolute accura-
+DeepSeek-V4-Pro (Guo et al., 2025), Claude Son-           cies remain low across all methods, highlighting
+net 4.6 (Anthropic, 2026b), Claude Opus 4.6 (An-          the difficulty of identifying the exact critical step
+thropic, 2026a), GPT-5.4 (Achiam et al., 2023),           from only the failed trajectory. Under this chal-
+and Qwen3-235B-A22B-Thinking (Yang et al.,                lenging setting, TRAJDEBUG improves over direct
+2025). The second family is Multi-Agent Systems,          prompting with the same backbone from 25.69%
+which decomposes the task across multiple LLM             to 34.11% (+8.42), demonstrating the effective-
+calls: AgentDebugger (Zhu et al., 2025) prompts           ness of our framework. (2) TRAJDEBUG gener-
+the judge with a phase-level error taxonomy and           alizes well across heterogeneous agent domains.
+produces a structured diagnosis; CHIEF (Wang              It ranks first on five of seven datasets, spanning
+et al., 2026) parses the trajectory into a hierarchi-     embodied decision-making, open-domain informa-
+cal causal graph and selects the critical step via        tion seeking, user-facing tool use, and long-horizon
+counterfactual backtracking against a virtual ora-        software engineering. In contrast, multi-agent base-
+cle; AgentRX (Barke et al., 2026) first flags steps       lines show uneven cross-domain performance(e.g.,
+that violate explicit task or schema constraints and      CHIEF drops to 2.32% on SWE-Bench Pro and
+then asks an LLM to select the critical error.            AgentRX to 8.00% on ALFWorld), suggesting
+                                                          that their pipelines transfer less consistently across
+Implementation. We implement TRAJDEBUG                    agent scenarios. These results demonstrate that
+and all multi-agent baselines with Qwen3-235B-            TRAJDEBUG’s evidence-grounded trigger detec-
+A22B-Thinking (Yang et al., 2025) for a fair com-         tion and error state classification offer robust advan-
+parison, while direct-prompting baselines use the         tages that generalize across diverse agent scenarios.
+
+                                                       6
+Method                             τ 2-Bench  SWE-Bench Pro  AVG       Step Accuracy (%)  50                    TraDebug (Ours)             GPT-5.4
+                                                                                          40                    Gemini-3.1-Pro              AgentRX
+TRAJDEBUG (Ours)                    52.75           24.41    38.58                        30                    Claude-Opus-4.6             AgentDebug
+w/o Multi-Granularity Compression    20.00          15.12    17.56                        20                    Claude-Sonnet-4.6           CHIEF
+w/o Evidence-Grounded Triggers       46.25          20.93    33.59                        10
+w/o Error State Classification       46.25          16.28    31.27                         0
+w/o All Components                   42.75          17.44    30.10
+                                                                                                1-35
+Table 2: Ablation study of TRAJDEBUG.                                                         (n=534)
+
+(3) TRAJDEBUG remains effective on the longest-                                                        36-70    71-105             106-140  141+
+horizon benchmarks. On ALFWorld (60.00 steps                                                           (n=237)  (n=35)             (n=35)   (n=28)
+on average) and SWE-Bench Pro (119.70 steps),                                                                   Trajectory Length
+where evidence is distributed across many steps
+and multiple errors often coexist, TRAJDEBUG at-                       Figure 5: Accuracy across trajectory length buckets.
+tains the best accuracy, with gains of +13.00% and
++6.97% over the corresponding direct baselines.                        35–50% on short trajectories to below 15% on long
+These results suggest that evidence-grounded trig-                     ones. In contrast, TRAJDEBUG remains substan-
+ger detection and error state classification help nar-                 tially more stable, retaining over 20% accuracy on
+row critical-step localization in long trajectories                    the longest bucket where the best baseline drops
+with complex failure dynamics.                                         to around 14%. This suggests that TRAJDEBUG
+                                                                       is still affected by increasing trajectory length, but
+5.3 Ablation Study                                                     evidence-grounded error detection and state-based
+                                                                       candidate filtering help it degrade less sharply and
+Table 2 ablates the three key components of TRA-                       yield larger gains on long-horizon trajectories.
+JDEBUG on τ 2-Bench and SWE-Bench Pro. Re-
+placing multi-granularity compression with the                         6 Application: Critical Error Detection as
+same hard-truncation strategy used by direct                               Feedback for Agent Improvement
+prompting causes the largest drop, reducing AVG
+by 21.02 points. This shows that preserving ev-                        Beyond diagnostic accuracy, a critical error de-
+idence from different history granularities is es-                     tector is useful only if its outputs translate into
+sential for long trajectories, rather than merely in-                  measurable agent improvement. We evaluate TRA-
+creasing the number of LLM calls. Removing er-                         JDEBUG as a feedback source for the agent in
+ror trigger detection or error state classification                    two deployment scenarios on τ 2-Bench (Barres
+lowers AVG by 4.99 and 7.31 points, respectively,                      et al., 2025) and a sampled set of 100 SWE-
+showing that these two downstream components                           Bench Verified (Jimenez et al., 2024), covering
+are also useful and non-redundant. On τ 2-Bench,                       both an idealized per-trajectory repair setting and
+both ablations reach the same accuracy, suggest-                       a more realistic cross-trajectory transfer setting.
+ing that the trigger taxonomy and state classifica-                    In both scenarios, the actor is GLM-5.1, all de-
+tion stage act as orthogonal filters of comparable                     tectors use Qwen3-235B-A22B-Thinking as the
+strength on tool-use trajectories. On SWE-Bench                        backbone, and detector-produced feedback is in-
+Pro, removing state classification reduces accuracy                    jected into the actor’s system prompt. We com-
+to 16.28, below the direct-prompting baseline of                       pare TRAJDEBUG against two baselines: Vanilla,
+17.44, whereas removing only the taxonomy still                        which directly prompts with the failed trajectory to
+achieves 20.93. This pattern supports our motiva-                      find the critical error step and write feedback, and
+tion in § 2: long-horizon trajectories contain many                    Self-Reflection (Renze and Guven, 2024), which
+detected errors that are cleanly resolved or dormant,                  generates a reflection over the trajectory before pro-
+making final attribution more difficult. State-based                   ducing the feedback. Details are in Appendix E.4.
+filtering narrows attribution to errors with terminal
+footprint.                                                             Per-Trajectory Repair under Oracle Failure.
+                                                                       We assume oracle access to the success label of
+5.4 Length Analysis                                                    each rollout: for every failed trajectory, the detec-
+                                                                       tor produces a feedback, which is injected into the
+Figure 5 shows critical-step detection accuracy                        system prompt before re-executing the same task
+across trajectory length buckets. All baselines de-                    with the same actor. As shown in the upper block
+grade sharply as trajectories grow, dropping from                      of Table 3, TRAJDEBUG delivers the largest gains
+
+                                                                    7
+Method           Airline                Retail        SWE-Bench        the failure-responsible step, and failure-mode tax-
+                                                                       onomies identify error categories rather than the
+Per-Trajectory Repair (Oracle Failure)                    72.00        decisive step in a specific trajectory.
+                                                     78.00 (+6.00)
+Initial                78.00               84.21     80.00 (+8.00)     Critical error attribution. A recent line stud-
+Self-Reflection   84.00 (+6.00)       93.86 (+9.65)  81.00 (+9.00)     ies fine-grained failure attribution across multi-
+Vanilla Debug    88.00 (+10.00)       93.86 (+9.65)                    agent reasoning (Zhang et al., 2025c; Chen et al.,
+TRAJDEBUG        90.00 (+12.00)      95.61 (+11.40)       71.64        2026; In et al., 2026; Banerjee et al., 2025), em-
+                                                     74.63 (+2.99)     bodied and web environments (Zhu et al., 2025),
+Failure-Memory Transfer (Realistic)                  71.64 (+0.00)     and software engineering (Deshpande et al., 2025;
+                                                     76.12 (+4.48)     Li et al., 2026). Methodologically, prompt-based
+Initial               78.78               84.21                        approaches inspect raw or compressed trajectories
+Self-Reflection  81.81 (+3.03)       82.89 (-1.32)                     with an LLM judge (Zhang et al., 2025c; Banerjee
+Vanilla Debug    75.75 (-3.03)       88.15 (+3.94)                     et al., 2025), but their diagnoses can be weakly
+TRAJDEBUG        84.84 (+6.06)       90.78 (+6.57)                     grounded in evidence; taxonomy- and constraint-
+                                                                       based approaches narrow the search space with
+Table 3: Task success rate (%) when detector outputs                   predefined error categories or invariants (Zhu et al.,
+are used as feedback for GLM-5.1.                                      2025; Barke et al., 2026), yet miss errors that
+                                                                       fall outside the schema; replay- and spectrum-
+across all three settings, lifting the average suc-                    based methods localize errors by re-executing or
+cess rate from 78.07 to 88.87, surpassing Vanilla                      perturbing the trajectory (Ge et al., 2025), but
+Debug and Self-Reflection. The gap shows that                          require deterministic environments; graph-based
+more accurate critical-error localization produces                     methods model dependencies among trajectory ele-
+more actionable feedback, beyond what holistic                         ments (Wang et al., 2026; Zhang et al., 2025b,a; Li
+prompting or generic reflection can offer.                             et al., 2026; Wang, 2026), but use connectedness as
+                                                                       a proxy for terminal responsibility, leaving each er-
+Failure-Memory Transfer to Held-Out Trajec-                            ror’s resolution status and terminal impact implicit.
+tories. We further test a realistic deployment in                      In contrast, TRAJDEBUG grounds error triggers in
+which the detector is applied to only a small slice of                 verbatim evidence, classifies error states, and per-
+historical failures and the resulting feedback must                    forms attribution over terminal-relevant candidates,
+generalize to unseen tasks. For each subset, we                        addressing both long-context error identification
+split the trajectories per-dataset into a 1/3 memory-                  and ambiguity among multiple local errors.
+construction split and a 2/3 held-out evaluation
+split. On the memory-construction split, the de-                       Benchmarks for failure attribution. Existing
+tector produces feedback on each failed trajectory;                    benchmarks are typically tied to a single do-
+all feedbacks are aggregated into a memory pool,                       main and modest trajectory length: WhoAnd-
+which is then injected as a whole into the actor’s                     When (Zhang et al., 2025c), TraceElephant (Chen
+system prompt when evaluating on the held-out                          et al., 2026), and MPBench (In et al., 2026)
+split. As shown in the lower block of Table 3,                         target multi-agent dialogues; AgentDebug (Zhu
+despite no per-instance oracle, TRAJDEBUG still                        et al., 2025) covers embodied and web tasks;
+yields the largest improvement, whereas Vanilla                        and TRAIL (Deshpande et al., 2025) and Code-
+and Self-Reflection show less stable transfer and                      Tracer (Li et al., 2026) focus on code agents.
+can even reduce performance in some cases. This                        TRAJERRBENCH complements them with 486
+indicates that the feedback induced by TRAJDE-                         manually annotated long-horizon trajectories from
+BUG encodes transferable failure patterns rather                       customer-service tool use (Barres et al., 2025) and
+than instance-specific fixes, suggesting that critical                 repository-scale software engineering (Deng et al.,
+error detection can serve as a low-cost source of                      2025), with up to ∼120 steps per trajectory, ex-
+reusable experience for long-horizon agents.                           posing critical errors under long-range evidence
+                                                                       dependencies and multiple coexisting local errors.
+7 Related Work
+
+Trajectory analysis and process supervision.
+Recent work analyzes agent executions beyond fi-
+nal answers, including process reward models that
+assign step-level scores (Xi et al., 2026; Fan et al.,
+2026) and studies that summarize recurring failure
+modes such as coordination, tool-use, and plan-
+ning errors (Cemri et al., 2026; Ma et al., 2024;
+Lu et al., 2024; Mulian et al., 2026; Ma et al.,
+2025). However, step-level scores do not isolate
+
+                                                                    8
+8 Conclusion                                                control. TRAJDEBUG is designed to trace the er-
+                                                            ror lifecycle for critical error detection in failed
+We presented TRAJDEBUG, a three-stage error-                agent trajectories. The data used in this work is
+lifecycle tracing framework for critical error de-          anonymized to the best of our knowledge. Since
+tection. It combines error trigger detection, error         the framework may still produce incorrect predic-
+state classification, and candidate-set-guided attri-       tions due to model and method limitations, users
+bution to identify errors in long trajectories and          should manually verify important diagnoses before
+distinguish failure-responsible errors among multi-         using them in high-stakes settings. (3) AI assis-
+ple errors. We also introduced TRAJERRBENCH, a              tance. We used AI to refine the wording of some
+benchmark of 486 manually annotated failed trajec-          sentences.
+tories from realistic tool-use and coding scenarios.
+Experiments show that TRAJDEBUG outperforms                 Acknowledgments
+LLM prompting and diagnostic baselines, and ap-
+plication studies demonstrate its value for trajectory      This work is supported by the 2025 Tencent Rhino-
+repair and transferable failure memory. These re-           Bird Joint Research Program (JR2025TEG013).
+sults position critical error detection as a promising
+interface for inference-time agent improvement.             References
+
+9 Limitations                                               Josh Achiam, Steven Adler, Sandhini Agarwal, Lama
+                                                               Ahmad, Ilge Akkaya, Florencia Leoni Aleman,
+We discuss the limitations of our work here, includ-           Diogo Almeida, Janko Altenschmidt, Sam Altman,
+ing two main aspects: (1) Although TRAJDEBUG                   Shyamal Anadkat, and 1 others. 2023. Gpt-4 techni-
+constrains judgments with verbatim evidence and                cal report. arXiv preprint arXiv:2303.08774.
+structured candidates, it still relies on LLMs for
+error interpretation and final attribution. Its predic-     Anthropic. 2026a. Introducing claude opus 4.6. Ac-
+tions may therefore be affected by the model’s rea-            cessed: 2026-02-05.
+soning ability, domain knowledge, and calibration.
+To reduce the concern that the gains merely come            Anthropic. 2026b. Introducing claude sonnet 4.6. Ac-
+from using a stronger judge, we implement TRA-                 cessed: 2026-02-17.
+JDEBUG with an open-source backbone rather than
+the strongest proprietary models; even under this           Adi Banerjee, Anirudh Nair, and Tarik Borogovac. 2025.
+setting, TRAJDEBUG outperforms direct prompting                Where did it all go wrong? a hierarchical look
+with frontier models and all multi-agent baselines             into multi-agent error attribution. arXiv preprint
+on average. (2) As a staged pipeline, TRAJDEBUG                arXiv:2510.04886.
+may inherit false negatives from earlier trigger de-
+tection or state classification stages, causing the         Shraddha Barke, Arnav Goyal, Alind Khare, Avaljot
+final candidate set to miss the true critical error. To        Singh, Suman Nath, and Chetan Bansal. 2026. Agen-
+mitigate this, the attribution stage allows an out-of-         trx: Diagnosing ai agent failures from execution tra-
+set prediction only under strict evidence require-             jectories. arXiv preprint arXiv:2602.02475.
+ments: the model must explain why the retained
+candidates do not account for the failure and pro-          Victor Barres, Honghua Dong, Soham Ray, Xujie Si,
+vide the missing trigger, violated reference, origin           and Karthik Narasimhan. 2025. τ 2-bench: Evaluat-
+step, and terminal footprint.                                  ing conversational agents in a dual-control environ-
+                                                               ment. Preprint, arXiv:2506.07982.
+10 Ethical Considerations
+                                                            Mert Cemri, Melissa Z Pan, Shuyi Yang, Lakshya A
+We discuss three ethical considerations. (1) Intel-            Agrawal, Bhavya Chopra, Rishabh Tiwari, Kurt
+lectual property. We respect the licenses of all arti-         Keutzer, Aditya Parameswaran, Dan Klein, Kannan
+facts used in this work, including datasets, models,           Ramchandran, and 1 others. 2026. Why do multi-
+and code repositories. We will release TRAJDE-                 agent llm systems fail? Advances in Neural Informa-
+BUG, the associated code, and TRAJERRBENCH                     tion Processing Systems, 38.
+under the MIT license2. (2) Intended use and risk
+                                                            Mengzhuo Chen, Junjie Wang, Fangwen Mu, Yawen
+    2https://opensource.org/license/mit                        Wang, Zhe Liu, Huanxiang Feng, and Qing Wang.
+                                                               2026. Seeing the whole elephant: A benchmark for
+                                                               failure attribution in llm-based multi-agent systems.
+                                                               arXiv preprint arXiv:2604.22708.
+
+                                                            Xiang Deng, Jeff Da, Edwin Pan, Yannis Yiming
+                                                               He, Charles Ide, Kanak Garg, Niklas Lauffer, An-
+                                                               drew Park, Nitin Pasari, Chetan Rane, and 1 others.
+
+                                                         9
+   2025. Swe-bench pro: Can ai agents solve long-              Xuyan Ma, Xiaofei Xie, Yawen Wang, Junjie Wang,
+   horizon software engineering tasks? arXiv preprint             Boyu Wu, Mingyang Li, and Qing Wang. 2025. Di-
+   arXiv:2509.16941.                                              agnosing failure root causes in platform-orchestrated
+                                                                  agentic systems: Dataset, taxonomy, and benchmark.
+Darshan Deshpande, Varun Gangal, Hersh Mehta, Jitin               arXiv preprint arXiv:2509.23735.
+   Krishnan, Anand Kannappan, and Rebecca Qian.
+   2025. Trail: Trace reasoning and agentic issue local-       Grégoire Mialon, Clémentine Fourrier, Thomas Wolf,
+   ization. arXiv preprint arXiv:2505.08638.                      Yann LeCun, and Thomas Scialom. 2024. Gaia: a
+                                                                  benchmark for general ai assistants. In International
+Shengda Fan, Xuyan Ye, Yupeng Huo, Zhi-Yuan                       Conference on Learning Representations, volume
+   Chen, Yiju Guo, Shenzhi Yang, Wenkai Yang, Shuqi               2024, pages 9025–9049.
+   Ye, Jingwen Chen, Haotian Chen, and 1 others.
+   2026. Agentprocessbench: Diagnosing step-level              Hadar Mulian, Sergey Zeltyn, Ido Levy, Liane Galanti,
+   process quality in tool-using agents. arXiv preprint           Avi Yaeli, and Segev Shlomov. 2026. Agentfixer:
+   arXiv:2603.14465.                                              From failure detection to fix recommendations in llm
+                                                                  agentic systems. arXiv preprint arXiv:2603.29848.
+Tianyu Gao, Howard Yen, Jiatong Yu, and Danqi Chen.
+   2023. Enabling large language models to generate            Hao Peng, Xiaozhi Wang, Jianhui Chen, Weikai Li, Yun-
+   text with citations. In Empirical Methods in Natural           jia Qi, Zimu Wang, Zhili Wu, Kaisheng Zeng, Bin Xu,
+   Language Processing (EMNLP).                                   Lei Hou, and 1 others. 2023. When does in-context
+                                                                  learning fall short and why? a study on specification-
+Yu Ge, Linna Xie, Zhong Li, Yu Pei, and Tian Zhang.               heavy tasks. arXiv preprint arXiv:2311.08993.
+   2025. Who is introducing the failure? automatically
+   attributing failures of multi-agent systems via spec-       Yunjia Qi, Hao Peng, Xiaozhi Wang, Amy Xin, Youfeng
+   trum analysis. arXiv preprint arXiv:2509.13782.                Liu, Bin Xu, Lei Hou, and Juanzi Li. 2026. Agen-
+                                                                  tif: Benchmarking large language models instruction
+Daya Guo, Dejian Yang, Haowei Zhang, Junxiao                      following ability in agentic scenarios. Advances in
+   Song, Ruoyu Zhang, Runxin Xu, Qihao Zhu, Shi-                  Neural Information Processing Systems, 38.
+   rong Ma, Peiyi Wang, Xiao Bi, and 1 others. 2025.
+   Deepseek-r1: Incentivizing reasoning capability in          Matthew Renze and Erhan Guven. 2024. Self-reflection
+   llms via reinforcement learning. arXiv preprint                in llm agents: Effects on problem-solving perfor-
+   arXiv:2501.12948.                                              mance. arXiv preprint arXiv:2405.06682.
+
+Yeonjun In, Mehrab Tanjim, Jayakumar Subramanian,              Gemini Team, Rohan Anil, Sebastian Borgeaud, Jean-
+   Sungchul Kim, Uttaran Bhattacharya, Wonjoong                   Baptiste Alayrac, Jiahui Yu, Radu Soricut, Johan
+   Kim, Sangwu Park, Somdeb Sarkhel, and Chany-                   Schalkwyk, Andrew M Dai, Anja Hauth, Katie Mil-
+   oung Park. 2026. Rethinking failure attribution in             lican, and 1 others. 2023. Gemini: a family of
+   multi-agent systems: A multi-perspective benchmark             highly capable multimodal models. arXiv preprint
+   and evaluation. arXiv preprint arXiv:2603.25001.               arXiv:2312.11805.
+
+Carlos E Jimenez, John Yang, Alexander Wettig,                 Kimi Team, Tongtong Bai, Yifan Bai, Yiping Bao,
+   Shunyu Yao, Kexin Pei, Ofir Press, and Karthik                 SH Cai, Yuan Cao, Y Charles, HS Che, Cheng
+   Narasimhan. 2024. Swe-bench: Can language mod-                 Chen, Guanduo Chen, and 1 others. 2026. Kimi
+   els resolve real-world github issues? In International         k2. 5: Visual agentic intelligence. arXiv preprint
+   Conference on Learning Representations, volume                 arXiv:2602.02276.
+   2024, pages 54107–54157.
+                                                               Xingyao Wang, Boxuan Li, Yufan Song, Frank F Xu, Xi-
+Han Li, Yifan Yao, Letian Zhu, Rili Feng, Hongyi Ye,              angru Tang, Mingchen Zhuge, Jiayi Pan, Yueqi Song,
+   Jiaming Wang, Yancheng He, Pengyu Zou, Lehan                   Bowen Li, Jaskirat Singh, and 1 others. 2025. Open-
+   Zhang, Xinping Lei, and 1 others. 2026. Code-                  hands: An open platform for ai software developers
+   tracer: Towards traceable agent states. arXiv preprint         as generalist agents. In International Conference
+   arXiv:2604.11641.                                              on Learning Representations, volume 2025, pages
+                                                                  65882–65919.
+Jiaying Lu, Bo Pan, Jieyi Chen, Yingchaojie Feng,
+   Jingyuan Hu, Yuchen Peng, and Wei Chen. 2024.               Yawen Wang, Wenjie Wu, Junjie Wang, and Qing Wang.
+   Agentlens: Visual analysis for agent behaviors in llm-         2026. From flat logs to causal graphs: Hierarchical
+   based autonomous systems. IEEE Transactions on                 failure attribution for llm-based multi-agent systems.
+   Visualization and Computer Graphics.                           arXiv preprint arXiv:2602.23701.
+
+Chang Ma, Junlei Zhang, Zhihao Zhu, Cheng Yang,                Zhaohui Geoffrey Wang. 2026. Agenttrace: Causal
+   Yujiu Yang, Yaohui Jin, Zhenzhong Lan, Lingpeng                graph tracing for root cause analysis in de-
+   Kong, and Junxian He. 2024. Agentboard: An an-                 ployed multi-agent systems. arXiv preprint
+   alytical evaluation board of multi-turn llm agents.            arXiv:2603.14688.
+   Advances in neural information processing systems,
+   37:74325–74362.                                             xAI. 2025. Grok 4 fast model card. https://data.x.
+                                                                  ai/2025-09-19-grok-4-fast-model-card.pdf.
+                                                                  Last updated: September 19, 2025.
+
+                                                           10
+Zhiheng Xi, Chenyang Liao, Guanyu Li, Zhihao Zhang,
+   Wenxiang Chen, Binghai Wang, Senjie Jin, Yuhao
+   Zhou, Jian Guan, Wei Wu, and 1 others. 2026. Agent-
+   prm: Process reward models for llm agents via step-
+   wise promise and progress. In Proceedings of the
+   ACM Web Conference 2026, pages 4184–4195.
+
+Yizhe Xie, Congcong Zhu, Xinyue Zhang, Tianqing
+   Zhu, Dayong Ye, Minfeng Qi, Huajie Chen, and Wan-
+   lei Zhou. 2026. From spark to fire: Modeling and
+   mitigating error cascades in llm-based multi-agent
+   collaboration. arXiv preprint arXiv:2603.04474.
+
+An Yang, Anfeng Li, Baosong Yang, Beichen Zhang,
+   Binyuan Hui, Bo Zheng, Bowen Yu, Chang
+   Gao, Chengen Huang, Chenxu Lv, and 1 others.
+   2025. Qwen3 technical report. arXiv preprint
+   arXiv:2505.09388.
+
+Shunyu Yao, Dian Yu, Jeffrey Zhao, Izhak Shafran,
+   Tom Griffiths, Yuan Cao, and Karthik Narasimhan.
+   2023. Tree of thoughts: Deliberate problem solving
+   with large language models. Advances in neural
+   information processing systems, 36:11809–11822.
+
+Shunyu Yao, Jeffrey Zhao, Dian Yu, Nan Du, Izhak
+   Shafran, Karthik Narasimhan, and Yuan Cao. 2022.
+   React: Synergizing reasoning and acting in language
+   models. arXiv preprint arXiv:2210.03629.
+
+Aohan Zeng, Xin Lv, Zhenyu Hou, Zhengxiao Du,
+   Qinkai Zheng, Bin Chen, Da Yin, Chendi Ge,
+   Chenghua Huang, Chengxing Xie, and 1 others. 2026.
+   Glm-5: from vibe coding to agentic engineering.
+   arXiv preprint arXiv:2602.15763.
+
+Guibin Zhang, Junhao Wang, Junjie Chen, Wangchun-
+   shu Zhou, Kun Wang, and Shuicheng Yan. 2025a.
+   Agentracer: Who is inducing failure in the llm agen-
+   tic systems? arXiv preprint arXiv:2509.03312.
+
+Heng Zhang, Yuling Shi, Xiaodong Gu, Haochen You,
+   Zijian Zhang, Lubin Gan, Yilei Yuan, and Jin Huang.
+   2025b. Graphtracer: Graph-guided failure tracing in
+   llm agents for robust multi-turn deep search. arXiv
+   preprint arXiv:2510.10581.
+
+Shaokun Zhang, Ming Yin, Jieyu Zhang, Jiale Liu,
+   Zhiguang Han, Jingyang Zhang, Beibin Li, Chi
+   Wang, Huazheng Wang, Yiran Chen, and 1 others.
+   2025c. Which agent causes task failures and when?
+   on automated failure attribution of llm multi-agent
+   systems. arXiv preprint arXiv:2505.00212.
+
+Kunlun Zhu, Zijia Liu, Bingxuan Li, Muxin Tian,
+   Yingxuan Yang, Jiaxun Zhang, Pengrui Han, Qipeng
+   Xie, Fuyang Cui, Weijia Zhang, and 1 others. 2025.
+   Where llm agents fail and how they can learn from
+   failures. arXiv preprint arXiv:2509.25370.
+
+                                                             11
+A Pilot Study Details                                       when all three annotators independently mark it as
+                                                            erroneous and each provides an evidence-grounded
+Data sources and annotators. For Pilot Study 2,             reason; disagreements are kept as non-errors to
+we randomly sample 50 failed trajectories from              avoid inflating the error set with subjective calls.
+WhoAndWhen (Zhang et al., 2025c) and Agent-                 This protocol yields 381 local error steps. The
+DebugBench (Zhu et al., 2025), drawing 10 tra-              Fleiss’ κ on error identification is 0.538, indicat-
+jectories from each subset of the two benchmarks,           ing moderate agreement and confirming that, even
+with 1,373 steps in total. The critical-error label of      under an evidence-grounded protocol, identifying
+each trajectory is inherited from the source dataset,       step-level errors in long agent trajectories remains
+since both benchmarks already provide ground-               genuinely hard for humans.
+truth critical-error annotations for their failed tra-
+jectories; we therefore only annotate per-step local        Downstream-state annotation of non-critical lo-
+errors and their downstream states. All annotations         cal errors (§2.3). For the downstream-state anal-
+are produced by three computer-science undergrad-           ysis in §2.3, the same three annotators indepen-
+uates who completed a calibration training round            dently classify each of the 331 non-critical local
+on a separate set of trajectories before working on         errors into one of three outcomes: repaired, per-
+the pilot data.                                             sistent, or unrepaired yet dormant. We attach an
+                                                            evidence requirement to each label so that state
+Detector evaluation (§2.2). For the detector                judgments remain reproducible. A repaired label
+comparison in §2.2, we evaluate seven advanced              follows the resolution criterion in §3.3: a later step
+models: GLM-5.1 (Zeng et al., 2026), Gemini-3.1-            must explicitly revisit the same reference object
+Pro (Team et al., 2023), DeepSeek-V4-Pro (Guo               and supersede the wrong commitment, for example
+et al., 2025), Claude Sonnet 4.6 (Anthropic,                by satisfying the violated constraint, acting on the
+2026b), Claude Opus 4.6 (Anthropic, 2026a),                 corrected state, or retracting the prior wrong claim;
+GPT-5.4 (Achiam et al., 2023), and Qwen3-235B-              the annotator must cite the specific repairing step.
+A22B (Yang et al., 2025). All models are queried            A persistent label requires the annotator to write
+with the same direct-prompt template used by the            an explicit reason together with the evidence from
+direct prompting baselines (Table E.1) at tempera-          a later step that still uses or relies on the wrong
+ture 0, and a prediction is counted as correct only         commitment introduced at the error step. An unre-
+when the predicted step index exactly matches the           paired yet dormant label is reserved for cases where
+critical error step provided by the source dataset.         no later step depends on the erroneous content, for
+                                                            example a step that miscounts four search results
+Local error step annotation (§2.2, §2.3). We                as two when no subsequent reasoning or action
+recruit a pool of 20 annotators in total, all of whom       references the count; the annotator must state why
+completed a calibration training round on a held-           the wrong content is never used downstream. The
+out set of trajectories. Annotators were compen-            boundary between persistent and unrepaired yet
+sated at rates consistent with the prevailing market        dormant is therefore decided by the presence of a
+standards for comparable annotation work. Three             downstream reference: persistent requires a citable
+annotators independently inspect each step. Follow-         later usage of the wrong content, while dormant
+ing the annotation principles established in prior          requires explaining its absence. A label is kept
+process-supervision work (Fan et al., 2026), each           only when all three annotators independently agree,
+annotator is required to (i) judge each step strictly       following the same unanimous-agreement criterion
+along the agent’s own reasoning, action, and obser-         used for local error identification. The Fleiss’ κ
+vation, without using their own task knowledge to           on downstream-state labels is 0.378, lower than
+fill in unstated steps; (ii) mark a step as erroneous       the agreement on error identification and consistent
+only when the error can be tied to an explicit, ob-         with the view that state judgments require addi-
+jective trigger, such as a violated task constraint, a      tional reasoning over downstream references and
+contradicted observation, or an internally inconsis-        are therefore harder to align across annotators.
+tent claim; and (iii) write a short, reproducible rea-
+son that cites the specific evidence supporting the
+judgment. Vague reasons (e.g., “the agent seems
+off-track”) are rejected and the step is not added
+to the error set. A step enters the error set only
+
+                                                        12
+B TRAJERRBENCH Details                                      no single model consistently determines the final la-
+                                                            bels. Moreover, the pre-annotation setting provides
+B.1 Dataset Construction                                    benchmark failure details to aid human annotation,
+                                                            whereas all evaluated direct-prompting baselines
+We construct TRAJERRBENCH from two comple-                  receive only the failed trajectory and failure sig-
+mentary domains: 400 rollouts on the airline and            nal, without gold outcomes or auxiliary debugging
+retail tasks of τ 2-Bench (Barres et al., 2025), pro-       information.
+duced by DeepSeek-Reasoner, GPT-5, Qwen3-Max
+and 86 rollouts on SWE-Bench Pro (Deng et al.,              Table 4: Exact-match agreement between model-
+2025), produced by Claude-Opus-4-6 (Anthropic,              assisted pre-annotations and final human-majority la-
+2026a), Kimi-K2.6-Coding (Team et al., 2026),               bels.
+Gemini-3.1-Pro (Team et al., 2023), Grok-4.20-
+Beta (xAI, 2025), and GPT-5.4 (Achiam et al.,               Subset                 Pre-annotation model  Exact match
+2023) from the OpenHands scaffold (Wang et al.,             τ 2-Bench (N =400)
+2025). The two subsets average 29.3 and 119.7                                      Claude Opus 4.6          64.5%
+steps per trajectory, respectively.                         SWE-Bench Pro (N =86)  Gemini 3.1 Pro           76.8%
+                                                                                   GPT-5.4                  53.2%
+B.2 Annotation Details
+                                                                                   Claude Opus 4.6          48.8%
+Our annotation protocol follows the decisive-error                                 Gemini 3.1 Pro           31.4%
+annotation practice of WhoAndWhen (Zhang et al.,                                   GPT-5.4                  55.8%
+2025c). Annotators are given the task instruction,
+the full failed trajectory, and the final failure out-         The standardized guideline contains three prin-
+come, and are asked to identify the earliest step that      ciples. First, an annotated step must contain an ex-
+directly causes the failure under the counterfactual        plicit mistake supported by the available evidence,
+definition in § 2.1. They do not need to execute an         such as violating the task instruction, contradicting
+actual intervention; instead, they make an evidence-        a previous observation, misusing a tool result, or
+grounded attribution judgment from the trajectory,          making an internally inconsistent claim. Second,
+as in prior failure-attribution annotation.                 the mistake must be failure-responsible: annota-
+                                                            tors should not choose local mistakes that are later
+   Since both benchmarks contain long and difficult         corrected or errors whose downstream effect never
+failure trajectories, we first generate model-assisted      affects the final outcome. Third, if multiple failure-
+pre-annotations to help annotators understand the           responsible mistakes are present, annotators choose
+likely failure points. Specifically, we ask GPT-5.4,        the earliest such step, following the principal-cause
+Gemini-3.1-Pro, and Claude-Opus-4-6 to annotate             convention used by WhoAndWhen (Zhang et al.,
+each trajectory. Each model is given the full tra-          2025c). Each annotator also writes a short explana-
+jectory, the ground-truth task specification, and the       tion for the selected step so that disagreements can
+failure information returned by the original bench-         be checked against concrete evidence.
+mark evaluation. For τ 2-Bench, this includes the
+unmet database constraints reported by the task en-         Annotator pool and labelling protocol. We re-
+vironment; for SWE-Bench Pro, this includes the             cruit a pool of 20 annotators in total, all of whom
+details of the failing test cases. Annotators then          completed a calibration training round on a held-
+receive the same full information, together with            out set of trajectories covering both τ 2-Bench and
+the three model pre-annotations, as reference ma-           SWE-Bench Pro before working on the released
+terial during annotation. The pre-annotations are           data. Annotators were compensated at rates consis-
+used only to support trajectory understanding; the          tent with the prevailing market standards for com-
+final labels are determined by human annotators             parable annotation work. Because decisive-error
+following the guideline below.                              localization is inherently ambiguous in long agent
+                                                            trajectories, each trajectory is independently anno-
+Agreement between pre-annotations and final la-             tated by 3 annotators and the final label is taken
+bels. To quantify potential anchoring from model-           by majority vote: a label is kept when at least 2 of
+assisted pre-annotation, Table 4 reports the exact-         the 3 annotators agree. We apply the same three-
+match rate between each model’s proposed critical           annotator majority-vote protocol to the reference-
+step and the final human-majority label. Agreement          category labels (Task Conflict, History Conflict, and
+varies substantially across models and subsets, and         Intra-Step Conflict) and to the execution-phase la-
+                                                            bels (planning, reasoning, action, observation, ver-
+                                                            ification).
+
+                                                        13
+Inter-annotator agreement. Table 5 reports                   the rest. This indicates that on tool-use tasks, criti-
+inter-annotator agreement for the critical-error             cal errors more often arise when the agent interprets
+step, the execution-phase label, and the reference-          accumulated context than when it issues an iso-
+category label on each subset of TRAJERRBENCH.               lated action. In SWE-Bench Pro, reasoning is still
+On τ 2-Bench, the critical-error step reaches almost-        the largest phase (57.1%), followed by planning
+perfect agreement (Fleiss’ κ=0.91), while the                (15.6%), verification (14.3%), and action (13.0%).
+execution-phase and reference-category labels                This shift is consistent with the patch-and-test na-
+reach substantial and fair agreement respectively.           ture of software-engineering trajectories: the agent
+For SWE-Bench Pro, we initially annotate 110 tra-            spends comparatively more time editing code and
+jectories, including ambiguous cases on which no             validating it, and a larger share of failures appears
+two annotators select the same critical step. The            in those phases.
+released benchmark and all experiments use only
+the 86 trajectories for which at least two of three          Error subtype. The middle column reveals
+annotators agree on the critical step; Table 5 re-           which fine-grained agent behaviour is most
+ports agreement on this retained set. Agreement              failure-prone within each phase. On τ 2-Bench, the
+is lower than on τ 2-Bench, reflecting the longer            top three subtypes reason.InvalidInference
+and more code-heavy trajectories: the critical-              (22.8%), reason.WrongChoice (22.2%), and
+error step reaches substantial agreement (Fleiss’            reason.MissingAssumptionCheck (14.5%)
+κ=0.674), while execution-phase and reference-               jointly account for nearly 60% of critical errors,
+category agreement is moderate and fair, respec-             indicating that the dominant failure mode is
+tively. Despite this, 98.2% of τ 2-Bench trajectories        inference over already-observed context rather
+and 91.9% of SWE-Bench Pro trajectories receive              than acting on incorrect observations. On
+a reference-category label on which at least 2 of 3          SWE-Bench Pro, the distribution becomes
+annotators agree, indicating that the majority-vote          more peaked: reason.WrongChoice alone
+protocol yields a usable label on the overwhelming           accounts for 40.7% of critical errors, followed
+majority of trajectories.                                    by plan.BadDecomposition (14.0%) and
+                                                             verify.NoVerification (9.3%), suggesting
+Table 5: Inter-annotator agreement on TRAJER-                that failures cluster around selecting the wrong
+RBENCH. “Pairwise” denotes pairwise agreement.               implementation path and skipping verification
+                                                             before submission.
+Subset         Label                Fleiss’ κ  Pairwise
+τ 2-Bench                                                    Reference category. On the right column, both
+               Critical-error step    0.91      91.2%        subsets are dominated by external references rather
+SWE-Bench Pro  Execution phase        0.73      84.0%        than intra-step contradictions: among critical er-
+               Reference category     0.41      68.9%        rors with an agreed reference-category label, Task
+                                                             Conflict and History Conflict together cover 98.7%
+               Critical-error step    0.67      66.7%        of τ 2-Bench and 97.5% of SWE-Bench Pro criti-
+               Execution phase        0.42      61.8%        cal errors, while Intra-Step Conflict accounts for
+               Reference category     0.38      52.4%        only 1.3% and 2.5%, respectively. The two subsets
+                                                             differ in which external reference is violated more
+B.3 Distribution of Critical Errors                          often: τ 2-Bench is balanced between Task Conflict
+                                                             (52.4%) and History Conflict (46.3%), reflecting
+Figures 6 and 7 show the joint distribution of criti-        failures that violate either explicit user constraints
+cal errors over the execution phase, error subtype,          or earlier tool observations; SWE-Bench Pro is
+and reference category for the τ 2-Bench and SWE-            more strongly skewed toward Task Conflict (73.4%
+Bench Pro subsets of TRAJERRBENCH respec-                    vs. 24.1% History Conflict), consistent with code-
+tively. The flows in each diagram are read from              task failures where the violated reference is most
+left (execution phase) to right (reference category),        often the task instruction or expected behaviour
+with the middle column showing the fine-grained              rather than an intermediate observation.
+error subtype.
+                                                             Joint patterns. Reading the diagrams jointly,
+Execution phase. Among critical errors with an               two patterns stand out. First, the reasoning phase is
+agreed execution-phase label, τ 2-Bench is heav-             the dominant entry channel into both Task Con-
+ily skewed toward reasoning (60.7%), followed by
+planning (14.8%) and observation (13.5%), with
+action (6.1%) and verification (4.8%) contributing
+
+                                                         14
+                           Tau2Bench: Critical Error Analysis
+                       Step -> Type -> Subtype -> Conflict Object
+
+           Error Step  Error                               Error                    Conflict
+            Position                  Type                 Subtype                  Object
+
+  Step 3-10 (68)                                       InvalidInference (91)               Task Conflict (206)
+ Step 11-15 (99)
+ Step 16-20 (97)       REASON (238)                     WrongChoice (89)                   Histroy Conflict (182)
+                                                                                           Intra-Step Conflict (5)
+Step 21-30 (110)           PLAN (58)        MissingAssumptionCheck (58)
+  Step 31+ (26)             OBS (53)
+                            ACT (24)              BadDecomposition (32)
+                         VERIFY (19)                   IgnoreOutput (26)
+                                                      MisreadOutput (21)
+                                                        WrongOrder (17)
+
+                                              PrematureTermination (11)
+                                              WrongActionSequence (10)
+
+                                                           WrongTool (8)
+                                                        NoVerification (8)
+                                                       UnrealisticPlan (6)
+                                                        GroundingFail (6)
+                                                 ToolSchemaMismatch (4)
+
+Figure 6: Distribution of critical errors in τ 2-Bench. Flows go from execution phase (left) to error subtype (middle)
+to reference category (right).
+
+flict and History Conflict in both subsets, sug-           Table 6: Overview of the case study trajectory.
+gesting that strengthening evidence-grounded rea-
+soning is the single highest-leverage intervention         Field                    Value
+for critical-error reduction. Second, the planning
+phase flows almost exclusively into Task Conflict,         Dataset                  τ 2-Bench(airline)
+whereas observation-phase failures flow almost ex-         Agent model              qwen3-max
+clusively into History Conflict; this clean separa-        Trajectory length        49 steps
+tion reflects the underlying definitions and supports      Final outcome            Failed (transferred to human)
+using the reference category as a complementary            Detected triggers        15
+axis to the execution phase when analysing failure         Detected instances       9
+mechanisms.                                                Candidate instances      4 (in F(τ ))
+                                                           TRAJDEBUG critical step  25
+C Case Studies                                             Human-annotated step     25
+
+We present an end-to-end case to illustrate how            flight to a direct flight one day later, push the return
+TRAJDEBUG localizes the critical error within a            flight back by one day, and, within a $200 budget,
+long failed trajectory. The example is drawn from          consider upgrading to business class and adding
+the airline subset of τ 2-Bench, where qwen3-max           checked baggage. The system policy explicitly
+acts as the agent and the user requests several mod-       states that all flights in the same reservation must
+ifications to an existing reservation under a budget       share the same cabin class.
+cap of $200. The trajectory contains 49 steps and
+ends with the agent transferring the conversation to       Trajectory summary. The trajectory can be de-
+a human operator. TRAJDEBUG selects step 25 as             composed into three phases. Flight modification
+the critical error, matching the human annotation          (steps 0–18). The agent retrieves the reservation,
+exactly.                                                   searches for direct flights, and successfully updates
+                                                           the booking to the new outbound (HAT072) and
+C.1 Case Overview                                          return (HAT278) flights in economy. Upgrade ne-
+                                                           gotiation (steps 19–24). The agent computes the
+Task. User yara_garcia_1905 asks the agent to              cost of upgrading both flights to business as $408,
+modify reservation HXDUBJ: change the outbound             which exceeds the user’s $200 budget; the user
+                                                           then asks whether only the outbound flight can be
+
+                                                       15
+                       SWE-Bench Pro: Critical Error Analysis
+                     Step -> Type -> Subtype -> Conflict Object
+
+         Error Step  Error                                      Error             Conflict
+          Position                Type                          Subtype           Object
+
+ Step 3-10 (3)                                                                           Task Conflict (58)
+Step 16-20 (2)
+Step 21-30 (4)                                                                           Histroy Conflict (19)
+                                                                                         Intra-Step Conflict (2)
+                     REASON (44)                                WrongChoice (35)
+
+Step 31+ (77)                                BadDecomposition (12)
+
+                      PLAN (12)                    NoVerification (8)
+                     VERIFY (11)        MissingAssumptionCheck (6)
+
+                        ACT (10)           ToolSchemaMismatch (4)
+
+Figure 7: Distribution of critical errors in SWE-Bench Pro. Flows go from execution phase (left) to error subtype
+(middle) to reference category (right).
+
+upgraded. Cascading failure (steps 25–48). The                  C.3 Detected Error Instances
+agent commits to the partial-upgrade plan, executes
+the corresponding API call, and enters a chain of               TRAJDEBUG clusters the 15 per-step triggers into 9
+payment failures and repeated retries that finally              object-anchored error instances. Table 7 lists them
+end in a hand-off to a human agent.                             with origin step, state label, and a short descrip-
+                                                                tion. Four instances (origin steps 13, 25, 33, 39)
+C.2 The Critical Error                                          survive state-based filtering and form the candidate
+                                                                set F(τ ).
+     Step 25 (assistant) — Critical Error
+                                                                C.4 Error Propagation and Attribution
+     Upgrading only the outbound flight (HAT072) to busi-
+     ness class costs $282. Since your current outbound         Although several earlier instances contain gen-
+     flight costs $130, the upgrade requires an additional      uine local mistakes, only the critical instance
+     $152. Given your budget of $200, this upgrade is           at step 25 has a wrong commitment that
+     within your budget. As a gold member, you will still       directly causes the terminal failure. The
+     enjoy two free checked bags on both flights. Please        propagation path is: (i) at step 27, the
+     confirm whether you would like to proceed with up-         agent issues update_reservation_flights with
+     grading only the outbound flight to business.              cabin=business but provides the return flight at
+                                                                its economy price, so the system charges both
+   The agent commits to a plan that violates the                flights as business ($282+$443=$725), exceeding
+reservation-level uniform-cabin policy stated in the            the gift-card balance; (ii) at step 31, the agent
+system prompt. The trigger detector flags this step             switches to another gift card and reissues the same
+as a Task Conflict in the planning phase with the               invalid call, which again fails; (iii) the agent then
+wrong commitment “upgrade only the outbound                     misattributes the failure to a payment-side problem
+flight to business” and the violated reference being            and enters a payment-retry chain (instances 5 and
+the policy “all flights in the same reservation must            8, steps 33–43), exhausting the remaining budget
+share the same cabin class”. Because this commit-               before transferring to a human at step 45.
+ment cannot be repaired without retracting the plan,
+the resulting error instance has a semantic terminal               Within the candidate set F(τ ), the causal attri-
+footprint and the state label Manifest Active, which            bution stage compares: (a) instance 1 (budget debt,
+keeps it in the candidate set F(τ ).                            origin step 13): a financial-calculation error that
+
+                                                            16
+Table 7: Detected error instances in the case-study trajectory. Instances marked with ⋆ form the candidate set F(τ ),
+and the row marked † is the critical instance selected by TRAJDEBUG.
+
+ID Origin Triggers Reference category                      State label   Description
+
+0   9   9          Task Conflict                       Clean Resolution  Flight search ignores the user-
+
+                                                                         specified 8 am–9 pm time window,
+
+                                                                         but the next turn still yields a feasi-
+
+                                                                                                          ble option.
+1⋆ 13 13, 19, 23 History Conflict Costly Resolution (budget debt) Financial computations omit the
+
+                                                                         non-refundable $30 insurance fee,
+
+                                                                         propagating through the refund and
+
+                                                                         upgrade-cost estimates.
+
+2   15  15         Task Conflict                       Clean Resolution  The agent incorrectly claims that
+
+                                                                         travel insurance waives change fees.
+
+3   21  21         Task Conflict                       Clean Resolution  The agent queries user details when
+
+                                                                         the budget is already obviously in-
+
+                                                                         sufficient.
+
+4⋆† 25 25, 27, 31  Task Conflict       Manifest Active (semantic) Commits to upgrading only the
+
+                                                                         outbound flight, violating the
+
+                                                                         reservation-level uniform-cabin
+
+5⋆  33  33, 41     Task Conflict       Manifest Active (semantic)        policy.
+                                                                         Repeatedly proposes split payment
+
+                                                                         in a single update_reservation
+
+                                                                         call, which the API does not sup-
+
+                                                                         port.
+
+6   35  35         History Conflict                    Clean Resolution  Attempts to pay with a certificate
+
+                                                                         whose balance ($150) is below the
+
+                                                                         required amount.
+
+7   37  37         History Conflict                    Clean Resolution  Reuses a payment method that has
+
+8⋆  39  39, 43     History Conflict    Manifest Active (semantic)        already failed in a prior step.
+                                                                         Repeatedly retries the same failed
+
+                                                                         gift_card_1646646 payment
+
+                                                                         without addressing the underlying
+
+                                                                         cause.
+
+wastes budget but does not by itself prevent task          states such as budget debt and manifest active com-
+completion; (b) instance 4 (semantic, origin step          mitments. Third, causal attribution compares the
+25): a plan that violates a system constraint and          remaining candidates by their role in the failure
+makes the requested upgrade infeasible regardless          rather than by temporal order alone, which is why
+of payment choice; (c) instances 5 and 8 (semantic,        TRAJDEBUG selects the later step 25 instead of the
+origin steps 33 and 39): downstream payment-side           earlier financial error.
+errors that occur only because the agent is already
+trying to execute the impossible plan committed            D TRAJDEBUG Implementation Details
+at step 25. Removing instance 4 would eliminate
+instances 5 and 8 and let the agent either accept          All experiments use Qwen3-235B-A22B-
+the over-budget upgrade or decline it cleanly, while       Thinking (Yang et al., 2025) as the base model,
+removing instance 1 would still leave the partial-         with temperature fixed at 0 for reproducibility.
+upgrade commitment unresolved. Step 25 is there-           Following the error-lifecycle tracking perspective
+fore selected as the critical error step t⋆.               in §3.3, TRAJDEBUG operationalizes critical
+                                                           error detection through three stages: error trigger
+C.5 Discussion                                             detection, error state classification, and causal
+                                                           attribution. To handle long trajectories, we use
+The case illustrates how the three stages of TRA-          the multi-granularity compression scheme in
+JDEBUG support long-horizon failure analysis.              §3.1. The high-detail view (th1) keeps up to 3000
+First, error trigger detection grounds local mistakes      characters, the medium-detail view (th2) keeps up
+in explicit conflicts, such as the uniform-cabin           to 1200 characters, and the low-detail view (th3)
+policy violation at step 25. Second, error state           keeps up to 600 characters.
+classification groups repeated triggers into object-
+anchored instances and distinguishes corrected er-            Each downstream stage uses these views accord-
+rors (e.g., instances 0, 2, 3) from terminal-relevant      ing to its own evidence requirements. In the error
+                                                           trigger detection stage, the current step and his-
+
+                                                       17
+tory within two steps are rendered with th1, history                                   ================ PRESERVE VERBATIM =============
+
+three to five steps away is rendered with th2, and                                     Preserve the FOLLOWING classes of tokens VERBATIM (copy them
+                                                                                                  exactly as written - do not translate, paraphrase,
+more distant history is rendered with th3. Only                                                   reorder, round, or abbreviate):
+
+the history before the current step is included in                                     - Proper nouns and named entities (people, places, brands,
+                                                                                                  franchise/universe names such as "Disney", "Marvel", "
+this view; the current step is provided separately in                                             MCU", book/paper/file names).
+
+th1 for local verification. In the error state classi-                                 - Product / part / SKU / ASIN / ISBN / DOI / arXiv identifiers
+                                                                                                   and any alphanumeric IDs the environment returned.
+fication stage, trigger steps are rendered with th1
+                                                                                       - Numbers with their units exactly as given (prices like "$22
+and all other steps are rendered with th3 as back-                                                .50", quantities like "3 items", measurements like "45
+                                                                                                  min", percentages, counts).
+ground context for instance clustering; for state
+                                                                                       - Years and dates (including citation years like "(1976)", ISO
+classification, the origin step, the last trigger step,                                            dates, "Q3 2023"-style period labels).
+
+and a fixed number of following steps are always                                       - URLs, file paths, CLI flags, API parameter names and their
+                                                                                                  literal values.
+rendered with th1. The remaining context is ren-
+dered by falling back in the order th1 → th2 →                                         - Quoted constraint phrases from the task statement (e.g. "
+th3 → raw, with inline annotations indicating the                                                 avoid Tue", "refundable", "under $25", "first page only
+                                                                                                  ") - keep them inside quotation marks if the original
+associated error instance. For budget debt, we use                                                had them.
+
+a Python script to check whether the distance be-                                      - Tool / function names and their exact argument keys.
+                                                                                       - Error messages, status codes, truncation markers ("has_more:
+tween the origin step and the repair step exceeds
+                                                                                                   true", "output truncated", "403 Forbidden").
+50% of the trajectory length. In the causal attribu-
+                                                                                       You MAY rewrite the connective prose between these tokens to
+tion stage, the full trajectory is rendered with the                                              shorten the field; you MAY NOT rewrite the tokens
+same fallback order th1 → th2 → th3 → raw, with                                                   themselves. If preserving them verbatim would push a
+                                                                                                  field past the length cap, DROP the least-important
+an additional 800-character truncation limit.                                                     surrounding prose first and keep the verbatim tokens.
+
+   We list the complete system prompts for the com-                             Error-Trigger Annotation Prompt.
+
+pression step and the three stages of TRAJDEBUG:                                     Stage 1 — Error Trigger Detection
+
+error trigger detection, error state classification,                                   You are an error-trigger annotator for one step of an LLM-
+                                                                                                  agent trajectory. For the CURRENT STEP, decide which
+and causal attribution.                                                                           trigger tags (if any) fire. Each fired trigger falls
+                                                                                                  into one of four categories:
+Multi-Granularity Compression Prompt.
+                                                                                          cat-1 = the step conflicts with the TASK
+     Stage A — Trajectory Compression                                                     cat-2 = the step conflicts with VISIBLE CONTEXT (env / tool
+
+       You are compressing a single trajectory step at THREE                                      output / system feedback / prior environment-rendered
+                  different compression levels for downstream agent error                         fact)
+                   diagnosis. Produce a detailed version (th1), a                         cat-3 = the step is INTERNALLY INCONSISTENT - its claim
+                  moderate version (th2), and a concise version (th3) of                          contradicts something the same message states verbatim,
+                  the same step content.                                                           or contradicts the agent's own prior plan / reflection
+                                                                                                   / memory
+       1. PRESERVE SEMANTIC CORE: Compression removes ONLY redundant                      env = the agent's tool call at THIS step is correct but
+                  phrasing, verbose boilerplate, repetitive expressions,                          the environment response is anomalous;
+                  and filler words. The core meaning of EVERY sentence
+                  must survive. When in doubt, keep more rather than less.             === CHECKLIST (A) - conflict with TASK (cat-1) ===
+
+       2. CONSTRAINTS AND PLANS ARE CRITICAL: If the content contains                     [ ] The step's plan permanently drops a sub-task / sub-goal
+                   ANY of the following, their key information MUST be                            / deliverable the TASK explicitly requires, with no
+                                                                                                  TODO / "later" / sequencing intent in the step itself,
+                  preserved across ALL three tiers:                                               and HISTORY does not already cover it. Phased execution
+            - Constraints (time limits, budget limits, "do NOT do X"                               that still keeps deferred items in scope is NOT a
+                                                                                                  trigger.
+                  prohibitions, "must do Y first" preconditions, required                       -> plan.BadDecomposition
+                   formats, allowed/disallowed actions)
+                                                                                          [ ] The step's plan schedules a sub-task before another sub-
+            - Plans (specific action items, ordered steps, goals, sub-                            task whose output it depends on, and TASK itself
+                  goals, milestones)                                                              dictates this ordering.
+                                                                                                -> plan.WrongOrder
+            - Requirements for subsequent steps (instructions that
+                  govern future behavior, expected outputs, acceptance                    [ ] The step depends on a tool / API / permission / data
+                  criteria)                                                                       source that TASK or the environment does not provide.
+                                                                                                -> plan.UnrealisticPlan
+            - Conditional logic ("if X then Y", fallback strategies,
+                  error handling rules)                                                   [ ] Double-anchor required. (i) HISTORY contains a verbatim
+                                                                                                  line where the agent was previously on-constraint; (ii)
+            Drop surrounding prose before dropping any constraint or                               THIS step contains a verbatim line that explicitly
+                  plan item.                                                                      narrows / widens / replaces a TASK constraint. Both
+                                                                                                  anchors must be in reference_quote. Gradual multi-step
+       3. THREE-TIER COMPRESSION LEVELS:                                                          drift without an explicit single-step swerve is NOT a
+            - th1 (detailed, <={th1_max} chars per field): Preserve all                           trigger here.
+                   meaningful details. Remove only obvious redundancy,                          -> plan.GoalDrift
+                  repeated phrasings, and decorative formatting. Keep
+                  every distinct fact, constraint, action, and                            [ ] TASK explicitly requires verify / check / confirm of X,
+                  observation.                                                                    and THIS step delivers the final answer without
+            - th2 (moderate, <={th2_max} chars per field): Merge                                  performing that check. Implicit verification
+                  related information. Omit secondary details and                                 expectations are NOT a trigger here.
+                  elaborations. But KEEP all constraints, key decisions,                        -> verify.NoVerification
+                  action outcomes, error messages, and critical
+                  observations.                                                           [ ] The step declares completion / returns the final answer
+            - th3 (concise, <={th3_max} chars per field): Retain only                             / stops the trajectory while a TASK-required
+                  the most essential actions, results, errors, and                                deliverable is still unmet.
+                  constraints. Use minimal wording. Still preserve all                          -> verify.PrematureTermination
+                  hard constraints and critical factual anchors.
+                                                                                          [ ] The step performs an action that TASK or environment
+
+                                                                            18
+          rules explicitly forbid (safety policy, permission           [ ] The tool call is admissible but the returned observation
+          boundary, forbidden endpoint, forbidden operation).                  is structurally insufficient because the tool is
+         -> act.UnsafeOrForbiddenAction                                       degenerate or blind on this target.
+
+=== CHECKLIST (B) - conflict with VISIBLE CONTEXT (cat-2) ===                -> env.ToolExtractorDegenerate
+
+   [ ] The step makes an explicit decision and cites supporting        [ ] The observation contains verbatim evidence of HTTP 429 /
+           evidence, but the citation is distorted (wrong value,               5xx / timeout / connection reset / rate limited.
+
+          wrong field, mis-paraphrased), and the wrong reading               -> env.RateLimitOrTransient
+          drives the decision.
+         -> reason.WrongChoice                                         [ ] The tool returns structurally empty / constant / payload
+                                                                               identical to a prior call.
+   [ ] The step cites visible evidence correctly, but
+          generalises the conclusion beyond what the evidence                -> env.EmptyOrRepeatedPayload
+          supports.
+         -> reason.InvalidInference                                    === CONFIDENCE ===
+
+   [ ] The step relies on a prior tool call / observation /            For each trigger fill `confidence`:
+          fact that does NOT actually appear in HISTORY (                 - high : (C1)+(C2) are both crisp; wrong_content_quote and
+          fabricated cross-message reference into a context that                  reference_quote are unambiguous and the conflict is
+          should exist).                                                         direct.
+         -> reason.MissingAssumptionCheck                                 - medium : both quotes exist verbatim, but reference_quote
+                                                                                 needs light alignment.
+   [ ] (a) The chosen tool or data source is unsuited to the              - low : inferring from a pattern; verbatim anchors are
+          established sub-goal; OR (b) plan-action mismatch: this                weak or partial.
+           step commits to plan A but issues action B.
+         -> act.WrongTool                                              Always fill `confidence_reasoning` with 1-2 sentences.
+
+   [ ] A tool call is syntactically malformed against the              Two verbatim quotes per trigger:
+          visible schema or prior successful calls.
+         -> act.ToolSchemaMismatch                                     - wrong_content_quote : verbatim substring of the CURRENT
+
+   [ ] The action order violates a workflow established by             STEP carrying the wrong content;
+          HISTORY or the visible UI / env state machine.
+         -> act.WrongActionSequence                                    - reference_quote      : verbatim substring of TASK / HISTORY
+
+   [ ] The step misreads its own immediate tool / env output:          / CURRENT STEP that is the I being conflicted.
+          treats an error as success, swaps fields, mis-
+          identifies the returned entity.                              Paraphrase, summary, or composite quotes are not acceptable.
+         -> obs.MisreadOutput
+                                                                       If either quote cannot be cited verbatim, do NOT emit
+   [ ] Subject to (C4): information visible in current or prior
+           tool / env output is silently ignored where it is           the trigger.
+
+          clearly needed, OR a summary/memory block drops load-        === OUTPUT FORMAT ===
+          bearing facts.
+         -> obs.IgnoreOutput                                           Emit a single JSON object:
+
+   [ ] The step treats a partial / pending / truncated response        {
+           as final.                                                      "triggers": [
+                                                                             {
+         -> obs.TimingIssue                                                     "step": <int>,
+                                                                                "category": "cat-1" | "cat-2" | "cat-3" | "env",
+   [ ] The step binds intent to the wrong visible entity.                       "taxonomy_tag": "<one of the 25 tags listed in the
+         -> obs.GroundingFail                                                    checklists above>",
+                                                                                "attribution": "agent" | "env",
+   [ ] The step is performing verification but the criterion                    "wrong_content_quote": "<verbatim from CURRENT STEP, or
+          does not match the sub-goal in HISTORY.                                for the upstream-env back-reference verbatim from the
+         -> verify.WrongVerification                                             earlier HISTORY step>",
+                                                                                "reference_quote": "<verbatim from TASK / HISTORY /
+   [ ] The step retries the same tool / query / action that                      CURRENT STEP>",
+          already produced bad / empty / error in HISTORY, with                 "confidence": "high" | "medium" | "low",
+          no relevant env state change and no strategy change.                  "confidence_reasoning": "<1-2 sentences>"
+          Subject to (C4).                                                   }
+         -> verify.InfiniteRetry                                          ]
+
+=== CHECKLIST (C) - internally inconsistent (cat-3) ===                }
+
+   [ ] The conclusion contradicts something the SAME message           Error-Instance Clustering Prompt.
+          states verbatim, OR contradicts a prior agent
+          reflection / memory / claim.                                      Stage 2 — Error State Classification: Instance
+         -> reason.InvalidInference                                         Clustering
+
+   [ ] The step picks the wrong row / column / item from a list               You are an error-instance clustering annotator. You receive a
+           / table that is verbatim visible in the CURRENT                               list of per-step error TRIGGERS detected on one
+                                                                                         trajectory. Group those triggers into ERROR INSTANCES,
+          MESSAGE itself.                                                                where one instance corresponds to "the same underlying
+         -> obs.MisreadOutput                                                            erroneous content / behavior" repeated or reflected
+                                                                                         across one or more steps.
+   [ ] The step asserts a concrete factual claim from the agent
+          's parametric knowledge, where the claim is concrete/               === TERMINOLOGY ===
+          falsifiable, NOT supported by TASK/HISTORY/CURRENT
+          MESSAGE, clearly wrong on widely-known ground truth,                Each trigger contradicts a "conflict object" - the thing the
+          and load-bearing for this step's conclusion.                                   wrong content is conflicting with. Following the spec
+         -> reason.MissingAssumptionCheck                                                we call this object I. Concretely, I can be one of:
+
+=== CHECKLIST (D) - environment-side anomaly (env) ===                           - a TASK clause (sub-task, deliverable, constraint);
+                                                                                 - a HISTORY object (a specific physical / virtual location,
+env triggers fire when the agent's tool call at this step is
+          otherwise correct, but the immediately following                               a specific tool output, a specific observation, a
+          environment response shows the anomaly. Set attribution                        specific memory entry, a specific prior tool-call
+           = "env".                                                                      signature);
+                                                                                 - a SAME-MESSAGE premise (operands, listed items, restated
+   [ ] The search / page response is hijacked by an ad vignette                          premise);
+           / overlay.                                                            - a prior agent-self statement (plan, reflection, memory).
+
+         -> env.AdOverlayHijack                                               Two triggers are about the SAME I when they are conflicting
+                                                                                         with the same underlying thing.
+   [ ] The model API / platform content filter rejects a
+          syntactically well-formed query.                                    Two triggers are about DIFFERENT I's when they conflict with
+         -> env.ContentFilterBlock                                                       different observations / different TASK clauses /
+                                                                                         different self-claims, or happen to share the
+                                                                                         taxonomy_tag string but the underlying object is
+                                                                                         different.
+
+                                                                              === CLUSTERING RULES ===
+
+                                                                   19
+(I-a)  Same step, same I, multiple modules -> ONE instance.             Error State Classification Prompt.
+(I-b)  Same step, DIFFERENT I -> MULTIPLE instances.
+(I-c)  Across steps, same I, never repaired in between -> ONE                Stage 2 — Error State Classification: State Label-
+(I-d)   instance with origin_step = first occurrence.                        ing
+       Across steps, same I, but repaired and then re-fires
+(I-e)   later -> SPLIT into TWO instances. If you cannot                You are an instance-state annotator. You receive ONE error
+        determine whether a repair happened, conservatively                       instance and the FULL trajectory. Upstream trigger
+        keep them in ONE instance.                                                detection is high-recall and may flag exploratory or
+       "Fabricated I" (an I the agent invented out of thin air)                   weakly committal steps; your job is to perform the
+                                                                                  commitment-strength recheck, the repair / state
+         is identified by the verbatim claim that introduced it.                  determination, and the terminal-connection audit
+                                                                                  defined in the methodology document.
+CLUSTERING PRINCIPLE: cluster by the SPECIFIC CONSTRAINT
+          OBJECT I being violated, NOT by "same type of erroneous       === KEY DEFINITIONS ===
+           behavior".
+                                                                        origin_step       = the first trigger step selected for this
+=== PRECISION REQUIREMENTS FOR `what_is_being_violated` ===
+                                                                               instance.
+Write `what_is_being_violated` as a CONCRETE pointer to the
+          exact object being contradicted.                              qualified_origin_step = the FIRST step in [origin_step, T]
+
+   - For TASK-clause violations: quote or paraphrase the                       at which the agent makes an OBSERVABLE WRONG COMMITMENT
+          specific constraint / deliverable / format requirement.
+                                                                               for this instance's violated_object. May equal
+   - For HISTORY-object violations: quote or paraphrase the
+          specific observation / tool output / location / URL,                 origin_step, may be a later step, may be null.
+          and reference the step where it first appeared.
+                                                                        last_trigger_step = the latest step at which the same
+   - For SAME-MESSAGE premise violations: name the operands /
+          listed items being misused.                                          instance re-fired upstream.
+
+   - For prior-self violations: quote or paraphrase the prior           terminal step T = the last message index in the trajectory.
+          plan / reflection / memory statement being contradicted.
+                                                                        I (violated_object) = the concrete object the instance is
+                                                                               violating (a TASK clause / a HISTORY object / a same-
+                                                                               message premise / a prior agent-self statement).
+
+                                                                        === TASK 1 - COMMITMENT-STRENGTH RECHECK ===
+
+=== ONE-SHOT PROBE GUIDANCE ===                                         Upstream trigger detection is high-recall: a trigger may fire
+                                                                                  at an early probe or initial plan step even when the
+If a trigger fires at exactly ONE step and the agent at later                     agent had no way yet to know the action was wrong. Your
+          steps neither references the same wrong belief nor                       job is to classify each origin_step into one of three
+          takes another action against the same I, keep it as a                   commitment strengths so that `qualified_origin_step`
+          STANDALONE singleton instance. Do NOT merge it with                     reflects the FIRST step at which the agent observably
+          other unrelated triggers.                                               persisted in the wrong belief despite already-visible
+                                                                                  evidence.
+=== HARD CONSTRAINT ===
+                                                                        A commitment to error requires BOTH:
+Triggers with attribution="agent" and triggers with                        (a) the agent takes an observable binding action or states a
+          attribution="env" CANNOT be merged into the same                         non-hedged belief that contradicts the violated_object
+          instance.                                                                I, AND
+                                                                           (b) by that step, the evidence contradicting I is already
+Every input trigger index must end up in EXACTLY ONE instance'                    visible in the prior trajectory.
+          s trigger_indices.
+                                                                        Classify the upstream origin into ONE of:
+=== ENV INSTANCE MERGING ===
+                                                                        origin_commitment_status = "explicit_wrong_commitment"
+For triggers with attribution="env", apply same-source merging             BOTH (a) and (b) hold at origin_step. Set
+           when two env triggers share at least one of:                        qualified_origin_step = origin_step.
+
+   - Same registrable domain;                                           origin_commitment_status = "weak_signal"
+   - Same tracking parameter key+value;                                    EITHER (a) holds at origin_step but (b) does NOT (
+   - Same HTTP error code;                                                     conflicting evidence not yet observable), OR (a) is
+   - Same failure keyword: "rate limit", "timeout", "content                   only hedged at origin_step.
+                                                                           There MUST be a clearly LATER step M (origin_step < M <= T
+          filter", "empty payload", "captcha", "access denied", "              ) at which the agent, now able to see the conflicting
+          not found";                                                          evidence, still takes a binding action that contradicts
+   - Same taxonomy_tag.                                                         I.
+                                                                           Set qualified_origin_step = M, set origin_relocated = true.
+Do NOT merge env triggers that share only a generic/CDN domain
+           (google.com, bing.com, youtube.com, etc.).                   origin_commitment_status = "pure_exploration"
+                                                                           origin_step is plain exploration / setup / a reasonable
+=== TRAJECTORY CONTEXT ===                                                     first guess, AND no step in (origin_step, T] satisfies
+                                                                               the weak_signal relocation threshold.
+You will also receive a TRAJECTORY STEP CONTENT block. Steps               Set qualified_origin_step = null, set
+          that fired at least one trigger are shown at HIGH                    exploration_suppressed = true.
+          detail (th1 compression); steps that did not fire any
+          trigger are shown at LOW detail (th3 compression) as          SINGLE-TRIGGER SHORTCUT. If the instance has exactly ONE
+          background for later state classification.                              trigger (origin_step == last_trigger_step) AND the
+                                                                                  instance is cat-2 or cat-3 (NOT cat-1 or env), the
+=== OUTPUT FORMAT ===                                                             default label is `pure_exploration`, UNLESS a verbatim
+                                                                                  quote from a step strictly after origin_step shows the
+{                                                                                 agent referencing or committing to the same wrong
+   "instances": [                                                                 object.
+      {
+         "instance_id": <int, 0-indexed across this trajectory>,        HARD CAT-1 RULES:
+         "trigger_indices": [<int>, ...],                                  1. cat-1 instance MUST NOT have origin_commitment_status =
+         "origin_step": <int, smallest step among trigger_indices               pure_exploration.
+          >,                                                               2. cat-1 instance MUST NOT have state = dormant.
+         "last_trigger_step": <int, largest step among
+          trigger_indices>,                                             HARD   ENV RULES:
+         "attribution": "agent" | "env",                                   1.  An env instance MUST NOT have origin_commitment_status
+         "category": "cat-1" | "cat-2" | "cat-3" | "env",                      = pure_exploration UNLESS BOTH: (a) the environment
+         "error_content": "<one-sentence natural-language                  2.  self-recovers on the next judgable step, AND (b) the
+          description of the same erroneous content/behavior>",                agent's next action is consistent with the recovered
+         "what_is_being_violated": "<one-sentence description of               output.
+          the I being violated>",                                              For env instances, wasted steps should be counted
+         "merged_reasoning": "<2-3 sentences explaining why these              against the VIOLATED sub-goal object remaining
+           triggers share the same I>"                                         unresolved.
+      }
+   ]
+
+}
+
+If the input triggers array is empty, emit {"instances": []}.
+
+                                                                        === TASK 2 - REPAIR / STATE DETERMINATION ===
+
+                                                                    20
+fixed_at_step_<N>                                                     - IMPORTANT: Correcting this specific error would
+   There is a step N with anchor < N <= T at which the agent'                   fundamentally change the trajectory toward success
+       s behavior satisfies the repair criterion for this
+       instance's category.                                           # Hints
+                                                                      1. Consider the ENTIRE trajectory from a global perspective -
+cat-1 : at step N the agent touches the violated TASK clause
+        AND the behavior is consistent with that constraint.                    understand the task goal and how the agent's path
+                                                                                diverged from success.
+cat-2 : at step N the agent touches the violated CONTEXT              2. Early exploration steps (steps 1-3) are often normal and
+       object AND the behavior is consistent with the latest                    should NOT be marked as critical unless they clearly
+       visible state.                                                           introduce the root cause.
+                                                                      3. Prefer the first step where the agent had enough reasonable
+cat-3 : at step N the agent explicitly retracts or corrects                      information to proceed correctly but nevertheless
+       the prior wrong claim.                                                   introduced the error locally.
+                                                                          This includes producing an incorrect output,
+env : (env-fix-1) the agent detects the env anomaly and                         misinterpreting or misusing prior information, or
+       switches to a MATERIALLY DIFFERENT strategy; OR (env-                    turning a correct intermediate state into an incorrect
+       fix-2) the env recovers AND the agent's subsequent                       one.
+       behavior is consistent with the recovered output.              4. Do not choose a later step merely because the failure
+                                                                                becomes more visible there.
+HARD ENV-FIX RULES:                                                       If a later step only repeats, propagates, or amplifies an
+   (R1) The following are NOT a strategy switch: clicking                       earlier mistake, select the earlier step where the
+       back; retrying the same URL/query/tool; reloading the                    mistake originated.
+       same hijacked/errored page.                                    5. If a flawed strategy is repeated across multiple steps,
+   (R2) Same-source RE-FIRE invalidates a prior fix.                            attribute the failure to the step where that strategy
+   (R3) A genuine env-fix-1 requires BOTH (a) the agent                         was first introduced. If the strategy was reasonable
+       explicitly recognises the env anomaly, AND (b) the next                  but the execution result was wrong, attribute the
+        observable action targets a DIFFERENT path.                             failure to the first execution step that produced the
+                                                                                incorrect result.
+=== TASK 3 - TERMINAL-CONNECTION AUDIT (FAILURE-PATH TEST) ===        6. Use recoverability only as a tie-breaker: among otherwise
+                                                                                similar candidates, prefer the earliest step whose
+Decide whether THIS instance lies on the actual observable                      error made recovery unlikely or blocked the trajectory
+          path that took the trajectory to its terminal failure.                from returning to a successful path.
+
+FAILURE-PATH MEMBERSHIP. Does any of the following appear on          You are given:
+        the path that produced the observed terminal failure?         - the TASK,
+          (i) the instance's wrong commitment is still active         - the FULL TRAJECTORY,
+        at T, OR re-fires after qualified_origin_step;                - a list of SUSPICIOUS STEPS that an upstream annotator
+          (ii) the instance is reflected in the terminal
+                                                                                flagged as containing some erroneous content (they are
+       answer, terminal action, terminal failure state;                         hints; you may pick any other step from the trajectory
+          (iii) this instance produced an irreversible state                    if you disagree).
+
+       change visible at T.
+       If ANY of (i)-(iii) holds -> the instance IS on the
+       failure path.
+
+Decide terminal_connection, one of:                                   === WHAT TO OUTPUT ===       these keys and nothing else:
+                                                                      Output ONE JSON object with  the step number of the critical
+"irreversible" - Q1(iv) holds.                                        - "critical_step": <int> -
+                                                                                                   sentences> explaining why this
+"semantic"  - Q1(i) or Q1(ii) holds.                                            error.
+                                                                      - "rationale": <string, 1-3
+"none"      - Q2 fully passes, or Q1 has no evidence
+                                                                                step is critical.
+at all.
+
+=== TASK 4 - RESOURCE EFFECT ===                                      === REQUIRED OUTPUT FORMAT (single JSON object, no prose
+                                                                                around it) ===
+Fill `resource_effect` whenever the instance wasted ANY steps
+          in (qualified_origin_step, T].                              {
+                                                                         "critical_step": <int>,
+Resource effect schema:                                                  "rationale": "<1-3 sentences>"
+   {
+      "wasted_steps": [<list of step indices wasted on I>],           }
+      "wasted_step_count": <int>,
+      "last_referencing_step": <int or null>                          Return ONLY the JSON object.
+   }
+
+=== OUTPUT FORMAT ===
+
+Return STRICT JSON with EXACTLY these keys:                           E Experiment Details
+
+{                                                                     All experiments were conducted with temperature
+   "instance_id": <int, copy from input>,                             set to 0 to ensure reproducibility.
+   "origin_commitment_status": "explicit_wrong_commitment" | "
+          weak_signal" | "pure_exploration",                          E.1 Direct Prompting Baselines
+   "qualified_origin_step": <int or null>,
+   "fix_status": "active" | "fixed_at_step_<N>",                      To satisfy context-length constraints, we truncate
+   "fix_evidence_quote": "<verbatim quote or null>",                  each trajectory step to 2,048 characters and set the
+   "terminal_connection": "irreversible" | "semantic" | "             maximum context length to 16,384 tokens for each
+          budget_debt" | "none",                                      trajectory. Table 8 evaluates whether this per-step
+   "chain_membership": <bool>,                                        limit disadvantages direct prompting. Increasing
+   "resource_effect": <object or null>,                               the limit substantially lowers the proportion of trun-
+   "chain_explanation": "<2-4 sentences. MUST include: (1) the        cated steps but does not improve accuracy, suggest-
+          trajectory's terminal failure mode in one phrase, (2)       ing that retaining more raw detail can also intro-
+          which of Q1(i)-(iii) holds OR the named dominating          duce irrelevant content that interferes with critical-
+          cause (3) one verbatim evidence quote.>"                    step judgment.
+
+}
+
+Causal Attribution Prompt.
+
+     Stage 3 — Causal Attribution
+
+You are an expert at identifying the SINGLE critical step that
+           caused a failed agent trajectory.
+
+An error is critical if:                       success   error
+- It represents the ROOT CAUSE that made task  specific
+
+          impossible
+- It caused a cascade of subsequent errors
+- The trajectory could have succeeded if THIS
+
+          had not occurred
+
+                                                                  21
+Table 8: Sensitivity of direct prompting to the per-step               reaches the best average accuracy of 50.2% and
+character limit.                                                       remains strongest on ALFWorld, τ 2-Bench, and
+                                                                       SWE-Bench Pro. For human-in-the-loop debug-
+Per-step limit    Avg. accuracy  Truncated steps                       ging, where nearby later steps can also guide in-
+                                                                       spection, TRAJDEBUG reaches 72.8% under the
+2,048 characters      26.00           27.1%                            symmetric [GT−5, GT+5] window.
+4,096 characters       20.02          14.5%
+8,192 characters       24.73           3.5%                            Inference cost and compute-matched compari-
+                                                                       son. Table 10 reports average token consumption
+Direct Prompting Baseline — Critical Error De-                         per trajectory using Qwen3-235B-A22B-Thinking
+tection                                                                as the common backbone. To control for inference
+                                                                       budget, we also run direct prompting 40 times at
+You are an expert at analyzing failed agent trajectories and           temperature 1 and use majority voting. This base-
+          providing actionable debugging insights.                     line consumes slightly more tokens than TRAJDE-
+                                                                       BUG but reaches only 29.56% accuracy, showing
+=== CRITICAL ERROR DEFINITION ===                                      that TRAJDEBUG’s gain over direct prompting can-
+A "critical error step" is the EARLIEST error instance that            not be explained by additional token consumption
+                                                                       alone.
+          remains ACTIVE (unrepaired) at the terminal step of a
+          failed trajectory -- the first error whose effects were      E.4 Application Experiment Details
+
+           never truly repaired, making it the root cause of the            Application — Vanilla Prompt
+          failure chain.
+                                                                              Trajectory:
+An error is "critical" if:                                                    {trajectory}
+- It represents the ROOT CAUSE that made task success
+                                                                              Your task:
+          impossible                                                          1. Identify the earliest step which directly leads the agent
+- It caused a cascade of subsequent errors
+- The trajectory could have succeeded if THIS specific error                             off
+                                                                                   track or repeats ineffective behaviour.
+          had not occurred                                                    2. Reference that exact step number as shown in the trajectory.
+- Correcting this specific error would fundamentally change
+                                                                                   Do not shift to later steps of that error.
+          the trajectory toward success                                       3. Explain why the chosen step is wrong, citing relevant
+
+=== TASK ===                                                                       observation/action details.
+{task_description}                                                            4. Suggest a concrete alternative for that same step that
+
+TRAJECTORY OUTCOME: FAILED (reward=0, reported by the task                               would
+          environment).                                                            move the agent toward success
+                                                                                   (e.g., a specific action to take instead).
+LAST STEP INDEX: {last_step}
+                                                                              Respond strictly in the following format (single spaces around
+=== FULL TRAJECTORY (one entry per message) ===                               colons, no extra text):
+{trajectory_block}                                                            step:<number>
+                                                                              reason:<one concise, specific sentence>
+Your task: find the critical error step of the trajectory.                    suggestion:<one actionable suggestion for that step>
+
+=== REQUIRED OUTPUT FORMAT (single JSON object, no prose                    Application — Self-Reflection Prompt
+          around it) ===
+                                                                              Current result: {trajectory}
+{
+   "critical_error_analysis": {                                               Why is this trajectory not finished the task?
+      "step": <int>,
+      "reason": "<1-3 sentences explaining why this step is a                 Feedback:
+          strong root-cause candidate>"
+   }                                                                   Format-matched feedback comparison. The
+                                                                       main application experiment compares complete
+}                                                                      debugging pipelines, whose feedback formats may
+                                                                       differ. To isolate the effect of critical-step localiza-
+Return ONLY the JSON object.                                           tion, we additionally use the same repair-hint gen-
+                                                                       erator and the same injection procedure for Vanilla
+E.2 Multi-Agent Systems Baselines                                      Debug and TRAJDEBUG; the two conditions differ
+                                                                       only in the critical step supplied to the hint gen-
+We reproduced each multi-agent baseline using its                      erator. TRAJDEBUG’s intermediate trigger, state,
+official codebase and default configuration. To                        and attribution signals are hidden from both the
+ensure a fair comparison with our implementa-
+tion of TRAJDEBUG, we used Qwen3-235B-A22B-
+Thinking as the base model and fixed the tempera-
+ture at 0 for reproducibility.
+
+E.3 Additional Evaluation Results
+
+Relaxed critical-step localization. Exact-step
+accuracy is deliberately strict, although predic-
+tions near the annotated critical step can still be
+useful in practice. For automated intervention, a
+prediction after the critical error may arrive too
+late; we therefore additionally evaluate whether
+the prediction falls in the asymmetric window
+[GT−3, GT]. As shown in Table 9, TRAJDEBUG
+
+                                                                   22
+Method                ALFWorld      GAIA      WebShop        W&W-HC   W&W-Alg.  τ 2-Bench  SWE-Bench Pro  AVG
+
+GLM-5.1                  39.0        42.9        42.0           22.4      73.8     51.2           12.8    40.6
+Gemini-3.1-Pro           38.0        34.7        40.0           29.3      62.7     65.5           23.3    41.9
+DeepSeek-V4-Pro          35.0        63.3        40.0           29.3      66.7     56.8           17.4    44.1
+Claude Sonnet 4.6        44.0        42.9       48.0            20.7      54.0     53.0           23.3    40.8
+GPT-5.4                  38.0        61.2        38.0           22.4      54.8     51.5           15.1    40.1
+Claude Opus 4.6          36.0        44.9       48.0            32.8      69.0     53.5           19.8    43.4
+Qwen3-235B-A22B          37.0        46.9        46.0           29.3      69.0     56.5           25.6    44.3
+
+AgentDebugger            45.0       64.0         44.4           29.3     72.2      52.5           16.3    46.2
+CHIEF                    12.0        48.0        22.0           34.5      65.1     42.6           19.8    34.8
+AgentRX                  19.4        32.7        26.5           31.0      59.2     52.2            8.3    40.8
+
+TRAJDEBUG (Ours)         50.0        59.2        40.0           29.3      69.0    69.0           34.9     50.2
+
+Table 9: Critical-step localization accuracy (%) under the automated-intervention window [GT−3, GT]. AVG is
+the macro-average over the seven subsets.
+
+Method                AVG Accuracy     Avg. Tokens               BUG’s evidence-constrained out-of-set fallback out-
+                                                                 performs direct holistic prompting (39.1% versus
+Direct Prompting            25.69     34,530 (1.0×)              35.1%). The fallback must identify an evidence-
+   + Majority Voting        29.56   1,403,850 (40.6×)            backed missing trigger together with its violated
+                            23.72   1,398,333 (40.5×)            reference, origin step, and terminal footprint. The
+AgentDebugger               18.77                                overall 41.8% reported here is a trajectory-level
+CHIEF                       23.10    307,786 (8.9×)              micro-average; Table 1 reports a macro-average
+AgentRX                    34.11     218,862 (6.3×)              across the seven benchmark subsets.
+TRAJDEBUG (Ours)                    1,382,243 (40.0×)
+                                                                 Stage-wise failure decomposition. We decom-
+Table 10: Accuracy (%) and token consumption. Ma-                pose the failure cases of TRAJDEBUG according to
+jority Voting is a compute-matched direct-prompting              the stage at which the ground-truth critical error is
+baseline.                                                        lost: Trigger Miss, where the critical error is not
+                                                                 identified as an error trigger; State Miss, where the
+hint generator and the actor. Table 11 shows that                critical error is detected but filtered out from F(τ )
+TRAJDEBUG remains stronger across all three set-                 during error state classification; and Attribution
+tings, providing a controlled comparison of the                  Miss, where the correct candidate enters the final
+downstream value of its localized critical step.                 attribution stage but is not selected. Table 13 shows
+                                                                 that Trigger Misses (42.1%) and Attribution Misses
+Method               Airline        Retail     SWE-Bench         (40.1%) are the two dominant failure modes, while
+                                                                 State Misses are less frequent (17.7%).
+Initial               78.00          84.21          72.00
+Vanilla Debug   86.00 (+8.00)  90.35 (+6.14)  78.00 (+6.00)         This decomposition characterizes where the re-
+TRAJDEBUG      88.00 (+10.00)  92.98 (+8.77)  80.00 (+8.00)      maining failures occur. First, Trigger Misses
+                                                                 (42.1%) account for the largest share of failures.
+Table 11: Task success rate (%) in the format-matched            Although our trigger detector inspects each step
+per-trajectory repair experiment.                                under multiple compressed trajectory views and
+                                                                 identifies evidence-grounded conflicts, some errors
+E.5 TRAJDEBUG Error Analysis                                     or deviations may be subtle, which can lead the
+                                                                 detector to miss the critical error. Second, the rela-
+Candidate retention and conditional attribution.                 tively low share of State Misses (17.7%) suggests
+We first stratify all 869 evaluated trajectories ac-             that error state classification usually preserves the
+cording to whether the human-annotated critical                  critical error once it has been detected as a trigger.
+error is retained in the candidate set passed to final           Attribution Misses (40.1%) therefore correspond
+attribution; one of the 50 GAIA trajectories is ex-              to harder residual cases after candidate filtering,
+cluded because its ground-truth critical-error label             where multiple retained errors are plausibly related
+is null. As shown in Table 12, TRAJDEBUG re-                     to the final failure and the model must distinguish
+tains the ground-truth step in 42.0% of trajectories,            the earliest failure-responsible step. These patterns
+compared with an expected 14.2% coverage from                    suggest that further gains may come from improv-
+a size-matched random candidate set. When the
+ground truth is retained, candidate-guided attribu-
+tion reaches 45.5% micro-average accuracy, sub-
+stantially outperforming direct holistic prompting
+at 29.6%. When it is excluded upstream, TRAJDE-
+
+                                                             23
+GT status before attribution   Cases (%)   Random coverage    TRAJDEBUG    Direct holistic      ∆
+
+Retained in candidate set     365 (42.0%)         14.2%       166 (45.5%)   108 (29.6%)     +15.9 pp
+Excluded upstream             504 (58.0%)         85.8%       197 (39.1%)   177 (35.1%)     +4.0 pp
+
+Overall                            869               –        363 (41.8%)   285 (32.8%)     +9.0 pp
+
+Table 12: Candidate-set coverage and conditional exact-step accuracy. Accuracy is micro-averaged within each
+stratum. Random coverage is the expected coverage of a uniformly sampled candidate set with the same size as
+TRAJDEBUG’s candidate set.
+
+Dataset          Trigger (%)  State (%)  Attribution (%)
+
+ALFWorld              32.4        6.8           60.8
+GAIA                  20.0        6.7           73.3
+WebShop               18.4        0.0           81.6
+WhoAndWhen-HC         33.3        2.2           64.4
+WhoAndWhen-Algo       62.1       12.1           25.9
+SWE-Bench Pro         45.2       24.2           30.6
+τ 2-Bench             49.2       30.7           20.1
+
+Overall              42.1        17.7           40.1
+
+Table 13: Failure decomposition of TRAJDEBUG.
+
+ing recall for subtle trigger errors and refining at-
+tribution among already filtered, terminal-relevant
+candidates.
+
+                                                          24
+

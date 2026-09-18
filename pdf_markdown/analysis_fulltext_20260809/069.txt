@@ -1,0 +1,707 @@
+The Fortieth AAAI Conference on Artificial Intelligence (AAAI-26)
+
+TechCoach: Towards Technical-Point-Aware Descriptive Action Coaching
+
+            Yuan-Ming Li1,3*, An-Lan Wang1,3,*, Ling-An Zeng1,3, Kun-Yu Lin1,3,
+                                 Yu-Ming Tang1,3, Wei-Shi Zheng1,2,3†
+
+                                                 1Sun Yat-sen University, China
+                                                 2Peng Cheng Laboratory, China
+        3Key Laboratory of Machine Intelligence and Advanced Computing, Ministry of Education, China
+                              {liym266, wanganlan}@mail2.sysu.edu.cn; wszheng@ieee.org
+
+                              Abstract                                   what is done well and what can be improved so that the
+                                                                         learner can be fully aware of the execution details and mas-
+   To guide a learner in mastering action skills, it is crucial          ter the skills (see the upper part of Fig.1). However, most ex-
+   for a coach to 1) reason through the learner’s action execu-          isting works pose AQA as a score-regression (Parmar et al.
+   tion and technical points (TechPoints), and 2) provide de-            2017) or pair-ranking (Doughty et al. 2019) problem, limit-
+   tailed, comprehensible feedback on what is done well and              ing the applicability of the models to more practical fields.
+   what can be improved. However, existing score-based action
+   assessment methods are still far from reaching this practi-           - Reasoning process. To provide precise feedback, a coach
+   cal scenario. To bridge this gap, we investigate a new task           will keep the technical points (TechPoints) in mind (e.g., The
+   termed Descriptive Action Coaching (DescCoach) which re-              player should extend the arms fully in Reverse Layup) and
+   quires the model to provide detailed commentary on what is            determine the TechPoint-level action quality from action ex-
+   done well and what can be improved beyond a simple qual-              ecution (see the lower part of Fig.1). However, few existing
+   ity score for action execution. To this end, we first build a         works have incorporated such a TechPoint-level reasoning
+   new dataset named EE4D-DescCoach. Through an automatic                process into AQA. While recent works (Wang et al. 2024a;
+   annotation pipeline, our dataset goes beyond the existing ac-         Li et al. 2024b) propose to address this issue by recognizing
+   tion assessment datasets by providing detailed TechPoint-             the existence of TechPoint-level mistakes, such a paradigm
+   level commentary. Furthermore, we propose TechCoach, a                still limits deeper exploration of the connections between the
+   new framework that explicitly incorporates TechPoint-level            action execution and the TechPoint-level action quality (i.e.,
+   reasoning into the DescCoach process. The central to our              detailed strength/weakness on a TechPoint).
+   method lies in the Context-aware TechPoint Reasoner, which
+   enables TechCoach to learn TechPoint-related quality repre-              To bridge the gap between the field of AQA and real-
+   sentation by querying visual context under the supervision            world action coaching scenarios, we investigate a new task,
+   of TechPoint-level coaching commentary. By leveraging the             Descriptive Action Coaching (DescCoach), which requires
+   visual context and the TechPoint-related quality representa-          the model to provide detailed commentary on what is
+   tion, a unified TechPoint-aware Action Assessor is then em-           done well and what can be improved, beyond merely as-
+   ployed to provide the overall coaching commentary together            signing a quality score to an action execution. This task
+   with the quality score. Combining all of these, we establish a        is challenging because to provide such a detailed commen-
+   new benchmark for DescCoach and evaluate the effectiveness            tary, the model should not only understand fine-grained ac-
+   of our method through extensive experiments.                          tion execution (e.g., the player looks down when perform-
+                                                                         ing Reverse Layup), but also establish explicit connections
+                   1 Introduction                                        between the execution with the action quality (e.g., it is a
+                                                                         weakness to look down at the ball as it will miss the target).
+Understanding how well an action is performed, also known
+as Action Quality Assessment (AQA), has recently attached                   To facilitate the studies on DescCoach, we construct
+growing attention due to its potential applications (Yin et al.          EE4D-DescCoach, a new dataset that not only contains
+2025; Zhou et al. 2024a). One of the most promising poten-               various action videos and quality scores but also features
+tials of AQA is to build an AI action coach, guiding an action           hierarchical detailed coaching commentary on both Tech-
+learner toward gradually mastering the skill. While impres-              Point and instance levels. Specifically, we first source ac-
+sive progress has been achieved, current AQA methods are                 tion videos from the recently proposed EgoExo4D (Grau-
+still far from real coaching and action-guiding scenarios, es-           man et al. 2024) dataset. Subsequently, we design an auto-
+pecially in their functionality and reasoning process:                   matic annotation pipeline to progressively obtain the gen-
+- Functionality. In practical action-guiding scenarios, a                eral TechPoints and hierarchical coaching commentary. To
+coach provides detailed and understandable feedback on                   our knowledge, no existing AQA dataset provides detailed
+                                                                         TechPoint-level coaching commentary. Compared to exist-
+    *These authors contributed equally.                                  ing datasets with score-based or binary TechPoint-level an-
+    †Corresponding author.                                               notations (Li et al. 2024b, Matsuyama et al. 2023), we be-
+Copyright © 2026, Association for the Advancement of Artificial          lieve the TechPoint-level commentary provides more clear
+Intelligence (www.aaai.org). All rights reserved.
+
+                                                                   6699
+Action Demonstration                                  Coaching Commentary
+
+…                     …                               What is done well: The athlete showcases excellent use of the backboard, arm extension,
+                                                      and ball placement during the layup, showing strong control and angle creation.
+…                     …
+                                                      What can be improved: However, there's a need for improvement in keeping the head
+                                                      up, as frequent glances at the ball can hinder visibility of the basket. Additionally, dribbling
+                                                      requires refinement …
+
+TechPoint-level Reasoning                             The athlete needs to keep the eyes up The athlete has nice ball placement, utilizing the
+TechPoint-level The athlete performs beautifully
+ action quality with the right arm extension          more consistently to see the basket  … backboard effectively
+
+Technical Points Arms and Elbows: Extend the          Head and Eyes: Keep the head up and Human-object Interaction: Be aware of the position
+(i.e., TechPoints) arms fully as they bring the ball
+                                                      eyes focused on the backboard and rim of the defenders … and aiming to bank the ball off
+                      under the basket,…
+                                                      to accurately judge the distance and angle the backboard for a successful reverse layup.
+
+Figure 1: An illustration of real-world action coaching. Upper: Given an action demonstration, a human coach provides
+commentary on what is done well and what can be improved. Lower: Delivering precise feedback requires reasoning at the
+level of TechPoints, i.e., keep the technical points (e.g., The player should extend the arms fully ...) in mind and determine the
+technical-point-level action quality (e.g., The athlete performs beautifully with the right arm extension) of the action. Such a
+reasoning process motivates us to propose our TechCoach to address Descriptive Action Coaching.
+
+and detailed clues for reasoning about action quality and               establishes EE4D-DescCoach as a unique resource among
+providing instance-level coaching commentary.                           existing AQA datasets. (2) We develop TechCoach, a new
+                                                                        method that effectively integrates TechPoint-level reasoning
+   The construction of the EE4D-DescCoach dataset allows                into the action coaching process through supervision from
+us to build TechPoint-Aware Descriptive Action Coach                    TechPoint-level coaching commentary. (3) We construct a
+(TechCoach), a new DescCoach framework which explic-                    new benchmark on DescCoach. Experiments not only val-
+itly incorporates TechPoint-level reasoning into the action             idate the effectiveness of the proposed approach, but also
+coaching process under the supervision of TechPoint-level               lay the foundation for future research in this field. Code &
+coaching commentary, and delivers feedback by incorporat-               Data: https://github.com/iSEE-Laboratory/TechCoach.
+ing the reasoning results and visual context.
+                                                                                          2 Related Works
+   To this end, TechCoach includes a Context-aware Tech-
+Point Reasoner, which queries the visual context with gen-              Action Quality Assessment(Xu et al. 2022; Tang et al.
+eral TechPoints to obtain TechPoint-related quality repre-              2020; Yu et al. 2021; Pan et al. 2019; Xu et al. 2024;
+sentations. To ensure these representations carry the ac-               Yun et al. 2024; Zhou et al. 2024b; Xu et al. 2022; Bai
+tion quality information, a TechPoint-level alignment loss              et al. 2022; Xu et al. 2025; Parmar et al. 2021; zeng et
+is proposed to align the representations with the TechPoint-            al. 2024; xia et al. 2023; Xu el al. 2025; Li et al. 2024c)
+level coaching commentary. After that, a Unified TechPoint-             aims to evaluate the effectiveness of an action. Most exist-
+aware Action Assessor (TA2) is employed to regress the ac-              ing works pose it as a score regression task. Despite sig-
+tion quality score and generate overall coaching commen-                nificant progress, score regression falls short of address-
+tary. Throughout this process, a progressive action coach-              ing real-world coaching scenarios. MTL-AQA(Parmar et
+ing attention mask guides TA2 to integrate information start-           al. 2019) and NAE(Zhang et al. 2024) propose to gen-
+ing with the visual context level, followed by the TechPoint            erate commentary alongside scores, but the commentary
+level, and ultimately the decision level (i.e., score-prediction        mainly focus on action and score rather than skill coaching.
+and commentary-generation).                                             NS-AQA(Okamoto et al. 2024) integrates multiple models
+                                                                        with judging rules to provide formatted feedback, yet re-
+   Combining EE4D-DescCoach and TechCoach, we estab-                    lies on complex, task-specific manual designs. Differently,
+lish a new benchmark to expand the field of AQA. Extensive              we focuse on generating free-from commentary on strengths
+experiments demonstrate that: (1) Our TechCoach achieves                and areas for improvement, aligning closely with practi-
+state-of-the-art performance among the compared methods,                cal coaching needs. We construct a new dataset with hier-
+including task-specific models and general MLLMs; (2) The               archical (especially the TechPoint-level) detailed coaching
+Context-aware TechPoint Reasoner is a core design to en-                commentary. Furthermore, we propose a general framework
+hance action quality perceiving ability and cannot be simply            that collaborates TechPoint-level reasoning into the coach-
+replaced by naive alternative solutions (e.g., replacing the            ing process. Unlike prior approaches relying on binary or
+TechPoint-level alignment by classifying whether the exe-               score-based supervision to detect mistakes or apply score
+cution shows strength or weakness on each TechPoint).                   rubrics (Matsuyama et al. 2023; Majeedi et al. 2024; Par-
+                                                                        mar et al.2022; Li et al. 2024b; Wang et al. 2024a), Tech-
+   The contributions of this work can be summarized as: (1)             Coach is the first to learn action quality representation under
+We introduce EE4D-DescCoach, a new dataset specifically
+designed for Descriptive Action Coaching. The hierarchical
+coaching commentary, particularly at the TechPoint level,
+
+                                                                  6700
+                               Domain   Original Expert Commentary                    Prompts for Generating Hierarchical Commentary
+                               Experts                                                - Summarize the strengthen and weakness for each Tech-Point;
+                                        - Yeah, see how she's having to look          - Generate the overall coaching commentary on the execution.
+<Domain>: Basketball ChatGPT            down. You can't see the basket here.
+<Task>: Reverse Layup                   There's the eyes. ….                          ChatGPT  TechPoint-Level Commentary
+                                        - beautiful look here of extending of
+                                        the right arm, ….                                      Head and Eyes: The athlete needs to keep the eyes up more
+                                                                                               consistently to see the basket, rather than looking down
+Prompts for Generating                  Generated General TechPoints                           frequently.”
+General TechPoints                                                                             Arms and Elbows: The athlete performs beautifully with the
+Provide instructions about tech-        head and eyes: The player should keep the              right arm extension and control of the ball., …
+points for practicing <Task>.           head up and eyes focused on the
+                                        backboard ….                                  Instance-Level Commentary
+   General TechPoints Generation        arms and elbows: The player should            The athlete showcases excellent use of the backboard, arm extension, and
+    Hierarchical Commentary             extend the arms fully as they bring the ball  ball placement during the layup, showing strong control and angle creation.
+    Generation                          under the basket, ….                          However, there's a need for improvement in keeping the head up, ……
+
+Figure 2: An overview of the LLM-driven automatic annotation pipeline for the EE4D-DescCoach dataset. We first
+prompt the LLM to generate general TechPoints for the given action task. Subsequently, we ask the LLM to summarize the
+TechPoint-level and instance-level commentary according to the general TechPoints and the original expert commentary.
+
+TechPoint-level commentary supervision. Unlike Stream-                                instances with a 8-second window and filter those instances
+VLM(Panchal et al. 2024) focusing on real-time fitness re-                            without meaningful commentary. By doing so, we obtain
+sponses, we explores how TechPoints and TechPoint-level                               4843 unique video instances, spanning about 10.8 hours.
+commentary can enhance reasoning. The EE4D-DescCoach
+dataset enables this exploration, and the ablations confirm                           3.2 Annotation Pipeline
+the significance of our technical design.
+Video Captioning is a long-standing task that requires a                              By diving deeper into the expert commentary in EgoExo4D,
+model to generate a language caption with video frames as                             it can be observed that: 1) The original expert commentary is
+input. Early studies focus on designing stronger architec-                            highly colloquial and noisy, awaiting summarization before
+tures (Lin et al. 2022; Wang et al. 2021; Aafaq et al. 2019;                          being used to build a coaching model. 2) The expert com-
+Shi et al. 2020; Yamazaki et al. 2023) or utilizing video-                            mentary is highly associated with the general TechPoints,
+language pretraining (Sun et al. 2019; Luo et al. 2020; Yang                          making it possible to mine the relationships between the
+et al. 2023; Alayrac et al. 2022; Seo et al. 2022) to model                           general TechPoints and final coaching commentary.
+relationships between video and language. Recently, Multi-
+modal Large Language Models (Lin et al. 2023; Wang et al.                                Based on the observations, we propose an automatic an-
+2024b; Li et al. 2024a; Maaz et al. 2023; Li et al. 2023; Chen                        notation pipeline to obtain general TechPoints, and hierar-
+et al. 2024b) show strong generalization ability across vari-                         chical coaching commentary on both TechPoint level and
+ous video-language tasks such as video content description                            instance level, which is shown in Fig.2.
+and video question answering. However, rare exploration                               - General TechPoints Collection. In the general coaching-
+has been conducted on whether these models could provide                              learning scenario, a coach will provide several TechPoints
+coaching commentary about what is done well and what can                              in advance so that the skill learner can learn to follow. Con-
+be improved. In this work, we provide a new testbed for to-                           sidering that completing a skilled physical action always re-
+day’s video-language models and reveal that they still strug-                         quires cooperation across multiple body parts and objects,
+gle to address such a practical scenario. Besides, we propose                         we define a TechPoint as a language instruction on one of
+a new TechPoint-guided coaching framework and evaluate                                the seven dimensions, including six body parts (e.g., head &
+its effectiveness through extensive experiments.                                      eyes, arms & hands) and the human-objects interaction.
+
+           3 EE4D-DescCoach Dataset                                                      To obtain TechPoints for each skilled action task, we treat
+                                                                                      the LLM (GPT-4o) as a general coach. As shown in the
+3.1 Data Source                                                                       lower left part of Fig.2, by providing the task name (e.g.,
+                                                                                      Basketball Drills - Reverse Layup) and detailed instructions
+We first source data from the recently proposed EgoExo4D                              to the LLM, we are able to obtain the general TechPoints
+(Grauman et al. 2024) dataset. In addition to ego-exo ac-                             on the previously mentioned seven dimensions (e.g., For the
+tion videos, EgoExo4D contains execution rating (1 to 10)                             dimension of “head & eyes”, we have the TechPoint: “The
+and time-aligned free-form spoken commentary (e.g. “Yeah,                             player should keep the head up and eyes focused on the
+see how she’s having to look down. You can’t see the bas-                             backboard and rim to accurately judge the distance and an-
+ket here.”) by domain experts. Such characteristics make it a                         gle for the reverse layup.”).
+great starting point for studying action coaching.                                    - Hierarchical Coaching Commentary Collection. Subse-
+                                                                                      quently, we further ask the LLM to mine the relationships
+   In our work, we focus on physical actions and select takes                         between the TechPoints and origin expert commentary and
+from EgoExo4D including the scenarios of basketball, soc-                             provide summarized hierarchical (i.e., TechPoint level and
+cer, and bouldering. We then segment each take into single                            instance level) coaching commentary about what is done
+
+                                                                6701
+Datasets                                 Unique    Unique      TechPoint Level Judgment      Instance Level Judgment
+                                        Instances  Hours                                 Score Commentary Coach-Score
+Datasets w/o Language Annotations                              Exists  Type  Num
+FineDiving (Xu et al. 2022)                3000      3.5h
+Skate-IRIS (Matsuyama et al. 2023)         150       7.3h      ×       -     -           ✓  ×  -
+CPR-Coach (Wang et al. 2024a)              1416      7.7h
+Datasets w/ Language Annotations                               ✓       Score 1050        ✓  ×  -
+MTL-AQA (Parmar and Morris 2019)           1412      1.7h
+MTL-NAE (Zhang et al. 2024)                1412      1.7h      ✓       Binary 18.4k      ×  ×  -
+EgoExo-Fitness (Li et al. 2024b)           913       4.6h
+EgoExo4D(Sports) (Grauman et al. 2024)     1219     16.4h      ×       -     -           ✓  ✓  1.94
+EE4D-DescCoach (Ours)                      4843     10.8h
+                                                               ×       -     -           ✓  ✓  2.94
+
+                                                               ✓       Binary 7.8k       ✓  ✓  2.37
+
+                                                               ×       -     -           ✓  ✓  3.44
+
+                                                               ✓ Commentary 25.1k        ✓  ✓  4.33
+
+Table 1: Comparison to related Action Assessment datasets. Our EE4D-DescCoach dataset is the first dataset that contains
+hierarchical (especially TechCoach-level) detailed coaching commentary. Coach-Score: A metric that evaluates whether the
+provided commentary is suited for real-world coaching scenarios.
+
+well and what can be improved in the action execution.               4.2 Overview
+   As shown in the right part of Fig.2, in this phase, LLM is
+                                                                     An overview of the proposed Technical-Point-aware De-
+asked to finish two tasks: (1) Review the general TechPoints         scriptive Action Coach (TechCoach) is shown in Fig.3. The
+and the original expert commentary, and then summarize               key idea of TechCoach is to mimic the reasoning process of
+the strength and weakness in the execution corresponding             human coaches by incorporating TechPoint-level reasoning
+to each TechPoint. (2) Review the original expert commen-            into the action coaching pipeline. Our framework consists of
+tary and the generated strengths and weaknesses, and then            three parts. Firstly, given an input video v, a Visual Encod-
+provide the overall commentary on the execution.                     ing Module will extract the visual context embedding. Af-
+                                                                     ter that, a Context-aware TechPoint Reasoner is adopted
+   To sum up, for each instance, we construct rich language          to take the visual context embedding and general technical
+annotations including the General TechPoints, TechPoint-             points as input to perceive the action quality on each Tech-
+level Commentary, and Instance-level Commentary. More-               Points and provide the TechPoint quality embeddings. Fi-
+over, for each instance we also obtain an average rating by          nally, a Unified TechPoint-aware Action Assessor is uti-
+averaging all the ratings provided by different experts.             lized to collaborate the visual context and TechPoint-aware
+- Quality Assurance. After obtaining the annotations, we             quality embeddings, then predict the final quality score and
+apply manual checking on our dataset to ensure the annota-           generate coaching commentary.
+tion quality. Please refer to Appendix for more details.
+- Discussions. In some cases, an execution could reveal both         4.3 Visual Encoding
+the strength and weakness aspects on one TechPoint, and
+some may just reveal one of them. Such a characteristic is           Given a video v, we first divide the video into non-
+inherited from EgoExo4D (Grauman et al. 2024).                       overlapping video clips and extract clip-level features with a
+                                                                     pretrained backbone. After that, inspired by TimeSformer
+3.3 Comparison with existing datasets                                (Bertasius et al. 2021), we utilize a Transformer-based
+                                                                     Spatial-Temporal Context Enhancer to enhance the spatial-
+We compare our dataset with related AQA-related datasets.            temporal context across the clip-level features. This process
+As shown in Tab.1, the detailed TechPoint-level commentary           produces the visual context embeddings fv ∈ RT ×H×W ×D
+allows us to distinguish our EE4D-DescCoach dataset from             can be obtained, where T , H, W , D indicate the temporal,
+the other related datasets. Furthermore, we prompt GPT-4o            height, width, and channel size, respectively.
+to rate the guiding ability of instance-level commentary from
+0 to 5 as the Coach-Score. As shown in the last column in            4.4 Context-aware TechPoint Reasoner
+Tab.1, commentary in MTL-AQA and MTL-NAE is not suit
+for coaching scenario as the original text mainly focuses on         To generate comprehensive coaching commentary for an
+the action and score rather than action guiding and skill im-        action execution, an intuitive approach is to directly input
+provement. Please refer to the Appendix for more details like        the video (and the TechPoint) features into the text genera-
+the prompts, the pre-defined body parts, data examples, etc.         tor. However, without explicit modeling, such an approach
+                                                                     is unable to effectively perceive the relationship between
+                    4 TechCoach                                      visual context and the TechPoints. To address this, Tech-
+                                                                     Coach adopts a Context-aware TechPoint Reasoner to learn
+4.1 Problem Formulation                                              TechPoint-related quality embeddings by querying the video
+                                                                     context embeddings under the supervision of the coaching
+Given an action video v, our goal is to train a model that           commentary for each TechPoint. An overview of Context-
+takes the video as input and predicts an overall action qual-        aware TechPoint Reasoner is shown in Fig.4.
+ity score together with a paragraph of detailed commentary           - TechPoint Queries Construction. Without loss of gen-
+about what is done well and what can be improved.                    erality, given the N general TechPoints corresponding to
+
+                                                               6702
+                                                                                          TechPoint-Level Commentary                                  …                    Coaching Commentary: The
+                                                                                               Feature Alignment                                                           athlete showcases excellent use of
+                           General Technical Points                                                                                                       Commentary       the backboard, arm extension …
+                                                                                                                                                           Generation      However, … keep the head up …
+                       keep the head up and eyes
+                       focused on the backboard …
+
+                       … extend the arms fully …                                                                                                               Score       Action Quality Score: 8.33
+                       … aiming to bank the ball off
+                       the backboard …                                    Text                 Context-aware                                Unified       Regression        Text
+                                                                        Encoder                  TechPoint                                                                 Score
+                                         Clip 1                                                   Reasoner                                  T.P.-aware Progressive Action
+                                                                      Visual                                                                  Action
+                                                                    Backbone                                                                Assessor Coaching Attention
+
+                                                                 …       …                     Spatial-Temporal                                       Video T.P.           T.P.
+
+                 Video                                                                         Context Enhancer
+
+                                       Clip N                       Visual                                                                            Score Text Video
+
+                 CoFnratemxte-asware TechPoint Reasoner             Backbone …need to keep the eyes
+
+                                                                          Text
+                 𝑇!"#                                               Encoder up more consistently …
+                       Visual C√ontQext Embeddings                  Generated Tokens                      Score Tokens                      TechPoint-related Quality Embeddings Concatenation
+                                       Multi-Head                         Text …beautiful right arm
+                 𝑇!"%
+                                                                    Encoder extension …
+                               x       Cross-Attn
+                 F𝑇i!"g$ure 3: An overvieK,wV of TechCToeaxtch. TechCoach processes an action video by first extracting visual context embeddings
+entary: The                                                         Encoder …nice ball placement …
+s excellent use  vTeicahPaoinptrQeu-etrireas ined backboneTecahnPodinta-LeSvepl atial-Temporal Context Enhancer. Next, a Context-aware TechPoint Reasoner queries this
+d, arm           coCnotnestxrutctitoon learn quality emAbligendmdenitngs foTerchkPoeinyt-LteeveclhConmimceanltapryoints (TechPoints), supervised by coaching commentary. Finally, a
+all placement
+p, showing       unifViseudal  CToentcexhtPo𝑇inTte-cahPwoinatre  AcTteicohnPoiAnt-styspeessor  √usQeusalityh-reelsaetedinputs  to  jointly  generate  an  overall  commentary    and  a  quality  score.
+d angle                                                    !"
+er, there's a          Embeddings      features                     prompts                    x Prompts
+ ement in
+d up, …
+
+core: 8.33
+
+                 Context-aware TechPoint Reasoner                                          …need to keep the eyes                       To ensure ftq carries the quality information related to the
+                                                                                           up more consistently …                    action execution on the TechPoints, our idea is to align the
+                 𝑇!"#                  Q Multi-Head                                Text                                              TechPoint-related quality embeddings ftq with the features
+                                 √        Cross-Attn                            Encoder    …beautiful right arm                      of the corresponding TechPoint-level coaching commentary.
+                                                     K,V                                   extension …                               To this end, a TechPoint-level alignment loss is adopted,
+                 𝑇!"%                                                              Text    …nice ball placement …                    which can be written as:
+                 𝑇!"$ x                                                          Encoder
+                                                                                          TechPoint-Level Commentary
+                 TechPoint Queries                                                 Text
+                                                                                 Encoder
+                                                                    TechPoint-Level
+
+                 Construction                                       Alignment
+
+                       Visual Context  𝑇 TechPoint                  TechPoint-type             √ x Quality-related                                    N2
+                        Embeddings                                     prompts                            Prompts
+                                         "#$                                                                                         LAlign =                  wtc[i, j] ∗ D(ψ(ftq[i, j]), ftc[i, j]), (2)
+
+                                            features
+
+                 Figure 4: An overview of the Context-aware TechPoint                                                                                 i=1 j=1
+                 Reasoner. Best viewed in color.
+                                                                                                                                     where ftc indicates the features of TechPoint-level commen-
+                 the input video, we first extract the TechPoint features                                                            tary extracted by the text encoder; ψ is a linear mapper that
+                                                                                                                                     projects the ftq back to the dimension of the text features;
+                 ftp ∈ RN×D with a pre-trained text encoder and a lin-                                                               wtc[i, j] is a binary scalar to filter those cases where com-
+                                                                                                                                     mentary on some aspects is not provided (see Discussions in
+                 ear mapper. After that, we augment ftp by introducing two                                                           Sec.3.2) ; D(·, ·) indicates a distance measurement between
+
+                 types of learnable prompts. Specifically, we use a group of                                                         two features and we use the L2 Distance by default.
+
+                 TechPoint-type prompts ftt ∈ RN×D to identify which
+
+                 dimension (e.g., head & eyes, human-object interaction)                                                             4.5 Unified TechPoint-aware Action Assessor
+
+                 each TechPoint feature belongs to. Besides, we adopt two                                                            After obtaining the visual context embeddings and
+                                                                                                                                     the TechPoint-related quality embeddings, we employ a
+                 quality-related prompts fq ∈ R2×D to indicate the as-                                                               Transformer-based Unified TechPoint-aware Action Asses-
+                                                                                                                                     sor (TA2) to jointly predict the action quality score and gen-
+                 pects of strength and weakness. Based on the definitions                                                            erate the overall coaching commentary.
+
+                 of the learnable prompts, the augmented TechPoint features                                                             Specifically, the input sequence to the TA2 module is
+                                                                                                                                     constructed by concatenating the following components: (1)
+                 f∗    ∈  RN ×2×D      are  computed                as:                                                              The generated text tokens T1:i−1; (2) a learnable score-
+                                                                                                                                     prediction token fs; (3) the flattened ftq as TechPoint to-
+                   tp                                                                                                                kens; (4) the flattened fv as video tokens. For generat-
+                                                                                                                                     ing commentary, we follow (Lin et al. 2022; Zhang et al.
+                                       ft∗p[i, j] = ftp[i] + ftt[i] + fq[j].                                        (1)              2024) by employing a Mask-Token Modeling supervision
+                                                                                                                                     (LMT M ) during training and using the Next-Token Pre-
+                 Such an augmentation allows us to inject the TechPoint and                                                          diction during inference. For score regression, the score-
+                                                                                                                                     prediction token from the output layer is passed to a MLP
+                 quality information into the TechPoint queries.                                                                     regressor, optimized using a MSE loss (LMSE).
+
+                 - TechPoint-driven Quality Reasoning. Our goal here is                                                                 Moreover, to guide the TA2 module in progressively inte-
+                                                                                                                                     grating information in a sequence from lower to higher level
+                 to decouple the visual context features corresponding to the
+
+                 TechPoints and quality aspects. To this end, we regard the
+
+                 augmented        TechPoint      features           f∗         as  the         queries  and  visual
+
+                                                                      tp
+
+                 context features fv as the keys and values, then utilize layers
+
+                 of multi-head cross attention module (Vaswani et al. 2017)
+
+                 to obtain the TechPoint-related quality embeddings ftq ∈
+
+                 RN×2×D. ftq[i, j] indicates the action quality on TechPoint
+
+                 i and aspect j (1 for the strength and 2 for the weakness).
+
+                                                                                                                               6703
+   Methods                 Score Regression        Methods                                                           # Params                                                                                                   Commentary Generation                                                                                                                                  GPT-Q↑
+                            ρ ↑ RL2↓                                                                                 (Txt.Gen.) B↑                                                                                            C↑ M↑ Bert↑ GPT-M↑
+                                                                                                                                                                                                                                                                                                                                                                                        14.20
+   Models infer with single instance               General Multi-modal Large Language Models                                                                                                                                                                                                                                                                                            22.28
+                                                                                                                                                                                                                                                                                                                                                                                        24.56
+   InternVideo2-MLP 69.75 4.70                     VideoLLaVA-7B                                                        7B 23.78 1.88 10.10 55.21 16.02                                                                                                                                                                                                                                 29.81
+                                                                                                                                                                                                                                                                                                                                                                                        32.60
+   USDL                    70.81 4.51              VideoChat2-7B                                                        7B 23.18 2.98 11.59 61.37 14.09
+                                                                                                                                                                                                                                                                                                                                                                                        34.57
+   SwinBERT                71.37 4.59              InternVideo2-S3-8B 7B 27.60 2.92 13.38 64.55 31.68                                                                                                                                                                                                                                                                                   37.04
+                                                                                                                                                                                                                                                                                                                                                                                        38.15
+   PGMI                    70.93 4.38              InternVL2-8B                                                         7B 17.88 0.25 17.75 61.75 41.16
+
+   TechCoach(Ours) 72.46 4.35                      InternVL2-76B                                                        70B 10.81 0.01 16.33 55.12 43.77
+
+   Models infer with extra exemplars               Task-specific Models
+
+   CoRe w/ 10 Exem. 73.17 4.35                     SwinBERT                                                             136M 36.11 11.70 16.01 66.03 46.56
+
+   TPT w/ 10 Exem. 73.77 4.29                      PGMI                                                                 136M 36.78 14.00 16.24 66.42 49.02
+
+                                                   TechCoach(Ours)                                                      136M 37.06 14.62 16.39 66.89 50.44
+
+Table 2: Comparison with existing models. TechCoach achieves strong performance on both score regression and commentary
+generation tasks. “w/ 10 Exem.”: models that infer with 10 extra exemplars. “Txt.Gen.”: Text Generator.
+
+(i.e., starting with visual context level, then TechPoint level,                                                                                                                                                    Variants                               Score Commentary
+                                                                                                                                                                                                                                                         ρ ↑ RL2↓ B↑ C↑ Bert↑
+and finally the decision level), a progressive action coaching
+                                                                                                                        LMSE LMT M LAlign
+attention mask is adopted on the TA2, which is shown in the
+                                                                                                                     1✓                                                                                                                                  70.8 4.5 - - -
+lower right part of Fig.3. Specifically, each TechPoint token
+                                                                                                                     2                                                                                              ✓                                                                                                                         - - 36.7 13.7 66.8
+independently attends to itself and the video tokens. Besides,
+                                                                                                                     3✓                                                                                             ✓                                    70.2 4.8 36.4 14.3 65.7
+the score-prediction token attends to itself and all the Tech-
+                                                                                                                     4✓                                                                                             ✓             ✓ 72.5 4.4 37.1 14.6 66.9
+Point tokens and video tokens. For commentary generation,                                                                                                                                                                                                                                                                                              asdasdasd
+                                                                                                                                                                                                                                                                                                                                                  asadsd asd
+                                                                                                                     5                                                                                              w/o TP-Align                         70.2 4.8 36.4 14.3 65.7
+TA2 integrates all information by attending to the generated
+                                                                                                                     6                                                                                              TP-CLS                               72.3 4.5 36.8 13.7 64.7
+text tokens, the score-prediction token, all the TechPoint to-
+                                                                                                                     7                                                                                              TP-Align                             72.5 4.4 37.1 14.6 66.9
+kens, and the video tokens.
+
+   To sum up, we train the TechCoach with the following                                                              Table 3: Upper: Ablations on the losses. Lower: compar-
+                                                                                                                     isons with the alternative for TechPoint-level alignment.
+overall loss function (λ1 and λ2 are hyper-parameters):
+
+   L = LMT M + λ1LMSE + λ2LAlign.                           (3)
+
+                   5 Experiments                                                                                                                                                                                              +3.88                                                                                                                                                                                                                       +3.58
+
+5.1 Dataset and Experiment Settings                                                                                                                                                                                 +3.04
+
+- Dataset. Following the official split of EgoExo4D, we sep-                                                                                                                                                                                                                                                                                      +1.45
+
+arate EE4D-DescCoach into training and evaluation set with
+
+3769 and 1074 instances, respectively.                                                                                  +0.00                                                                                                                                                                                                                          +0.00
+
+- Evaluation Metrics. For score prediction, we usVVeiVdideiVVedtoVioheiCddCoieehdeChoaoeahCtoC2taCh2h-t7a-2ha7tB-ta22B7t-2-B77-B7BB                                                                                 InIntIetnerIItnnrenInVtrnteVnetirreVdinndreiVnVedoVioei2dd2oi-ede8-2oo8eB-2o2B8-2-B88-B8BB                                    InIntIetnerIItnnrenInVtrnteVnetLrreVnLnr2VLnV2-V8-2LL8B-L22B8-2-B88-B8BB
+                                                                                                                                                                                                                    InIntIetnerIItnnrenInVtrnteVnetirreVdinndreiVnVedoVioei2dd2oi-ede8-2oo8eB-2o2B8-2-Bw88w-B/8Bw/BGw/GwTGw/T/PGT/GPGPTTTPPP      InIntIetnerIItnnrenInVtrnteVnetLrreVnLnr2VLnV2-V8-2LL8B-L22B8-2-Bw88w-B/8Bw/BGw/GwTGw/T/PGT/GPGPTTTPPP
+                                                                                                      VViVdideiVVedoVioeiCddCoiehdeChoaoeahCtoC2taCh2h-t7a-2ha7tB-ta22B7t-2-Bw77w-B/7Bw/BGw/GwTGw/T/PGT/GPGPTTTPPP
+
+Spearman’s rank correlation coefficient (ρ) and Relative-
+
+L2 Distance (RL2) as the metrics. For natural language
+
+generation, we adopt BLEU(B)(Papineni et al. 2002), ME-
+
+TEOR(M)(Banerjee et al. 2005), CIDEr(C) (Vedantam et al.                                                             Figure 5: A further study of the impact of TechPoint-level
+
+2015) and BERT scores (Zhang et al. 2019). Moreover, for
+better comparison with open-source MLLM68s, we deBsiEgRnTtSwcoore alignment lGoPsTs-MshoScwortehat LAlign signiGfiPcaT-nQtlSycoenrehances ac-
+                                                                                                                     tion quality perception ability 3(9evaluated by GP++3T+3.5-3.+++58Q.+35833.38.55.S85858c8ore).
+more LLM-based Metrics: (1) a Mention Score(GPT-M) to
+                                                                                                                                                  ++3+3.+38.3888.888
+                                             67                            +++0+00.80.++8.6+00886.0.6886.6866 51                                                                                                                ++33.8.+8838.88
+evaluate whether the generated commentary mentions the                                                                                                                                                                                                                                                                                        37
+same technical details as in the ground tr6u6th;+++0(+00.200.++00.)+0000.0.0a00.000Q-u-00a-.03l-3i.013t1.13y1                                                                                                       ++3++3.03.++034.+3034..3.4000.40444                                                                                           ++1+1.4.1+++4.5+14115.1.544..445555
+
+Score(GPT-Q)  to  evaluate   whether  the  generated      --00.3.3-101.31                                                49                                                                                                                                 35++0+0.00.+++00.+0000.0.00.00000
+
+                                                      commen-                                                        5.2 Main Results                                                                                                                    compare TechCoach
+
+tary shares the same praises or improvem6e5nt opinions as in                                                         As47s+h+0o+0+.00w.++000.+000n..0.000.0000in                                                    Tab.2,        we                                                                                                                                                   with                                                                      two
+
+the ground truth on those both-mentioned technical details.                                                          branches of baselines: (1) Task-Specific Models: We se-
+                                              64                                                                     lec4t5 task-specMifiocdeblasselines in3c3luding UMSDodLels(Tang et al.
+-  Implementation  Details.  We  sample            and  seMgmodeenlst
+                                           frames
+
+each video into 32 8-frame clips. Subsequently, SSwSwwSwiewniSSnBwSiwuBnBwEiBiEnsnERiEBRnBeTRBRETE(pTTERRw(RwTrT(/(weT/w(I(wn/-Iw(n/tIw/e/tnIerI/ItVVnrenIVtrntie2VeditrdreeiVVBedroVioei2dad2oie2decB2oBoeka02Bo2acb22cakBBokcbB0aanbkoccaob)enkkcno,)ebkben)oboC)enon)eneo))eR) e (TYTeTeecucehcTThcCheTeeChcoCceCtohahcoaoCchCachaCoohclca(oah.Oc(hcaOh(hcu2O(hur((w0sOruO(s)rO2u/)uswor)urw1ss/rw)o!/)s)ow)/!w,!o!w"!//#oT!!o"$/#"!o$!#!%P"$%!#!!%)$"T!"#%#$"$#(%$%B% ai TeTeTectcehTTThcaCeTeChecloceCcoh.ahchaoCchC2cahCCoohc0a(oaohOc(ca2Oah(hcuOc2hur((hsOruO)(s)rOu,)usr)ursSsr))sw) in-
+trained InternVideo2 (Wang et al. 2024b) and average pool-                                                           BERT(Lin et al. 2022) and PGMI (Zhang et al. 2024). (2)
+
+ing to obtain clip-level feature maps with a size of 16×8×8.                                                         General MLLMs: We compare popular open-source MLLMs
+
+We use both the ego- and exo-centric videos as input, and                                                            including VideoLLaVA (Lin et al. 2023), VideoChat2 (Li
+
+concatenate the multi-view features and feed them into a                                                             et al. 2024a), InternVideo2-S3 (Wang et al. 2024b), and In-
+
+linear projector before going through the Spatial-Temporal                                                           ternVL2 (Chen et al. 2024a) under zero-shot evaluation set-
+
+Context Enhancer. The same strategy is adopted on the com-                                                           tings. See Appendix for more details about the baselines.
+
+pared methods. We use similar multi-modal Transformer en-                                                            - Score Regression: Compared with Direct Regression-
+
+coder as in (Lin et al. 2022; Zhang et al. 2024) to integrate                                                        based (i.e., InternVideo2-MLP and USDL) and Multi-Task
+
+inputs and generate text.                                                                                            Learning-based (i.e., SwinBERT, PGMI) AQA methods,
+
+                                                                                                               6704
+                                                                  Ours: The athlete demonstrates excellent footwork, knee bend, and good elevation, and effective shooting form.
+                                                                  the extension of the shooting arm and wrist action were also commendable. However, improvements can be
+                                                                  made by ensuring the guide hand is properly positioned, and ensuring the guide hand does not interfere with
+                                                                  the shot. additionally, the athlete should focus on maintaining a more balanced landing to enhance stability
+                                                                  and overall balance during the shot.
+
+                                                                  Ground-Truth: The athlete demonstrates strong arm extension and proper wrist snap in their shooting
+                                                                  technique, which is beneficial for accurate shots. However, there are areas for improvement, such as ensuring
+                                                                  the guide hand remains open and unobstructive, distributing weight evenly, avoiding left foot dependency,
+                                                                  and landing on the balls of the feet to maintain balance. Additionally, jumping forward instead of back can
+                                                                  prevent power loss. Addressing these elements can enhance overall shooting consistency and effectiveness.
+
+Figure 6: Visualizations on the generated coaching commentary. TechCoach generates precise and detailed commentary on
+what is done well and what can be improved from the given action videos. Correctly matched parts are highlighted in colors.
+
+TechCoach achieves the best performance on score regres-              a simple solution is to perform binary classifications over
+sion. Note that CoRe and TPT adopt a Contrastive Regres-              the TechPoint-related Quality Embeddings, i.e., classifing
+sion framework that utilizes 10 extra exemplars during in-            whether the execution shows strengths or weaknesses on
+ference, thereby enhancing their score regression capability.         each TechPoint (TP-CLS). In the lower part of Tab.3, com-
+- Commentary Generation: (1) For task-specific mod-                   parisons between Rows 5 and 6 show that TP-CLS strength-
+els: TechCoach achieves SoTA performance on all metrics               ens the quality perception of the model, resulting in perfor-
+by explicitly incorporating TechPoint-level reasoning into            mance improvement on score regression metrics. However,
+coaching process. In Sec.5.3, we dive deeper to the main              without explicit alignment with the TechPoint-level com-
+component of our TechCoach (i.e. Context-aware TechPoint              mentary, TP-CLS falls short in understanding deeper rela-
+Reasoner) by conducting extensive ablation studies. (2) For           tionships between the action execution and TechPoints, re-
+general MLLMs: Though shown great visual context un-                  sulting in a clear performance gap between our TechPoint-
+derstanding and reasoning abilities, the evaluated MLLMs              level alignment, especially on commentary generation.
+still fall short on the realistic coaching scenarios (under-          - More ablation studies like (i) Impacts of the Tech-
+perform the task-specific models). The best among them                Point Query Augmentation. (ii) Impacts of various types of
+are the InternVL2 family models, who achieve the high-                TechPoint-level alignment loss; (iii) Influence of the training
+est performance on LLM-based metrics. While scaling up                videos from different views are provided in Appendix.
+InternVL2 (8B→76B) brings performance improvement on
+the LLM-based metrics, there still exists clear performance           5.4 Qualitative Results
+gap between general MLLMs and task-specific models.
+- More Comparison Results. In Appendix, we provide                    Visualization results in Fig.6 show that TechCoach is able
+deeper explorations and analysis on various aspects, e.g., (i)        to understand various technical TechPoints of different ac-
+User study, (ii) More analysis on MLLM’s performance.                 tions and provide detailed commentary on what is done well
+                                                                      (e.g., “the extension of the shooting arm and wrist action
+5.3 Ablation Studies                                                  were also commendable”) and what can be improved (e.g.,
+                                                                      “improvements are needed in core engagement to prevent
+- Is TechPoint-level alignment necessary? As shown in the             being pulled from the wall”) from the given action videos.
+upper part of Tab.3, we gradually ablate the training losses          More qualitative results are shown in the Appendix.
+from our full model. Comparison among Rows 1-3 show
+that the model achieves unstable performance when simply                                  6 Conclusion
+combining the LMSE and LMT M . However, the TechPoint-
+level alignment loss (LAlign) bring stable performance im-            We investigate Descriptive Action Coaching, a novel task
+provement on all metrics (Row 4). Results in Fig.5 fur-               that aims to provide coaching feedback on what is done well
+ther illustrate how LAlign impacts the performance. Starting          and what can be improved from an action execution. To sup-
+from SwinBERT, after adding all our designs except LAlign,            port this task, we develop an automated pipeline for con-
+model performs much better on mentioning the technical de-            structing the EE4D-DescCoach dataset which features clean
+tails (3.04 improvement on GPT-M Score) due to the Tech-              and detailed coaching commentary on both TechPoint and
+Points inputs, but does not obtain similar improvement on             instance levels. The TechPoint-level commentary provides
+perceiving action quality (only 1.45 improvement on GPT-              new supervision for incorporating TechPoint-level reason-
+Q Score). After further adding LAlign, much stronger im-              ing into the action coaching process, encouraging us to build
+provement is observed on GPT-Q Score. All these results               TechCoach, a new framework empowered by a Context-
+indicate the TechPoint-level alignment is necessary and will          aware TechPoint Reasoner. Besides demonstrating strong
+bring stronger action quality perception ability.                     performance of the proposed TechCoach, extensive exper-
+- Does TechPoint-level alignment equal to binary classi-              iments also highlights the effectiveness and the necessity of
+fication? The main target of the TechPoint-level alignment            the proposed Context-aware TechPoint Reasoner. We expect
+(TP-Align) is to ensure the TechPoint-related Quality Em-             the proposed new task, dataset, and method provide a new
+beddings carry the quality-related information. To this end,          perspective for advancing current AQA to a more explain-
+                                                                      able and practical scenario.
+
+                                                                6705
+                  Acknowledgments                                      Proceedings of the IEEE/CVF Conference on Computer Vi-
+                                                                       sion and Pattern Recognition, 22195–22206.
+This work was supported partially by NSFC(92470202,
+U21A20471), Guangdong NSF Project (No.                                 Li, Y.-M.; Huang, W.-J.; Wang, A.-L.; Zeng, L.-A.; Meng,
+2023B1515040025), Guangdong Key Research and                           J.-K.; and Zheng, W.-S. 2024b. EgoExo-Fitness: Towards
+Development Program(No.2024B0101040004).                               Egocentric and Exocentric Full-Body Action Understand-
+                                                                       ing. European Conference on Computer Vision.
+                       References
+                                                                       Li, Y.-M.; Zeng, L.-A.; Meng, J.-K.; and Zheng, W.-S.
+Aafaq, N.; Akhtar, N.; Liu, W.; Gilani, S. Z.; and Mian, A.            2024c. Continual Action Assessment via Task-Consistent
+2019. Spatio-temporal dynamics and semantic attribute en-              Score-Discriminative Feature Distribution Modeling. IEEE
+riched visual encoding for video captioning. In Proceedings            Transactions on Circuits and Systems for Video Technology.
+of the IEEE/CVF conference on computer vision and pattern
+recognition, 12487–12496.                                              Lin, B.; Ye, Y.; Zhu, B.; Cui, J.; Ning, M.; Jin, P.; and
+                                                                       Yuan, L. 2023. Video-llava: Learning united visual rep-
+Alayrac, J.-B.; Donahue, J.; Luc, P.; Miech, A.; Barr, I.; Has-        resentation by alignment before projection. arXiv preprint
+son, Y.; Lenc, K.; Mensch, A.; Millican, K.; Reynolds, M.;             arXiv:2311.10122.
+et al. 2022. Flamingo: a visual language model for few-shot
+learning. Advances in neural information processing sys-               Lin, K.; Li, L.; Lin, C.-C.; Ahmed, F.; Gan, Z.; Liu, Z.; Lu,
+tems, 35: 23716–23736.                                                 Y.; and Wang, L. 2022. Swinbert: End-to-end transformers
+                                                                       with sparse attention for video captioning. In Proceedings of
+Bai, Y.; Zhou, D.; Zhang, S.; Wang, J.; Ding, E.; Guan, Y.;            the IEEE/CVF Conference on Computer Vision and Pattern
+Long, Y.; and Wang, J. 2022. Action quality assessment                 Recognition, 17949–17958.
+with temporal parsing transformer. In European conference
+on computer vision, 422–438. Springer.                                 Luo, H.; Ji, L.; Shi, B.; Huang, H.; Duan, N.; Li, T.; Li, J.;
+                                                                       Bharti, T.; and Zhou, M. 2020. Univl: A unified video and
+Banerjee, S.; and Lavie, A. 2005. METEOR: An automatic                 language pre-training model for multimodal understanding
+metric for MT evaluation with improved correlation with hu-            and generation. arXiv preprint arXiv:2002.06353.
+man judgments. In Proceedings of the acl workshop on in-
+trinsic and extrinsic evaluation measures for machine trans-           Maaz, M.; Rasheed, H.; Khan, S.; and Khan, F. S.
+lation and/or summarization, 65–72.                                    2023. Video-chatgpt: Towards detailed video understand-
+                                                                       ing via large vision and language models. arXiv preprint
+Bertasius, G.; Wang, H.; and Torresani, L. 2021. Is space-             arXiv:2306.05424.
+time attention all you need for video understanding? In
+ICML, volume 2, 4.                                                     Majeedi, A.; Gajjala, V. R.; GNVV, S. S. S. N.; and Li, Y.
+                                                                       2024. RICAˆ 2: Rubric-Informed, Calibrated Assessment of
+Chen, Z.; Wang, W.; Tian, H.; Ye, S.; Gao, Z.; Cui, E.;                Actions. arXiv preprint arXiv:2408.02138.
+Tong, W.; Hu, K.; Luo, J.; Ma, Z.; et al. 2024a. How Far
+Are We to GPT-4V? Closing the Gap to Commercial Mul-                   Matsuyama, H.; Kawaguchi, N.; and Lim, B. Y. 2023.
+timodal Models with Open-Source Suites. arXiv preprint                 IRIS: Interpretable Rubric-Informed Segmentation for Ac-
+arXiv:2404.16821.                                                      tion Quality Assessment. In Proceedings of the 28th Interna-
+                                                                       tional Conference on Intelligent User Interfaces, 368–378.
+Chen, Z.; Wu, J.; Wang, W.; Su, W.; Chen, G.; Xing, S.;
+Zhong, M.; Zhang, Q.; Zhu, X.; Lu, L.; et al. 2024b. In-               Okamoto, L.; and Parmar, P. 2024. Hierarchical NeuroSym-
+ternvl: Scaling up vision foundation models and aligning               bolic Approach for Comprehensive and Explainable Action
+for generic visual-linguistic tasks. In Proceedings of the             Quality Assessment. In Proceedings of the IEEE/CVF Con-
+IEEE/CVF Conference on Computer Vision and Pattern                     ference on Computer Vision and Pattern Recognition, 3204–
+Recognition, 24185–24198.                                              3213.
+
+Doughty, H.; Mayol-Cuevas, W.; and Damen, D. 2019. The                 Pan, J.-H.; Gao, J.; and Zheng, W.-S. 2019. Action as-
+pros and cons: Rank-aware temporal attention for skill deter-          sessment by joint relation graphs. In Proceedings of the
+mination in long videos. In Proceedings of the IEEE/CVF                IEEE/CVF international conference on computer vision,
+conference on computer vision and pattern recognition,                 6331–6340.
+7862–7871.
+                                                                       Panchal, S.; Bhattacharyya, A.; Berger, G.; Mercier, A.;
+Grauman, K.; Westbury, A.; Torresani, L.; Kitani, K.; Malik,           Bo¨hm, C.; Dietrichkeit, F.; Pourreza, R.; Li, X.; Madan,
+J.; Afouras, T.; Ashutosh, K.; Baiyya, V.; Bansal, S.; Boote,          P.; Lee, M.; et al. 2024. What to say and when to say it:
+B.; et al. 2024. Ego-exo4d: Understanding skilled human ac-            Live fitness coaching as a testbed for situated interaction.
+tivity from first-and third-person perspectives. In Proceed-           Advances in Neural Information Processing Systems, 37:
+ings of the IEEE/CVF Conference on Computer Vision and                 75853–75882.
+Pattern Recognition, 19383–19400.
+                                                                       Papineni, K.; Roukos, S.; Ward, T.; and Zhu, W.-J. 2002.
+Li, K.; He, Y.; Wang, Y.; Li, Y.; Wang, W.; Luo, P.; Wang,             Bleu: a method for automatic evaluation of machine trans-
+Y.; Wang, L.; and Qiao, Y. 2023. Videochat: Chat-centric               lation. In Proceedings of the 40th annual meeting of the
+video understanding. arXiv preprint arXiv:2305.06355.                  Association for Computational Linguistics, 311–318.
+
+Li, K.; Wang, Y.; He, Y.; Li, Y.; Wang, Y.; Liu, Y.; Wang, Z.;         Parmar, P.; Gharat, A.; and Rhodin, H. 2022. Do-
+Xu, J.; Chen, G.; Luo, P.; et al. 2024a. Mvbench: A com-               main knowledge-informed self-supervised representations
+prehensive multi-modal video understanding benchmark. In               for workout form assessment. In European Conference on
+                                                                       Computer Vision, 105–123. Springer.
+
+                                                                 6706
+Parmar, P.; and Morris, B. T. 2019. What and how well you           Xu, H.; Ke, X.; Li, Y.; Xu, R.; Wu, H.; Lin, X.; and Guo,
+performed? a multitask learning approach to action quality          W. 2025. Vision-Language Action Knowledge Learning for
+assessment. In Proceedings of the IEEE/CVF Conference on            Semantic-Aware Action Quality Assessment. In European
+Computer Vision and Pattern Recognition, 304–313.                   Conference on Computer Vision, 423–440. Springer.
+
+Parmar, P.; Reddy, J.; and Morris, B. 2021. Piano skills as-        Xu, J.; Rao, Y.; Yu, X.; Chen, G.; Zhou, J.; and Lu, J. 2022.
+sessment. In 2021 IEEE 23rd international workshop on               Finediving: A fine-grained dataset for procedure-aware ac-
+multimedia signal processing (MMSP), 1–5. IEEE.                     tion quality assessment. In Proceedings of the IEEE/CVF
+                                                                    Conference on Computer Vision and Pattern Recognition,
+Parmar, P.; and Tran Morris, B. 2017. Learning to score             2949–2958.
+olympic events. In Proceedings of the IEEE conference on
+computer vision and pattern recognition workshops, 20–28.           Xu, J.; Yin, S.; Zhao, G.; Wang, Z.; and Peng, Y. 2024.
+                                                                    FineParser: A Fine-grained Spatio-temporal Action Parser
+Seo, P. H.; Nagrani, A.; Arnab, A.; and Schmid, C. 2022.            for Human-centric Action Quality Assessment. In Proceed-
+End-to-end generative pretraining for multimodal video cap-         ings of the IEEE/CVF Conference on Computer Vision and
+tioning. In Proceedings of the IEEE/CVF Conference on               Pattern Recognition, 14628–14637.
+Computer Vision and Pattern Recognition, 17959–17968.
+                                                                    Yamazaki, K.; Vo, K.; Truong, Q. S.; Raj, B.; and Le, N.
+Shi, B.; Ji, L.; Niu, Z.; Duan, N.; Zhou, M.; and Chen, X.          2023. Vltint: Visual-linguistic transformer-in-transformer
+2020. Learning semantic concepts and temporal alignment             for coherent video paragraph captioning. In Proceedings of
+for narrated video procedural captioning. In Proceedings            the AAAI Conference on Artificial intelligence, volume 37,
+of the 28th ACM international conference on multimedia,             3081–3090.
+4355–4363.
+                                                                    Yang, A.; Nagrani, A.; Seo, P. H.; Miech, A.; Pont-Tuset, J.;
+Sun, C.; Myers, A.; Vondrick, C.; Murphy, K.; and Schmid,           Laptev, I.; Sivic, J.; and Schmid, C. 2023. Vid2seq: Large-
+C. 2019. Videobert: A joint model for video and language            scale pretraining of a visual language model for dense video
+representation learning. In Proceedings of the IEEE/CVF             captioning. In Proceedings of the IEEE/CVF Conference on
+international conference on computer vision, 7464–7473.             Computer Vision and Pattern Recognition, 10714–10726.
+
+Tang, Y.; Ni, Z.; Zhou, J.; Zhang, D.; Lu, J.; Wu, Y.;              Yin, H.; Parmar, P.; Xu, D.; Zhang, Y.; Zheng, T.; and Fu,
+and Zhou, J. 2020. Uncertainty-aware score distribution             W. 2025. A Decade of Action Quality Assessment: Largest
+learning for action quality assessment. In Proceedings of           Systematic Survey of Trends, Challenges, and Future Direc-
+the IEEE/CVF conference on computer vision and pattern              tions. arXiv preprint arXiv:2502.02817.
+recognition, 9839–9848.
+                                                                    Yu, X.; Rao, Y.; Zhao, W.; Lu, J.; and Zhou, J. 2021. Group-
+Vaswani, A.; Shazeer, N.; Parmar, N.; Uszkoreit, J.; Jones,         aware contrastive regression for action quality assessment.
+L.; Gomez, A. N.; Kaiser, Ł.; and Polosukhin, I. 2017. At-          In Proceedings of the IEEE/CVF international conference
+tention is all you need. Advances in neural information pro-        on computer vision, 7919–7928.
+cessing systems, 30.
+                                                                    Yun, W.; Qi, M.; Peng, F.; and Ma, H. 2024. Semi-
+Vedantam, R.; Lawrence Zitnick, C.; and Parikh, D. 2015.            supervised teacher-reference-student architecture for action
+Cider: Consensus-based image description evaluation. In             quality assessment. In European Conference on Computer
+Proceedings of the IEEE conference on computer vision and           Vision, 161–178. Springer.
+pattern recognition, 4566–4575.
+                                                                    Zeng, L.-A.; and Zheng, W.-S. 2024. Multimodal Action
+Wang, S.; Wang, S.; Yang, D.; Li, M.; Kuang, H.; Zhao, X.;          Quality Assessment. IEEE Transactions on Image Process-
+Su, L.; Zhai, P.; and Zhang, L. 2024a. CPR-Coach: Recog-            ing.
+nizing composite error actions based on single-class train-
+ing. In Proceedings of the IEEE/CVF Conference on Com-              Zhang, S.; Bai, S.; Chen, G.; Chen, L.; Lu, J.; Wang,
+puter Vision and Pattern Recognition, 18782–18792.                  J.; and Tang, Y. 2024. Narrative Action Evaluation with
+                                                                    Prompt-Guided Multimodal Interaction. In Proceedings of
+Wang, T.; Zhang, R.; Lu, Z.; Zheng, F.; Cheng, R.; and Luo,         the IEEE/CVF Conference on Computer Vision and Pattern
+P. 2021. End-to-end dense video captioning with parallel            Recognition, 18430–18439.
+decoding. In Proceedings of the IEEE/CVF international
+conference on computer vision, 6847–6857.                           Zhang, T.; Kishore, V.; Wu, F.; Weinberger, K. Q.; and Artzi,
+                                                                    Y. 2019. Bertscore: Evaluating text generation with bert.
+Wang, Y.; Li, K.; Li, X.; Yu, J.; He, Y.; Chen, G.; Pei, B.;        arXiv preprint arXiv:1904.09675.
+Zheng, R.; Xu, J.; Wang, Z.; et al. 2024b. Internvideo2:
+Scaling video foundation models for multimodal video un-            Zhou, K.; Cai, R.; Wang, L.; Shum, H. P.; and Liang,
+derstanding. arXiv preprint arXiv:2403.15377.                       X. 2024a. A comprehensive survey of action qual-
+                                                                    ity assessment: Method and benchmark. arXiv preprint
+Xia, J.; Zhuge, M.; Geng, T.; Fan, S.; Wei, Y.; He, Z.; and         arXiv:2412.11149.
+Zheng, F. 2023. Skating-mixer: Long-term sport audio-
+visual modeling with mlps. In Proceedings of the AAAI Con-          Zhou, K.; Wang, L.; Zhang, X.; Shum, H. P.; Li, F. W.; Li,
+ference on Artificial Intelligence, volume 37, 2901–2909.           J.; and Liang, X. 2024b. Magr: Manifold-aligned graph reg-
+                                                                    ularization for continual action quality assessment. In Euro-
+Xu, A.; Zeng, L.-A.; and Zheng, W.-S. 2022. Likert scor-            pean Conference on Computer Vision, 375–392. Springer.
+ing with grade decoupling for long-term action assessment.
+In Proceedings of the IEEE/CVF Conference on Computer
+Vision and Pattern Recognition, 3232–3241.
+
+                                                              6707
+
